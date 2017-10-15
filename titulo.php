@@ -36,4 +36,3 @@ body {
 
 </body>
 </html>
-<!--<div class="header-banner"align="center" height="100px" style="background-image:url('imagenes/header1.jpg')">boeer</div>-->
