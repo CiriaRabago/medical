@@ -1,0 +1,179 @@
+@charset "utf-8";
+/* CSS Document */
+.boton
+{
+	cursor:pointer;
+	border:2px solid;
+	border-color:#FFFFFF;
+	background-color:#FFFFFF;
+	font-size:18px;
+	text-align:center;
+	color:#60ad25;
+}
+.boton:hover
+{
+	border:2px solid #F1F8CD;
+	background-color:#60ad25;
+	color:#FFFFFF;
+	text-decoration:blink;
+}
+.cuadros_de_texto
+{
+	border:0px;
+	background-color:#C0D8E4;
+	color:#000000;
+	font-size:12px;
+	text-align:left;
+	font-family: verdana;
+  	-moz-border-radius: 1em;
+    border-radius: 0em;	
+	text-transform: uppercase;
+}
+.cuadros_de_texto_memo
+{
+	border:0px;
+	background-color:#C0D8E4;
+	color:#000000;
+	font-size:12px;
+	text-align:justify;
+	font-family: verdana;
+  	-moz-border-radius: 1em;
+    border-radius: 0em;	
+    text-transform: uppercase;
+}
+.input_numerico
+{
+	border:0px;
+	background-color:#C0D8E4;
+	color:#000000;
+	font-size:12px;
+	text-align:right;
+	font-family: verdana;
+}
+.titulo
+{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:22px;
+	text-transform:uppercase;
+	color:#BCAA79;
+	border-bottom:1px dashed #BCAA79;
+}
+.titulo2
+{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-size:15px;
+	text-transform:uppercase;
+	color:#BCAA79;
+	border-bottom:1px dashed #BCAA79;
+}
+.subSubTitulo2
+{
+	margin:0px;
+	padding:0px;
+	text-align:left;
+	font-family: verdana;
+	font-size:14px;
+	font-weight: bold;
+	color:#7F692B;
+}
+.detalle2
+{
+	margin:0px;
+	padding:0px;
+	text-align:left;
+	font-family: verdana;
+	font-size:13px;
+	color:#000000;
+}
+.detalle3
+{
+	margin:0px;
+	padding:0px;
+	text-align:left;
+	font-family: verdana;
+	background-color:#F1F8CD;
+	font-size:12px;
+	color:#000000;
+}
+/*********************TITULOS**************************/
+	body {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #000;
+	}
+	
+	h3 {
+		margin: 0px;
+		padding: 0px;	
+	}
+
+	.suggestionsBox {
+		position: relative;
+		left: 250px;
+		margin: 10px 0px 0px 0px;
+		width: 500px;
+		background-color: #F1F8CD;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+		border: 2px solid #000;	
+		color: #fff;
+	}
+
+	.suggestionList {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.suggestionList li {
+		
+		margin: 0px 0px 3px 0px;
+		padding: 3px;
+		cursor: pointer;
+		font-size: 10px;
+		font-weight: bold;
+		color: #031d44;
+	}
+	
+	.suggestionList li:hover {
+		background-color: #9DCA5C;
+				color: #000000;
+	}
+	a:link {
+        color: #FFFFFF;
+        text-decoration: underline;
+        font-style: normal;
+        line-height: normal;
+        font-weight: bold;
+        font-size: 11px;
+
+}
+a:visited {
+        text-decoration: underline;
+        color: #FFFFFF;
+        font-style: normal;
+        line-height: normal;
+        font-weight: bold;
+        font-size: 11px;
+
+}
+a:hover {
+        text-decoration: underline;
+        color: #FFFFFF;
+        font-style: normal;
+        line-height: normal;
+        font-weight: bold;
+}
+a:active {
+        text-decoration: blink;
+        color: #FFFFFF;
+        font-style: normal;
+        line-height: normal;
+        ffont-weight: bold;
+}

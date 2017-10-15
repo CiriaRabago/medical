@@ -1,0 +1,1 @@
+COPY /B "tag.prn" \\poderozo\lp2824
