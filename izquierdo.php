@@ -10,7 +10,7 @@ include "clases/clase_menu.php";
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link href="estilolab.css" rel="stylesheet" type="text/css">
 <link href="churchil.css" rel="stylesheet" type="text/css" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script> 
 function mostrar(id,nm)
 { 
@@ -46,6 +46,28 @@ function mostrar(id,nm)
 			}
 		}
 	  }
+}
+
+function expand(el){
+  x = document.getElementsByClassName("option-menu");
+ console.info(el.childNodes[1].innerHTML);
+ if( el.childNodes[1].innerHTML == '<i class="fa fa-angle-down" aria-hidden="true"></i>' )
+ 	el.childNodes[1].innerHTML="<i class='fa fa-angle-right' aria-hidden='true'></i>";
+ else{
+ 	var i;
+ 	for (i = 0; i < x.length; i++) {
+  	option = x[i];
+  	if(option.childNodes.length > 1)
+  		option.childNodes[1].innerHTML="<i class='fa fa-angle-right' aria-hidden='true'></i>";
+ //    x[i].style.backgroundColor = "#2a2e3d";
+ //    x[i].onmouseover = function() {
+ //  		this.style.backgroundColor ="434859";
+	// };
+  }
+  //el.style.backgroundColor = "#434859";  
+  el.childNodes[1].innerHTML="<i class='fa fa-angle-down' aria-hidden='true'></i>"	
+ }
+  
 }
 </script>
 

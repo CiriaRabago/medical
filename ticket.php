@@ -21,7 +21,7 @@ include "clases/clase_medico.php";
 <body>
 <table>
 <tr>
-<td rowspan="3"><img src="imagenes/Logo1.gif" height="47" /></td>
+<td rowspan="3"><img src="imagenes/Logo1.png" height="47" /></td>
   <?php
  $ms=$_GET['ms'];
  $datos=explode(';',$ms);

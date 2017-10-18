@@ -3,7 +3,7 @@
 }
 
 .logo-header{
-	padding-top: 5px;
+	padding-top: 3px;
 	padding-left: 20px;
 	float:left;
 }
@@ -44,17 +44,17 @@
 	background-color: #434859;	
 }
 .option-submenu{
-	background-color: #077dac;
+	background-color: #1f2333;
 	cursor: pointer;
 	padding-left: 10px;
 	text-align: left;
-	font-size: 14px;
+	font-size: 12px;
 	color: #FFF;
 	font-weight: 100;
 
 }
 .option-submenu:hover{
-	font-weight: bold;
+	/*font-weight: bold;*/
 }
 
 .titulo-md{
@@ -326,3 +326,8 @@
 }
 
 
+.icon-expand{
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}

@@ -14,7 +14,7 @@ class PDF extends FPDF
 		    $logo=$_GET['log'];
 			if ($logo=='1')
 			  {
-			$this->Image('imagenes/Logotipo.gif',4,4,38);}
+			$this->Image('imagenes/Logotipo.jpg',4,4,38);}
 			$this->SetFont('Arial','B',18);
 			/*$this->SetXY(10,30); 
 			$this->Cell(0,10,'SOLICITUD',0,0,'C',false); 
@@ -34,7 +34,7 @@ class PDF extends FPDF
 			//$this->Cell(0,0,'Página '.$this->PageNo().'/{nb}',0,0,'C');
 			$this->Cell(0,0,'También somos Farmacia!! Edif. Don Vale planta baja local 04 "Farmacia El Santuario CA"',0,0,'C');
 			$this->SetY(-7);
-			$this->Cell(0,0,'unidadmedicasanluis@hotmail.com',0,0,'C');
+			//$this->Cell(0,0,'unidadmedicasanluis@hotmail.com',0,0,'C');
 
 		}
 } // fin de la clase

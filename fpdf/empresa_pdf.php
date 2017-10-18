@@ -8,7 +8,7 @@ class PDF extends FPDF
 //Cabecera de página
 		function Header()
 		{
-			//$this->Image('imagenes/Logotipo.gif',4,4,70);
+			//$this->Image('imagenes/Logotipo.jpg',4,4,70);
 			if($xxx=='')
 			  $xxx=1;
 			else
@@ -33,11 +33,12 @@ class PDF extends FPDF
 		function Footer()
 		{
 			//Posición: a 1,5 cm del final
-			$this->SetY(-10);
+			$this->SetY(-16);
 			$this->SetFont('Arial','BI',8);
-			$this->Cell(0,0,'Avenida Principal Pirineos I lote A Vereda 1, Teléfonos: 0276 - 3568903 4167803 - San Cristóbal',0,0,'C');
-			$this->SetY(-7);
-			$this->Cell(0,0,'unidadmedicasanluis@hotmail.com',0,0,'C');
+			$this->Cell(0,0,utf8_decode('Carrera 6 barrio Lagunitas local 1-22, San antonio - edo. Táchira /  '),0,0,'C');
+			$this->SetY(-12);
+			$this->Cell(0,0,utf8_decode('Carrera 21 entre pasaje acueducto y calle 12, edificio Tiyity planta baja - San Cristóbal edo. Táchira '),0,0,'C');
+			//$this->Cell(0,0,'unidadmedicasanluis@hotmail.com',0,0,'C');
 		}
 } // fin de la clase
 

@@ -15,7 +15,7 @@ include "clases/clase_diagnostico.php";
 .Estilo2 {color: #FF0000}
 -->
 </style>
-<title>Unidad Medica San Luis</title>
+<title>Unidad Medica Churchil</title>
 </head>
 <body>
 <?php 

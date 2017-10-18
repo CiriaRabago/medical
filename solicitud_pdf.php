@@ -11,7 +11,7 @@ class PDF extends FPDF
 		{
 		   $logo=$_GET['log'];
 			if ($logo=='1')
-			  {$this->Image('imagenes/Logotipo.gif',1,0.4,6);}
+			  {$this->Image('imagenes/Logotipo.jpg',1,0.4,6);}
 			$this->SetFont('Arial','B',18);
 			$this->SetY(2);
 			$this->SetX(4);

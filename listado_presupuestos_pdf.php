@@ -14,7 +14,7 @@ class PDF extends FPDF
 //Cabecera de página
     function Header()
     {
-      $this->Image('imagenes/Logotipo.gif',4,4,40);
+      $this->Image('imagenes/Logotipo.jpg',4,4,40);
       $this->SetFont('Arial','BI',10); 
       $this->SetXY(10,12); 
       $zone=(3600*-4.5); 

@@ -13,7 +13,7 @@
 </style>
 </head>
 <body>
-<p><img src="imagenes/Logo1.gif" height="47" /></p>
+<p><img src="imagenes/Logo1.png" height="47" /></p>
 <p>
   <?php
  $ms=$_GET['ms'];

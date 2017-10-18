@@ -12,7 +12,7 @@ class PDF extends FPDF
 		{
 		   $logo=$_GET['log'];
 			if ($logo=='1')
-			  {$this->Image('imagenes/Logotipo.gif',1,0.4,6);}
+			  {$this->Image('imagenes/Logotipo.jpg',1,0.4,6);}
 			$this->SetFont('Arial','B',18);
 			//$this->SetX(5);
 			
@@ -43,7 +43,7 @@ $bus_r_e=$r_estu->cons_res_estudio2($idvis);
 
 
 		$pdf->AddPage();
-		$pdf->Image('imagenes/Logotipo.gif',1,0.4,3.5);
+		$pdf->Image('imagenes/Logotipo.jpg',1,0.4,3.5);
 		$pdf->SetY(3);
 		$pdf->SetFont('Arial','BI',14); $pdf->Cell(0,0.5,'RESULTADOS DE ESTUDIO ',0,1,'C',false);
 		$pdf->SetFont('Arial','BI',10); $pdf->Cell(2,0.5,'FECHA: ',0,0,'L',false);

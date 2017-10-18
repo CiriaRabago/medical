@@ -36,9 +36,9 @@ if ($us=='0')
 	    }
 if (($us!='0') && ($us!='1'))
 		{   
-			session_register("cedu_usu");
-			session_register("tipo_usu");
-			session_register("nom_usu");
+			// session_register("cedu_usu");
+			// session_register("tipo_usu");
+			// session_register("nom_usu");
 			$vec=explode('**',$us);
 			$_SESSION["cedu_usu"]=$vec[0];
 			$_SESSION["tipo_usu"]=$vec[1];

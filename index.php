@@ -8,7 +8,7 @@
 <link href="churchil.css" rel="stylesheet" type="text/css" />
 </head>
 
-<frameset rows="100,*" cols="*" frameborder="no" border="0" framespacing="0">
+<frameset rows="85,*" cols="*" frameborder="no" border="0" framespacing="0">
   <frame src="titulo.php" class="header-box" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
   <frameset cols="200,*" frameborder="no" border="0" framespacing="0" >
     <frame src="menu.php" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="menu" />

@@ -645,7 +645,7 @@ if($n>1) $pdf->Ln(0.1); else $pdf->Ln(0.3);
 	$pdf->Image('imagenes/propaganda.jpg',1,15,6,8);
     $pdf->SetXY(8,15);
 	$pdf->Cell(1,0.5,'Nombre :',0,1,'C',false);	
-	$pdf->Image('imagenes/umsl_claro.png',11,15,2,2);
+	$pdf->Image('imagenes/Logo1.png',11,15,2,2);
 	$pdf->SetXY(7,16);
 	$pdf->Cell(1,0.5,$datos[1].' '.$datos[2].' ',0,1,'L',false);	
 	$pdf->SetXY(7,16.5);

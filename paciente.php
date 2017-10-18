@@ -704,17 +704,17 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
 <?php
 $requi= new pac_req('',$_POST["ced"],'1','A'); 
 	  $reg_r=$requi->cons_pac_req2();
-	   if ($reg_r!='' && $reg_r==1){?>
+	   if ($reg_r!='' && $reg_r==1){ ?>
 	   	<input type="text" name="" id="" value="SI" readonly="readonly">
 
-	   <?php}else{
+	   <?php }else{
 	 ?>
 </span>
 	Consignados
 	<input type="checkbox" name="req" id="req" value="1" onclick="Requisitos()">
 	<input type="hidden" name="cheq_req" id="cheq_req" value="1">
 </td>
-<?php}?>
+<?php } ?>
     
 			</tr>
 	   <?php 

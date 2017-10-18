@@ -267,12 +267,22 @@ function eliminar($id)
 					else
 					{
 					   if($nb>0)
-						$pagia=' onclick="mostrar('.$contamenu.','.$rowa[1].');" ';
+						$pagia=' onclick="expand(this);mostrar('.$contamenu.','.$rowa[1].');" ';
 					}
-					
+					// $icons = ['ADMINISTRACION'=>'cogs',
+					//  'EMPLEADOS'=>'users',
+					//  'ATENCION AL PACIENTE'=>'user-circle-o',
+					//  'CITAS'=>'address-book-o',
+					//   'CONTROL MEDICO'=>'heartbeat',
+					//   'FACTURACION'=>'file-text-o',
+					//   'LABORATORIO'=>'thermometer-three-quarters',
+					//   'REPORTES'=>'','SALIR'=>''];
+					if ($nb > 0)
+						$icon = "<span class='icon-expand'><i class='fa fa-angle-right' aria-hidden='true'></i></span>";					
+					else $icon = "";
 					$HTMLa.='<td width="200"  height="28" class="texto option-menu" align="center" 
-									style="cursor:hand" '.$colora.$imagena.$pagia.'>'.strtoupper(ucwords(strtolower($rowa[2]))).
-									'</td>';
+									style="cursor:hand" '.$colora.$imagena.$pagia.'>'.strtoupper($rowa[2]).
+									$icon.'</td>';
 					
 					if($nb>0)
 					{

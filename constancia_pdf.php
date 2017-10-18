@@ -12,7 +12,7 @@ class PDF extends FPDF
 		     $logo=$_GET['log'];
 			if ($logo=='1')
 			  {
-			$this->Image('imagenes/Logotipo.gif',4,4,60);}
+			$this->Image('imagenes/Logotipo.jpg',4,4,60);}
 			$this->SetFont('Arial','B',18);
 			$this->SetXY(10,50); 
 			$this->Cell(0,10,'CONSTANCIA MÉDICA',0,0,'C',false); 
@@ -30,9 +30,9 @@ class PDF extends FPDF
 			//Arial italic 8
 			$this->SetFont('Arial','BI',8);
 			//Número de página
-			/*$this->Cell(0,0,'Avenida Principal Pirineos I lote A Vereda 1, Teléfonos: 0276 - 3568903 4167803 - San Cristóbal',0,0,'C');
+			/*$this->Cell(0,0,'Carrera 6 barrio Lagunitas local 1-22, San antonio - edo. Táchira / Carrera 21 entre pasaje acueducto y calle 12, edificio Tiyity planta baja - San Cristóbal edo. Táchira ',0,0,'C');
 			$this->SetY(-7);
-			$this->Cell(0,0,'unidadmedicasanluis@hotmail.com',0,0,'C');*/
+			//$this->Cell(0,0,'unidadmedicasanluis@hotmail.com',0,0,'C');*/
 
 		}
 } // fin de la clase

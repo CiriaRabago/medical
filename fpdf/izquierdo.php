@@ -46,6 +46,8 @@ function mostrar(id,nm)
 		}
 	  }
 }
+
+
 </script>
 
 <style type="text/css">
@@ -71,6 +73,5 @@ body {
  echo $men->pinta_menu();
  
  ?>
-
 </body>
 </html>

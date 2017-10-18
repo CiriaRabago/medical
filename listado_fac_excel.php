@@ -42,7 +42,7 @@ $reg=$ser->listado_fact2($_GET["getf_in"],$_GET["getf_fi"],$_GET["getser"],$_GET
   ?> <table width="500" border="1">
   <tr>
     <td width="20">RAZON SOCIAL</td>
-    <td width="20">UNIDAD MEDICA SAN LUIS</td>
+    <td width="20">UNIDAD MEDICA CHURCHIL</td>
   <tr>
     <td width="20">RIF</td>
     <td width="20">J-30843945-2</td>

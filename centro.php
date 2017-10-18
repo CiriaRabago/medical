@@ -11,10 +11,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Documento sin t&iacute;tulo</title>
-<style type="text/css">
-<!--
--->
-</style>
 <script>
 
 function verifi()
@@ -33,7 +29,7 @@ document.getElementById('USUARIO').focus();
 </script>
 <link href="estilolab.css" rel="stylesheet" type="text/css" />
 <link href="churchil.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body onload="posicion();">
@@ -44,12 +40,12 @@ document.getElementById('USUARIO').focus();
       <td height="26" colspan="3" ><div align="center" class="TituloF">INICIO DE SESION </div></td>
     </tr>
     <tr>
-      <td width="273" height="26"><div align="right" class="Estilo2 Estilo3 Estilo9 Estilo13 Estilo15 Estilo21">
+      <td width="273" height="26" style="padding-top:20px"><div align="right" class="Estilo2 Estilo3 Estilo9 Estilo13 Estilo15 Estilo21">
           <div align="left" class="Estilo1 Estilo15 padding_right_small">
             <div align="right"><strong><span class="Etiqueta"><span class="etiqueta">Usuario: </span></span> </strong></div>
           </div>
       </div></td>
-      <td colspan="2"><div align="left" class="">
+      <td colspan="2" style="padding-top:20px"><div align="left" class="">
           <label> <span class="Estilo14">
           <input name="USUARIO" type="text" class="texto" id="USUARIO" size="15"  value="17932496"/>
           </span></label>

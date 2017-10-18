@@ -122,7 +122,7 @@ $pres= new presup();
       }
 
     $pdf->AddPage();
-    $pdf->Image('imagenes/Logotipo.gif',1,0.4,3.5);
+    $pdf->Image('imagenes/Logotipo.jpg',1,0.4,3.5);
     $pdf->SetY(3);
     $pdf->SetFont('Arial','BI',14); $pdf->Cell(0,0.5,'COMPROBANTE DE PRESUPUESTO #'.$id_presupuesto,0,1,'C',false);
     $pdf->Ln();
