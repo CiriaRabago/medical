@@ -196,13 +196,13 @@ function fotox()
     <tr>
       <td class="etiqueta">RIF / Cedula: </td>
       <td colspan="3" class="texto"><label>
-        <input name="rif" type="text" class="texto" id="rif" size="25" onkeypress='return sincomillas(event)' value="<?php=$_POST['rif'];?>"/>
+        <input name="rif" type="text" class="texto" id="rif" size="25" onkeypress='return sincomillas(event)' value="<?=$_POST['rif'];?>"/>
         <span class="texto Estilo2"><span class="Estilo1">*</span></span> </label></td>
     </tr>
     <tr>
       <td class="etiqueta">Nombre:</td>
       <td colspan="3" class="texto"><label>
-        <input name="nom" type="text" class="texto" id="nom" size="50" onkeypress='return sincomillas(event)' value="<?php=$_POST['nom'];?>"/>
+        <input name="nom" type="text" class="texto" id="nom" size="50" onkeypress='return sincomillas(event)' value="<?=$_POST['nom'];?>"/>
         <span class="texto Estilo2"><span class="Estilo1">*</span></span> </label></td>
     </tr>
 	<tr>
@@ -217,43 +217,43 @@ function fotox()
     <tr>
       <td width="197" class="etiqueta">Direcci&oacute;n :</td>
       <td colspan="3" class="texto"><label>
-        <textarea name="dire" cols="50" class="texto" id="dire" onkeypress='return sincomillas(event)'><?php=$_POST['dire'];?></textarea>
+        <textarea name="dire" cols="50" class="texto" id="dire" onkeypress='return sincomillas(event)'><?=$_POST['dire'];?></textarea>
       </label></td>
     </tr>
     <tr>
       <td class="etiqueta">Telefono 1:</td>
       <td colspan="3" class="texto"><label>
-        <input name="te1" type="text" class="texto" id="te1" size="25" onkeypress='return sincomillas(event)' value="<?php=$_POST['te1'];?>"/>
+        <input name="te1" type="text" class="texto" id="te1" size="25" onkeypress='return sincomillas(event)' value="<?=$_POST['te1'];?>"/>
         <span class="texto Estilo2"><span class="Estilo1">*</span></span> </label></td>
     </tr>
     <tr>
       <td class="etiqueta">Telefono 2 :</td>
       <td colspan="3" class="texto"><label>
-        <input name="te2" type="text" class="texto" id="te2" size="25" onkeypress='return sincomillas(event)' value="<?php=$_POST['te2'];?>"/>
+        <input name="te2" type="text" class="texto" id="te2" size="25" onkeypress='return sincomillas(event)' value="<?=$_POST['te2'];?>"/>
       </label></td>
     </tr>
     <tr>
       <td class="etiqueta">Correo electr&oacute;nico :</td>
       <td colspan="3" class="texto"><label>
-        <input name="email" type="text" class="texto" id="email" size="50" onkeypress='return sincomillas(event)' value="<?php=$_POST['email'];?>"/>
+        <input name="email" type="text" class="texto" id="email" size="50" onkeypress='return sincomillas(event)' value="<?=$_POST['email'];?>"/>
       </label></td>
     </tr>
     <tr>
       <td class="etiqueta">Porcentaje:</td>
       <td colspan="3" class="texto"><label> </label>
-          <input name="porce" type="text" class="texto" id="porce" onkeypress='return soloNumeros(event)' size="3" maxlength="3" value="<?php=$_POST['porce'];?>"/> %
+          <input name="porce" type="text" class="texto" id="porce" onkeypress='return soloNumeros(event)' size="3" maxlength="3" value="<?=$_POST['porce'];?>"/> %
           <span class="texto Estilo2"><span class="Estilo1">*</span></span> </td>
     </tr>
 
     <tr>
       <td class="etiqueta">Mpps:</td>
       <td class="texto"><label class="texto">
-        <input name="mpps" type="text" class="texto" id="mpps" value="<?php=$_POST['mpps'];?>">
+        <input name="mpps" type="text" class="texto" id="mpps" value="<?=$_POST['mpps'];?>">
       </label></td>
     </tr>
 	 <tr>
 	   <td class="etiqueta">Colegio: </td>
-	   <td class="texto"><input name="cole" type="text" class="texto" id="cole" value="<?php=$_POST['cole'];?>"></td>
+	   <td class="texto"><input name="cole" type="text" class="texto" id="cole" value="<?=$_POST['cole'];?>"></td>
     </tr>
 	 <tr>
       <td class="etiqueta">Especialidad:</td>
@@ -268,10 +268,10 @@ function fotox()
       <td height="25" class="etiqueta">Subir firma digital:</td>
       <td colspan="3" class="texto">
 	         <div id="archivos">
-			    <input type="text" name="firma" id="firma" class="texto"  value="<?php=$_POST['firma'];?>"/>
+			    <input type="text" name="firma" id="firma" class="texto"  value="<?=$_POST['firma'];?>"/>
 			    <input name="fotofile" type="file" class="texto" id="fotofile" size="30" onChange="fotox()" />
 				<?php if(substr($_POST['firma'],0,5)=='firm/'){?>
-				<img src="<?php=$_POST["firma"]?>?<?php=time()?>" width="120" height="100" id="foto" name="foto">
+				<img src="<?=$_POST["firma"]?>?<?=time()?>" width="120" height="100" id="foto" name="foto">
 				<?php }?>
 	         </div>
         <span class="Estilo2">Los Archivos pueden ser tipo JPEG, jpg, bmp, GIF &oacute; gif. </span>      </td>
@@ -287,9 +287,9 @@ function fotox()
 
 	<a href="#" onclick="Guardar();" class="button-save" alt="Guardar"  > <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar </a>
 
-            <input name="ocu_N" type="hidden" value="<?php=$_POST['ocu_N'];?>"/>
-			<input name="ocu_g" type="hidden" value="<?php=$_POST['ocu_g'];?>"/>
-            <input type="hidden" name="ocu_e" value="<?php=$_POST['ocu_e'];?>"/>
+            <input name="ocu_N" type="hidden" value="<?=$_POST['ocu_N'];?>"/>
+			<input name="ocu_g" type="hidden" value="<?=$_POST['ocu_g'];?>"/>
+            <input type="hidden" name="ocu_e" value="<?=$_POST['ocu_e'];?>"/>
 			<a href="#" onclick="medico_pdf();" class="button-print" alt="Imprimir"  > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>      </td>
     </tr>
   </table>

@@ -186,7 +186,7 @@ if ($_POST["espe"]>'0')
 	  <td class="etiqueta">Domingo</td>      
 	 </tr>
 	 <tr>	 
-	  <input type="hidden" id="labor" name="labor" value="<?php=$labor;?>"  />
+	  <input type="hidden" id="labor" name="labor" value="<?=$labor;?>"  />
       <td class="etiqueta" align="center"><input type="checkbox" name="lu" <?php if(substr($labor,0,1)=='1') echo 'checked="checked"';?> /></td>      
 	  <td class="etiqueta" align="center"><input type="checkbox" name="ma" <?php if(substr($labor,1,1)=='1') echo 'checked="checked"';?>/></td>      
 	  <td class="etiqueta" align="center"><input type="checkbox" name="mi" <?php if(substr($labor,2,1)=='1') echo 'checked="checked"';?>/></td>      

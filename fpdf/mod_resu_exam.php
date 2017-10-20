@@ -269,7 +269,7 @@ function firmar(c)
 	   <td height="30" colspan="7"><div align="center">	      
 	  <img src="imagenes/firmar.jpg" alt="firmar" width="140" height="50" 
 	  style="cursor:hand" 
-	  onclick="firmar(<?php=$orden;?>);" 
+	  onclick="firmar(<?=$orden;?>);" 
 	  onmouseover="this.src='imagenes/firmar2.jpg'"  
 	  onmouseout="this.src='imagenes/firmar.jpg'"/></div>
 	   </td>

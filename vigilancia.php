@@ -58,8 +58,8 @@ window.open(msg,'','width=700,height=450,resizable=yes,scrollbars=yes');
 </script>
 <body>
 <form name="form1" method="post" action="vigilancia.php">
-<input type="hidden" id="fe1" name="fe1" value="<?php=$_POST['fe1'];?>">
-<input type="hidden" id="fe2" name="fe2" value="<?php=$_POST['fe2'];?>">
+<input type="hidden" id="fe1" name="fe1" value="<?=$_POST['fe1'];?>">
+<input type="hidden" id="fe2" name="fe2" value="<?=$_POST['fe2'];?>">
 
 <?php
 $emp= new empresa('','','','','','','','','','');
@@ -221,7 +221,7 @@ if($valm2<10)$valm2='0'.$valm2;
 			echo $vig_relenfdis;
 			$msg="'Vigilancia_pdf.php?empre=".$val."&anio=".$_POST['fe1']."&mes=".$_POST['fe2']."'";	?>
   <p align="center"><p align="center">  
-  <a href="#" onclick="imprimir(<?php=$msg;?>);" class="button-print" alt="Imprimir"  > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
+  <a href="#" onclick="imprimir(<?=$msg;?>);" class="button-print" alt="Imprimir"  > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
   	<a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Salir"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a></p>
   <p align="center">&nbsp;</p>
   <?php

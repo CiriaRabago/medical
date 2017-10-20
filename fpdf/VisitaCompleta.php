@@ -74,7 +74,7 @@ function resultados(ced)
 </table>
 <div align="center" id="ImpriVis">
 
-<input class="textoN" name="laboratorio" id="laboratorio" type="button" onclick="resultados('<?php=$rowp[1];?>');" value="Resultados Examenes de Laboratorio" />
+<input class="textoN" name="laboratorio" id="laboratorio" type="button" onclick="resultados('<?=$rowp[1];?>');" value="Resultados Examenes de Laboratorio" />
 </div>	 
 
 <div align="center">

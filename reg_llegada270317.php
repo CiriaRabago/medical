@@ -439,10 +439,10 @@ if(isset($_POST["ocu_e"]) && $_POST["ocu_e"]=='2' )
 	?>
 	</tr>
 	<tr>
-	  <td class="etiqueta">Clave de Aprobacion :</td><td class="textoN"><input type="text" class="texto" name="keyacc" id="keyacc" value="<?php=$_POST['keyacc'];?>"/></td>
+	  <td class="etiqueta">Clave de Aprobacion :</td><td class="textoN"><input type="text" class="texto" name="keyacc" id="keyacc" value="<?=$_POST['keyacc'];?>"/></td>
 	</tr>
 	<tr>
-	  <td class="etiqueta">Responsable :</td><td class="textoN"><input size="100" type="text" class="texto" name="resacc" id="resacc" value="<?php=$_POST['resacc'];?>"/></td>
+	  <td class="etiqueta">Responsable :</td><td class="textoN"><input size="100" type="text" class="texto" name="resacc" id="resacc" value="<?=$_POST['resacc'];?>"/></td>
 	</tr>
 	<?php }?>
     <tr>

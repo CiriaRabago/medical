@@ -279,7 +279,7 @@ function firmar(c)
 	                               </td>
 							<?php  if($examen!=$sw)
 						           {	$sw=$examen; ?>
-								   <td align="center" bgcolor="#FF0000" rowspan="<?php=$n;?>"><input type="checkbox" name="<?php='f'.$examen;?>" id="<?php='f'.$examen;?>" /></td>
+								   <td align="center" bgcolor="#FF0000" rowspan="<?=$n;?>"><input type="checkbox" name="<?='f'.$examen;?>" id="<?='f'.$examen;?>" /></td>
 						     <?php     }?>
 					            </tr>
 								
@@ -307,7 +307,7 @@ function firmar(c)
 	   <td height="30" colspan="7"><div align="center">	      
 	  <img src="imagenes/firmar.jpg" alt="firmar" width="140" height="50" 
 	  style="cursor:hand" 
-	  onclick="firmar(<?php=$orden;?>);" 
+	  onclick="firmar(<?=$orden;?>);" 
 	  onmouseover="this.src='imagenes/firmar2.jpg'"  
 	  onmouseout="this.src='imagenes/firmar.jpg'"/></div>
 	   </td>

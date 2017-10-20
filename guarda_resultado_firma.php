@@ -16,7 +16,7 @@ include "clases/clase_resultado.php";
 
 <body>
 <form method="post" name="form1">
-<input type="hidden" name="orden" id="orden" value="<?php=$_POST['orden'];?>"  />
+<input type="hidden" name="orden" id="orden" value="<?=$_POST['orden'];?>"  />
  <?php
   $orden = $_POST['orden'];
   $usu=$_SESSION["cedu_usu"];

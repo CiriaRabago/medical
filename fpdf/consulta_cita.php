@@ -41,7 +41,7 @@ else   { s=2;
 function tratarFecha(dia,mes,ano){
   document.form1.fechas.value=dia+'-'+mes+'-'+ano;
   //document.getElementById("fecha").value=dia;
-  <?php=$funcionTratarFecha?>
+  <?=$funcionTratarFecha?>
   document.form1.submit();
 }
 </script>
@@ -229,7 +229,7 @@ function busca()
 		 $ff=$dia.'-'.$mes.'-'.$fech[2];
 		 $newf=$fech[2].$mes.$dia;}?>
 	  <input type="hidden" id="sw" name="sw" value="0" />
-	  <input type="hidden" id="newf" name="newf" value="<?php=$newf;?>" />
+	  <input type="hidden" id="newf" name="newf" value="<?=$newf;?>" />
       <input name="fechas" id="fechas" type="text" class="texto" value="<?php echo $ff;?>" class="texto" onchange="ver();"/>
 	  <img src="imagenes/boton_calendario.png" alt="Mostrar almanaque"  style="cursor:hand" onclick="mostrar('<?php echo $_POST['sw'];?>')" 
 		onmouseover="this.src='imagenes/boton_calendario.png'"  onmouseout="this.src='imagenes/boton_calendario.png'"/><br /><label class="etiqueta">dd-mm-aaaa</label>

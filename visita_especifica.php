@@ -159,7 +159,7 @@ function resultados(ced)
   <TR><td colspan="4" >
     <div align="center" id="ImpriVis">
 
-<input class="textoN" name="laboratorio" id="laboratorio" type="button" onclick="resultados('<?php=$_GET['cpaci'];?>');" value="Resultados Examenes de Laboratorio" />
+<input class="textoN" name="laboratorio" id="laboratorio" type="button" onclick="resultados('<?=$_GET['cpaci'];?>');" value="Resultados Examenes de Laboratorio" />
 </div>	 
  </td>
   </TR>

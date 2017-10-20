@@ -56,7 +56,7 @@ include "clases/clase_orden.php";
 		  $cont++;
 	   ?>
 			<tr class="texto" <?php echo $color; ?>>
-			  <td width="20"><a href="resu_exam_his.php?orden=<?php=$row[0];?>" style="cursor:hand; text-decoration:underline"><?php echo $row[0]; ?></a></td>
+			  <td width="20"><a href="resu_exam_his.php?orden=<?=$row[0];?>" style="cursor:hand; text-decoration:underline"><?php echo $row[0]; ?></a></td>
 			  <td width="100"><?php echo $row[1]; ?></td>
 			  <td width="100"><?php echo $row[2]; ?></td>
 			  

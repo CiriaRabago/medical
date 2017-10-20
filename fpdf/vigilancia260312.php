@@ -167,7 +167,7 @@ if ($_POST["mes"]!='')
 			echo $vig_reldiamot;
 		$vig_relenfdis=$vis->relacion_enf_dis($val,$vala,$valm,$dat[2]);
 			echo $vig_relenfdis;?>
-  <p align="center"><a href="#" onclick="imprimir(<?php=$msg;?>);" class="button-print" alt="Imprimir"  > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
+  <p align="center"><a href="#" onclick="imprimir(<?=$msg;?>);" class="button-print" alt="Imprimir"  > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
 
   <a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Salir"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a></p>
   <p align="center">&nbsp;</p>
