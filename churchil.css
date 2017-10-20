@@ -1,11 +1,13 @@
 .banner-header{
   float: right;
+  width: 800px;
 }
 
 .logo-header{
 	padding-top: 3px;
 	padding-left: 20px;
 	float:left;
+	width: 100px;
 }
 .content{
 	padding-top: 20px;
