@@ -124,9 +124,14 @@ function soloNumeros(evt){
         </span></td>
       </tr>
       <tr>
-        <td colspan="2" class="Etiqueta"><div align="center"><span class="textoN"><img src="imagenes/p_guardar1.gif" alt="Guardar la caracteristica" width="140" height="50" style="cursor:hand" onclick="Guardar();" onmouseover="this.src='imagenes/a_guardar1.gif'"  onmouseout="this.src='imagenes/p_guardar1.gif'"/><img src="imagenes/p_salir1.gif" alt="salir al men&uacute; de an&aacute;lisis" 
-	width="140" height="50" style="cursor:hand" onclick="top.mainFrame.location.href='salir.php'" 
-	onmouseover="this.src='imagenes/a_salir1.gif'"  onmouseout="this.src='imagenes/p_salir1.gif'"/></span><span class="Texto"><span class="Estilo26">
+        <td colspan="2" class="Etiqueta"><div align="center"><span class="textoN">
+          <a href="#" onclick="Guardar();" class="button-save" alt="Guardar"  > <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar </a>
+
+
+  <a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Salir"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a>
+
+
+  </span><span class="Texto"><span class="Estilo26">
             <input type="hidden" name="ocu_g"  value="0"/>
         </span></span></div></td>
       </tr>
