@@ -47,7 +47,7 @@ document.getElementById('USUARIO').focus();
       </div></td>
       <td colspan="2" style="padding-top:20px"><div align="left" class="">
           <label> <span class="Estilo14">
-          <input name="USUARIO" type="text" class="texto" id="USUARIO" size="15"  value="17932496"/>
+          <input name="USUARIO" type="text" class="texto" id="USUARIO" size="15"  value=""/>
           </span></label>
             </div>
           </td>
@@ -59,7 +59,7 @@ document.getElementById('USUARIO').focus();
           </div>
       </div></td>
       <td colspan="2"><div align="left"><span>
-          <input name="CLAVE" type="password" class="texto" id="CLAVE" size="15"  value="JGRS"/>
+          <input name="CLAVE" type="password" class="texto" id="CLAVE" size="15"  value=""/>
       </span></div></td>
     </tr>
     
