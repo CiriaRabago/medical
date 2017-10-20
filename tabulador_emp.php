@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_servicio.php";
@@ -42,7 +42,7 @@ function Guardar(){
 	document.form1.submit();
 }
 </script>
-<?phpif($_POST["ocu_g"]==1){
+<?php if($_POST["ocu_g"]==1){
 		$fecha_ac= @date("Y-m-d");
 	for ($i=0; $i < $_POST["serv_totales"]; $i++) { 
 
@@ -75,7 +75,7 @@ function Guardar(){
       <td class="etiqueta">Empresa: </td>
       <td colspan="3" class="texto"><select name="comemp" class="texto" id="comemp" onchange="submit();">
         <option value="0" selected="selected" >Particular</option>
-        <?php  
+        <?php   
         $emp= new empresa('','','','','','','','',$_SESSION["cedu_usu"],'');
 		 if ($emp->combo_emp()!= false)
 		        echo $emp->combo_emp(); ?>
@@ -88,13 +88,13 @@ function Guardar(){
         <tr>
        	<td height="30">&nbsp;</td>
         </tr>
-    <?php
+    <?php 
 	if($_POST["comemp"]!=0)
 	{ $v_emp=$emp->ver_empre($_POST["comemp"]);
 
     ?>
 	<tr class="titulofor">
-      <td height="30" colspan="4"><div align="center" class="titulofor">Tabulador de Servicios de <?phpecho $v_emp ?></div></td>
+      <td height="30" colspan="4"><div align="center" class="titulofor">Tabulador de Servicios de <?php echo $v_emp ?></div></td>
     </tr>
 	 <tr>
       <td colspan="4"><div id="prod" style="display:block">
@@ -106,14 +106,14 @@ function Guardar(){
 	<td>Precio Empresa</td>
     </tr>	
 	
-<?php
+<?php 
 $ser= new servicio(0,'','','','','','',0);	  		
 $serviprod2=$ser->lista_serv_tab_emp(); 
 $n2=mysql_num_rows($serviprod2);
 $indi2=0;
 ?>
-<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php echo $n2;?>" />
-<?php
+<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php  echo $n2;?>" />
+<?php 
 while ($row2=mysql_fetch_array($serviprod2))
 { 
   $nocodigo='nocodcar'.$indi2;
@@ -123,14 +123,14 @@ while ($row2=mysql_fetch_array($serviprod2))
   
   if ($indi2%2!=0) $color='bgcolor="#E3E3E6"'; else $color='';
 ?>
-  <tr class="texto" <?php echo $color; ?>  >
+  <tr class="texto" <?php  echo $color; ?>  >
     <td width="20">
-	<input name="<?php echo $nocodigo;?>" id="<?php echo $nocodigo;?>" type="hidden" value="<?php echo $row2[1]; ?>" />
+	<input name="<?php  echo $nocodigo;?>" id="<?php  echo $nocodigo;?>" type="hidden" value="<?php  echo $row2[1]; ?>" />
 	</td>
-    <td><?php echo $row2[0]; ?></td>
-    <td> <div align="right"><?php echo $row2[2]; ?></div></td>
+    <td><?php  echo $row2[0]; ?></td>
+    <td> <div align="right"><?php  echo $row2[2]; ?></div></td>
 	<td><div align="center">
-	<?php
+	<?php 
 		//para leer el monto si se encuentra guardado:::::
 	$dat_pre='';
 	$tab2= new tab_pre();
@@ -139,24 +139,24 @@ while ($row2=mysql_fetch_array($serviprod2))
 	   { $dat_pre=explode('**',$ver_tab);
 		}
 	?>
-	  <input class="texto" name="<?php echo $monto; ?>" id="<?php echo $monto; ?>" type="text" value="<?phpecho $dat_pre[1];?>" size="5" />
-	  <input name="<?php echo $idpre; ?>" id="<?php echo $idpre; ?>" type="hidden" value="<?phpecho $dat_pre[0];?>"/>
+	  <input class="texto" name="<?php  echo $monto; ?>" id="<?php  echo $monto; ?>" type="text" value="<?php echo $dat_pre[1];?>" size="5" />
+	  <input name="<?php  echo $idpre; ?>" id="<?php  echo $idpre; ?>" type="hidden" value="<?php echo $dat_pre[0];?>"/>
 	  </div></td>
   </tr>
-<?php 
+<?php  
 $indi2++; 
  }?>
  <tr>
       <td colspan="4"><div align="center"><img src="imagenes/p_guardar1.gif" width="140" height="50" style="cursor:hand" onclick="Guardar();" 
 		onmouseover="this.src='imagenes/a_guardar1.gif'"  onmouseout="this.src='imagenes/p_guardar1.gif'"/>
 		<input name="ocu_g" type="hidden" value="0"/> 
-		<input type="hidden" name="serv_totales" value="<?php echo $indi2; ?>"/>
-		<input type="hidden" name="c_emp" id="c_emp" value="<?php echo $_POST["comemp"] ?>"/>
+		<input type="hidden" name="serv_totales" value="<?php  echo $indi2; ?>"/>
+		<input type="hidden" name="c_emp" id="c_emp" value="<?php  echo $_POST["comemp"] ?>"/>
           <input type="hidden" name="ocu_e" value="0"/>        
       <img src="imagenes/p_salir1.gif" alt="salir al men&uacute; de an&aacute;lisis" width="140" height="50" style="cursor:hand" onclick="top.mainFrame.location.href='tabulador_emp.php'" 
 		onmouseover="this.src='imagenes/a_salir1.gif'"  onmouseout="this.src='imagenes/p_salir1.gif'"/></div></td>
     </tr>
- <?php}?>
+ <?php }?>
 </table>
 	     
 		 </div>

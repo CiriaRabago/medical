@@ -1,4 +1,4 @@
-<?php
+<?php 
 /* 
 CLASE USUARIO
 CCREADA POR: Gratelly Garza Morillo

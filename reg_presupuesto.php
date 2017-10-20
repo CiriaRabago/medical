@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -123,7 +123,7 @@ function ing_iva()
 }
 </script>
 <body>
-<?php if ($_POST["primera"]=='')
+<?php  if ($_POST["primera"]=='')
  {
    //// buscar el id de menu que le corresponde esta pagina
    $men= new menu('', '', '', 'reg_presupuesto.php', '','', '', '');
@@ -137,7 +137,7 @@ function ing_iva()
 <form name="form1" id="form1" method="post" action="">
 <input name="ingreso" id="ingreso" type="hidden" value="0" />
 
-<?php /////////////////////////Mostrar u ocultar Botones///////////////////////////
+<?php  /////////////////////////Mostrar u ocultar Botones///////////////////////////
   $ope1='style="display:none"'; 
   $ope4='style="display:none"';
   $ope5='style="display:none"';
@@ -201,7 +201,7 @@ $emp= new empresa_pres('','','','','','','','','','');
  ?>
 	   		<table width="520" border="0" align="center" >
 			<tr class="titulofor">
-			  <td height="30" colspan="3"><div align="center" class="titulofor">Presupuesto N: <?phpecho $ver_id?> </div></td>
+			  <td height="30" colspan="3"><div align="center" class="titulofor">Presupuesto N: <?php echo $ver_id?> </div></td>
 			</tr>
 			<tr class="texto">
 			<td height="30" colspan="5">
@@ -209,10 +209,10 @@ $emp= new empresa_pres('','','','','','','','','','');
 			<tr class="textoN">
 			<td width="160" height="22">Proveedor:</td>
 			<td class="texto" colspan="3" ><select name="comemp" class="texto" id="comemp" onchange="ing_iva();">
-			<?php  
+			<?php   
 			if ($emp->combo_emp_pres()!= false)
 			echo $emp->combo_emp_pres(); ?>
-			</select><script> document.getElementById("comemp").value="<?php echo $_POST["c_prov"];?>"; </script>
+			</select><script> document.getElementById("comemp").value="<?php  echo $_POST["c_prov"];?>"; </script>
 			<span class="Estilo1"> &nbsp;* </span></td>
 			</tr>
 			<tr>

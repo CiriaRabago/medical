@@ -1,4 +1,4 @@
-<?php 
+<?php  
 session_start();
 require('fpdf/fpdf.php');
 include "clases/clase_conexion.php";

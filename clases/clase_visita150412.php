@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE VISITA
 CREADA POR: Ing. GRATELLY GARZA MORILLO

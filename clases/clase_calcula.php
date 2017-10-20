@@ -1,4 +1,4 @@
-<?php
+<?php 
 function calcula_valor($orden,$exam,$carac)
 {
 $valor=0;

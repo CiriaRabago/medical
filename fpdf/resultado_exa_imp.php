@@ -46,7 +46,7 @@ function marca(nomb,abr)
 
 </script>
 <body>
-<?php 
+<?php  
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
 include "clases/clase_examen.php";
@@ -60,10 +60,10 @@ if($_GET['orden'])
 ?>
 
 <form name="form1" id="form1" method="post" action="resultado_exa.php">
-<?php  if($_POST['ingreso']) {?>
-    <input name="ingreso" id="ingreso" type="hidden" value="<?php echo $_POST['ingreso']; ?>" /> <?php } ?>  
-<?php  if($_POST['cedula']) {?>
-    <input name="cedula" id="cedula" type="hidden" value="<?php echo $_POST['cedula']; ?>" /> <?php } 
+<?php   if($_POST['ingreso']) {?>
+    <input name="ingreso" id="ingreso" type="hidden" value="<?php  echo $_POST['ingreso']; ?>" /> <?php  } ?>  
+<?php   if($_POST['cedula']) {?>
+    <input name="cedula" id="cedula" type="hidden" value="<?php  echo $_POST['cedula']; ?>" /> <?php  } 
 $pagina=$_SERVER['HTTP_REFERER'];
 if($pagina!='http://www.umsanluis.com/visitas_antes.php')
   $pagina='http://www.umsanluis.com/salir.php'; 
@@ -73,12 +73,12 @@ if($pagina!='http://www.umsanluis.com/visitas_antes.php')
 	?>  
 
 
-<input name="pagina" id="pagina" type="hidden" value="<?php echo $pagina; ?>" />
+<input name="pagina" id="pagina" type="hidden" value="<?php  echo $pagina; ?>" />
 <table width="600" border="0" align="center">
     <tr class="titulofor">
-      <td height="30" colspan="4"><div align="center" class="titulofor">Resultados de la Orden No. <?php echo $_POST['orden'];  ?></div></td>
+      <td height="30" colspan="4"><div align="center" class="titulofor">Resultados de la Orden No. <?php  echo $_POST['orden'];  ?></div></td>
     </tr>
-  <?php    $ord= new orden($_POST['orden'],'','','','','','');
+  <?php     $ord= new orden($_POST['orden'],'','','','','','');
 		$resu=$ord->ver_results();
 		if($resu!='')
 			echo  $resu;
@@ -88,7 +88,7 @@ if($pagina!='http://www.umsanluis.com/visitas_antes.php')
 	 
 	 <tr>
       <td height="30" colspan="4"><div align="center">
-	  <input name="orden" id="orden" type="hidden" value="<?php echo $_POST['orden']; ?>" />
+	  <input name="orden" id="orden" type="hidden" value="<?php  echo $_POST['orden']; ?>" />
 	  <img src="imagenes/p_imprimir1.gif" alt="Imprimir Resultados" width="140" height="50" 
 	  style="cursor:hand" 
 	  onclick="generar_pdf();" 
@@ -97,7 +97,7 @@ if($pagina!='http://www.umsanluis.com/visitas_antes.php')
 	  
 	  <img src="imagenes/p_salir1.gif" alt="Salir" width="140" height="50" 
 	  style="cursor:hand" 
-	  onclick="top.mainFrame.location.href='<?php echo $pagina; ?>'" 
+	  onclick="top.mainFrame.location.href='<?php  echo $pagina; ?>'" 
 	  onmouseover="this.src='imagenes/a_salir1.gif'"  
 	  onmouseout="this.src='imagenes/p_salir1.gif'"/></div></td>
     </tr>

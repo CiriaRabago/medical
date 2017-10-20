@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_caract.php";
@@ -154,7 +154,7 @@ function GuardarLV()
 <form name="form1" id="form1" method="post" action="">
 
 
-<?php 
+<?php  
 //echo 'carct'.$_GET['car'];
 $car= new caract($_GET['car'],'','','','','','','',''); 
 
@@ -201,28 +201,28 @@ if($_GET['val']==1)
 
 <table width="590" border="0" align="center">
     <tr class="titulofor">
-      <td height="30" colspan="4"><div align="center" class="titulofor">Valores de Referencia: <?php echo $_GET['nomb']; ?> </div></td>
+      <td height="30" colspan="4"><div align="center" class="titulofor">Valores de Referencia: <?php  echo $_GET['nomb']; ?> </div></td>
     </tr>
     <tr>
       <td class="etiqueta">Valor Minimo : </td>
       <td colspan="3" class="texto">
-        <input name="valmin" type="text" class="texto" id="valmin" size="10"  onkeypress='return sincomillas(event)' value="<?php echo $_POST['valmin'];?>"/>
+        <input name="valmin" type="text" class="texto" id="valmin" size="10"  onkeypress='return sincomillas(event)' value="<?php  echo $_POST['valmin'];?>"/>
         <span class="texto Estilo2"><span class="Estilo3">* </span></span>        <label>
       </label></td>
     </tr>
     <tr>
       <td class="etiqueta">Valor M&aacute;ximo:</td>
       <td colspan="3" class="texto"><label>
-      <input name="valmax" type="text" class="texto" id="valmax" size="10" onkeypress='return sincomillas(event)' value="<?php echo $_POST['valmax'];?>" />
+      <input name="valmax" type="text" class="texto" id="valmax" size="10" onkeypress='return sincomillas(event)' value="<?php  echo $_POST['valmax'];?>" />
       <span class="texto Estilo2"><span class="Estilo3">* </span></span> </label></td>
     </tr>
     <tr>
       <td width="197" class="etiqueta">Desde:</td>
       <td colspan="3" class="texto"><label>Dia 
-          <input name="diades" type="text" class="texto" id="diades" value="0" size="10" onkeypress='return soloNumeros(event)' value="<?php echo $_POST['diades'];?>" />
-Mes      </label> <input name="mesdes" type="text" class="texto" id="mesdes" value="0" size="10" onkeypress='return soloNumeros(event)' value="<?php echo $_POST['mesdes'];?>"/> 
+          <input name="diades" type="text" class="texto" id="diades" value="0" size="10" onkeypress='return soloNumeros(event)' value="<?php  echo $_POST['diades'];?>" />
+Mes      </label> <input name="mesdes" type="text" class="texto" id="mesdes" value="0" size="10" onkeypress='return soloNumeros(event)' value="<?php  echo $_POST['mesdes'];?>"/> 
 A&ntilde;o  
-      <input name="aniodes" type="text" class="texto" id="aniodes" value="0" size="10" value="<?php echo $_POST['aniodes'];?>" onkeypress='return soloNumeros(event)'/></td>
+      <input name="aniodes" type="text" class="texto" id="aniodes" value="0" size="10" value="<?php  echo $_POST['aniodes'];?>" onkeypress='return soloNumeros(event)'/></td>
     </tr>
     <tr>
       <td class="etiqueta">Hasta:</td>
@@ -238,21 +238,21 @@ A&ntilde;o
       <td class="etiqueta">Valor Referencia<span class="etiqueta">:</span></td>
       <td colspan="3" class="texto"><select name="sexo" class="texto" id="sexo" onchange="ver()">
 		  <option value="">Seleccione</option>
-          <option value="M" <?php if($_POST['sexo']=='M') echo 'selected';?>>Masculino</option>
-          <option value="F" <?php if($_POST['sexo']=='F') echo 'selected';?>>Femenino</option>
-		  <option value="A" <?php if($_POST['sexo']=='A') echo 'selected';?>>Ambos</option>
-		  <option value="O" <?php if($_POST['sexo']=='O') echo 'selected';?>>Otros</option>
+          <option value="M" <?php  if($_POST['sexo']=='M') echo 'selected';?>>Masculino</option>
+          <option value="F" <?php  if($_POST['sexo']=='F') echo 'selected';?>>Femenino</option>
+		  <option value="A" <?php  if($_POST['sexo']=='A') echo 'selected';?>>Ambos</option>
+		  <option value="O" <?php  if($_POST['sexo']=='O') echo 'selected';?>>Otros</option>
         </select> 
 		<input name="ocu_N" id="ocu_N" type="hidden" value="0"/>
 		<input type="hidden" name="ocu_e" id="ocu_e" value="0"/> 
 	  <span class="texto Estilo2"><span class="Estilo3">* </span></span>	  </td>
     </tr>
-	<?php if($_POST['sexo']=='O'){?>
+	<?php  if($_POST['sexo']=='O'){?>
 	<tr>
 	  <td class="etiqueta"><span class="etiqueta">Indique cual Otro:</span></td>
       <td colspan="3" class="texto"><input type="text" class="texto" name="otro" id="otro" />
 	</tr>
-	<?php }?>
+	<?php  }?>
     <tr>
       <td colspan="2">&nbsp;</td>
       <td><span class="Estilo3">* </span><span class="etiqueta">campos obligatorios </span></td>
@@ -275,11 +275,11 @@ A&ntilde;o
   </table>
   
   <br>
- <?php $verVR=$car->buscar_valor_ref();
+ <?php  $verVR=$car->buscar_valor_ref();
     echo $verVR; ?>
   </div>
   
-<?php if($_GET['val']==2)
+<?php  if($_GET['val']==2)
    echo  '<div id="valolis" style="display:block ">';
    else
    echo '<div id="valolis" style="display:none ">'; 
@@ -349,7 +349,7 @@ A&ntilde;o
   </table>
   
   
-   <?php $verVL=$car->buscar_valor_lista();
+   <?php  $verVL=$car->buscar_valor_lista();
     echo $verVL; ?>
   
   

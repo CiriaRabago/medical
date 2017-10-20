@@ -1,4 +1,4 @@
-<?php
+<?php 
 //=======================================================================
 // File:        JPGRAPH_THEME.INC.PHP
 // Description: Class to define graph theme

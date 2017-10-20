@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_medico.php";
@@ -18,7 +18,7 @@ include "clases/clase_diagnostico.php";
 <title>Unidad Medica Churchil</title>
 </head>
 <body>
-<?php 
+<?php  
     $mos='style="display:none"';
 ?>
 <form name="form1" method="post" action="">
@@ -27,7 +27,7 @@ include "clases/clase_diagnostico.php";
       		<td colspan="2"><div align="center">Estadistica de Diagnostico </div></td>
     	</tr>
   	</table>
-	<?php	
+	<?php 	
 	echo '<table width="660" border="0" align="center">
              <tr class="etiqueta_grande">
                 <td colspan="7"><div align="center">REPORTE DE DIAGNOSTICOS</div></td>

@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*=======================================================================
 // File:        JPGRAPH_MESHINTERPOLATE.INC.PHP
 // Description: Utility class to do mesh linear interpolation of a matrix

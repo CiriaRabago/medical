@@ -1,4 +1,4 @@
-<?php
+<?php 
 //=======================================================================
 // File:        GD_IMAGE.INC.PHP
 // Description: PHP Graph Plotting library. Low level image drawing routines

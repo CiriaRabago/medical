@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -258,11 +258,11 @@ function ver2()
 					
 					</td>
                     <td colspan="2">
-					<?php  $ser= new servicio('','','','','','','','','','','',''); ?> 
+					<?php   $ser= new servicio('','','','','','','','','','','',''); ?> 
 						<select name="servicio" class="texto" id="servicio" >
 						  <option value="0" selected="selected" >SELECCIONE --></option>
 						  <option value="" >TODOS</option>
-						  <?php  if ($ser->combo_servicios()!= false)
+						  <?php   if ($ser->combo_servicios()!= false)
 								echo $ser->combo_servicios(); ?>
 					  </select>
 					
@@ -287,7 +287,7 @@ function ver2()
                     <td colspan="4"><select name="empresa" class="texto" id="empresa">
 					<option value="0" selected="selected" >SELECCIONE --></option>
 						  <option value="" >TODOS</option>
-                      <?php  $emp= new empresa('','','','','','','','','','');
+                      <?php   $emp= new empresa('','','','','','','','','','');
 						$cemp=$emp->combo_emp('');
 						if($cemp!=false) echo $cemp;
 						?>
@@ -316,7 +316,7 @@ function ver2()
 				<input name="orden" id="orden" type="hidden" value="0" /></div></td>
 			</tr>
 		  </table>
-	<?php   
+	<?php    
 	
 	if($_POST['ingreso']==1)
  	{
@@ -335,7 +335,7 @@ function ver2()
 	?> 
 		  <table width="890">
 		  	<tr class="titulofor">
-			  <td width="890" colspan="10" align="center"><?php echo $titulo; ?></td>
+			  <td width="890" colspan="10" align="center"><?php  echo $titulo; ?></td>
 			</tr>	
 			<tr class="titulorep">
 			  <td width="20">N°</td>
@@ -349,7 +349,7 @@ function ver2()
 			  <td colspan="2" width="40">Accion</td>
 			</tr>	   
 	   
-<?php		   while ($row=mysql_fetch_array($reg))
+<?php 		   while ($row=mysql_fetch_array($reg))
 		   { 
 			  if ($cont%2!=0) $color='bgcolor="#E3E3E6"'; else $color='';
 			  $cont++;
@@ -364,35 +364,35 @@ function ver2()
 				case 'I': $sta='INCOMPLETO'; break;
 				case 'E': $sta='ELIMINADO'; break; }
 		   ?>
-				<tr class="texto" <?php echo $color; ?>>
-				  <td width="20"><?php echo $cont; ?></td>
-				  <td width="70"><?php echo $row[5]; ?></td>
-				  <td width="70"><?php echo $row[2]; ?></td>
-				  <td width="150"><?php echo $row[3]; ?></td>
-				  <td width="150"><?php echo $empresa; ?></td>
-				  <td width="150"><?php echo $row[11]; ?></td>
-				  <td width="140"><?php echo $row[10]; ?></td>
-				  <td width="90"><?php echo $sta; ?></td>
-				  <td width="20" align="center"><a href="visita_especifica.php?visi=<?php echo $row[0]; ?>&ipaci=<?php echo $row[1]; ?>&fecha=<?php echo $row[5]; ?>&emp=<?php echo $empresa; ?>&esta=<?php echo $sta; ?>&motivo=<?php echo $row[13]; ?>&cpaci=<?php echo $row[2]; ?>&npaci=<?php echo $row[3]; ?>" target="_blank"><img src="imagenes/search.gif" title="Ver" alt="Ver" border="0" /></a></td>
-			  	  <td width="20" align="center"><a href="visita_modif.php?visi=<?php echo $row[0]; ?>&idpac=<?php echo $row[1]; ?>&npac=<?php echo $row[3]; ?>&idemp=<?php echo $row2[0]; ?>"><img src="imagenes/edit.gif" title="Modificar" alt="Modificar" border="0"/></a></td>
+				<tr class="texto" <?php  echo $color; ?>>
+				  <td width="20"><?php  echo $cont; ?></td>
+				  <td width="70"><?php  echo $row[5]; ?></td>
+				  <td width="70"><?php  echo $row[2]; ?></td>
+				  <td width="150"><?php  echo $row[3]; ?></td>
+				  <td width="150"><?php  echo $empresa; ?></td>
+				  <td width="150"><?php  echo $row[11]; ?></td>
+				  <td width="140"><?php  echo $row[10]; ?></td>
+				  <td width="90"><?php  echo $sta; ?></td>
+				  <td width="20" align="center"><a href="visita_especifica.php?visi=<?php  echo $row[0]; ?>&ipaci=<?php  echo $row[1]; ?>&fecha=<?php  echo $row[5]; ?>&emp=<?php  echo $empresa; ?>&esta=<?php  echo $sta; ?>&motivo=<?php  echo $row[13]; ?>&cpaci=<?php  echo $row[2]; ?>&npaci=<?php  echo $row[3]; ?>" target="_blank"><img src="imagenes/search.gif" title="Ver" alt="Ver" border="0" /></a></td>
+			  	  <td width="20" align="center"><a href="visita_modif.php?visi=<?php  echo $row[0]; ?>&idpac=<?php  echo $row[1]; ?>&npac=<?php  echo $row[3]; ?>&idemp=<?php  echo $row2[0]; ?>"><img src="imagenes/edit.gif" title="Modificar" alt="Modificar" border="0"/></a></td>
 <!-- 			  	  <td width="20" align="center"><img src="imagenes/delete.gif" title="Inactivar" alt="Inactivar" border="0"/></td>
  -->				</tr>
 
-	<?php		}  ?>
+	<?php 		}  ?>
 				<tr >
 				  <td colspan="10" align="center" class="td-btn">
-				  <a href="#" class="button-print" alt="Imprimir"  onclick="irpdf('listado_pac_pdf.php?fi=<?php echo $_POST['ocu_fi'];?>&ff=<?php echo $_POST['ocu_ff'];?>&serv=<?php echo $_POST['servicio'];?>&ced=<?php echo $_POST['cedula'];?>&sta=<?php echo $_POST['estado'];?>&empr=<?php echo $_POST['empresa'];?>')" > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
+				  <a href="#" class="button-print" alt="Imprimir"  onclick="irpdf('listado_pac_pdf.php?fi=<?php  echo $_POST['ocu_fi'];?>&ff=<?php  echo $_POST['ocu_ff'];?>&serv=<?php  echo $_POST['servicio'];?>&ced=<?php  echo $_POST['cedula'];?>&sta=<?php  echo $_POST['estado'];?>&empr=<?php  echo $_POST['empresa'];?>')" > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
 
 				 
-				<input name="consulta" id="consulta" type="hidden" value="<?php echo $row; ?>" />
-				<input name="titu" id="titu" type="hidden" value="<?php echo $titulo; ?>" />
+				<input name="consulta" id="consulta" type="hidden" value="<?php  echo $row; ?>" />
+				<input name="titu" id="titu" type="hidden" value="<?php  echo $titulo; ?>" />
 				</td>
 				</tr>
 	    </table>
-	<?php	}
+	<?php 	}
 		else
 		{ echo '<br><p class="textoN" align="center">No se encontró ninguna coincidencia</p>'; }?>
-<?php	} ?>
+<?php 	} ?>
 
 
 </form>

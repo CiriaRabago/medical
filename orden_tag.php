@@ -1,4 +1,4 @@
-<?php   
+<?php    
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php"; 
 include "clases/clase_examen.php";
@@ -15,7 +15,7 @@ include "clases/clase_empleado.php";
 <form action="" name="form1" method="get">
 <input type="hidden" name="orden" id="orden" />
 <input type="hidden" name="ced" id="ced" />
-<?php
+<?php 
 if($_POST['orden'])
 {
  	$idorden=$_POST['orden'];

@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_servicio.php";
@@ -93,13 +93,13 @@ function elimproducto(pa)
 <form name="form1" id="form1" method="post" action="servicios_modif.php">
 <input name="codauxser" id="codauxser" type="hidden" value="0" />
 
-<?php 
+<?php  
 $codser=$_POST["codauxser"];
 $codacc=$_POST["codaccion"];
 ?>
-<input name="codauxser" id="codauxser" type="hidden" value="<?php echo $codser; ?>" />
-<input name="codaccion" id="codaccion" type="hidden" value="<?php echo $codacc; ?>" />
-<?php
+<input name="codauxser" id="codauxser" type="hidden" value="<?php  echo $codser; ?>" />
+<input name="codaccion" id="codaccion" type="hidden" value="<?php  echo $codacc; ?>" />
+<?php 
 // Guardar servicio modificado
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
   { 
@@ -173,21 +173,21 @@ $codacc=$_POST["codaccion"];
     <tr>
       <td class="etiqueta">Nombre:</td>
       <td colspan="3" class="texto Estilo2" z><label>
-	  <input name="ocu_C" id="ocu_C" type="hidden" value="<?php if($codacc=='M') echo $datosser[0]; ?>" />
-        <input name="nomb" type="text" class="texto" id="nomb" value="<?php if($codacc=='M') echo $datosser[1]; ?>" size="50" onkeypress='return sincomillas(event)' />
+	  <input name="ocu_C" id="ocu_C" type="hidden" value="<?php  if($codacc=='M') echo $datosser[0]; ?>" />
+        <input name="nomb" type="text" class="texto" id="nomb" value="<?php  if($codacc=='M') echo $datosser[1]; ?>" size="50" onkeypress='return sincomillas(event)' />
         <span class="Estilo3" >*</span> </label></td>
     </tr>
     <tr>
       <td class="etiqueta">Descripci&oacute;n:</td>
       <td colspan="3"><label>
-        <input name="descrip" type="text" class="texto" id="descrip" value="<?php if($codacc=='M') echo $datosser[2]; ?>" size="50" onkeypress='return sincomillas(event)'/>
+        <input name="descrip" type="text" class="texto" id="descrip" value="<?php  if($codacc=='M') echo $datosser[2]; ?>" size="50" onkeypress='return sincomillas(event)'/>
 		<input name="ocu_N" type="hidden" value="0" /> 
       </label></td>
     </tr>
     <tr>
       <td class="etiqueta">Precio:</td>
       <td colspan="3"><label class="texto">
-          <input name="pre" type="text" class="texto" id="pre" value="<?php if($codacc=='M') echo $datosser[3]; ?>" />      
+          <input name="pre" type="text" class="texto" id="pre" value="<?php  if($codacc=='M') echo $datosser[3]; ?>" />      
         <span class="Estilo3">* </span>      
       <input name="ocu_pre" type="hidden" id="ocu_pre" value="0" />
       </label></td>
@@ -197,8 +197,8 @@ $codacc=$_POST["codaccion"];
       <td colspan="3"><span class="texto">
         <select name="agenda" class="texto" id="agenda">
           <option value="">Seleccione---&gt;</option>
-          <option value="S" <?php if($codacc=='M' && $datosser[4]=='S') echo 'selected'; ?>>Si</option>
-          <option value="N" <?php if($codacc=='M' && $datosser[4]=='N') echo 'selected'; ?>>No</option>
+          <option value="S" <?php  if($codacc=='M' && $datosser[4]=='S') echo 'selected'; ?>>Si</option>
+          <option value="N" <?php  if($codacc=='M' && $datosser[4]=='N') echo 'selected'; ?>>No</option>
         </select>
         <span class="Estilo3">*</span></span></td>
     </tr>
@@ -207,8 +207,8 @@ $codacc=$_POST["codaccion"];
       <td colspan="3"><span class="texto">
         <select name="vigilancia" class="texto" id="vigilancia">
           <option value="">Seleccione---&gt;</option>
-          <option value="S" <?php if($codacc=='M' && $datosser[5]=='S') echo 'selected'; ?>>Si</option>
-          <option value="N" <?php if($codacc=='M' && $datosser[5]=='N') echo 'selected'; ?>>No</option>
+          <option value="S" <?php  if($codacc=='M' && $datosser[5]=='S') echo 'selected'; ?>>Si</option>
+          <option value="N" <?php  if($codacc=='M' && $datosser[5]=='N') echo 'selected'; ?>>No</option>
         </select>
         <span class="Estilo3">*</span></span></td>
     </tr>
@@ -220,7 +220,7 @@ $codacc=$_POST["codaccion"];
 		  <input type="hidden" name="ocu_prodeli" id="ocu_prodeli" value="0"/>     
       <img src="imagenes/p_salir1.gif" alt="salir al men&uacute; de an&aacute;lisis" width="140" height="50" style="cursor:hand" onclick="top.mainFrame.location.href='servicios_lista.php'" 
 		onmouseover="this.src='imagenes/a_salir1.gif'"  onmouseout="this.src='imagenes/p_salir1.gif'"/></div></td>
-    <?php	  		
+    <?php 	  		
 	$serviprod=$ser->consul_prod_serv(); 
 	$n=mysql_num_rows($serviprod); 
 	if($n>0)
@@ -239,11 +239,11 @@ $codacc=$_POST["codaccion"];
 			<td>Orden </td>
 			</tr>	
 			
-			<?php	  		
+			<?php 	  		
 			$indi=0;
 			?>
-			<input name="cantiocu" id="cantiocu" type="hidden" value="<?php echo $n;?>" />
-			<?php
+			<input name="cantiocu" id="cantiocu" type="hidden" value="<?php  echo $n;?>" />
+			<?php 
 			while ($row=mysql_fetch_array($serviprod))
 			{ 
 			  $codigo='codcar'.$indi;
@@ -252,19 +252,19 @@ $codacc=$_POST["codaccion"];
 			  
 			  if ($indi%2!=0) $color='bgcolor="#E3E3E6"'; else $color='';
 			?>
-			  <tr class="texto" <?php echo $color; ?>  >
+			  <tr class="texto" <?php  echo $color; ?>  >
 				<td width="20">
-				<input name="<?php echo $codigo;?>" id="<?php echo $codigo;?>" type="hidden" value="<?php echo $row[4]; ?>" />
-				<input name="<?php echo $codigoch;?>" id="<?php echo $codigoch;?>"  type="checkbox" value="<?php echo $row[4]; ?>" 
-				             onclick="document.form1.<?php echo $orden; ?>.disabled=!document.form1.<?php echo $orden; ?>.disabled" /></td>
-				<td><?php echo $row[0]; ?></td>
-				<td> <div align="right"><?php echo $row[1]; ?></div></td>
+				<input name="<?php  echo $codigo;?>" id="<?php  echo $codigo;?>" type="hidden" value="<?php  echo $row[4]; ?>" />
+				<input name="<?php  echo $codigoch;?>" id="<?php  echo $codigoch;?>"  type="checkbox" value="<?php  echo $row[4]; ?>" 
+				             onclick="document.form1.<?php  echo $orden; ?>.disabled=!document.form1.<?php  echo $orden; ?>.disabled" /></td>
+				<td><?php  echo $row[0]; ?></td>
+				<td> <div align="right"><?php  echo $row[1]; ?></div></td>
 				<td>
 			      <div align="right">
-			        <input class="texto" name="<?php echo $orden; ?>" id="<?php echo $orden; ?>" type="text" value="<?php echo $row[2]; ?>" size="5" disabled />
-			        <img src="imagenes/delete.gif" style="cursor:hand" alt="Eliminar Servicio Asociado" title="Eliminar Servicio Asociado" onclick="elimproducto('<?php echo $row[4]; ?>');" />
+			        <input class="texto" name="<?php  echo $orden; ?>" id="<?php  echo $orden; ?>" type="text" value="<?php  echo $row[2]; ?>" size="5" disabled />
+			        <img src="imagenes/delete.gif" style="cursor:hand" alt="Eliminar Servicio Asociado" title="Eliminar Servicio Asociado" onclick="elimproducto('<?php  echo $row[4]; ?>');" />
 		          </div></td></tr>
-			<?php 
+			<?php  
 			$indi++; 
 			 }  ?>
 			</table>
@@ -272,7 +272,7 @@ $codacc=$_POST["codaccion"];
 		 </div>
 	  </td>
 	 </tr>
-    <?php } ?>
+    <?php  } ?>
 	<tr class="titulofor">
       <td height="30" colspan="4"><div align="center" class="titulofor">Servicios Por Asociar</div></td>
     </tr>
@@ -286,13 +286,13 @@ $codacc=$_POST["codaccion"];
 			<td>Orden </td>
 			</tr>	
 			
-		<?php	  		
+		<?php 	  		
 		$serviprod2=$ser->consul_prod_serv_no(); 
 		$n2=mysql_num_rows($serviprod2);
 		$indi2=0;
 		?>
-		<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php echo $n2;?>" />
-		<?php
+		<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php  echo $n2;?>" />
+		<?php 
 		while ($row2=mysql_fetch_array($serviprod2))
 		{ 
 		  $nocodigo='nocodcar'.$indi2;
@@ -301,18 +301,18 @@ $codacc=$_POST["codaccion"];
 		  
 		  if ($indi2%2!=0) $color2='bgcolor="#E3E3E6"'; else $color2='';
 		?>
-		  <tr class="texto" <?php echo $color2; ?>  >
+		  <tr class="texto" <?php  echo $color2; ?>  >
 			<td width="20">
-			<input name="<?php echo $nocodigo;?>" id="<?php echo $nocodigo;?>" type="hidden" value="<?php echo $row2[2]; ?>" />
-			<input name="<?php echo $nocodigoch;?>" id="<?php echo $nocodigoch;?>"  type="checkbox" value="<?php echo $row2[2]; ?>" 
-			onclick="document.form1.<?php echo $noorden; ?>.disabled=!document.form1.<?php echo $noorden; ?>.disabled" /></td>
-			<td><?php echo $row2[0]; ?></td>
-			<td> <div align="right"><?php echo $row2[1]; ?></div></td>
+			<input name="<?php  echo $nocodigo;?>" id="<?php  echo $nocodigo;?>" type="hidden" value="<?php  echo $row2[2]; ?>" />
+			<input name="<?php  echo $nocodigoch;?>" id="<?php  echo $nocodigoch;?>"  type="checkbox" value="<?php  echo $row2[2]; ?>" 
+			onclick="document.form1.<?php  echo $noorden; ?>.disabled=!document.form1.<?php  echo $noorden; ?>.disabled" /></td>
+			<td><?php  echo $row2[0]; ?></td>
+			<td> <div align="right"><?php  echo $row2[1]; ?></div></td>
 			<td>
 			    <div align="right">
-			      <input class="texto" name="<?php echo $noorden; ?>" id="<?php echo $noorden; ?>" type="text" value="0" size="5" disabled />
+			      <input class="texto" name="<?php  echo $noorden; ?>" id="<?php  echo $noorden; ?>" type="text" value="0" size="5" disabled />
 		        &nbsp;&nbsp;&nbsp;</div></td></tr>
-		<?php 
+		<?php  
 		$indi2++; 
 		 }  ?>
 		</table>

@@ -1,4 +1,4 @@
-<?php
+<?php 
 //We've included ../Includes/FusionCharts.php, which contains functions
 //to help us easily embed the charts.
 include("../Includes/FusionCharts.php");
@@ -22,7 +22,7 @@ include("../Includes/FusionCharts.php");
 <CENTER>
 <h2><a href="http://www.fusioncharts.com" target="_blank">FusionCharts Free</a> Examples</h2>
 <h4>Basic example using pre-built Data.xml</h4>
-<?php
+<?php 
 	
 	//This page demonstrates the ease of generating charts using FusionCharts.
 	//For this chart, we've used a pre-defined Data.xml (contained in /Data/ folder)

@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_servicio.php";
@@ -72,7 +72,7 @@ function ver_ser(codi)
     <tr>
 	 <tr>
       <td><div id="ls">
-	  <?php 
+	  <?php  
 	  
 	    $ser= new servicio(0,'','','','','','',0);
    		$ver=$ser->ver_servicios();

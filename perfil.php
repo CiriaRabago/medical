@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php";
@@ -86,7 +86,7 @@ function ver_modif(cadena)
 <body>
 <p>&nbsp;</p>
 <form name="form1" id="form1" method="post" action="perfil.php">
-<?php 
+<?php  
  $per= new perfil($_POST["ocu_N"],$_POST["nomb"],$_POST["descrip"],$_POST["pre"]);
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
   { 
@@ -183,7 +183,7 @@ function ver_modif(cadena)
 	     </td>
     </tr>
   </table>
-  <?php 
+  <?php  
    $ver=$per->ver_perfil();
         if ($ver==false)
 		{

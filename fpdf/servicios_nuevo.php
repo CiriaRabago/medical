@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_servicio.php";
@@ -133,7 +133,7 @@ padre.removeChild(el);
 <body>
 <p>&nbsp;</p>
 <form name="form1" id="form1" method="post" action="servicios_nuevo.php">
-<?php 
+<?php  
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
   { 
     $ser= new servicio(0,$_POST["nomb"],$_POST["descrip"],'A',$_POST["agenda"],$_POST["vigilancia"],'NULL',$_POST["pre"]);
@@ -234,13 +234,13 @@ padre.removeChild(el);
 	<td>Orden </td>
     </tr>	
 	
-<?php	  		
+<?php 	  		
 $serviprod2=$ser->consul_prod_serv_no(); 
 $n2=mysql_num_rows($serviprod2);
 $indi2=0;
 ?>
-<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php echo $n2;?>" />
-<?php
+<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php  echo $n2;?>" />
+<?php 
 while ($row2=mysql_fetch_array($serviprod2))
 { 
   $nocodigo='nocodcar'.$indi2;
@@ -249,17 +249,17 @@ while ($row2=mysql_fetch_array($serviprod2))
   
   if ($indi2%2!=0) $color='bgcolor="#E3E3E6"'; else $color='';
 ?>
-  <tr class="texto" <?php echo $color; ?>  >
+  <tr class="texto" <?php  echo $color; ?>  >
     <td width="20">
-	<input name="<?php echo $nocodigo;?>" id="<?php echo $nocodigo;?>" type="hidden" value="<?php echo $row2[2]; ?>" />
-	<input name="<?php echo $nocodigoch;?>" id="<?php echo $nocodigoch;?>"  type="checkbox" value="<?php echo $row2[2]; ?>" /></td>
-    <td><?php echo $row2[0]; ?></td>
-    <td> <div align="right"><?php echo $row2[1]; ?></div></td>
+	<input name="<?php  echo $nocodigo;?>" id="<?php  echo $nocodigo;?>" type="hidden" value="<?php  echo $row2[2]; ?>" />
+	<input name="<?php  echo $nocodigoch;?>" id="<?php  echo $nocodigoch;?>"  type="checkbox" value="<?php  echo $row2[2]; ?>" /></td>
+    <td><?php  echo $row2[0]; ?></td>
+    <td> <div align="right"><?php  echo $row2[1]; ?></div></td>
 	<td><div align="center">
-	  <input class="texto" name="<?php echo $orden; ?>" id="<?php echo $orden; ?>" type="text" value="0" size="5" />
+	  <input class="texto" name="<?php  echo $orden; ?>" id="<?php  echo $orden; ?>" type="text" value="0" size="5" />
 	  </div></td>
   </tr>
-<?php 
+<?php  
 $indi2++; 
  }  ?>
 </table>

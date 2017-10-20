@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -138,7 +138,7 @@ function inac_vis(visit)
 
 </script>
 <body>
-<?php if ($_POST["primera"]=='')
+<?php  if ($_POST["primera"]=='')
  {
    //// buscar el id de menu que le corresponde esta pagina
    $men= new menu('', '', '', 'listado_pac.php', '','', '', '');
@@ -154,7 +154,7 @@ function inac_vis(visit)
 <input name="nemp" id="nemp" type="hidden" value="" />
 <input name="nmed" id="nmed" type="hidden" value="" />
 <input name="nsta" id="nsta" type="hidden" value="" />
-<?php /////////////////////////Mostrar u ocultar Botones///////////////////////////
+<?php  /////////////////////////Mostrar u ocultar Botones///////////////////////////
   $ope1='style="display:none"'; 
   $ope4='style="display:none"';
   $ope5='style="display:none"';
@@ -206,7 +206,7 @@ function inac_vis(visit)
                   </tr>
                   <tr>
                     <td>
-					<?php
+					<?php 
 					  if($_POST['fna1']=="") $_POST['fna1']=substr(date('d-m-Y'),0,2);
 					  if($_POST['fna2']=="") $_POST['fna2']=substr(date('d-m-Y'),3,2);
 					  if($_POST['fna3']=="") $_POST['fna3']=substr(date('d-m-Y'),6,4);
@@ -216,56 +216,56 @@ function inac_vis(visit)
 					  ?>
 					<select name="fna1" class="texto" id="fna1">
           <option value="">--</option>
-		      <option value="01" <?php if($_POST['fna1']=="01")echo "selected='selected'";?>>01</option>
-          <option value="02" <?php if($_POST['fna1']=="02")echo "selected='selected'";?>>02</option>
-          <option value="03" <?php if($_POST['fna1']=="03")echo "selected='selected'";?>>03</option>
-          <option value="04" <?php if($_POST['fna1']=="04")echo "selected='selected'";?>>04</option>
-          <option value="05" <?php if($_POST['fna1']=="05")echo "selected='selected'";?>>05</option>
-          <option value="06" <?php if($_POST['fna1']=="06")echo "selected='selected'";?>>06</option>
-          <option value="07" <?php if($_POST['fna1']=="07")echo "selected='selected'";?>>07</option>
-          <option value="08" <?php if($_POST['fna1']=="08")echo "selected='selected'";?>>08</option>
-          <option value="09" <?php if($_POST['fna1']=="09")echo "selected='selected'";?>>09</option>
-          <option value="10" <?php if($_POST['fna1']=="10")echo "selected='selected'";?>>10</option>
-          <option value="11" <?php if($_POST['fna1']=="11")echo "selected='selected'";?>>11</option>
-          <option value="12" <?php if($_POST['fna1']=="12")echo "selected='selected'";?>>12</option>
-          <option value="13" <?php if($_POST['fna1']=="13")echo "selected='selected'";?>>13</option>
-          <option value="14" <?php if($_POST['fna1']=="14")echo "selected='selected'";?>>14</option>
-          <option value="15" <?php if($_POST['fna1']=="15")echo "selected='selected'";?>>15</option>
-          <option value="16" <?php if($_POST['fna1']=="16")echo "selected='selected'";?>>16</option>
-          <option value="17" <?php if($_POST['fna1']=="17")echo "selected='selected'";?>>17</option>
-          <option value="18" <?php if($_POST['fna1']=="18")echo "selected='selected'";?>>18</option>
-          <option value="19" <?php if($_POST['fna1']=="19")echo "selected='selected'";?>>19</option>
-          <option value="20" <?php if($_POST['fna1']=="20")echo "selected='selected'";?>>20</option>
-          <option value="21" <?php if($_POST['fna1']=="21")echo "selected='selected'";?>>21</option>
-          <option value="22" <?php if($_POST['fna1']=="22")echo "selected='selected'";?>>22</option>
-          <option value="23" <?php if($_POST['fna1']=="23")echo "selected='selected'";?>>23</option>
-          <option value="24" <?php if($_POST['fna1']=="24")echo "selected='selected'";?>>24</option>
-          <option value="25" <?php if($_POST['fna1']=="25")echo "selected='selected'";?>>25</option>
-          <option value="26" <?php if($_POST['fna1']=="26")echo "selected='selected'";?>>26</option>
-          <option value="27" <?php if($_POST['fna1']=="27")echo "selected='selected'";?>>27</option>
-          <option value="28" <?php if($_POST['fna1']=="28")echo "selected='selected'";?>>28</option>
-          <option value="29" <?php if($_POST['fna1']=="29")echo "selected='selected'";?>>29</option>
-          <option value="30" <?php if($_POST['fna1']=="30")echo "selected='selected'";?>>30</option>
-          <option value="31" <?php if($_POST['fna1']=="31")echo "selected='selected'";?>>31</option>
+		      <option value="01" <?php  if($_POST['fna1']=="01")echo "selected='selected'";?>>01</option>
+          <option value="02" <?php  if($_POST['fna1']=="02")echo "selected='selected'";?>>02</option>
+          <option value="03" <?php  if($_POST['fna1']=="03")echo "selected='selected'";?>>03</option>
+          <option value="04" <?php  if($_POST['fna1']=="04")echo "selected='selected'";?>>04</option>
+          <option value="05" <?php  if($_POST['fna1']=="05")echo "selected='selected'";?>>05</option>
+          <option value="06" <?php  if($_POST['fna1']=="06")echo "selected='selected'";?>>06</option>
+          <option value="07" <?php  if($_POST['fna1']=="07")echo "selected='selected'";?>>07</option>
+          <option value="08" <?php  if($_POST['fna1']=="08")echo "selected='selected'";?>>08</option>
+          <option value="09" <?php  if($_POST['fna1']=="09")echo "selected='selected'";?>>09</option>
+          <option value="10" <?php  if($_POST['fna1']=="10")echo "selected='selected'";?>>10</option>
+          <option value="11" <?php  if($_POST['fna1']=="11")echo "selected='selected'";?>>11</option>
+          <option value="12" <?php  if($_POST['fna1']=="12")echo "selected='selected'";?>>12</option>
+          <option value="13" <?php  if($_POST['fna1']=="13")echo "selected='selected'";?>>13</option>
+          <option value="14" <?php  if($_POST['fna1']=="14")echo "selected='selected'";?>>14</option>
+          <option value="15" <?php  if($_POST['fna1']=="15")echo "selected='selected'";?>>15</option>
+          <option value="16" <?php  if($_POST['fna1']=="16")echo "selected='selected'";?>>16</option>
+          <option value="17" <?php  if($_POST['fna1']=="17")echo "selected='selected'";?>>17</option>
+          <option value="18" <?php  if($_POST['fna1']=="18")echo "selected='selected'";?>>18</option>
+          <option value="19" <?php  if($_POST['fna1']=="19")echo "selected='selected'";?>>19</option>
+          <option value="20" <?php  if($_POST['fna1']=="20")echo "selected='selected'";?>>20</option>
+          <option value="21" <?php  if($_POST['fna1']=="21")echo "selected='selected'";?>>21</option>
+          <option value="22" <?php  if($_POST['fna1']=="22")echo "selected='selected'";?>>22</option>
+          <option value="23" <?php  if($_POST['fna1']=="23")echo "selected='selected'";?>>23</option>
+          <option value="24" <?php  if($_POST['fna1']=="24")echo "selected='selected'";?>>24</option>
+          <option value="25" <?php  if($_POST['fna1']=="25")echo "selected='selected'";?>>25</option>
+          <option value="26" <?php  if($_POST['fna1']=="26")echo "selected='selected'";?>>26</option>
+          <option value="27" <?php  if($_POST['fna1']=="27")echo "selected='selected'";?>>27</option>
+          <option value="28" <?php  if($_POST['fna1']=="28")echo "selected='selected'";?>>28</option>
+          <option value="29" <?php  if($_POST['fna1']=="29")echo "selected='selected'";?>>29</option>
+          <option value="30" <?php  if($_POST['fna1']=="30")echo "selected='selected'";?>>30</option>
+          <option value="31" <?php  if($_POST['fna1']=="31")echo "selected='selected'";?>>31</option>
         </select>
 		/
 <select name="fna2" class="texto" id="fna2">
   <option value="">--</option>
-  <option value="01" <?php if($_POST['fna2']=="01")echo "selected='selected'";?>>01</option>
-  <option value="02" <?php if($_POST['fna2']=="02")echo "selected='selected'";?>>02</option>
-  <option value="03" <?php if($_POST['fna2']=="03")echo "selected='selected'";?>>03</option>
-  <option value="04" <?php if($_POST['fna2']=="04")echo "selected='selected'";?>>04</option>
-  <option value="05" <?php if($_POST['fna2']=="05")echo "selected='selected'";?>>05</option>
-  <option value="06" <?php if($_POST['fna2']=="06")echo "selected='selected'";?>>06</option>
-  <option value="07" <?php if($_POST['fna2']=="07")echo "selected='selected'";?>>07</option>
-  <option value="08" <?php if($_POST['fna2']=="08")echo "selected='selected'";?>>08</option>
-  <option value="09" <?php if($_POST['fna2']=="09")echo "selected='selected'";?>>09</option>
-  <option value="10" <?php if($_POST['fna2']=="10")echo "selected='selected'";?>>10</option>
-  <option value="11" <?php if($_POST['fna2']=="11")echo "selected='selected'";?>>11</option>
-  <option value="12" <?php if($_POST['fna2']=="12")echo "selected='selected'";?>>12</option>
+  <option value="01" <?php  if($_POST['fna2']=="01")echo "selected='selected'";?>>01</option>
+  <option value="02" <?php  if($_POST['fna2']=="02")echo "selected='selected'";?>>02</option>
+  <option value="03" <?php  if($_POST['fna2']=="03")echo "selected='selected'";?>>03</option>
+  <option value="04" <?php  if($_POST['fna2']=="04")echo "selected='selected'";?>>04</option>
+  <option value="05" <?php  if($_POST['fna2']=="05")echo "selected='selected'";?>>05</option>
+  <option value="06" <?php  if($_POST['fna2']=="06")echo "selected='selected'";?>>06</option>
+  <option value="07" <?php  if($_POST['fna2']=="07")echo "selected='selected'";?>>07</option>
+  <option value="08" <?php  if($_POST['fna2']=="08")echo "selected='selected'";?>>08</option>
+  <option value="09" <?php  if($_POST['fna2']=="09")echo "selected='selected'";?>>09</option>
+  <option value="10" <?php  if($_POST['fna2']=="10")echo "selected='selected'";?>>10</option>
+  <option value="11" <?php  if($_POST['fna2']=="11")echo "selected='selected'";?>>11</option>
+  <option value="12" <?php  if($_POST['fna2']=="12")echo "selected='selected'";?>>12</option>
 </select>
 /
-<input name="fna3" type="text" class="texto" id="fna3"  value="<?php echo $_POST['fna3'];?>" onChange="ver1()" onkeypress='return soloNumeros(event)' size="4" maxlength="4">
+<input name="fna3" type="text" class="texto" id="fna3"  value="<?php  echo $_POST['fna3'];?>" onChange="ver1()" onkeypress='return soloNumeros(event)' size="4" maxlength="4">
 
 <span class="Estilo2"><strong>d&iacute;a/mes/a&ntilde;o </strong></span>
 <input name="ocu_fi" id="ocu_fi" type="hidden" value="" />
@@ -273,56 +273,56 @@ function inac_vis(visit)
                     <td>
 					<select name="fnf1" class="texto" id="fnf1">
           <option value="">--</option>
-		      <option value="01" <?php if($_POST['fnf1']=="01")echo "selected='selected'";?>>01</option>
-          <option value="02" <?php if($_POST['fnf1']=="02")echo "selected='selected'";?>>02</option>
-          <option value="03" <?php if($_POST['fnf1']=="03")echo "selected='selected'";?>>03</option>
-          <option value="04" <?php if($_POST['fnf1']=="04")echo "selected='selected'";?>>04</option>
-          <option value="05" <?php if($_POST['fnf1']=="05")echo "selected='selected'";?>>05</option>
-          <option value="06" <?php if($_POST['fnf1']=="06")echo "selected='selected'";?>>06</option>
-          <option value="07" <?php if($_POST['fnf1']=="07")echo "selected='selected'";?>>07</option>
-          <option value="08" <?php if($_POST['fnf1']=="08")echo "selected='selected'";?>>08</option>
-          <option value="09" <?php if($_POST['fnf1']=="09")echo "selected='selected'";?>>09</option>
-          <option value="10" <?php if($_POST['fnf1']=="10")echo "selected='selected'";?>>10</option>
-          <option value="11" <?php if($_POST['fnf1']=="11")echo "selected='selected'";?>>11</option>
-          <option value="12" <?php if($_POST['fnf1']=="12")echo "selected='selected'";?>>12</option>
-          <option value="13" <?php if($_POST['fnf1']=="13")echo "selected='selected'";?>>13</option>
-          <option value="14" <?php if($_POST['fnf1']=="14")echo "selected='selected'";?>>14</option>
-          <option value="15" <?php if($_POST['fnf1']=="15")echo "selected='selected'";?>>15</option>
-          <option value="16" <?php if($_POST['fnf1']=="16")echo "selected='selected'";?>>16</option>
-          <option value="17" <?php if($_POST['fnf1']=="17")echo "selected='selected'";?>>17</option>
-          <option value="18" <?php if($_POST['fnf1']=="18")echo "selected='selected'";?>>18</option>
-          <option value="19" <?php if($_POST['fnf1']=="19")echo "selected='selected'";?>>19</option>
-          <option value="20" <?php if($_POST['fnf1']=="20")echo "selected='selected'";?>>20</option>
-          <option value="21" <?php if($_POST['fnf1']=="21")echo "selected='selected'";?>>21</option>
-          <option value="22" <?php if($_POST['fnf1']=="22")echo "selected='selected'";?>>22</option>
-          <option value="23" <?php if($_POST['fnf1']=="23")echo "selected='selected'";?>>23</option>
-          <option value="24" <?php if($_POST['fnf1']=="24")echo "selected='selected'";?>>24</option>
-          <option value="25" <?php if($_POST['fnf1']=="25")echo "selected='selected'";?>>25</option>
-          <option value="26" <?php if($_POST['fnf1']=="26")echo "selected='selected'";?>>26</option>
-          <option value="27" <?php if($_POST['fnf1']=="27")echo "selected='selected'";?>>27</option>
-          <option value="28" <?php if($_POST['fnf1']=="28")echo "selected='selected'";?>>28</option>
-          <option value="29" <?php if($_POST['fnf1']=="29")echo "selected='selected'";?>>29</option>
+		      <option value="01" <?php  if($_POST['fnf1']=="01")echo "selected='selected'";?>>01</option>
+          <option value="02" <?php  if($_POST['fnf1']=="02")echo "selected='selected'";?>>02</option>
+          <option value="03" <?php  if($_POST['fnf1']=="03")echo "selected='selected'";?>>03</option>
+          <option value="04" <?php  if($_POST['fnf1']=="04")echo "selected='selected'";?>>04</option>
+          <option value="05" <?php  if($_POST['fnf1']=="05")echo "selected='selected'";?>>05</option>
+          <option value="06" <?php  if($_POST['fnf1']=="06")echo "selected='selected'";?>>06</option>
+          <option value="07" <?php  if($_POST['fnf1']=="07")echo "selected='selected'";?>>07</option>
+          <option value="08" <?php  if($_POST['fnf1']=="08")echo "selected='selected'";?>>08</option>
+          <option value="09" <?php  if($_POST['fnf1']=="09")echo "selected='selected'";?>>09</option>
+          <option value="10" <?php  if($_POST['fnf1']=="10")echo "selected='selected'";?>>10</option>
+          <option value="11" <?php  if($_POST['fnf1']=="11")echo "selected='selected'";?>>11</option>
+          <option value="12" <?php  if($_POST['fnf1']=="12")echo "selected='selected'";?>>12</option>
+          <option value="13" <?php  if($_POST['fnf1']=="13")echo "selected='selected'";?>>13</option>
+          <option value="14" <?php  if($_POST['fnf1']=="14")echo "selected='selected'";?>>14</option>
+          <option value="15" <?php  if($_POST['fnf1']=="15")echo "selected='selected'";?>>15</option>
+          <option value="16" <?php  if($_POST['fnf1']=="16")echo "selected='selected'";?>>16</option>
+          <option value="17" <?php  if($_POST['fnf1']=="17")echo "selected='selected'";?>>17</option>
+          <option value="18" <?php  if($_POST['fnf1']=="18")echo "selected='selected'";?>>18</option>
+          <option value="19" <?php  if($_POST['fnf1']=="19")echo "selected='selected'";?>>19</option>
+          <option value="20" <?php  if($_POST['fnf1']=="20")echo "selected='selected'";?>>20</option>
+          <option value="21" <?php  if($_POST['fnf1']=="21")echo "selected='selected'";?>>21</option>
+          <option value="22" <?php  if($_POST['fnf1']=="22")echo "selected='selected'";?>>22</option>
+          <option value="23" <?php  if($_POST['fnf1']=="23")echo "selected='selected'";?>>23</option>
+          <option value="24" <?php  if($_POST['fnf1']=="24")echo "selected='selected'";?>>24</option>
+          <option value="25" <?php  if($_POST['fnf1']=="25")echo "selected='selected'";?>>25</option>
+          <option value="26" <?php  if($_POST['fnf1']=="26")echo "selected='selected'";?>>26</option>
+          <option value="27" <?php  if($_POST['fnf1']=="27")echo "selected='selected'";?>>27</option>
+          <option value="28" <?php  if($_POST['fnf1']=="28")echo "selected='selected'";?>>28</option>
+          <option value="29" <?php  if($_POST['fnf1']=="29")echo "selected='selected'";?>>29</option>
           <option value="30" >30</option>
           <option value="31" >31</option>
         </select>
 		/
 <select name="fnf2" class="texto" id="fnf2">
   <option value="">--</option>
-  <option value="01" <?php if($_POST['fnf2']=="01")echo "selected='selected'";?>>01</option>
-  <option value="02" <?php if($_POST['fnf2']=="02")echo "selected='selected'";?>>02</option>
-  <option value="03" <?php if($_POST['fnf2']=="03")echo "selected='selected'";?>>03</option>
-  <option value="04" <?php if($_POST['fnf2']=="04")echo "selected='selected'";?>>04</option>
-  <option value="05" <?php if($_POST['fnf2']=="05")echo "selected='selected'";?>>05</option>
-  <option value="06" <?php if($_POST['fnf2']=="06")echo "selected='selected'";?>>06</option>
-  <option value="07" <?php if($_POST['fnf2']=="07")echo "selected='selected'";?>>07</option>
-  <option value="08" <?php if($_POST['fnf2']=="08")echo "selected='selected'";?>>08</option>
-  <option value="09" <?php if($_POST['fnf2']=="09")echo "selected='selected'";?>>09</option>
-  <option value="10" <?php if($_POST['fnf2']=="10")echo "selected='selected'";?>>10</option>
-  <option value="11" <?php if($_POST['fnf2']=="11")echo "selected='selected'";?>>11</option>
-  <option value="12" <?php if($_POST['fnf2']=="12")echo "selected='selected'";?>>12</option>
+  <option value="01" <?php  if($_POST['fnf2']=="01")echo "selected='selected'";?>>01</option>
+  <option value="02" <?php  if($_POST['fnf2']=="02")echo "selected='selected'";?>>02</option>
+  <option value="03" <?php  if($_POST['fnf2']=="03")echo "selected='selected'";?>>03</option>
+  <option value="04" <?php  if($_POST['fnf2']=="04")echo "selected='selected'";?>>04</option>
+  <option value="05" <?php  if($_POST['fnf2']=="05")echo "selected='selected'";?>>05</option>
+  <option value="06" <?php  if($_POST['fnf2']=="06")echo "selected='selected'";?>>06</option>
+  <option value="07" <?php  if($_POST['fnf2']=="07")echo "selected='selected'";?>>07</option>
+  <option value="08" <?php  if($_POST['fnf2']=="08")echo "selected='selected'";?>>08</option>
+  <option value="09" <?php  if($_POST['fnf2']=="09")echo "selected='selected'";?>>09</option>
+  <option value="10" <?php  if($_POST['fnf2']=="10")echo "selected='selected'";?>>10</option>
+  <option value="11" <?php  if($_POST['fnf2']=="11")echo "selected='selected'";?>>11</option>
+  <option value="12" <?php  if($_POST['fnf2']=="12")echo "selected='selected'";?>>12</option>
 </select>
 /
-<input name="fnf3" type="text" class="texto" id="fnf3"  value="<?php echo $_POST['fnf3'];?>" onChange="ver2()" onkeypress='return soloNumeros(event)' size="4" maxlength="4">
+<input name="fnf3" type="text" class="texto" id="fnf3"  value="<?php  echo $_POST['fnf3'];?>" onChange="ver2()" onkeypress='return soloNumeros(event)' size="4" maxlength="4">
 
 <span class="Estilo2"><strong>d&iacute;a/mes/a&ntilde;o </strong></span>
 <input name="ocu_ff" id="ocu_ff" type="hidden" value="" />
@@ -330,11 +330,11 @@ function inac_vis(visit)
 					
 					</td>
                     <td colspan="2">
-					<?php  $ser= new servicio($_POST['servicio'],'','','','','','','','','','',''); ?> 
+					<?php   $ser= new servicio($_POST['servicio'],'','','','','','','','','','',''); ?> 
 						<select name="servicio" class="texto" id="servicio" >
 						  <option value="0" selected="selected" >SELECCIONE --></option>
 						  <option value="" >TODOS</option>
-						  <?php  if ($ser->combo_servicios()!= false)
+						  <?php   if ($ser->combo_servicios()!= false)
 								echo $ser->combo_servicios(); ?>
 					  </select>
 					
@@ -358,21 +358,21 @@ function inac_vis(visit)
                   <tr>
                     <td colspan="4"><select name="empresa" class="texto" id="empresa">
 					<option value="X" selected="selected" >SELECCIONE --></option>
-						  <option value="" <?php if($_POST['empresa']=="") echo ' selected ';?>>TODOS</option>
+						  <option value="" <?php  if($_POST['empresa']=="") echo ' selected ';?>>TODOS</option>
 						  <option value="0" >PARTICULAR</option>
-                      <?php  $emp= new empresa('','','','','','','','','','');
+                      <?php   $emp= new empresa('','','','','','','','','','');
 						$cemp=$emp->combo_emp($_POST['empresa']);
 						if($cemp!=false) echo $cemp;
 						?>
                     </select></td>
                     <td><select name="estado" class="texto" id="estado">
                       <option value="0" selected="selected" >SELECCIONE --></option>
-					            <option value=""  <?php if($_POST['estado']=="" ) echo "selected='selected'";?>>TODOS</option>
-                      <option value="A" <?php if($_POST['estado']=="A") echo "selected='selected'";?>>ATENDIDO</option>
-                      <option value="L" <?php if($_POST['estado']=="L") echo "selected='selected'";?>>LISTA DE ESPERA</option>
-                      <option value="P" <?php if($_POST['estado']=="P") echo "selected='selected'";?>>PENDIENTE</option>
-                      <option value="I" <?php if($_POST['estado']=="I") echo "selected='selected'";?>>INCOMPLETO</option>
-                      <option value="E" <?php if($_POST['estado']=="E") echo "selected='selected'";?>>ELIMINADO</option>
+					            <option value=""  <?php  if($_POST['estado']=="" ) echo "selected='selected'";?>>TODOS</option>
+                      <option value="A" <?php  if($_POST['estado']=="A") echo "selected='selected'";?>>ATENDIDO</option>
+                      <option value="L" <?php  if($_POST['estado']=="L") echo "selected='selected'";?>>LISTA DE ESPERA</option>
+                      <option value="P" <?php  if($_POST['estado']=="P") echo "selected='selected'";?>>PENDIENTE</option>
+                      <option value="I" <?php  if($_POST['estado']=="I") echo "selected='selected'";?>>INCOMPLETO</option>
+                      <option value="E" <?php  if($_POST['estado']=="E") echo "selected='selected'";?>>ELIMINADO</option>
                     </select></td>
                   </tr>
 
@@ -382,8 +382,8 @@ function inac_vis(visit)
                   <tr>
                     <td colspan="5"><select name="medico" class="texto" id="medico">
 					<option value="0" selected="selected" >SELECCIONE --></option>
-						  <option value="" <?php if($_POST['medico']=="") echo ' selected ';?> >TODOS</option>
-                      <?php  $med= new medico('','','','','','','','','','');
+						  <option value="" <?php  if($_POST['medico']=="") echo ' selected ';?> >TODOS</option>
+                      <?php   $med= new medico('','','','','','','','','','');
 						$cmed=$med->combo_medico($_POST['medico']);
 						if($cmed!=false) echo $cmed;
 						?>
@@ -403,7 +403,7 @@ function inac_vis(visit)
 				<input name="orden" id="orden" type="hidden" value="0" /></td>
 			</tr>
 		  </table>
-	<?php   
+	<?php    
 
 	if($_POST['elimvis']!=0)
  	{
@@ -433,7 +433,7 @@ function inac_vis(visit)
 	?> 
 		  <table width="1040">
 		  	<tr class="titulofor">
-			  <td width="1040" colspan="12" align="center"><?php echo $titulo; ?></td>
+			  <td width="1040" colspan="12" align="center"><?php  echo $titulo; ?></td>
 			</tr>	
 			<tr class="titulorep">
 			  <td width="20">N°</td>
@@ -448,7 +448,7 @@ function inac_vis(visit)
 			  <td colspan="3" width="60">ACCION</td>
 			</tr>	   
 	   
-<?php		   while ($row=mysql_fetch_array($reg))
+<?php 		   while ($row=mysql_fetch_array($reg))
 		   { 
 			  if ($cont%2!=0) $color='bgcolor="#E3E3E6"'; else $color='';
 			  $cont++;
@@ -466,38 +466,38 @@ function inac_vis(visit)
 			 $busemple=$emple->buscar_nom_emple();
 			 
 		   ?>
-				<tr class="texto" <?php echo $color; ?>>
-				  <td width="20"><?php echo $cont; ?></td>
-				  <td width="70"><?php echo $row[5]; ?></td>
-				  <td width="70"><?php echo $row[2]; ?></td>
-				  <td width="150"><?php echo $row[3]; ?></td>
-				  <td width="150"><?php echo $empresa; ?></td>
-				  <td width="150"><?php echo $row[11]; ?></td>
-				  <td width="140"><?php echo $row[10]; ?></td>
-				  <td width="140"><?php echo $busemple; ?></td>
-				  <td width="90"><?php echo $sta; ?></td>
-				  <td width="20" align="center"><a href="visita_especifica.php?visi=<?php echo $row[0]; ?>&ipaci=<?php echo $row[1]; ?>&fecha=<?php echo $row[5]; ?>&emp=<?php echo $empresa; ?>&esta=<?php echo $sta; ?>&motivo=<?php echo $row[13]; ?>&cpaci=<?php echo $row[2]; ?>&npaci=<?php echo $row[3]; ?>" target="_blank"><img src="imagenes/search.gif" title="Ver" alt="Ver" <?php echo $ope2;?> border="0"/></a></td>
-			  	  <td width="20" align="center"><a href="visita_modif.php?visi=<?php echo $row[0]; ?>&idpac=<?php echo $row[1]; ?>&npac=<?php echo $row[3]; ?>&idemp=<?php echo $row2[0]; ?>" target="_blank"><img src="imagenes/edit.gif" title="Modificar" alt="Modificar" border="0" <?php echo $ope1;?>/></a></td>
- 			  	  <td width="20" align="center"><img src="imagenes/delete.gif" title="Inactivar" <?php echo $ope4;?> alt="Inactivar" onclick="inac_vis(<?php echo $row[0]; ?>)" border="0"/></td>
+				<tr class="texto" <?php  echo $color; ?>>
+				  <td width="20"><?php  echo $cont; ?></td>
+				  <td width="70"><?php  echo $row[5]; ?></td>
+				  <td width="70"><?php  echo $row[2]; ?></td>
+				  <td width="150"><?php  echo $row[3]; ?></td>
+				  <td width="150"><?php  echo $empresa; ?></td>
+				  <td width="150"><?php  echo $row[11]; ?></td>
+				  <td width="140"><?php  echo $row[10]; ?></td>
+				  <td width="140"><?php  echo $busemple; ?></td>
+				  <td width="90"><?php  echo $sta; ?></td>
+				  <td width="20" align="center"><a href="visita_especifica.php?visi=<?php  echo $row[0]; ?>&ipaci=<?php  echo $row[1]; ?>&fecha=<?php  echo $row[5]; ?>&emp=<?php  echo $empresa; ?>&esta=<?php  echo $sta; ?>&motivo=<?php  echo $row[13]; ?>&cpaci=<?php  echo $row[2]; ?>&npaci=<?php  echo $row[3]; ?>" target="_blank"><img src="imagenes/search.gif" title="Ver" alt="Ver" <?php  echo $ope2;?> border="0"/></a></td>
+			  	  <td width="20" align="center"><a href="visita_modif.php?visi=<?php  echo $row[0]; ?>&idpac=<?php  echo $row[1]; ?>&npac=<?php  echo $row[3]; ?>&idemp=<?php  echo $row2[0]; ?>" target="_blank"><img src="imagenes/edit.gif" title="Modificar" alt="Modificar" border="0" <?php  echo $ope1;?>/></a></td>
+ 			  	  <td width="20" align="center"><img src="imagenes/delete.gif" title="Inactivar" <?php  echo $ope4;?> alt="Inactivar" onclick="inac_vis(<?php  echo $row[0]; ?>)" border="0"/></td>
 				</tr>
 
-	<?php		}  ?>
+	<?php 		}  ?>
 				<tr >
 				  <td colspan="12" align="center" class="td-btn">
-          <a href="#" onclick="irpdf('listado_pac_pdf.php?fi=<?php echo $_POST['ocu_fi'];?>&ff=<?php echo $_POST['ocu_ff'];?>&serv=<?php echo $_POST['servicio'];?>&ced=<?php echo $_POST['cedula'];?>&sta=<?php echo $_POST['estado'];?>&empr=<?php echo $_POST['empresa'];?>&medi=<?php echo $_POST['medico'];?>')"  class="button-print" alt="Imprimir"   <?php echo $ope5;?> > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
+          <a href="#" onclick="irpdf('listado_pac_pdf.php?fi=<?php  echo $_POST['ocu_fi'];?>&ff=<?php  echo $_POST['ocu_ff'];?>&serv=<?php  echo $_POST['servicio'];?>&ced=<?php  echo $_POST['cedula'];?>&sta=<?php  echo $_POST['estado'];?>&empr=<?php  echo $_POST['empresa'];?>&medi=<?php  echo $_POST['medico'];?>')"  class="button-print" alt="Imprimir"   <?php  echo $ope5;?> > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
 
-				<input name="consulta" id="consulta" type="hidden" value="<?php echo $row; ?>" />
-				<input name="titu" id="titu" type="hidden" value="<?php echo $titulo; ?>" />
+				<input name="consulta" id="consulta" type="hidden" value="<?php  echo $row; ?>" />
+				<input name="titu" id="titu" type="hidden" value="<?php  echo $titulo; ?>" />
 				<input name="elimvis" id="elimvis" type="hidden" value="0" />
-				<input name="primera" type="hidden" id="primera" value="<?php echo $_POST["primera"]; ?>" />
-                <input name="busper" type="hidden" id="busper" value="<?php echo $_POST["busper"]; ?>" />
+				<input name="primera" type="hidden" id="primera" value="<?php  echo $_POST["primera"]; ?>" />
+                <input name="busper" type="hidden" id="busper" value="<?php  echo $_POST["busper"]; ?>" />
 				</td>
 				</tr>
 	    </table>
-	<?php	}
+	<?php 	}
 		else
 		{ echo '<br><p class="textoN" align="center">No se encontró ninguna coincidencia</p>'; }?>
-<?php	} ?>
+<?php 	} ?>
 
 
 </form>

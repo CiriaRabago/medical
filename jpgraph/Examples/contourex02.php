@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 // Contour plot example 02
 
 require_once ('jpgraph/jpgraph.php');

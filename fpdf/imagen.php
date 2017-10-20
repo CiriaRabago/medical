@@ -1,4 +1,4 @@
-<?php session_start();//Inicio de sesi�n
+<?php  session_start();//Inicio de sesi�n
 
 $md5 = md5(microtime() * mktime()); //Creaci�n de cadena aleatoria
 

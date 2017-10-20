@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_tipcar.php";
@@ -119,7 +119,7 @@ function valores(cadena)
 
 </script>
 <body>
-<?php 
+<?php  
 	
  if ($_POST["primera"]=='')
  {
@@ -136,7 +136,7 @@ function valores(cadena)
  } 
 ?>
 <form name="form1" id="form1" method="post" action="caract.php">
-  <?php 
+  <?php  
 //--------------Guardar en Bitacora la Consulta--------------//
 if(isset($_POST["ocu_con"]) && $_POST["ocu_con"]=='1' )
 {
@@ -271,7 +271,7 @@ $car= new caract($_POST["ocu_N"],$_POST["comuni"],$_POST["comtip"],$_POST["nomb"
       <td colspan="3" class="texto"><label>
         <select name="comtip" class="texto" id="comtip">
        <option value="0" selected="selected" >Seleccione -------&gt;</option>
-		 <?php 
+		 <?php  
 		 if ($tip->combo_tipcar()!= false)
 		        echo $tip->combo_tipcar(); ?>
         </select>
@@ -284,7 +284,7 @@ $car= new caract($_POST["ocu_N"],$_POST["comuni"],$_POST["comtip"],$_POST["nomb"
       <td colspan="3" class="texto"><label>
         <select name="comuni" class="texto" id="comuni">
 		<option value="0" selected="selected" >Seleccione -------&gt;</option>
-		 <?php 
+		 <?php  
 		 if ($uni->combo_unimed()!= false)
 		        echo $uni->combo_unimed(); ?>
         </select>
@@ -362,22 +362,22 @@ $car= new caract($_POST["ocu_N"],$_POST["comuni"],$_POST["comtip"],$_POST["nomb"
     </tr>
     <tr>
       <td colspan="4" class="td-buttons">
-      <a href="#" onclick="eliminar();" class="button" alt="Eliminar"  <?php echo $ope4;?> ><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar </a>
+      <a href="#" onclick="eliminar();" class="button" alt="Eliminar"  <?php  echo $ope4;?> ><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar </a>
       <a href="#" onclick="Nuevo();" class="button" alt="Nueva unidad de medida"  > <i class="fa fa-file-o" aria-hidden="true"></i> Nuevo </a>
-      <a href="#" onclick="Guardar();" class="button" alt="Guardar la caracteristica"  <?php echo $ope1;?> > <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar </a>
+      <a href="#" onclick="Guardar();" class="button" alt="Guardar la caracteristica"  <?php  echo $ope1;?> > <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar </a>
 
 	
       <input name="ocu_g" type="hidden" value="0"/>   <input type="hidden" name="ocu_e" value="0"/>    
 
       <a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button" alt="Salir al men&uacute; de an&aacute;lisis"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Volver </a>
 
-      <input name="primera" type="hidden" id="primera" value="<?php echo $_POST["primera"]; ?>" />
-      <input name="busper" type="hidden" id="busper" value="<?php echo $_POST["busper"]; ?>" />
+      <input name="primera" type="hidden" id="primera" value="<?php  echo $_POST["primera"]; ?>" />
+      <input name="busper" type="hidden" id="busper" value="<?php  echo $_POST["busper"]; ?>" />
       <input name="ocu_con" type="hidden" id="ocu_con" value="0" /></td>
     </tr>
   </table>
   <div>
-    <?php 
+    <?php  
 	if ($ope2=='1')//
     { //
 		$ver=$car->ver_caract();

@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 //include "Clases/clase_conexion.php";
 ?>

@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 // List all current supported flags.
 // $Id: listallflags.php,v 1.1.2.1 2003/06/29 15:28:12 aditus Exp $
 require_once ('jpgraph/jpgraph.php');

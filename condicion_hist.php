@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_tipocondicion.php";
@@ -152,7 +152,7 @@ var texto='<div id="a2"><table width="200" border="0"><tr><td><label><input name
 </script>
 <body>
 <form id="form1" name="form1" method="post" action="condicion_hist.php">
-<?php
+<?php 
 $tcon= new tipcon('','','','','','','');
 if ($_POST["tip"]>'0')
 	$tipc= $_POST["tip"];
@@ -210,11 +210,11 @@ if ($_POST["condic"]>'0')
       <td width="522" class="texto td-btn" ><label>
         <select name="tip" class="texto" id="tip"  onchange="ver();">
           <option value="0">Seleccione---&gt;</option>
-		  <?php if ($con->combo_tipcon()!= false)
+		  <?php  if ($con->combo_tipcon()!= false)
 		        echo $con->combo_tipcon(); ?>
         </select>
         <span class="Estilo1">*</span>
-		<script> document.getElementById("tip").value="<?php echo $tipc; ?>"; </script>
+		<script> document.getElementById("tip").value="<?php  echo $tipc; ?>"; </script>
         <a href="#" onclick="agregar();" class="button" alt="agregar tipo de condici&oacute;n" id="agreg" > <i class="fa fa-plus" aria-hidden="true"></i> Agregar </a>
 
        </label></td>
@@ -275,7 +275,7 @@ if ($_POST["condic"]>'0')
       <input name="ocu_N" type="hidden" id="ocu_N" value="0" /></td>
     </tr>
   </table>
-       <?php 
+       <?php  
 $ver=$con->ver_condicion($tipc);
         if ($ver==false)
 		{

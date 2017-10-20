@@ -1,4 +1,4 @@
-<?phpsession_start();
+<?php session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_empresa.php";
 include "clases/clase_paciente.php";
@@ -49,7 +49,7 @@ function buscar()
 }
 </script>
 <form name="form1" id="form1" method="post" action="verificar_documentos.php" enctype="multipart/form-data">
-  <?php
+  <?php 
 
 $pac= new paciente($_POST["ced"],'','','','','','','','','','','','','','');
 
@@ -77,16 +77,16 @@ $pac= new paciente($_POST["ced"],'','','','','','','','','','','','','','');
    <tr>
       <td class="etiqueta">C&eacute;dula: </td>
       <td colspan="2" class="texto"><label>
-        <input name="ced" type="text" class="texto" id="ced" size="25"  value="<?php echo $datos[1]; ?>" onkeypress='return soloNumeros(event)'/>
+        <input name="ced" type="text" class="texto" id="ced" size="25"  value="<?php  echo $datos[1]; ?>" onkeypress='return soloNumeros(event)'/>
         <img src="imagenes/p_buspeq1.gif" alt="Buscar paciente Si EXISTE" width="35" height="25"  style="cursor:hand" onClick="buscar();" onMouseOver="this.src='imagenes/a_buspeq1.gif'"  onMouseOut="this.src='imagenes/p_buspeq1.gif'"/><span class="Estilo1">*</span> s&oacute;lo n&uacute;meros  </label></td>
       <td width="321" rowspan="5" class="texto"><div align="right">
-<img src="<?php echo $_POST["imafot"]?>?<?=time()?>" width="120" height="100" id="foto" name="foto">
+<img src="<?php  echo $_POST["imafot"]?>?<?=time()?>" width="120" height="100" id="foto" name="foto">
 <input name="ocu_fot" type="hidden" id="ocu_fot" value="0">
-<input name="imafot" type="hidden" id="imafot" value="<?php echo $_POST["imafot"]; ?>">
+<input name="imafot" type="hidden" id="imafot" value="<?php  echo $_POST["imafot"]; ?>">
  <input type="hidden" name="ocu_b" value="0" />
       </div></td>
     </tr>
-        <?php
+        <?php 
     $ben= new benef('','','',''); // PARA DETERMINAR EL PARENTESCO Y SABER QUE DOCUMENTOS MOSTRAR :::::::::::::::: JOSE RAMIREZ
     $regb=$ben->cons_benef2($datos[0]);
     
@@ -101,12 +101,12 @@ $pac= new paciente($_POST["ced"],'','','','','','','','','','','','','','');
     }else $t_paciente=2; // beneficiario
      }?>
     <tr>
-      <td  colspan="2" class="etiqueta">Paciente: <?php echo $datos[2].' '.$datos[3].' '.$datos[4].' '.$datos[5]?></td></td>
+      <td  colspan="2" class="etiqueta">Paciente: <?php  echo $datos[2].' '.$datos[3].' '.$datos[4].' '.$datos[5]?></td></td>
     </tr>
     <tr>
       <td class="etiqueta">Tipo de paciente:</td>
       <td class="etiqueta">
-      <?php if ($t_paciente==1) {
+      <?php  if ($t_paciente==1) {
          echo 'Titular';
          ?>
           </td>
@@ -116,35 +116,35 @@ $pac= new paciente($_POST["ced"],'','','','','','','','','','','','','','');
           <tr class="titulofor">
           <td height="30" colspan="4"><div align="center" class="titulofor">Consignados</div></td>
           </tr>
-          <?phpif(file_exists('cedula/'.$datos[0].'.jpg')) {
+          <?php if(file_exists('cedula/'.$datos[0].'.jpg')) {
           ?>
           <tr><td width="321" rowspan="5" class="texto">Cedula:<div align="right">
-          <img src="cedula/<?phpecho$datos[0]?>.jpg" width="200" height="180" id="foto" name="foto">
+          <img src="cedula/<?php echo$datos[0]?>.jpg" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
-          <?php}
+          <?php }
           if(file_exists('cedula/'.$datos[0].'.JPG')) {
           ?>
           <tr><td width="321" rowspan="5" class="texto">Cedula:<div align="right">
-          <img src="cedula/<?phpecho$datos[0]?>.JPG" width="200" height="180" id="foto" name="foto">
+          <img src="cedula/<?php echo$datos[0]?>.JPG" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
-          <?php}
+          <?php }
           if(file_exists('carnet/'.$datos[0].'.jpg')) {?>
           <td width="321" rowspan="5" class="texto">Carnet:<div align="right">
-          <img src="carnet/<?php echo $datos[0]?>.jpg" width="200" height="180" id="foto" name="foto">
+          <img src="carnet/<?php  echo $datos[0]?>.jpg" width="200" height="180" id="foto" name="foto">
           </div>
-          <?php}
+          <?php }
          if(file_exists('carnet/'.$datos[0].'.JPG')) {?>
           <td width="321" rowspan="5" class="texto">Carnet:<div align="right">
-          <img src="carnet/<?php echo $datos[0]?>.JPG" width="200" height="180" id="foto" name="foto">
+          <img src="carnet/<?php  echo $datos[0]?>.JPG" width="200" height="180" id="foto" name="foto">
           </div>
          
-          <?php}
+          <?php }
           ?>  </td>
           </tr>
           </table>
-          <?php
+          <?php 
       }
     if ($t_paciente==2){
         echo 'Beneficiario';
@@ -155,88 +155,88 @@ $pac= new paciente($_POST["ced"],'','','','','','','','','','','','','','');
           <tr class="titulofor">
           <td height="30" colspan="4"><div align="center" class="titulofor">Consignados</div></td>
           </tr>
-          <?phpif(file_exists('cedula/'.$benefe[0].'.jpg')) {//titular
+          <?php if(file_exists('cedula/'.$benefe[0].'.jpg')) {//titular
           ?>
           <tr><td width="321" rowspan="5" class="texto">Cedula titular:<div align="right">
-          <img src="cedula/<?phpecho$benefe[0]?>.jpg" width="200" height="180" id="foto" name="foto">
+          <img src="cedula/<?php echo$benefe[0]?>.jpg" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
-          <?php}if(file_exists('cedula/'.$benefe[0].'.JPG')) {
+          <?php }if(file_exists('cedula/'.$benefe[0].'.JPG')) {
           ?>
           <tr><td width="321" rowspan="5" class="texto">Cedula titulart:<div align="right">
-          <img src="cedula/<?phpecho$benefe[0]?>.JPG" width="200" height="180" id="foto" name="foto">
+          <img src="cedula/<?php echo$benefe[0]?>.JPG" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
-          <?php}
+          <?php }
           if(file_exists('carnet/'.$benefe[0].'.jpg')) {?>
           <td width="321" rowspan="5" class="texto">Carnet titular:<div align="right">
-          <img src="carnet/<?php echo $benefe[0]?>.jpg" width="200" height="180" id="foto" name="foto">
+          <img src="carnet/<?php  echo $benefe[0]?>.jpg" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
           </tr>
           </table>  
-         <?php}
+         <?php }
          if(file_exists('carnet/'.$benefe[0].'.JPG')) {?>
           <td width="321" rowspan="5" class="texto">Carnet titular:<div align="right">
-          <img src="carnet/<?php echo $benefe[0]?>.JPG" width="200" height="180" id="foto" name="foto">
+          <img src="carnet/<?php  echo $benefe[0]?>.JPG" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
           </tr>
            </table>  
-          <?php}
+          <?php }
           if(file_exists('cedula/'.$datos[0].'.jpg')) {//beneficiario
           ?>
           <table width="791" border="0" align="center">
           <tr><td width="321" rowspan="5" class="texto">Cedula Beneficiario:<div align="right">
-          <img src="cedula/<?phpecho$datos[0]?>.jpg" width="200" height="180" id="foto" name="foto">
+          <img src="cedula/<?php echo$datos[0]?>.jpg" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
-          <?php}?>
-           <?phpif(file_exists('cedula/'.$datos[0].'.JPG')) {
+          <?php }?>
+           <?php if(file_exists('cedula/'.$datos[0].'.JPG')) {
           ?>
           <table width="791" border="0" align="center">
           <tr><td width="321" rowspan="5" class="texto">Cedula Beneficiario:<div align="right">
-          <img src="cedula/<?phpecho$datos[0]?>.JPG" width="200" height="180" id="foto" name="foto">
+          <img src="cedula/<?php echo$datos[0]?>.JPG" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
-          <?php}
+          <?php }
           if(file_exists('acta/'.$datos[0].'.jpg')) {?>
           <td width="321" rowspan="5" class="texto">Acta/Partida Beneficiario:<div align="right">
-          <img src="acta/<?php echo $datos[0]?>.jpg" width="200" height="180" id="foto" name="foto">
+          <img src="acta/<?php  echo $datos[0]?>.jpg" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
           </tr>
           </table>
-         <?php}
+         <?php }
          if(file_exists('acta/'.$datos[0].'.JPG')) {?>
           <td width="321" rowspan="5" class="texto">Acta/Partida Beneficiario:<div align="right">
-          <img src="acta/<?php echo $datos[0]?>.JPG" width="200" height="180" id="foto" name="foto">
+          <img src="acta/<?php  echo $datos[0]?>.JPG" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
           </tr>
           </table>
-          <?php
+          <?php 
         }
           if(file_exists('carnet/'.$datos[0].'.jpg')) {?>
           <table width="791" border="0" align="center">
           <tr>
           <td width="321" rowspan="5" class="texto">Acta/Partida Beneficiario:<div align="right">
-          <img src="carnet/<?php echo $datos[0]?>.jpg" width="200" height="180" id="foto" name="foto">
+          <img src="carnet/<?php  echo $datos[0]?>.jpg" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
           </tr>
           </table>
-         <?php}
+         <?php }
          if(file_exists('carnet/'.$datos[0].'.JPG')) {?>
          <table width="791" border="0" align="center">
           <tr>
           <td width="321" rowspan="5" class="texto">Acta/Partida Beneficiario:<div align="right">
-          <img src="carnet/<?php echo $datos[0]?>.JPG" width="200" height="180" id="foto" name="foto">
+          <img src="carnet/<?php  echo $datos[0]?>.JPG" width="200" height="180" id="foto" name="foto">
           </div>
           </td>
           </tr>
           </table>
-          <?php
+          <?php 
         }
       }
           ?>

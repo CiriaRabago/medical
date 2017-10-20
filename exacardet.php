@@ -42,14 +42,14 @@ function agreg()
 }
 </script>
 <body>
-<?php 
+<?php  
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
 include "clases/clase_examen.php"; 
 ?>
 <form name="form1" id="form1" method="post" action="exacardet.php">
 
-<?php if ($_POST['ordenar']==1)
+<?php  if ($_POST['ordenar']==1)
 {
 	for($i=0;$i<$_POST['cantiocu'];$i++)
 	{
@@ -93,11 +93,11 @@ if ($_POST['agregar']==1)
   </tr>
   <tr>
     <td width="60" class="etiqueta">Perfil:</td>
-    <td width="366" colspan="2" class="textoN"><?php echo $_POST['perfilocu']; ?><input name="perfil" type="hidden" value="<?php echo $_POST['perfil']; ?>" /><input name="perfilocu" type="hidden" value="<?php echo $_POST['perfilocu']; ?>" /></td>
+    <td width="366" colspan="2" class="textoN"><?php  echo $_POST['perfilocu']; ?><input name="perfil" type="hidden" value="<?php  echo $_POST['perfil']; ?>" /><input name="perfilocu" type="hidden" value="<?php  echo $_POST['perfilocu']; ?>" /></td>
   </tr>
   <tr>
     <td class="etiqueta">Examen:</td>
-    <td colspan="2" class="textoN"><?php echo $_POST['exaocu']; ?><input name="exame" type="hidden" value="<?php echo $_POST['exame']; ?>" /><input name="exaocu" type="hidden" value="<?php echo $_POST['exaocu']; ?>" /></td>
+    <td colspan="2" class="textoN"><?php  echo $_POST['exaocu']; ?><input name="exame" type="hidden" value="<?php  echo $_POST['exame']; ?>" /><input name="exaocu" type="hidden" value="<?php  echo $_POST['exaocu']; ?>" /></td>
   </tr>
 
   <tr>
@@ -106,13 +106,13 @@ if ($_POST['agregar']==1)
   </tr>
 </table>
 
-  	<?php  
+  	<?php   
 	    $n=0;
 		$exa=new examen($_POST['exame'],'','','','','','','','');
   		$caractexa=$exa->consul_caract_examen(); 
 		$n=mysql_num_rows($caractexa);
   ?>
-<input name="cantiocu" id="cantiocu" type="hidden" value="<?php echo $n; ?>" />
+<input name="cantiocu" id="cantiocu" type="hidden" value="<?php  echo $n; ?>" />
 <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr class="titulorep" align="center">
     <td width="20">&nbsp;</td>
@@ -120,7 +120,7 @@ if ($_POST['agregar']==1)
     <td width="90">Unidad<br>Medida</td>
     <td width="90">orden</td>
   </tr>
-<?php 				
+<?php  				
 $indi=0;
 while ($row=mysql_fetch_array($caractexa))
 { $codigo='codcar'.$indi;
@@ -137,14 +137,14 @@ while ($row=mysql_fetch_array($caractexa))
     </tr>';
   }
  ?>
-  <tr <?php if ($indi%2!=0) echo 'bgcolor="#E3E3E6"'; ?>   class="texto">
-    <td><input name="<?php echo $codigo;?>" id="<?php echo $codigo;?>" type="hidden" value="<?php echo $row[1]; ?>" /> 
-	    <input name="<?php echo $codigoch;?>" id="<?php echo $codigoch;?>" type="checkbox" value="<?php echo $row[1]; ?>" /></td>
-    <td><?php echo $row[2]; ?></td>
-    <td><?php echo $row[4]; ?></td>
-    <td><input class="texto" name="<?php echo $orden; ?>" id="<?php echo $orden; ?>" type="text" value="<?php echo $row[3]; ?>" size="5" /></td>
+  <tr <?php  if ($indi%2!=0) echo 'bgcolor="#E3E3E6"'; ?>   class="texto">
+    <td><input name="<?php  echo $codigo;?>" id="<?php  echo $codigo;?>" type="hidden" value="<?php  echo $row[1]; ?>" /> 
+	    <input name="<?php  echo $codigoch;?>" id="<?php  echo $codigoch;?>" type="checkbox" value="<?php  echo $row[1]; ?>" /></td>
+    <td><?php  echo $row[2]; ?></td>
+    <td><?php  echo $row[4]; ?></td>
+    <td><input class="texto" name="<?php  echo $orden; ?>" id="<?php  echo $orden; ?>" type="text" value="<?php  echo $row[3]; ?>" size="5" /></td>
   </tr>
-<?php 
+<?php  
 $indi++; }  ?>
 	<tr>
     <td colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
@@ -167,26 +167,26 @@ $indi++; }  ?>
     <td colspan="2">Unidad<br>Medida</td>
     </tr>	
 	
-<?php	  		
+<?php 	  		
 $caractexa2=$exa->consul_caract_examen_no(); 
 $n2=mysql_num_rows($caractexa2);
 $indi2=0;
 ?>
-<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php echo $n2;?>" />
-<?php
+<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php  echo $n2;?>" />
+<?php 
 while ($row2=mysql_fetch_array($caractexa2))
 { 
   $nocodigo='nocodcar'.$indi2;
   $nocodigoch='nocodcarch'.$indi2;
 ?>
-  <tr <?php if ($indi2%2!=0) echo 'bgcolor="#E3E3E6"'; ?>   class="texto">
+  <tr <?php  if ($indi2%2!=0) echo 'bgcolor="#E3E3E6"'; ?>   class="texto">
     <td>
-	<input name="<?php echo $nocodigo;?>" id="<?php echo $nocodigo;?>" type="hidden" value="<?php echo $row2[1]; ?>" />
-	<input name="<?php echo $nocodigoch;?>" id="<?php echo $nocodigoch;?>"  type="checkbox" value="<?php echo $row2[1]; ?>" /></td>
-    <td><?php echo $row2[2]; ?></td>
-    <td colspan="2"><?php echo $row2[3]; ?></td>
+	<input name="<?php  echo $nocodigo;?>" id="<?php  echo $nocodigo;?>" type="hidden" value="<?php  echo $row2[1]; ?>" />
+	<input name="<?php  echo $nocodigoch;?>" id="<?php  echo $nocodigoch;?>"  type="checkbox" value="<?php  echo $row2[1]; ?>" /></td>
+    <td><?php  echo $row2[2]; ?></td>
+    <td colspan="2"><?php  echo $row2[3]; ?></td>
   </tr>
-<?php 
+<?php  
 $indi2++; 
  }  ?>
   <tr>

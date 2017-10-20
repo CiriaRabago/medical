@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE EXAMEN
 CREADA POR: MONICA BATISTA

@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_servicio.php";
@@ -98,7 +98,7 @@ padre.removeChild(el);
 <body>
 <form name="form1" id="form1" method="post" action="visita_modif.php">
 
-<?php 
+<?php  
 if($_POST['ocugua']==1)
 {
 		$vis=$_POST['oidvis'];
@@ -217,12 +217,12 @@ $iemp=$_POST['comemp'];
 }
  ?>
 
-<input name="oidpac" id="oidpac" type="hidden" value="<?php echo $ipaci; ?>" />
-<input name="oidvis" id="oidvis" type="hidden" value="<?php echo $vis; ?>" />
+<input name="oidpac" id="oidpac" type="hidden" value="<?php  echo $ipaci; ?>" />
+<input name="oidvis" id="oidvis" type="hidden" value="<?php  echo $vis; ?>" />
 
 <table width="704" border="0" cellpadding="0" cellspacing="1">
 
-  <?php $visita= new visita($vis,'','','','','','','','','','','','');
+  <?php  $visita= new visita($vis,'','','','','','','','','','','','');
      $dpac=$visita->datos_pac_vis($ipaci);
 	 if($dpac!='false') 
 	 {
@@ -234,26 +234,26 @@ $iemp=$_POST['comemp'];
 
 	<tr>
 	  <td width="150" class="textoN">CÉDULA:</td>
-      <td width="551" colspan="2" class="texto"><?php echo $rowp[1]; ?></td>
+      <td width="551" colspan="2" class="texto"><?php  echo $rowp[1]; ?></td>
 	</tr>
 	<tr>
 	  <td width="150" class="textoN">NOMBRE:</td>
-      <td width="551" colspan="2" class="texto"><?php echo $rowp[2]; ?></td>
+      <td width="551" colspan="2" class="texto"><?php  echo $rowp[2]; ?></td>
 	</tr>	
 	<tr>
 	  <td width="150" class="textoN">EDAD:</td>
-      <td width="551" colspan="2" class="texto"><?php echo $rowp[4]; ?></td>
+      <td width="551" colspan="2" class="texto"><?php  echo $rowp[4]; ?></td>
 	</tr>
 	<tr>
 	  <td width="150" class="textoN">SEXO:</td>
-      <td width="551" colspan="2" class="texto"><?php echo $sexo; ?></td>
+      <td width="551" colspan="2" class="texto"><?php  echo $sexo; ?></td>
 	</tr>
   <tr>
    <td width="150" class="textoN">EMPRESA:</td>
       <td width="551" colspan="2">
 	  <select name="comemp" class="texto" id="comemp" onChange="document.getElementById('ocuguaemp').value=1;">
         <option value="0" selected="selected">Particular</option>
-        <?php  
+        <?php   
 		 $emp= new empresa('','','','','','','','','','');
 		 $empre=$emp->combo_emp($iemp);
 		 if ($empre!= false)
@@ -262,7 +262,7 @@ $iemp=$_POST['comemp'];
 	  <input name="ocuguaemp" id="ocuguaemp" type="hidden" value="0">
 	  </td>
   </tr>
-    <?php $rv=$visita->ver_result_vis();
+    <?php  $rv=$visita->ver_result_vis();
      if($rv!=false)
 	   $rowr=mysql_fetch_array($rv);
    ?> 
@@ -271,12 +271,12 @@ $iemp=$_POST['comemp'];
       <td width="551" colspan="2">
           <select name="mot" class="texto" id="mot" onChange="document.getElementById('ocuguatipvis').value=1;">
           <option value="0" selected="selected" >Seleccione--></option>
-          <option value="Egreso" <?php if($rowr[13]=="Egreso") echo 'selected'; ?> >Egreso</option>
-          <option value="Ingreso" <?php if($rowr[13]=="Ingreso") echo 'selected'; ?> >Ingreso</option>
-          <option value="Periodico" <?php if($rowr[13]=="Periodico") echo 'selected'; ?>>Periodico</option>
-          <option value="Post-vacacional" <?php if($rowr[13]=="Post-vacacional") echo 'selected'; ?>>Post-vacacional</option>
-          <option value="Pre-empleo" <?php if($rowr[13]=="Pre-empleo") echo 'selected'; ?> >Pre-empleo</option>
-          <option value="Pre-vacacional" <?php if($rowr[13]=="Pre-vacacional") echo 'selected'; ?>>Pre-vacacional</option>
+          <option value="Egreso" <?php  if($rowr[13]=="Egreso") echo 'selected'; ?> >Egreso</option>
+          <option value="Ingreso" <?php  if($rowr[13]=="Ingreso") echo 'selected'; ?> >Ingreso</option>
+          <option value="Periodico" <?php  if($rowr[13]=="Periodico") echo 'selected'; ?>>Periodico</option>
+          <option value="Post-vacacional" <?php  if($rowr[13]=="Post-vacacional") echo 'selected'; ?>>Post-vacacional</option>
+          <option value="Pre-empleo" <?php  if($rowr[13]=="Pre-empleo") echo 'selected'; ?> >Pre-empleo</option>
+          <option value="Pre-vacacional" <?php  if($rowr[13]=="Pre-vacacional") echo 'selected'; ?>>Pre-vacacional</option>
       </select>	
 	  <input name="ocuguatipvis" id="ocuguatipvis" type="hidden" value="0">
     </td>
@@ -284,56 +284,56 @@ $iemp=$_POST['comemp'];
   <tr>
     <td width="150" class="textoN">MEDICO TRATANTE:</td>
       <td width="551" colspan="2">
-	  <?php  
+	  <?php   
 		$med= new medico('','','','','','','','','','','','','','','');
 	  ?>
 	  <select name="esp" class="texto" id="esp" onChange="document.getElementById('ocuguamedico').value=1;">
           <option value="0" selected="selected" >Seleccione--></option>
-          <?php  if ($med->combo_medico()!= false)
+          <?php   if ($med->combo_medico()!= false)
 		        echo $med->combo_medico(); ?>
         </select>
-		<script> document.getElementById("esp").value="<?php echo $rowr[14]; ?>"; </script>
+		<script> document.getElementById("esp").value="<?php  echo $rowr[14]; ?>"; </script>
 		<input name="ocuguamedico" id="ocuguamedico" type="hidden" value="0">
       </td>
   </tr>
   <tr>
     <td  height="30" colspan="3"  align="center" class="titulofor">RESULTADOS DE LA VISITA</td>
   </tr>
-  <?php $rv=$visita->ver_result_vis();
+  <?php  $rv=$visita->ver_result_vis();
      if($rv!=false)
 	   $rowr=mysql_fetch_array($rv);
    ?> 
   <tr>
     <td width="150" class="textoN">Motivo de la Visita</td>
-    <td width="551" colspan="2"><textarea name="razonVisita" id="razonVisita" cols="90" rows="3" class="texto"><?php if($rowr[10]!="") echo $rowr[10]; ?></textarea></td>
+    <td width="551" colspan="2"><textarea name="razonVisita" id="razonVisita" cols="90" rows="3" class="texto"><?php  if($rowr[10]!="") echo $rowr[10]; ?></textarea></td>
   </tr>
   <tr>
     <td width="150" class="textoN">Examen F&iacute;sico </td>
     <td width="551" colspan="2"><select name="ExaFis" class="texto" id="ExaFis">
-	  <option value=" <?php if($rowr[0]=="") echo 'selected'; ?> ">Seleccione</option>
-      <option value="Buenas Condiciones Generales" <?php if($rowr[0]=="Buenas Condiciones Generales") echo 'selected'; ?> >Buenas Condiciones Generales</option>
-      <option value="Regulares Condiciones Generales" <?php if($rowr[0]=="Regulares Condiciones Generales") echo 'selected'; ?> >Regulares Condiciones Generales</option>
-      <option value="Malas Condiciones Generales" <?php if($rowr[0]=="Malas Condiciones Generales") echo 'selected'; ?> >Malas Condiciones Generales</option>
-      <option  value="Satisfactorio" <?php if($rowr[0]=="Satisfactorio") echo 'selected'; ?> >Satisfactorio</option>
-      <option value="En Estudio" <?php if($rowr[0]=="En Estudio") echo 'selected'; ?> >En Estudio</option>
-      <option value="No Satisfactorio" <?php if($rowr[0]=="No Satisfactorio") echo 'selected'; ?> >No Satisfactorio</option>
+	  <option value=" <?php  if($rowr[0]=="") echo 'selected'; ?> ">Seleccione</option>
+      <option value="Buenas Condiciones Generales" <?php  if($rowr[0]=="Buenas Condiciones Generales") echo 'selected'; ?> >Buenas Condiciones Generales</option>
+      <option value="Regulares Condiciones Generales" <?php  if($rowr[0]=="Regulares Condiciones Generales") echo 'selected'; ?> >Regulares Condiciones Generales</option>
+      <option value="Malas Condiciones Generales" <?php  if($rowr[0]=="Malas Condiciones Generales") echo 'selected'; ?> >Malas Condiciones Generales</option>
+      <option  value="Satisfactorio" <?php  if($rowr[0]=="Satisfactorio") echo 'selected'; ?> >Satisfactorio</option>
+      <option value="En Estudio" <?php  if($rowr[0]=="En Estudio") echo 'selected'; ?> >En Estudio</option>
+      <option value="No Satisfactorio" <?php  if($rowr[0]=="No Satisfactorio") echo 'selected'; ?> >No Satisfactorio</option>
     </select></td>
   </tr>
   <tr>
     <td width="150" class="textoN">Comentario Examen F&iacute;sico</td>
-    <td width="551" colspan="2"><textarea name="detaExaFis" id="detaExaFis" cols="90" rows="3" class="texto"><?php if($rowr[11]!="") echo $rowr[11]; ?></textarea></td>
+    <td width="551" colspan="2"><textarea name="detaExaFis" id="detaExaFis" cols="90" rows="3" class="texto"><?php  if($rowr[11]!="") echo $rowr[11]; ?></textarea></td>
   </tr>
   <tr>
     <td class="textoN">Examen de Laboratorio </td>
     <td colspan="2"><select name="ExaLab" class="texto" id="ExaLab">
-	  <option value=""  <?php if($rowr[1]=="") echo 'selected'; ?> >Seleccione</option>
-      <option value="Satisfactorio" <?php if($rowr[1]=="Satisfactorio") echo 'selected'; ?> >Satisfactorio</option>
-      <option value="En Estudio" <?php if($rowr[1]=="En Estudio") echo 'selected'; ?> >En Estudio</option>
-      <option value="No Satisfactorio" <?php if($rowr[1]=="No Satisfactorio") echo 'selected'; ?> >No Satisfactorio</option>
+	  <option value=""  <?php  if($rowr[1]=="") echo 'selected'; ?> >Seleccione</option>
+      <option value="Satisfactorio" <?php  if($rowr[1]=="Satisfactorio") echo 'selected'; ?> >Satisfactorio</option>
+      <option value="En Estudio" <?php  if($rowr[1]=="En Estudio") echo 'selected'; ?> >En Estudio</option>
+      <option value="No Satisfactorio" <?php  if($rowr[1]=="No Satisfactorio") echo 'selected'; ?> >No Satisfactorio</option>
     </select>
 	</td>
   </tr>
-  <?php  $cantidiag=1;
+  <?php   $cantidiag=1;
       $printdiag='';
   	  $diag= new diagnostico('','','');
 	  $dvs=$visita->ver_diag_vis();
@@ -430,7 +430,7 @@ $iemp=$_POST['comemp'];
 				  <input name="iddivi1" id="iddivi1" type="hidden" value="0">
 				  <select name="DiagEsp1" id="DiagEsp1" class="texto">
 					<option value="">Seleccione el Diagn&oacute;stico</option>
-			<?php  $dg=$diag->combo_diag('');
+			<?php   $dg=$diag->combo_diag('');
 				if ($dg!=false) echo $dg; ?>
 				  </select>
 				</td>
@@ -446,7 +446,7 @@ $iemp=$_POST['comemp'];
 				</td>
 			  </tr>
 			  <tr>
-				<td width="430" colspan="3"><textarea name="detaDiag1" id="detaDiag1" cols="80" rows="2" class="texto"><?php if($rowr[12]!="") echo $rowr[12]; ?></textarea></td>
+				<td width="430" colspan="3"><textarea name="detaDiag1" id="detaDiag1" cols="80" rows="2" class="texto"><?php  if($rowr[12]!="") echo $rowr[12]; ?></textarea></td>
 				<td width="60" align="right"><img src="imagenes/add_16x16.gif" id="agred1" title="Agregar Diagnóstico" alt="Agregar Diagnóstico" onClick="mostrar(1);"></td>
 			    <td width="60" align="left"><img src="imagenes/delete_16x16.gif" id="elid1" title="Eliminar Diagnóstico" alt="Eliminar Diagnóstico" onClick="elimdi(1);" style="display:none"></td>
 			  </tr>
@@ -456,39 +456,39 @@ $iemp=$_POST['comemp'];
 		   <div id="ddee2"></div>
 			</td>
 		  </tr>				   
-		 <?php  
+		 <?php   
 		} // Fin del if
 	$dg=$diag->combo_diag(''); ?>
   <tr>
     <td class="textoN">Tratamiento / Plan  
-	<input name='ocucombo' id='ocucombo' type='hidden' value='<?php echo $dg; ?>'>
+	<input name='ocucombo' id='ocucombo' type='hidden' value='<?php  echo $dg; ?>'>
 	<input name='elidiag' id='elidiag' type='hidden' value=''>
-	<input name="cantidiag" id="cantidiag" type="hidden" value="<?php if($dvs!=false) echo $contdi; else echo 1;?>">
+	<input name="cantidiag" id="cantidiag" type="hidden" value="<?php  if($dvs!=false) echo $contdi; else echo 1;?>">
 	
 	 </td>
-    <td colspan="2"><textarea name="Tratam" cols="90" rows="3" class="texto" id="Tratam"><?php if($rowr[3]!="") echo $rowr[3]; ?></textarea></td>
+    <td colspan="2"><textarea name="Tratam" cols="90" rows="3" class="texto" id="Tratam"><?php  if($rowr[3]!="") echo $rowr[3]; ?></textarea></td>
   </tr>
     <tr>
     <td class="textoN">Indicaciones</td>
-    <td colspan="2"><textarea name="Indic" cols="90" rows="3" class="texto"><?php if($rowr[4]!="") echo $rowr[4]; ?></textarea></td>
+    <td colspan="2"><textarea name="Indic" cols="90" rows="3" class="texto"><?php  if($rowr[4]!="") echo $rowr[4]; ?></textarea></td>
   </tr>
 
   <tr>
     <td class="textoN">Conclusiones</td>
     <td colspan="2"><select name="Conclu" class="texto" id="Conclu">
-	  <option value="" <?php if($rowr[7]=="") echo 'selected'; ?>>Seleccione</option>
-      <option value="Apto" <?php if($rowr[7]=="Apto") echo 'selected'; ?>>Apto</option>
-      <option value="Apto con Limitación" <?php if($rowr[7]=="Apto con Limitación") echo 'selected'; ?>>Apto con Limitaci&oacute;n</option>
-      <option value="No Apto" <?php if($rowr[7]=="No Apto") echo 'selected'; ?>>No Apto</option>
+	  <option value="" <?php  if($rowr[7]=="") echo 'selected'; ?>>Seleccione</option>
+      <option value="Apto" <?php  if($rowr[7]=="Apto") echo 'selected'; ?>>Apto</option>
+      <option value="Apto con Limitación" <?php  if($rowr[7]=="Apto con Limitación") echo 'selected'; ?>>Apto con Limitaci&oacute;n</option>
+      <option value="No Apto" <?php  if($rowr[7]=="No Apto") echo 'selected'; ?>>No Apto</option>
         </select></td>
   </tr>
   <tr>
     <td class="textoN">Recomendaciones</td>
-    <td colspan="2"><textarea name="Recom" cols="90" rows="3" class="texto" id="Recom"><?php if($rowr[5]!="") echo $rowr[5]; ?></textarea></td>
+    <td colspan="2"><textarea name="Recom" cols="90" rows="3" class="texto" id="Recom"><?php  if($rowr[5]!="") echo $rowr[5]; ?></textarea></td>
   </tr>
   <tr>
     <td class="textoN">Reposo</td>
-    <td colspan="2" ><textarea name="Repos" cols="90" rows="3" class="texto" id="Repos"><?php if($rowr[6]!="") echo $rowr[6]; ?></textarea></td>
+    <td colspan="2" ><textarea name="Repos" cols="90" rows="3" class="texto" id="Repos"><?php  if($rowr[6]!="") echo $rowr[6]; ?></textarea></td>
   </tr>
   <tr>
     <td colspan="3" ><hr size="0" width="100%"></td>
@@ -496,7 +496,7 @@ $iemp=$_POST['comemp'];
    <tr>
     <td class="textoN">Referencias</td>
     <td colspan="2" class="texto">
-		<table width="474" border="0" cellspacing="1" cellpadding="0"><?php 
+		<table width="474" border="0" cellspacing="1" cellpadding="0"><?php  
 			$ref= new referencia('','','','','','','','','','',''); 
 	       	$lref=$ref->lista_esp_ref($vis);
 			if($lref!=false)
@@ -551,7 +551,7 @@ $iemp=$_POST['comemp'];
     <td class="textoN">Solicitudes</td>
     <td colspan="2" class="texto" >
 		<table width="474" border="0" cellspacing="0" cellpadding="0">
-		<?php	$sol= new solicitud('',''); 
+		<?php 	$sol= new solicitud('',''); 
 			$lsol=$sol->lista_sol($vis);
 			if($lsol!='false')
 			{
@@ -590,18 +590,18 @@ $iemp=$_POST['comemp'];
 
   <tr>
     <td class="textoN">Observaci&oacute;n</td>
-    <td colspan="2" ><textarea name="obsvis" cols="90" rows="3" class="texto" id="obsvis"><?php if($rowr[9]!="") echo $rowr[9]; ?></textarea></td>
+    <td colspan="2" ><textarea name="obsvis" cols="90" rows="3" class="texto" id="obsvis"><?php  if($rowr[9]!="") echo $rowr[9]; ?></textarea></td>
   </tr>
   <tr>
     <td colspan="3" ><hr size="0" width="100%"></td>
   </tr>
-  <?php $labv=$visita->ver_lab_visita();
+  <?php  $labv=$visita->ver_lab_visita();
      if($labv!=false)
 	 {   ?>
   <tr>
     <td class="textoN">&Oacute;rdenes de Laboratorio Asociadas </td>
     <td colspan="2" >
-	  <?php while($rowlv=mysql_fetch_array($labv))
+	  <?php  while($rowlv=mysql_fetch_array($labv))
 		 { echo '<span class="texto" onclick="imprimir('."'".'orden_pdf.php?orden='.$rowlv[0]."'".');" style="cursor:hand; text-decoration:underline ">Orden de Laboratorio No. '.$rowlv[0].'</span> - 
 		 		 <span class="texto" onclick="imprimir('."'".'resultado_exa_imp.php?orden='.$rowlv[0]."'".');" style="cursor:hand; text-decoration:underline ">Resultado de Orden No. '.$rowlv[0].'</span><br>'; 
 		 }?>
@@ -610,7 +610,7 @@ $iemp=$_POST['comemp'];
   <tr>
     <td colspan="3" ><hr size="0" width="100%"></td>
   </tr>
-  <?php } // Fin si encontro ordenes de lab asociadas  ?>
+  <?php  } // Fin si encontro ordenes de lab asociadas  ?>
   <tr>
     <td colspan="3">
 	 <div align="center" id="cargar">

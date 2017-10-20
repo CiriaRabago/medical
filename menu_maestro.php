@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_menu.php";
@@ -89,7 +89,7 @@ function ver()
 </script>
 <body>
 <form name="form1" method="post" action="menu_maestro.php">
-<?php 
+<?php  
 if ($_POST["nivel"]>'0')
 {
 	$val=$_POST["nivel"]; 
@@ -149,11 +149,11 @@ if ($_POST["nivel"]>'0')
       <td colspan="3" class="texto"><label>
           <select name="nivel" class="texto" id="nivel" onchange="ver();">
           <option value="0" selected="selected" >Seleccione--></option>
-		  <?php  
+		  <?php   
 		 if ($men->combo_niv()!= false)
 		        echo $men->combo_niv(); ?>
 	    </select>    
-		<script> document.getElementById("nivel").value="<?php echo $val; ?>"; </script>    
+		<script> document.getElementById("nivel").value="<?php  echo $val; ?>"; </script>    
         <span class="texto Estilo2"><span class="Estilo1">*</span></span>
       </label></td>
     </tr>
@@ -178,9 +178,9 @@ if ($_POST["nivel"]>'0')
     <tr>
       <td class="etiqueta">Padre:</td>
       <td colspan="3" class="texto"><label>
-          <select name="padre" class="texto" id="padre" <?php echo $mos; ?>>
+          <select name="padre" class="texto" id="padre" <?php  echo $mos; ?>>
 		   <option value="0" selected="selected" >Seleccione--></option>
-		   <?php  
+		   <?php   
 		 if ($men->combo_men($pad)!= false)
 		        echo $men->combo_men($pad); ?>
           </select>        
@@ -211,7 +211,7 @@ if ($_POST["nivel"]>'0')
 	<a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Nuevo"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a></td>
     </tr>
   </table>
-       <?php 
+       <?php  
 $ver=$men->ver_menu2();
         if ($ver==false)
 		{

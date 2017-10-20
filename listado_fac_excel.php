@@ -1,4 +1,4 @@
-<?php
+<?php 
 
    header("Content-type: application/vnd.ms-excel; name='excel'");
    header("Content-Disposition: filename=ListaExcel.xls");
@@ -65,7 +65,7 @@ $reg=$ser->listado_fact2($_GET["getf_in"],$_GET["getf_fi"],$_GET["getser"],$_GET
   </tr>
   <tr>
     <td width="20">FECHA DE ATENCION</td>
-    <td width="20"><?php echo $_GET["getf_in"]?></td>
+    <td width="20"><?php  echo $_GET["getf_in"]?></td>
      </tr>
   <tr>
     <td width="20">SEMANA</td>
@@ -78,7 +78,7 @@ $reg=$ser->listado_fact2($_GET["getf_in"],$_GET["getf_fi"],$_GET["getser"],$_GET
   </table>
   <table width="1040" border="1">
         <tr class="titulofor">
-        <td width="1040" colspan="12" align="center"><?php echo $titulo; ?></td>
+        <td width="1040" colspan="12" align="center"><?php  echo $titulo; ?></td>
         
       </tr> 
         <tr class="titulorep">
@@ -96,7 +96,7 @@ $reg=$ser->listado_fact2($_GET["getf_in"],$_GET["getf_fi"],$_GET["getser"],$_GET
         <td width="140">TLF. MEDICO</td>
         </tr>  
      
-<?php       while ($row=mysql_fetch_array($reg))
+<?php        while ($row=mysql_fetch_array($reg))
        { 
         if ($cont%2!=0) $color='bgcolor="#E3E3E6"'; else $color='';
         $cont++;
@@ -115,35 +115,35 @@ $reg=$ser->listado_fact2($_GET["getf_in"],$_GET["getf_fi"],$_GET["getser"],$_GET
 
        ?>
        <tr class="texto">
-          <td width="20"><?php echo $cont; ?></td>
-          <td width="70"><?php echo $row[1]; ?></td>
-           <?php
+          <td width="20"><?php  echo $cont; ?></td>
+          <td width="70"><?php  echo $row[1]; ?></td>
+           <?php 
            //consulta para ver precio
           $sql_pre="select precio from slc_tab_pre where id_servicio='$row[9]' and id_empresa='$row[10]' ";
           $result_pre=mysql_query($sql_pre);
           $datos_pre=mysql_fetch_array($result_pre);
           $precio=$precio+$datos_pre[0];
           ?>
-          <td width="70"><?php echo $datos_pre[0]; ?></td>
-          <td width="70"><?php echo $row[2]; ?></td>
-          <td width="150"><?php echo $row[3].' '.$row[4]; ?></td>
-          <td width="150"><?php echo $row[5]; ?></td>
-          <td width="150"><?php echo $row[6]; ?></td>
-           <?php
+          <td width="70"><?php  echo $datos_pre[0]; ?></td>
+          <td width="70"><?php  echo $row[2]; ?></td>
+          <td width="150"><?php  echo $row[3].' '.$row[4]; ?></td>
+          <td width="150"><?php  echo $row[5]; ?></td>
+          <td width="150"><?php  echo $row[6]; ?></td>
+           <?php 
 
           $sql_benef="select ced_titular,nomb_titular from slc_benef where ced_benf='$row[2]' ";
           $result_benef=mysql_query($sql_benef);
           $datos_benef=mysql_fetch_array($result_benef);
           ?>
-          <td width="150"><?php echo $datos_benef[0]; ?></td>
-          <td width="150"><?php echo $datos_benef[1]; ?></td>
-          <td width="140"><?php echo $row[7]; ?></td>
-          <td width="140"><?php echo $row[8]; ?></td>
+          <td width="150"><?php  echo $datos_benef[0]; ?></td>
+          <td width="150"><?php  echo $datos_benef[1]; ?></td>
+          <td width="140"><?php  echo $row[7]; ?></td>
+          <td width="140"><?php  echo $row[8]; ?></td>
           <td width="140">0276-3417815</td></tr>
-          <?php}
+          <?php }
           ?>
        </table>
-      <?php
+      <?php 
 
 }
   ?>

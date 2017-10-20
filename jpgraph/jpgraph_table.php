@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*=======================================================================
  // File:        JPGRAPH_TABLE.PHP
  // Description: Classes to create basic tables of data

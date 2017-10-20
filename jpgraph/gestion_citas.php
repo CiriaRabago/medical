@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php";
@@ -24,7 +24,7 @@ include "clases/clase_feriado.php";
 .Estilo3 {color: #FF0000}
 -->
 </style>
-<?php
+<?php 
 $anoInicial = '2013';
 $anoFinal = '2100';
 $funcionTratarFecha = 'document.location = "?dia="+dia+"&mes="+mes+"&ano="+ano;';
@@ -133,7 +133,7 @@ function busca()
 </script>
 <body>
 <form id="form1" name="form1" method="post" action="gestion_citas.php">
-<?php
+<?php 
  $dia=substr($_POST['fechas'],0,2);
  $mes=substr($_POST['fechas'],3,2);
  $ano=substr($_POST['fechas'],6,4);
@@ -202,22 +202,22 @@ function busca()
     <tr>
       <td width="139" class="etiqueta">Especialidad:</td>
       <td colspan="3" class="texto Estilo2"><label>
-         <?php $esp=new especialidad($_POST['espe'],'');
+         <?php  $esp=new especialidad($_POST['espe'],'');
 	        $listaperf=$esp->combo_esp(); ?>
 
           <select name="espe" class="texto" id="espe" onchange="ver();" >
 			<option value="0">Seleccione---&gt;</option>
-			<?php if ($listaperf!=false) echo $listaperf;?>			
+			<?php  if ($listaperf!=false) echo $listaperf;?>			
           </select>
-		   <script> document.getElementById("perfil").value="<?php echo $val; ?>"; </script>
+		   <script> document.getElementById("perfil").value="<?php  echo $val; ?>"; </script>
           <span class="Estilo3">* </span> </label></td>
     </tr>
     <tr>
       <td class="etiqueta">Doctor:</td>
-      <td colspan="3"><label>  <?php if($_POST["ocu_N"]!='0') $medi=$_POST["ocu_N"];?>
+      <td colspan="3"><label>  <?php  if($_POST["ocu_N"]!='0') $medi=$_POST["ocu_N"];?>
 	  <select name="medi" class="texto"  id="medi" onchange="ver();">
 		<option value="0">Seleccione---&gt;</option>
-		<?php 
+		<?php  
 		$exa=new medico('','','','','','','','','','','','','','','');
 	    $listaexa=$exa->combo_medico_new($_POST['espe'],$_POST['medi']);
 		if ($listaexa!=false) echo $listaexa;?>
@@ -231,7 +231,7 @@ function busca()
       <input name="cedu" id="cedu" type="text" value="<?=$_POST['cedu']?>" class="texto" onchange="busca()"/>
       <span class="texto Estilo2"><span class="Estilo3">* </span> </span> </label></td>
     </tr>
-	<?php if($_POST['cedu']!='')
+	<?php  if($_POST['cedu']!='')
 	    {
 		$pac= new paciente($_POST["cedu"],'','','','','','','','','','','','','','');
 		$bus=$pac->buscar();
@@ -244,13 +244,13 @@ function busca()
 	<tr>
       <td class="etiqueta">Nombre y Apellidos :</td>
       <td colspan="3"><label>     
-      <span class="texto Estilo2"><span class="Estilo3"><?php echo $nom;?> </span> </span> </label></td>
+      <span class="texto Estilo2"><span class="Estilo3"><?php  echo $nom;?> </span> </span> </label></td>
     </tr>
-     <?php } }?>
+     <?php  } }?>
 	<tr>
       <td class="etiqueta">Fecha de la Cita:</td>
       <td colspan="3"><label>	      
-	  <?php $zone=(3600*-4.5); 
+	  <?php  $zone=(3600*-4.5); 
         $fec=gmdate("Y-m-d H:i:s", time() + $zone);
 		$datos=explode('-',$fec);
 		$fec=substr($datos[2],0,2).'-'.$datos[1].'-'.$datos[0];
@@ -266,18 +266,18 @@ function busca()
 		 $newf=$fech[2].$mes.$dia;}?>
 	  <input type="hidden" id="sw" name="sw" value="0" />
 	  <input type="hidden" id="newf" name="newf" value="<?=$newf;?>" />
-      <input name="fechas" id="fechas" type="text" class="texto" value="<?php echo $ff;?>" class="texto"/>
-	  <img src="imagenes/boton_calendario.png" alt="Mostrar almanaque"  style="cursor:hand" onclick="mostrar('<?php echo $_POST['sw'];?>')" 
+      <input name="fechas" id="fechas" type="text" class="texto" value="<?php  echo $ff;?>" class="texto"/>
+	  <img src="imagenes/boton_calendario.png" alt="Mostrar almanaque"  style="cursor:hand" onclick="mostrar('<?php  echo $_POST['sw'];?>')" 
 		onmouseover="this.src='imagenes/boton_calendario.png'"  onmouseout="this.src='imagenes/boton_calendario.png'"/><br /><label class="etiqueta">dd-mm-aaaa</label>
 		<!-- *********************almanaque **************************-->
 		
-             <?php 
+             <?php  
                if($_POST['sw']==1)
 			   { $_POST['sw']=1; ?><td colspan="2" width="200">
 			<table border="0" cellpadding="5" cellspacing="0" bgcolor="#D4D0C8">
               <tr>
                 <td width="100%">
-			   <?php
+			   <?php 
                  $fecha = getdate(time());
                  if(isset($_POST["dia"]))$dia = $_POST["dia"];
                  else $dia = $fecha['mday'];
@@ -291,7 +291,7 @@ function busca()
 				 
                   ?>
                  <select size="1" name="mes" class="m1" onChange="mostrar('2')">
-                 <?php
+                 <?php 
                  $meses = Array ('enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre');
                  for($i = 1; $i <= 12; $i++)
 				 {
@@ -302,7 +302,7 @@ function busca()
                   ?>
                   </select>&nbsp;&nbsp;&nbsp;
 				  <select size="1" name="ano" class="m1" onChange="mostrar('2')">
-                  <?php
+                  <?php 
                   for ($i = $anoInicial; $i <= $anoFinal; $i++)
 				   {
                    echo '      <option ';
@@ -312,7 +312,7 @@ function busca()
                   </select><br>
                   <font size="1">&nbsp;</font>
 				  <table border="0" cellpadding="2" cellspacing="0" width="100%" class="m1" bgcolor="#FFFFFF" height="100%"> 
-                    <?php
+                    <?php 
                     $diasSem = Array ('L','M','M','J','V','S','D');
                     $ultimoDia = date('t',$fecha);
                     $numMes = 0;
@@ -341,7 +341,7 @@ function busca()
                     </table>
                   </td>
                 </tr>
-            </table></td><?php }?>
+            </table></td><?php  }?>
 		<!-- fin almanaque--> 
       <span class="texto Estilo2"><span class="Estilo3">* </span> </span> </label></td>
     </tr>
@@ -360,7 +360,7 @@ function busca()
       <input name="ocu_g" type="hidden" value="0"/>  <input type="hidden" name="ocu_e" value="0"/>  <a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Nuevo"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a></td>
     </tr>
   </table>
- <?php 
+ <?php  
     //if($_POST["exam"]!=0 && $_POST["espe"]!=0 && $_POST["cedu"]!='')
 	 //{
 	  //$dat=$cit->ver_cantidad($_POST["espe"],$_POST["exam"]); 

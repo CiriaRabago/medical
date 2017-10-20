@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -57,7 +57,7 @@ function Guardar()
 </script>
 <body onload="posicion();">
 <form id="form1" name="form1" method="post" action="pagar_orden.php">
-  <?php $mos='style="display:none"';
+  <?php  $mos='style="display:none"';
    if (isset($_POST["ocu_bus"])!='0' && $_POST["ocu_bus"]!='0' ) //para eliminar
 	{	 $ord= new orden($_POST['orden'],'','','','','','');  
 	   	 $bus=$ord->buscar_orden();
@@ -81,7 +81,7 @@ function Guardar()
 			echo '<script>alert("El Registro no pudo ser Modificado");</script>';
   }
 	 ?>
-  <table width="537" border="0" align="center" cellpadding="0" cellspacing="0" <?php echo $mos1; ?>>
+  <table width="537" border="0" align="center" cellpadding="0" cellspacing="0" <?php  echo $mos1; ?>>
     <tr class="titulofor">
       <td colspan="4"><div align="center">Pagar la Orden </div></td>
     </tr>
@@ -110,12 +110,12 @@ function Guardar()
       </td>
     </tr>
   </table>
-  <table width="537" height="174" border="0" align="center" <?php echo $mos; ?>>
+  <table width="537" height="174" border="0" align="center" <?php  echo $mos; ?>>
     <tr class="titulofor">
       <td height="20" colspan="2"><div align="center">Pagar la Orden </div></td>
     </tr>
     <tr>
-      <td height="22" colspan="2" class="etiqueta"><div align="left"> Monto a pagar de la Orden: <?php echo $monto; ?>  </div></td>
+      <td height="22" colspan="2" class="etiqueta"><div align="left"> Monto a pagar de la Orden: <?php  echo $monto; ?>  </div></td>
     </tr>
     <tr>
       <td width="257" height="44" class="etiqueta"><div align="right">Nro. de Factura: </div></td>
@@ -132,7 +132,7 @@ function Guardar()
 </span>
         <input name="ocu_g" type="hidden" id="ocu_g" value="0" />
         <span class="textoN">
-        <input name="ocu_ord" type="hidden" id="ocu_ord" value="<?php echo $_POST['ocu_ord']; ?>" />
+        <input name="ocu_ord" type="hidden" id="ocu_ord" value="<?php  echo $_POST['ocu_ord']; ?>" />
         </span>      </div></td>
     </tr>
     <tr>

@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -254,11 +254,11 @@ function ver2()
  				  </tr>	
 				  <tr>
 				     <td colspan="2">
-					<?php  $ser= new diagnostico('','',''); ?> 
+					<?php   $ser= new diagnostico('','',''); ?> 
 						<select name="diagnostico" class="texto" id="diagnostico" >
 						  <option value="0" selected="selected" >SELECCIONE --></option>
 						  <option value="9" >TODOS</option>
-						  <?php  if ($ser->combo_diag('')!= false)
+						  <?php   if ($ser->combo_diag('')!= false)
 								echo $ser->combo_diag(''); ?>
 			  		    </select>
 					
@@ -266,7 +266,7 @@ function ver2()
                     <td colspan="5"><select name="medico" class="texto" id="medico">
 					<option value="0" selected="selected" >SELECCIONE --></option>
 						  <option value="9" >TODOS</option>
-                      <?php  $med= new medico('','','','','','','','','','');
+                      <?php   $med= new medico('','','','','','','','','','');
 						$cmed=$med->combo_medico('');
 						if($cmed!=false) echo $cmed;
 						?>

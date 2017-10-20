@@ -1,4 +1,4 @@
-<?php
+<?php 
 include '../jpgraph.php';
 include '../jpgraph_canvas.php';
 include '../jpgraph_table.php';

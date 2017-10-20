@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -81,7 +81,7 @@ function buscar()
     <td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
   </tr>  
 </table>
-<?php   
+<?php    
      $cedusu=$_SESSION["cedu_usu"];
 	 $bus1= new usuario('','','','',$cedusu,'','','');
 	 $usua=$bus1->consulta_usu();

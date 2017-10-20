@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "../clases/clase_conexion.php";
 include "../clases/clase_visita.php";
@@ -159,7 +159,7 @@ function ver_ser(){
 </script>
 <body onload="posicion();">
 <form id="form1" name="form1" method="post" action="reg_llegada_filtro.php">
-<?php 
+<?php  
 $activabene=0;
 $activatitu=0;
 $idpac=$_POST["ocuid"];
@@ -368,14 +368,14 @@ if(isset($_POST["ocu_e"]) && $_POST["ocu_e"]=='2' )
   }
  $cedreg=$_POST["cedreg"];
 ?>
-  <table width="683" border="0" align="center" <?php echo $mosreg; ?>>
+  <table width="683" border="0" align="center" <?php  echo $mosreg; ?>>
     <tr class="titulofor">
       <td colspan="2"><div align="center">Registro de llegada </div></td>
     </tr>
     <tr>
       <td width="143" height="32" class="etiqueta">C&eacute;dula:</td>
       <td width="530" class="texto"><label>
-        <input name="cedreg" type="text" class="texto" id="cedreg" onkeypress='return soloNumeros(event)' value="<?php echo $_POST["cedreg"];?>"/>
+        <input name="cedreg" type="text" class="texto" id="cedreg" onkeypress='return soloNumeros(event)' value="<?php  echo $_POST["cedreg"];?>"/>
         </label>
           <img src="imagenes/p_buspeq1.gif" alt="Buscar paciente" width="35" height="25"  style="cursor:hand" onclick="buscar();"	onmouseover="this.src='imagenes/a_buspeq1.gif'"  onmouseout="this.src='imagenes/p_buspeq1.gif'"/><span class="Estilo1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* </span><span class="etiqueta">campos obligatorios</span></td>
     </tr>
@@ -384,28 +384,28 @@ if(isset($_POST["ocu_e"]) && $_POST["ocu_e"]=='2' )
     </tr>
     <tr>
       <td class="etiqueta">C&eacute;dula:</td>
-      <td class="texto"><?php echo $ced; ?>
-      <input name="ocuced" type="hidden" id="ocuced" value="<?php echo $ced; ?>" />
+      <td class="texto"><?php  echo $ced; ?>
+      <input name="ocuced" type="hidden" id="ocuced" value="<?php  echo $ced; ?>" />
       <span class="Estilo2">*</span></td>
     </tr>
     <tr>
       <td class="etiqueta">Nombres y Apellidos: </td>
-      <td class="texto"><?php echo $nom; ?>
-        <input name="ocunom" type="hidden" id="ocunom" value="<?php echo $nom; ?>" />
+      <td class="texto"><?php  echo $nom; ?>
+        <input name="ocunom" type="hidden" id="ocunom" value="<?php  echo $nom; ?>" />
       <span class="Estilo2">*</span></td>
     </tr>
     <tr>
       <td class="etiqueta">Empresa:</td>      
      <td class="texto"><select name="comemp" class="texto" id="comemp">
         <option value="0" selected="selected" >Particular</option>
-        <?php  
+        <?php   
 		 if ($emp->combo_emp()!= false)
 		        echo $emp->combo_emp(); ?>
-      </select><script> document.getElementById("comemp").value="<?php echo $_POST["codemp"];?>"; </script>
+      </select><script> document.getElementById("comemp").value="<?php  echo $_POST["codemp"];?>"; </script>
 
       <span class="Estilo2">*</span></td>
     </tr>
-	<?php
+	<?php 
 	  $sw=0;
 	  $infc=$ben->cons_contacto($ced);
 	  if($infc)
@@ -419,18 +419,18 @@ if(isset($_POST["ocu_e"]) && $_POST["ocu_e"]=='2' )
 	   }
 	 ?>
 	<tr>
-	     <td  class="etiqueta">Persona contacto :</td><td class="texto"><?php if($sw==0) echo "<input type='text' class='texto' size='70'  name='nomco' id='nomco' value='".$_POST["nomco"]."' />"; else { echo $nomco; echo "<input type='hidden' name='nomco' id='nomco' value=''/>";}?></td>
+	     <td  class="etiqueta">Persona contacto :</td><td class="texto"><?php  if($sw==0) echo "<input type='text' class='texto' size='70'  name='nomco' id='nomco' value='".$_POST["nomco"]."' />"; else { echo $nomco; echo "<input type='hidden' name='nomco' id='nomco' value=''/>";}?></td>
 	</tr>
 	<tr>
-	     <td  class="etiqueta">Telefono persona contacto :</td><td class="texto"><?php if($sw==0) echo "<input type='text' class='texto'  name='telfco' id='telfco' value='".$_POST["telfco"]."'/>"; else { echo $telfco; echo "<input type='hidden' name='nomco' id='nomco' value=''/>";}?></td>
+	     <td  class="etiqueta">Telefono persona contacto :</td><td class="texto"><?php  if($sw==0) echo "<input type='text' class='texto'  name='telfco' id='telfco' value='".$_POST["telfco"]."'/>"; else { echo $telfco; echo "<input type='hidden' name='nomco' id='nomco' value=''/>";}?></td>
 	</tr>
 	<tr>
 	  <td colspan="2" class="etiqueta">Indique tipo de paciente :
-	     <input name="titular" id="titular"  type="checkbox"  onclick="buscar()" <?php if(isset($_POST['titular']) || $activatitu=='1'){ echo "checked='checked'"; } ?>/>Titular 
-	     <input name="beneficiario" id="beneficiario"  type="checkbox"  onclick="buscar()"  <?php if(isset($_POST['beneficiario']) || $activabene=='1'){ echo "checked='checked'"; } ?> />Beneficiario
+	     <input name="titular" id="titular"  type="checkbox"  onclick="buscar()" <?php  if(isset($_POST['titular']) || $activatitu=='1'){ echo "checked='checked'"; } ?>/>Titular 
+	     <input name="beneficiario" id="beneficiario"  type="checkbox"  onclick="buscar()"  <?php  if(isset($_POST['beneficiario']) || $activabene=='1'){ echo "checked='checked'"; } ?> />Beneficiario
 	  </td>
 	</tr>
-	<?php
+	<?php 
 	 if(isset($_POST['beneficiario']) || $activabene=='1')
 	  {	   
 	   $infc=$ben->cons_beneficiario($ced);
@@ -443,16 +443,16 @@ if(isset($_POST["ocu_e"]) && $_POST["ocu_e"]=='2' )
 	   }
 	  ?>
 	  <tr>
-	     <td  class="etiqueta">Cedula del titular :</td><td> <input type="text" class="texto" name="cedtit" id="cedtit" value="<?php echo $_POST["cedtit"];?>" /></td>
+	     <td  class="etiqueta">Cedula del titular :</td><td> <input type="text" class="texto" name="cedtit" id="cedtit" value="<?php  echo $_POST["cedtit"];?>" /></td>
 	  </tr>
 	  <tr>
-	     <td  class="etiqueta">Nombre del titular : </td><td><input type="text" class="texto" name="nomtit" id="nomtit" value="<?php echo $_POST["nomtit"];?>"/></td>
+	     <td  class="etiqueta">Nombre del titular : </td><td><input type="text" class="texto" name="nomtit" id="nomtit" value="<?php  echo $_POST["nomtit"];?>"/></td>
 	  </tr>
 	  <tr>
-	     <td  class="etiqueta">Telefono del titular : </td><td><input type="text" class="texto" name="teltit" id="teltit" value="<?php echo $_POST["teltit"];?>"/></td>
+	     <td  class="etiqueta">Telefono del titular : </td><td><input type="text" class="texto" name="teltit" id="teltit" value="<?php  echo $_POST["teltit"];?>"/></td>
 	  </tr>
 	  
-	  <?php
+	  <?php 
 	  }
 	   if($_POST['codemp']=='226'){
 	?>
@@ -462,7 +462,7 @@ if(isset($_POST["ocu_e"]) && $_POST["ocu_e"]=='2' )
 	<tr>
 	  <td class="etiqueta">Responsable :</td><td class="textoN"><input size="100" type="text" class="texto" name="resacc" id="resacc" value="<?=$_POST['resacc'];?>"/></td>
 	</tr>
-	<?php }?>
+	<?php  }?>
     <tr>
       <td colspan="2" class="mensaje"><strong>Puede Seleccionar un servicio que est&eacute; p&eacute;ndiente en una visita o crear una nueva visita </strong></td>
     </tr>
@@ -480,7 +480,7 @@ if(isset($_POST["ocu_e"]) && $_POST["ocu_e"]=='2' )
           <option value="Post-vacacional">Post-vacacional</option>
           <option value="Pre-empleo">Pre-empleo</option>
           <option value="Pre-vacacional">Pre-vacacional</option>
-        </select><script> document.getElementById("mot").value="<?php echo $mt; ?>"; </script>
+        </select><script> document.getElementById("mot").value="<?php  echo $mt; ?>"; </script>
         <span class="Estilo2">*</span></label></td>
     </tr>
 
@@ -489,24 +489,24 @@ if(isset($_POST["ocu_e"]) && $_POST["ocu_e"]=='2' )
       <td class="texto">
         <select name="esp" class="texto" id="esp">
           <option value="0" selected="selected" >Seleccione--></option>
-          <?php  if ($ref->combo_medico()!= false)
+          <?php   if ($ref->combo_medico()!= false)
 		        echo $ref->combo_medico(); ?>
-        </select><script> document.getElementById("esp").value="<?php echo $es; ?>"; </script></td>
+        </select><script> document.getElementById("esp").value="<?php  echo $es; ?>"; </script></td>
     </tr>
     <tr>
       <td class="etiqueta">Nro. Factura:</td>
       <td class="texto"><label>
-        <input name="fac" type="text" class="texto" id="fac" accesskey="F2" size="15"  value="<?php echo $fact; ?>"/>
+        <input name="fac" type="text" class="texto" id="fac" accesskey="F2" size="15"  value="<?php  echo $fact; ?>"/>
         <span class="Estilo1">indique el n&uacute;mero de Factura que cancela este Servicio.      </span></label></td>
     </tr>
     <tr>
       <td class="etiqueta">Servicio:</td>
       <td class="texto"><span class="Estilo2">
-        <select name="ser" class="texto" id="ser"  onchange="ver();"  <?php echo  $_POST["disab"]; ?>>
+        <select name="ser" class="texto" id="ser"  onchange="ver();"  <?php  echo  $_POST["disab"]; ?>>
           <option value="0" selected="selected" >Seleccione--></option>
-          <?php  if ($ser->combo_servicios()!= false)
+          <?php   if ($ser->combo_servicios()!= false)
 		        echo $ser->combo_servicios(); ?>
-        </select><script>document.getElementById("ser").value="<?php echo $val; ?>"; </script>
+        </select><script>document.getElementById("ser").value="<?php  echo $val; ?>"; </script>
       </span></td>
       <td>
       	<div id='ver_ser2'></div>
@@ -514,7 +514,7 @@ if(isset($_POST["ocu_e"]) && $_POST["ocu_e"]=='2' )
     </tr>
     <tr>
       <td colspan="2">
-          <?php	  	
+          <?php 	  	
 if ($_POST["ocuser"]>'0' && ($_POST["ocu_N"]=='0' || $_POST["ocu_N"]==''))	//LISTAR PRODUCTO DE UN SERVICIO EN UNA NUEVA VISITA
 {
 $serviprod2=$ser->consul_prod_serv(); 
@@ -527,26 +527,26 @@ if ($n2>'0')
             <td width="380">Servicios Asociados </td>
             <td width="100">Precio </td>
           </tr>
-<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php echo $n2;?>" />
-<?php
+<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php  echo $n2;?>" />
+<?php 
 while ($row2=mysql_fetch_array($serviprod2))
 { 
   $nocodigo='nocodcar'.$indi2;
   $nocodigoch='nocodcarch'.$indi2;
   if ($indi2%2!=0) $color='bgcolor="#E3E3E6"'; else $color='';
 ?>
-          <tr class="texto" <?php echo $color; ?>  >
+          <tr class="texto" <?php  echo $color; ?>  >
             <td width="20">
-              <input name="<?php echo $nocodigo;?>" id="<?php echo $nocodigo;?>" type="hidden" value="<?php echo $row2[4]; ?>" />
-              <input name="<?php echo $nocodigoch;?>" id="<?php echo $nocodigoch;?>"  type="checkbox" value="<?php echo $row2[4]; ?>" /></td>
-            <td><?php echo $row2[0]; ?></td>
+              <input name="<?php  echo $nocodigo;?>" id="<?php  echo $nocodigo;?>" type="hidden" value="<?php  echo $row2[4]; ?>" />
+              <input name="<?php  echo $nocodigoch;?>" id="<?php  echo $nocodigoch;?>"  type="checkbox" value="<?php  echo $row2[4]; ?>" /></td>
+            <td><?php  echo $row2[0]; ?></td>
             <td>
-              <div align="right"><?php echo $row2[1]; ?></div></td>
+              <div align="right"><?php  echo $row2[1]; ?></div></td>
           </tr>
-          <?php 
+          <?php  
 $indi2++; 
  } ?>
-        </table><?php }}
+        </table><?php  }}
 if ($_POST["ocuser"]>'0' && $_POST["ocu_N"]>'0')	///LISTAR PRODUCTOS DE UN VISITA PENDIENTE
 {
 $serviprod2=$vis->consul_det_vis($_POST["ocu_N"]); 
@@ -561,8 +561,8 @@ if ($n2>'0')
 			<td width="20">&nbsp;</td>
 			<td width="150">Estado </td>
           </tr>
-<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php echo $n2;?>" />
-<?php
+<input name="cantiocu2" id="cantiocu2" type="hidden" value="<?php  echo $n2;?>" />
+<?php 
 while ($row2=mysql_fetch_array($serviprod2))
 { 
   $nocodigo='nocodcar'.$indi2;
@@ -592,29 +592,29 @@ if($row2[3]=='E')
 	$che='style="display:none"';}
   if ($indi2%2!=0) $color='bgcolor="#E3E3E6"'; else $color='';
 ?>
-          <tr  class="texto" <?php echo $color; ?> >
+          <tr  class="texto" <?php  echo $color; ?> >
             <td width="20">
-              <input name="<?php echo $nocodigo;?>" id="<?php echo $nocodigo;?>" type="hidden" value="<?php echo $row2[0]; ?>" />
-              <input name="<?php echo $nocodigoch;?>" id="<?php echo $nocodigoch;?>"  type="checkbox" <?php echo $che;?> value="<?php echo $row2[0]; ?>" / ></td>
-            <td><?php echo $row2[1]; ?></td>
+              <input name="<?php  echo $nocodigo;?>" id="<?php  echo $nocodigo;?>" type="hidden" value="<?php  echo $row2[0]; ?>" />
+              <input name="<?php  echo $nocodigoch;?>" id="<?php  echo $nocodigoch;?>"  type="checkbox" <?php  echo $che;?> value="<?php  echo $row2[0]; ?>" / ></td>
+            <td><?php  echo $row2[1]; ?></td>
             <td>
-              <div align="right"><?php echo $row2[2]; ?></div></td>
+              <div align="right"><?php  echo $row2[2]; ?></div></td>
 			  <td width="20">&nbsp;</td>
-			<td><input name="<?php echo $nostatus;?>" id="<?php echo $nostatus;?>" type="hidden" value="<?php echo $row2[3]; ?>" />
-			<input name="<?php echo $noser;?>" id="<?php echo $noser;?>" type="hidden" value="<?php echo $row2[5]; ?>" />
-              <div <?php echo $fuente?> align="left"><?php echo $status; ?></div></td>
+			<td><input name="<?php  echo $nostatus;?>" id="<?php  echo $nostatus;?>" type="hidden" value="<?php  echo $row2[3]; ?>" />
+			<input name="<?php  echo $noser;?>" id="<?php  echo $noser;?>" type="hidden" value="<?php  echo $row2[5]; ?>" />
+              <div <?php  echo $fuente?> align="left"><?php  echo $status; ?></div></td>
           </tr>
-          <?php 
+          <?php  
 $indi2++; 
  } ?>
-        </table><?php }} 
+        </table><?php  }} 
 ?></td>
     </tr>
-    <tr <?php echo $mosvis; ?>>
+    <tr <?php  echo $mosvis; ?>>
       <td colspan="2" class="titulorep">Visitas por Concluir </td>
     </tr>
     <tr>
-      <td colspan="2" class="etiqueta"><?php echo $vispen; ?></td>
+      <td colspan="2" class="etiqueta"><?php  echo $vispen; ?></td>
     </tr>
     
     <tr>
@@ -632,17 +632,17 @@ $indi2++;
       </div>
 		<input name="ocu_g" type="hidden" value="0"/>
         <input type="hidden" name="ocu_b" value="0" />
-        <input name="ocuser" type="hidden" id="ocuser" value="<?php echo $_POST["ocuser"]; ?>" />
-        <input name="ocuser" type="text" id="ocuser2" onchange="ver_ser();" value="<?php echo $_POST["ocuser"]; ?>" />
-        <input name="ocu_N" type="hidden" id="ocu_N" value="<?php echo $_POST["ocu_N"]; ?>" />
+        <input name="ocuser" type="hidden" id="ocuser" value="<?php  echo $_POST["ocuser"]; ?>" />
+        <input name="ocuser" type="text" id="ocuser2" onchange="ver_ser();" value="<?php  echo $_POST["ocuser"]; ?>" />
+        <input name="ocu_N" type="hidden" id="ocu_N" value="<?php  echo $_POST["ocu_N"]; ?>" />
         <input name="ocu_e" type="hidden" id="ocu_e" value="0" />
         <input name="disab" type="hidden" id="disab" value="0" />
-        <input name="codemp" type="hidden" id="codemp" value="<?php echo $codemp; ?>"/>
-		<input name="ocuid" type="hidden" id="ocuid" value="<?php echo $idpac; ?>"/>
+        <input name="codemp" type="hidden" id="codemp" value="<?php  echo $codemp; ?>"/>
+		<input name="ocuid" type="hidden" id="ocuid" value="<?php  echo $idpac; ?>"/>
       </td>
     </tr>
   </table>
-  <table width="299" border="0" align="center" <?php echo $mosobs; ?>>
+  <table width="299" border="0" align="center" <?php  echo $mosobs; ?>>
     <tr class="titulorep">
       <td><div align="center">Indique el Motivo de la Eliminaci&oacute;n de la visita </div></td>
     </tr>

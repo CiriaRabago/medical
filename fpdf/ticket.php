@@ -1,4 +1,4 @@
-<?php 
+<?php  
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_espec.php";
@@ -22,7 +22,7 @@ include "clases/clase_medico.php";
 <table>
 <tr>
 <td rowspan="3"><img src="imagenes/Logo1.png" height="47" /></td>
-  <?php
+  <?php 
  $ms=$_GET['ms'];
  $datos=explode(';',$ms);
  echo "<td>Cita registrada con Numero : <span class='Estilo2'>".$datos[0]."</span>";

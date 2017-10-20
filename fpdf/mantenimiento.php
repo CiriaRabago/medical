@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_usuario.php";
@@ -54,7 +54,7 @@ function soloNumeros(evt){
 </script>
 <body>
 <form id="form1" name="form1" method="post" action="mantenimiento.php">
-    <?php
+    <?php 
 			     $ver='style="display:none"';
 				 $bus= new usuario($_SESSION["cedu_usu"],'','','','','','','');
 			     $CAD= $bus->buscar_usuario();
@@ -86,9 +86,9 @@ function soloNumeros(evt){
   }
   
      ?></p>
-    <table width="536" border="0" align="center"  bgcolor="#FFFFFF" <?php echo $ver; ?>>
+    <table width="536" border="0" align="center"  bgcolor="#FFFFFF" <?php  echo $ver; ?>>
       <tr class="titulofor">
-        <td colspan="2"><div align="center"><?php echo $nombre; ?> </div></td>
+        <td colspan="2"><div align="center"><?php  echo $nombre; ?> </div></td>
       </tr>
       <tr>
         <td colspan="2" class="Estilo24 Etiqueta"><div align="center" class="Estilo29">
@@ -102,7 +102,7 @@ function soloNumeros(evt){
         <td width="164" class="etiqueta"><strong>Clave Actual: </strong></td>
         <td width="364" class="texto"><label>
           <input name="claa" type="password" class="texto" id="claa" maxlength="6" />
-          <input name="claact" type="hidden" id="claact"  value="<?php echo $buscla; ?>"/>
+          <input name="claact" type="hidden" id="claact"  value="<?php  echo $buscla; ?>"/>
           </label>
        </td>
       </tr>

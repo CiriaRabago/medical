@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_empresa.php";
@@ -247,7 +247,7 @@ function ver()
 
 </script>
 <body onload="posicion();">
-<?php ?>
+<?php  ?>
 <form name="form1" id="form1" method="post" action="paciente.php" enctype="multipart/form-data">
   <div align="center">
   <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="500" height="255" align="baseline">
@@ -256,7 +256,7 @@ function ver()
       <embed src="capture4.swf" width="500" height="255" align="baseline" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed>
   </object>
   
-  <?php 
+  <?php  
 error_reporting(0);
 $w = (int)$_POST['width'];
 $h = (int)$_POST['height'];
@@ -461,32 +461,32 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
     <tr>
       <td class="etiqueta">C&eacute;dula: </td>
       <td colspan="2" class="texto"><label>
-        <input name="ced" type="text" class="texto" id="ced" size="25"  value="<?php echo $datos[1]; ?>" onkeypress='return soloNumeros(event)'/>
+        <input name="ced" type="text" class="texto" id="ced" size="25"  value="<?php  echo $datos[1]; ?>" onkeypress='return soloNumeros(event)'/>
         <img src="imagenes/p_buspeq1.gif" alt="Buscar paciente Si EXISTE" width="35" height="25"  style="cursor:hand" onClick="buscar();"	onMouseOver="this.src='imagenes/a_buspeq1.gif'"  onMouseOut="this.src='imagenes/p_buspeq1.gif'"/><span class="Estilo1">*</span> s&oacute;lo n&uacute;meros  </label></td>
       <td width="321" rowspan="5" class="texto"><div align="right">
-<img src="<?php echo $_POST["imafot"]?>?<?=time()?>" width="120" height="100" id="foto" name="foto"><img src="imagenes/p_elifoto1.gif" alt="Eliminar la Foto" width="25" height="25" style="cursor:hand" onClick="eliminar_foto();"	onMouseOver="this.src='imagenes/a_elifoto1.gif'"  onMouseOut="this.src='imagenes/p_elifoto1.gif'">
+<img src="<?php  echo $_POST["imafot"]?>?<?=time()?>" width="120" height="100" id="foto" name="foto"><img src="imagenes/p_elifoto1.gif" alt="Eliminar la Foto" width="25" height="25" style="cursor:hand" onClick="eliminar_foto();"	onMouseOver="this.src='imagenes/a_elifoto1.gif'"  onMouseOut="this.src='imagenes/p_elifoto1.gif'">
 <input name="ocu_fot" type="hidden" id="ocu_fot" value="0">
-<input name="imafot" type="hidden" id="imafot" value="<?php echo $_POST["imafot"]; ?>">
+<input name="imafot" type="hidden" id="imafot" value="<?php  echo $_POST["imafot"]; ?>">
       </div></td>
     </tr>
     <tr>
       <td class="etiqueta">Primer Nombre:</td>
-      <td colspan="2" class="texto"><input name="nom1" type="text" class="texto" id="nom1" size="25"  value="<?php echo $datos[2]; ?>"onkeypress='return sincomillas(event)'/>
+      <td colspan="2" class="texto"><input name="nom1" type="text" class="texto" id="nom1" size="25"  value="<?php  echo $datos[2]; ?>"onkeypress='return sincomillas(event)'/>
         <span class="Estilo2">*</span></td>
     </tr>
     <tr>
       <td class="etiqueta">Segundo Nombre:</td>
-      <td colspan="2" class="texto"><input name="nom2" type="text" class="texto" id="nom2" size="25" value="<?php echo $datos[3]; ?>" onkeypress='return sincomillas(event)'/></td>
+      <td colspan="2" class="texto"><input name="nom2" type="text" class="texto" id="nom2" size="25" value="<?php  echo $datos[3]; ?>" onkeypress='return sincomillas(event)'/></td>
     </tr>
     <tr>
       <td class="etiqueta"><p>Primer Apellido:</p>      </td>
-      <td colspan="2" class="texto"><input name="ape1" type="text" class="texto" id="ape1" size="25" value="<?php echo $datos[4]; ?>" onkeypress='return sincomillas(event)'/>
+      <td colspan="2" class="texto"><input name="ape1" type="text" class="texto" id="ape1" size="25" value="<?php  echo $datos[4]; ?>" onkeypress='return sincomillas(event)'/>
         <span class="Estilo1">*</span></td>
     </tr>
     <tr>
       <td class="etiqueta">Segundo Apellido:</td>
       <td colspan="2" class="texto"><label>
-        <input name="ape2" type="text" class="texto" id="ape2" size="25" value="<?php echo $datos[5]; ?>" onkeypress='return sincomillas(event)'/>
+        <input name="ape2" type="text" class="texto" id="ape2" size="25" value="<?php  echo $datos[5]; ?>" onkeypress='return sincomillas(event)'/>
       </label></td>
     </tr>
     <tr>
@@ -497,24 +497,24 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
     <tr>
       <td width="179" class="etiqueta">Direcci&oacute;n :</td>
       <td colspan="3" class="texto"><label>
-        <textarea name="dire" cols="50" class="texto" id="dire" onkeypress='return sincomillas(event)'><?php echo $datos[6]; ?></textarea>
+        <textarea name="dire" cols="50" class="texto" id="dire" onkeypress='return sincomillas(event)'><?php  echo $datos[6]; ?></textarea>
       </label></td>
     </tr>
      <tr>
       <td height="19" class="etiqueta">Telefono Habitaci&oacute;n:</td>
       <td colspan="3" class="texto"><label>
-        <input name="te1" type="text" class="texto" id="te1" size="25" value="<?php echo $datos[7]; ?>" onkeypress='return soloNumeros(event)'/>
+        <input name="te1" type="text" class="texto" id="te1" size="25" value="<?php  echo $datos[7]; ?>" onkeypress='return soloNumeros(event)'/>
         <span class="Estilo1">*</span></label></td>
     </tr>
     <tr>
       <td class="etiqueta">Telefono Celular :</td>
       <td colspan="3" class="texto"><label>
-        <input name="te2" type="text" class="texto" id="te2" size="25" value="<?php echo $datos[8]; ?>"  onkeypress='return soloNumeros(event)'/>
+        <input name="te2" type="text" class="texto" id="te2" size="25" value="<?php  echo $datos[8]; ?>"  onkeypress='return soloNumeros(event)'/>
       </label></td>
     </tr>
      <tr>
       <td class="etiqueta">correo electr&oacute;nico:</td>
-      <td colspan="3" class="texto"><input name="cor" type="text" class="texto" id="cor" size="50" value="<?php echo $datos[9]; ?>" onkeypress='return sincomillas(event)'/></td>
+      <td colspan="3" class="texto"><input name="cor" type="text" class="texto" id="cor" size="50" value="<?php  echo $datos[9]; ?>" onkeypress='return sincomillas(event)'/></td>
     </tr>
     <tr>
       <td class="etiqueta">Fecha de Nacimiento: </td>
@@ -551,7 +551,7 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
           <option value="29">29</option>
           <option value="30">30</option>
           <option value="31">31</option>
-        </select><script> document.getElementById("fna1").value="<?php echo $dian; ?>"; </script>
+        </select><script> document.getElementById("fna1").value="<?php  echo $dian; ?>"; </script>
       </label>
 /
 <label>
@@ -568,11 +568,11 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
   <option value="10">10</option>
   <option value="11">11</option>
   <option value="12">12</option>
-</select><script> document.getElementById("fna2").value="<?php echo $mesn; ?>"; </script>
+</select><script> document.getElementById("fna2").value="<?php  echo $mesn; ?>"; </script>
 </label>
 /
 <label>
-<input name="fna3" type="text" class="texto" id="fna3"  value="<?php echo $añon; ?>"onChange="ver()" onkeypress='return soloNumeros(event)' size="8" maxlength="4">
+<input name="fna3" type="text" class="texto" id="fna3"  value="<?php  echo $añon; ?>"onChange="ver()" onkeypress='return soloNumeros(event)' size="8" maxlength="4">
 </label>
 <span class="Estilo2"><strong>
 <input name="ocu_fi" type="hidden" value="" />
@@ -588,7 +588,7 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
         <option value="V">Viudo(a)</option>
         <option value="D">Divorciado(a)</option>
         <option value="U">Unión Libre</option>
-      </select> <script> document.getElementById("edo").value="<?php echo $datos[11]; ?>"; </script></td>
+      </select> <script> document.getElementById("edo").value="<?php  echo $datos[11]; ?>"; </script></td>
     </tr>
     <tr>
       <td class="etiqueta">Sexo:</td>
@@ -596,7 +596,7 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
         <option value="0">Seleccione---&gt;</option>
         <option value="F">Femenino</option>
         <option value="M">Masculino</option>
-      </select><script> document.getElementById("sex").value="<?php echo $datos[12]; ?>"; </script>
+      </select><script> document.getElementById("sex").value="<?php  echo $datos[12]; ?>"; </script>
         <span class="Estilo1">*</span></td>
     </tr>
     <tr>
@@ -610,34 +610,34 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
           <option value="Universitario">Universitario</option>
           <option value="Postgrado">Postgrado</option>
           <option value="T. S. U.">T. S. U.</option>
-        </select><script> document.getElementById("grado").value="<?php echo $datos[16]; ?>"; </script>
+        </select><script> document.getElementById("grado").value="<?php  echo $datos[16]; ?>"; </script>
         <span class="Estilo1">*</span></label></td>
     </tr>
     <tr>
       <td class="etiqueta">Empresa donde Trabaja: </td>
       <td colspan="3" class="texto"><select name="comemp" class="texto" id="comemp">
         <option value="0" selected="selected" >Particular</option>
-        <?php  
+        <?php   
 		 if ($emp->combo_emp()!= false)
 		        echo $emp->combo_emp(); ?>
-      </select><script> document.getElementById("comemp").value="<?php echo $datos[13]; ?>"; </script>
-        <input name="ocu_N" type="hidden" value="<?php echo $datos[0]; ?>"/>
+      </select><script> document.getElementById("comemp").value="<?php  echo $datos[13]; ?>"; </script>
+        <input name="ocu_N" type="hidden" value="<?php  echo $datos[0]; ?>"/>
         <span class="Estilo2">Si proviene de una empresa solicitar Fecha de Ingreso y Cargo Obligatoriamente.</span> </td>
     </tr>
     <tr>
       <td class="etiqueta">Tiempo en la Empresa: </td>
       <td colspan="3" class="texto"><label>
-      <input name="fing" type="text" class="texto" id="fing" size="20" maxlength="10" value="<?php echo $datos[15]; ?>">
+      <input name="fing" type="text" class="texto" id="fing" size="20" maxlength="10" value="<?php  echo $datos[15]; ?>">
       </label>
         <span class="Estilo2"><strong>* </strong></span>Ejemplo: 10 meses ó 2 años</td>
     </tr>
     <tr>
       <td class="etiqueta">Cargo:</td>
       <td colspan="3" class="texto"><label>
-        <input name="cargo" type="text" class="texto" id="cargo" size="50" value="<?php echo $datos[14]; ?>">
+        <input name="cargo" type="text" class="texto" id="cargo" size="50" value="<?php  echo $datos[14]; ?>">
       <span class="Estilo2"><strong>*</strong></span>      </label></td>
     </tr>
-   	   	<?php
+   	   	<?php 
 		$ben= new benef('','','',''); 
 	  $regb=$ben->cons_benef2($datos[1]);
 	  if($regb)
@@ -646,27 +646,27 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
 		?>
 		 <tr>
 	  <td colspan="2" class="etiqueta">Indique tipo de paciente :
-	     <input name="titular" id="titular" onchange="ocultar();" onclick='validarchek(form1.titular,0)' type="checkbox"  <?php if ($datos[1]!='' && $datos[1]==$benefe[0]) {
+	     <input name="titular" id="titular" onchange="ocultar();" onclick='validarchek(form1.titular,0)' type="checkbox"  <?php  if ($datos[1]!='' && $datos[1]==$benefe[0]) {
 	      echo "checked='checked'"; } ?>/>Titular 
-	     <input name="beneficiario" id="beneficiario" onchange="abrir();" onclick='validarchek(form1.beneficiario,0)' type="checkbox" <?phpif ($datos[1]!='' && $datos[1]!=$benefe[0] && $benefe[0]!='') { echo "checked='checked'"; } ?> />Beneficiario
+	     <input name="beneficiario" id="beneficiario" onchange="abrir();" onclick='validarchek(form1.beneficiario,0)' type="checkbox" <?php if ($datos[1]!='' && $datos[1]!=$benefe[0] && $benefe[0]!='') { echo "checked='checked'"; } ?> />Beneficiario
 	  </td>
 	  <input type="hidden" name="cheq_titular" id="cheq_titular" value=""></tr>
-		<?php
+		<?php 
 	   if ($datos[1]!='' && $datos[1]==$benefe[0]) {
 	   ?><tr><td colspan="2">
 	  <span class="Estilo2"  >El paciente es el titular de la p&oacute;liza</span>
 	   </td></tr>
-	   <?php	
+	   <?php 	
 	   }	  
 	   ?>		
 			<tr>
 			<td colspan="1"><div id="contenido" style="display: none">
 			<div class="etiqueta"> Cedula del titular :</div>
-			<input type="text" class="texto" name="cedtit" id="cedtit" value="<?phpecho $benefe[0];?>"/>
+			<input type="text" class="texto" name="cedtit" id="cedtit" value="<?php echo $benefe[0];?>"/>
 			<div class="etiqueta">Nombre del titular :</div>
-			<input type="text" class="texto" name="nomtit" id="nomtit" value="<?phpecho $benefe[2];?>"/>
+			<input type="text" class="texto" name="nomtit" id="nomtit" value="<?php echo $benefe[2];?>"/>
 			<div class="etiqueta">Telef del titular : </div>
-			<input type="text" class="texto" name="teltit" id="teltit" value="<?phpecho $benefe[3];?>"/>
+			<input type="text" class="texto" name="teltit" id="teltit" value="<?php echo $benefe[3];?>"/>
 			</td>
 			</div>
 			<tr>
@@ -681,7 +681,7 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
 			<option value="P">Padre</option>
 			<option value="E">Esposo(a)</option>
 			<option value="H">Hijo(a)</option>
-			</select><script> document.getElementById("paren").value="<?php echo $benefe[4]; ?>"; </script>
+			</select><script> document.getElementById("paren").value="<?php  echo $benefe[4]; ?>"; </script>
 			<span class="Estilo1"><a href="javascript:mostrarVentana();">&nbsp;Requisitos&nbsp;</a>
 <div id="miVentana" style="position: fixed; width: 450px; height: 300px; top: 0; left: 0; font-family:Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; border: #000000 3px solid; background-color: #FAFAFA; color: #000000; display:none;">
  <div style="font-weight: bold; text-align: left; color: #FFFFFF; padding: 5px; background-color:#FF8C00" align="center"><img src="imagenes/inf_medico.png" width="60" height="60"> &nbsp;&nbsp;Requisitos Solicitados al Beneficiario</div>
@@ -700,20 +700,20 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
   <div style="padding: 5px; background-color: ; text-align: center; margin-top: 10px;"><input id="btnAceptar" onclick="ocultarVentana();" name="btnAceptar" size="20" type="button" value="Aceptar" />
  </div>
 </div>
-<?php
+<?php 
 $requi= new pac_req('',$_POST["ced"],'1','A'); 
 	  $reg_r=$requi->cons_pac_req2();
 	 ?>
 </span>
 	Consignados
-	<input type="checkbox" name="req" id="req" value="1" onclick="Requisitos()" <?php if ($reg_r!='' && $reg_r==1) {
+	<input type="checkbox" name="req" id="req" value="1" onclick="Requisitos()" <?php  if ($reg_r!='' && $reg_r==1) {
 	      echo "checked='checked'"; } ?> >
 	<input type="hidden" name="cheq_req" id="cheq_req" value="1">
 </td>
 
     
 			</tr>
-	   <?php 
+	   <?php  
 	   
 			$ben2= new beneficiario('','','',''); 
 			$regs=$ben2->cons_contacto($datos[1]);
@@ -724,12 +724,12 @@ $requi= new pac_req('',$_POST["ced"],'1','A');
 			<tr>
 			<td class="etiqueta">Contacto:</td>
 			<td  class="texto"><label>
-			<input name="nomcon" type="text" class="texto" id="nomcon" size="50" value="<?php echo $contac[1]; ?>"> </label></td>
+			<input name="nomcon" type="text" class="texto" id="nomcon" size="50" value="<?php  echo $contac[1]; ?>"> </label></td>
 			<td class="etiqueta">Telf:</td>
-			<td  class="texto"><label><input name="telcon" type="text" class="texto" id="telcon" size="50" value="<?php echo $contac[2]; ?>">
+			<td  class="texto"><label><input name="telcon" type="text" class="texto" id="telcon" size="50" value="<?php  echo $contac[2]; ?>">
 			</label></td>
 			</tr>	
-			<?php }	   
+			<?php  }	   
 			} ?>
 			<tr>
 			<td height="32" colspan="4" class="texto"><label><span class="Estilo2">* </span><span class="etiqueta">campos obligatorios </span></label>
@@ -749,7 +749,7 @@ $requi= new pac_req('',$_POST["ced"],'1','A');
 
 	<a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Nuevo"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a>
 
-          <input name="ususis" type="hidden" id="ususis" value="<?php echo $_SESSION["cedu_usu"]; ?>">
+          <input name="ususis" type="hidden" id="ususis" value="<?php  echo $_SESSION["cedu_usu"]; ?>">
           <input type="hidden" name="ocu_b" value="0" />
       </td>
     </tr>

@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_empleado.php";
@@ -158,7 +158,7 @@ function ver1()
 <body>
 <form name="form1" method="post" action="empleado.php">
   <div align="center">
-  <?php 
+  <?php  
  $pac= new empleado('','','','','','','','','','','','','','','','','','','');
  $usu= new usuario('','','','','','','','');
 
@@ -442,7 +442,7 @@ function ver1()
   </td>
     </tr>
   </table>
-       <?php 
+       <?php  
 $ver=$pac->ver_empleado();
         if ($ver==false)
 		{

@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*=======================================================================
  // File:        JPGRAPH_UTILS.INC
  // Description: Collection of non-essential "nice to have" utilities

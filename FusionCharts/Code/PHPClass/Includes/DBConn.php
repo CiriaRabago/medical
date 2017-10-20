@@ -1,4 +1,4 @@
-<?php
+<?php 
 // In this page, we open the connection to the Database
 // In this page, we open the connection to the Database
 // Our MySQL database (blueprintdb) for the Blueprint Application

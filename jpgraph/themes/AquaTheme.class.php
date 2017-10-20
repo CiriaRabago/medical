@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 /**
 * Aqua Theme class

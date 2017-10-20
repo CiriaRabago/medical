@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_servicio.php";
@@ -28,7 +28,7 @@ function ver_ser(codi)
 <body>
 <p>&nbsp;</p>
 <form name="form1" id="form1" method="post" action="lista_espera.php">
-<?php $ser= new servicio(0,'','','','','','',0);
+<?php  $ser= new servicio(0,'','','','','','',0);
    		$ver=$ser->ver_serv_LE();
 		//echo  '<br>'.$ver.'<br>';
         if ($ver==false)

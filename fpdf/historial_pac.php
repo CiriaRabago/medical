@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -12,7 +12,7 @@ include("FusionCharts/Code/PHPClass/Includes/FusionCharts_Gen.php");
     FusionCharts Free - Simple Column 3D Chart 
   </TITLE>
 
-  <?php
+  <?php 
   //You need to include the following JS file, if you intend to embed the chart using JavaScript.
   //Embedding using JavaScripts avoids the "Click to Activate..." issue in Internet Explorer
   //When you make your own charts, make sure that the path to this JS file is correct. 
@@ -65,7 +65,7 @@ function activerhis()
 
 <BODY>
 <form name="form1" id="form1" method="post" action="historial_pac.php">
-<?php
+<?php 
  if($_POST['ingreso']==1)
  {
     //echo 'entro a verificar';
@@ -90,13 +90,13 @@ function activerhis()
 			
 			<tr class="texto">
 			  <td height="30" colspan="4"><div align="left" class="texto"> 
-	  			<span class="textoN">C&Eacute;DULA: <?php echo $datos[11]; ?></span>
-	  			<input name="cedula" id="cedula" type="text" value="<?php echo $datos[11]; ?>" class="texto" />
+	  			<span class="textoN">C&Eacute;DULA: <?php  echo $datos[11]; ?></span>
+	  			<input name="cedula" id="cedula" type="text" value="<?php  echo $datos[11]; ?>" class="texto" />
       			<br>
-				<span class="textoN">NOMBRE</span>: <?php echo utf8_encode($datos[1]).' '.utf8_encode($datos[2]).' '.utf8_encode($datos[3]).' '.utf8_encode($datos[4]); ?><input name="nombre" id="nombre" type="hidden" value="<?php echo $datos[1].' '.$datos[2].' '.$datos[3].' '.$datos[4]; ?>" /><br>
-	  			<span class="textoN">EDAD</span>: <?php if($_POST['cedula']) echo calculaedad($datos[5]); ?><input name="edad" id="edad" type="hidden" value="<?php echo calculaedad($datos[5]); ?>" /><br>
-	  			<span class="textoN">SEXO</span>: <?php echo $sexo; ?><input name="sexo" id="sexo" type="hidden" value="<?php echo $datos[6]; ?>" /><input name="sexonom" id="sexonom" type="hidden" value="<?php echo $sexo; ?>" /><br>
-	  			<span class="textoN">EMPRESA: </span><?php echo $datos[8]; ?><input name="empresa" id="empresa" type="hidden" value="<?php echo $datos[7]; ?>" /><input name="empresanom" id="empresanom" type="hidden" value="<?php echo $datos[8]; ?>" />
+				<span class="textoN">NOMBRE</span>: <?php  echo utf8_encode($datos[1]).' '.utf8_encode($datos[2]).' '.utf8_encode($datos[3]).' '.utf8_encode($datos[4]); ?><input name="nombre" id="nombre" type="hidden" value="<?php  echo $datos[1].' '.$datos[2].' '.$datos[3].' '.$datos[4]; ?>" /><br>
+	  			<span class="textoN">EDAD</span>: <?php  if($_POST['cedula']) echo calculaedad($datos[5]); ?><input name="edad" id="edad" type="hidden" value="<?php  echo calculaedad($datos[5]); ?>" /><br>
+	  			<span class="textoN">SEXO</span>: <?php  echo $sexo; ?><input name="sexo" id="sexo" type="hidden" value="<?php  echo $datos[6]; ?>" /><input name="sexonom" id="sexonom" type="hidden" value="<?php  echo $sexo; ?>" /><br>
+	  			<span class="textoN">EMPRESA: </span><?php  echo $datos[8]; ?><input name="empresa" id="empresa" type="hidden" value="<?php  echo $datos[7]; ?>" /><input name="empresanom" id="empresanom" type="hidden" value="<?php  echo $datos[8]; ?>" />
 				<input name="ingreso" id="ingreso" type="hidden" value="0">
 				<input name="mostrargrafi" id="mostrargrafi" type="hidden" value="0">
 				</div><br>
@@ -105,7 +105,7 @@ function activerhis()
 				<span class="textoN">HISTORIAL</span><br>
 				<select name="caracts" id="caracts" class="texto" onChange="activerhis()">
 				  <option value="0">Seleccione</option>
-				  <?php if($_POST['ingreso']==1)
+				  <?php  if($_POST['ingreso']==1)
 				     {
 				      $resulth=$ord->caract_hist($datos[0]);
 				  	  if($resulth)  
@@ -115,9 +115,9 @@ function activerhis()
 					  }
 					 }  ?> 
 				</select><input name="nombcarocu" id="nombcarocu" type="hidden" value="" /><br>
-			   <?php if($resulth) { ?>
+			   <?php  if($resulth) { ?>
 			        <span id="verhis" onClick="irhisto();" style="cursor:hand; text-decoration:underline; display:none ">VER HISTORIAL</span>
-			   <?php } ?>
+			   <?php  } ?>
 			  <br>
 			  </div>
 			</tr>
@@ -129,7 +129,7 @@ function activerhis()
 			  </td></tr>
 	    </table>
 <div align="center" id="grafico">
-  <?php
+  <?php 
   //This page demonstrates the ease of generating charts using FusionCharts PHP Class.
   //For this chart, we've created an instance of FusionCharts PHP Class,
   //fed chart data and configuration parameters to it and rendered chart using the instance.

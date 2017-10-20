@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 // Antispam example using a random string
 require_once "jpgraph/jpgraph_antispam.php";
 

@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_servicio.php";
@@ -52,7 +52,7 @@ function imprimir(ventana)
 
 <form action="historia_visit.php" method="post" name="form3">
 
-<?php 
+<?php  
 if($_POST['ocuguahv']==1)
 {
   $chv=$_POST['contCondiHV'];
@@ -130,16 +130,16 @@ if($_POST['ocuguahv']==1)
 ?>
 
 <div id="Contenido2"> 
-<input name="oidpachv" id="oidpachv" type="hidden" value="<?php echo $ipaci; ?>" />
-<input name="oidvishv" id="oidvishv" type="hidden" value="<?php echo $visita; ?>" />
-<input name="oiddevihv" id="oiddevihv" type="hidden" value="<?php echo $devi; ?>" />
+<input name="oidpachv" id="oidpachv" type="hidden" value="<?php  echo $ipaci; ?>" />
+<input name="oidvishv" id="oidvishv" type="hidden" value="<?php  echo $visita; ?>" />
+<input name="oiddevihv" id="oiddevihv" type="hidden" value="<?php  echo $devi; ?>" />
 
 <table width="704" border="0" cellspacing="1" cellpadding="0" >
   <tr>
     <td  height="30" colspan="3" align="center" class="titulofor">HISTORIA DE LA VISITA </td>
   </tr>
   <tr>
-    <td colspan="3"><?php
+    <td colspan="3"><?php 
 		$vis= new visita($visita,'','','','','','','','','','','','');
 	 	$tipHV=$vis->tipos_cond_H('2'); 
 		if ($tipHV==false)
@@ -205,8 +205,8 @@ if($_POST['ocuguahv']==1)
 										while($row6 = mysql_fetch_row($valcond))
 										{
 											if($row6[2]==0) $ck=''; else $ck='checked';
-											?> <input type="radio" <?php echo $ck;?>   name="rbHV<?php echo $contHV; ?>" id="rbHV<?php echo $contHV; ?>" value="<?php echo $row6[0]; ?>" />
-											<?php echo $row6[1].'&nbsp;&nbsp;';
+											?> <input type="radio" <?php  echo $ck;?>   name="rbHV<?php  echo $contHV; ?>" id="rbHV<?php  echo $contHV; ?>" value="<?php  echo $row6[0]; ?>" />
+											<?php  echo $row6[1].'&nbsp;&nbsp;';
 										}
 										echo '&nbsp;</td>';
 									}
@@ -215,7 +215,7 @@ if($_POST['ocuguahv']==1)
 							 if($row5[5]!=NULL) $vcc=$row5[5]; else $vcc='';
 							 if($row5[2]=='S') $posdiv='<td width="140" class="texto">'; else $posdiv='<td width="500" class="texto">';
 							 echo $posdiv.'<input name="valorHV'.$contHV.'" id="valorHV'.$contHV.'" type="text" value="'.$vcc.'" class="texto"  size="60"/></td>';
-							?> <input name="idvchv<?php echo $contHV; ?>" id="idvchv<?php echo $contHV; ?>" type="hidden" value="0" /> <?php
+							?> <input name="idvchv<?php  echo $contHV; ?>" id="idvchv<?php  echo $contHV; ?>" type="hidden" value="0" /> <?php 
 							echo '</tr></table></td></tr>';
 					  }
 					  echo '</table></td></tr>';
@@ -225,10 +225,10 @@ if($_POST['ocuguahv']==1)
 		} // Fin si encuentra tipos
 		?>
 		
-		<input name="contCondiHV" id="contCondiHV" type="hidden" value="<?php echo $contHV; ?>" />
+		<input name="contCondiHV" id="contCondiHV" type="hidden" value="<?php  echo $contHV; ?>" />
 		<div id="cargar" align="center">
 			<input class="textoN" name="HistoVisi" id="HistoVisi" type="button" value="Guardar Historia - Visita"  onclick="GuardarHV();" />
-			<input class="textoN" name="imprHV" id="imprHV" type="button" value="Imprimir Historia - Visita" onclick="imprimir('historia_vis_pdf.php?vis=<?php echo $visita; ?>');" />
+			<input class="textoN" name="imprHV" id="imprHV" type="button" value="Imprimir Historia - Visita" onclick="imprimir('historia_vis_pdf.php?vis=<?php  echo $visita; ?>');" />
 		</div>
 		<input name="ocuguahv" id="ocuguahv" type="hidden" value="0" />
 		<br>

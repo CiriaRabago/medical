@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_empresa.php";
@@ -95,7 +95,7 @@ function ver_modif(cadena)
 	document.form1.ocu_N.value=trozos[0];
 }
 </script>
-<body><?php
+<body><?php 
 $emp=new empresa('','','','','','','','','','');
 if(isset($_POST["ocu_r"])!='0' && $_POST["ocu_r"]!='0'){	
 	$gua = $emp->restaurar($_POST["ocu_N"]);
@@ -165,7 +165,7 @@ if(isset($_POST["ocu_r"])!='0' && $_POST["ocu_r"]!='0'){
     </tr>
     <tr >
       <td height="30" colspan="4">
-       <?php 
+       <?php  
         $ver=$emp->ver_empresa_inactiva();
         if ($ver!=false)
 		    echo $ver;

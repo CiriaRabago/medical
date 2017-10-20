@@ -1,4 +1,4 @@
-<?php  
+<?php   
 			  // Nombre del archivo de con el cual queremos que se guarde la base de datos
 			  
 			     

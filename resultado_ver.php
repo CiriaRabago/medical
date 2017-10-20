@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -61,7 +61,7 @@ function validar()
   <tr>
     <td height="3" colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
   </tr> 
-  <?php    $ord= new orden('','','','','','','');
+  <?php     $ord= new orden('','','','','','','');
 		$resu=$ord->result_ordenes();
 		echo  $resu;
 	 ?>

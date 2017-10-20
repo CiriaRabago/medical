@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 require_once ('../jpgraph.php');
 require_once ('../jpgraph_canvas.php');
 require_once ('../jpgraph_colormap.inc.php');

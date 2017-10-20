@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 /**
 * Green Theme class

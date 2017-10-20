@@ -8,7 +8,7 @@
 <body>
 <p>&nbsp;</p>
 <form name="form1" id="form1" method="post" action="">
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_servicio.php";

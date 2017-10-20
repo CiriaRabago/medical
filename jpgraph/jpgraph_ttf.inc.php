@@ -1,4 +1,4 @@
-<?php
+<?php 
 //=======================================================================
 // File:        jpgraph_ttf.inc.php
 // Description: Handling of TTF fonts

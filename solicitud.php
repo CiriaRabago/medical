@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_solicitud.php";
@@ -96,7 +96,7 @@ function soloNumeros(evt){
 </script>
 <body>
 <form name="form1" id="form1" method="post" action="solicitud.php">
-<?php 
+<?php  
  $sol= new solicitud($_POST["ocu_N"],$_POST["nom"]);
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
   { 
@@ -165,7 +165,7 @@ function soloNumeros(evt){
           </div></td>
     </tr>
   </table>
- <div><?php 
+ <div><?php  
  $ver=$sol->ver_solicitud();
         if ($ver==false)
 		{

@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* DECLARACIÓN DE LA CLASE */
 class res_estudio
 {	

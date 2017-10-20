@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 // $Id: balloonex1.php,v 1.5 2002/12/15 16:08:51 aditus Exp $
 require_once ('jpgraph/jpgraph.php');
 require_once ('jpgraph/jpgraph_scatter.php');

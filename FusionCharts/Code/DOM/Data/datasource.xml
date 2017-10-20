@@ -1,4 +1,4 @@
-<?phpxml version="1.0" encoding="utf-8"?>
+<?php xml version="1.0" encoding="utf-8"?>
 <graph caption="Annual Sales Summary" subcaption="For the period of 2004 to 2007"
  xAxisName="Year" yAxisName="Sales" numberPrefix="$">	
 	<set name="2004" value="37800" color='F6BD0F' />

@@ -1,4 +1,4 @@
-<?php
+<?php 
 //=======================================================================
 // File:        JPGRAPH_RGB.INC.PHP
 // Description: Class to handle RGb color space specification and

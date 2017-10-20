@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_servicio.php";
@@ -51,7 +51,7 @@ function imprimir(ventana)
 <body>
 <form action="historia_antec.php" method="post" name="form1">
 
-<?php 
+<?php  
 if($_POST['ocugua']==1)
 {
   $cha=$_POST['contCondiHA'];
@@ -128,16 +128,16 @@ if($_POST['ocugua']==1)
 ?>
 
 <div id="Contenido"> 
-<input name="oidpac" id="oidpac" type="hidden" value="<?php echo $ipaci; ?>" />
-<input name="oidvis" id="oidvis" type="hidden" value="<?php echo $visita; ?>" />
-<input name="oiddevi" id="oiddevi" type="hidden" value="<?php echo $devi; ?>" />
+<input name="oidpac" id="oidpac" type="hidden" value="<?php  echo $ipaci; ?>" />
+<input name="oidvis" id="oidvis" type="hidden" value="<?php  echo $visita; ?>" />
+<input name="oiddevi" id="oiddevi" type="hidden" value="<?php  echo $devi; ?>" />
 
 <table width="704" border="0" cellspacing="1" cellpadding="0" >
   <tr>
     <td height="30" colspan="3" align="center" class="titulofor">HISTORIA - ANTECEDENTES</td>
   </tr>
   <tr>
-    <td colspan="3"><?php
+    <td colspan="3"><?php 
 	    $vis= new visita($visita,'','','','','','','','','','','','');
 	 	$tipHA=$vis->tipos_cond_H('1');
 		if ($tipHA==false)
@@ -193,8 +193,8 @@ if($_POST['ocugua']==1)
 										while($row3 = mysql_fetch_row($valcond))
 										{
 											if($row3[2]==0) $ck=''; else $ck='checked';
-											?> <input type="radio" <?php echo $ck;?>   name="rbHA<?php echo $contHA; ?>" id="rbHA<?php echo $contHA; ?>" value="<?php echo $row3[0]; ?>" />
-											<?php echo $row3[1].'&nbsp;&nbsp;';
+											?> <input type="radio" <?php  echo $ck;?>   name="rbHA<?php  echo $contHA; ?>" id="rbHA<?php  echo $contHA; ?>" value="<?php  echo $row3[0]; ?>" />
+											<?php  echo $row3[1].'&nbsp;&nbsp;';
 										}
 										echo '&nbsp;</td>';
 									}
@@ -203,7 +203,7 @@ if($_POST['ocugua']==1)
 							  if($row2[5]!=NULL) $vcc=$row2[5]; else $vcc='';
 							  if($row2[2]=='S') $posdiv='<td width="140" class="texto">'; else $posdiv='<td width="500" class="texto">';
 							  echo $posdiv.'<input name="valorHA'.$contHA.'" id="valorHA'.$contHA.'" type="text" value="'.$vcc.'" class="texto" /></td>';
-							?> <input name="idvcha<?php echo $contHA; ?>"  id="idvcha<?php echo $contHA; ?>"   type="hidden" value="0" /> <?php
+							?> <input name="idvcha<?php  echo $contHA; ?>"  id="idvcha<?php  echo $contHA; ?>"   type="hidden" value="0" /> <?php 
 							echo '</tr></table></td></tr>';
 					  }
 					  echo '</table></td></tr>';
@@ -212,10 +212,10 @@ if($_POST['ocugua']==1)
 			echo '</table>'; 
 		} // Fin si encuentra tipos
 		?>
-		<input name="contCondiHA" id="contCondiHA" type="hidden" value="<?php echo $contHA; ?>" />
+		<input name="contCondiHA" id="contCondiHA" type="hidden" value="<?php  echo $contHA; ?>" />
 		<div id="cargar" align="center">
 			<input class="textoN" name="HistoAnte" id="HistoAnte" type="button" value="Guardar Historia - Antecedentes" onclick="guardarHA();" />
-			<input class="textoN" name="imprHA" id="imprHA" type="button" value="Imprimir Historia - Antecedentes" onclick="imprimir('historia_ant_pdf.php?vis=<?php echo $visita; ?>');" />
+			<input class="textoN" name="imprHA" id="imprHA" type="button" value="Imprimir Historia - Antecedentes" onclick="imprimir('historia_ant_pdf.php?vis=<?php  echo $visita; ?>');" />
 		</div>
 		<input name="ocugua" id="ocugua" type="hidden" value="0" />
 		<br>

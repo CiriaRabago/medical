@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 // Gantt example to create CSIM using CreateSimple()
 
 require_once ('jpgraph/jpgraph.php');

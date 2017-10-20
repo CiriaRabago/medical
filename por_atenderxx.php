@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_servicio.php";
@@ -63,7 +63,7 @@ function atendio(idv,dv,sv)
 <p>&nbsp;</p>
 <form name="form1" id="form1" method="post" action="por_atender.php">
 
-<?php 		
+<?php  		
 	$ser= new servicio(0,'','','','','','',0);
    	$ver=$ser->ver_serv_LE();
     if ($ver==false)

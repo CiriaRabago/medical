@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 // $Id: piecex2.php,v 1.3.2.1 2003/08/19 20:40:12 aditus Exp $
 // Example of pie with center circle
 require_once ('jpgraph/jpgraph.php');

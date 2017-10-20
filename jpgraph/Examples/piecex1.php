@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 // $Id
 // Example of pie with center circle
 require_once ('jpgraph/jpgraph.php');

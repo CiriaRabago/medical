@@ -1,4 +1,4 @@
-<?php
+<?php 
     // Example 10 : Specified error correction level
 
     // Include the library

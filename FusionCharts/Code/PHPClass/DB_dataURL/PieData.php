@@ -1,4 +1,4 @@
-<?php
+<?php 
     //We've included  ../Includes/DBConn.php, which contains functions
     //to help us easily connect to a database.
     include("../Includes/DBConn.php");

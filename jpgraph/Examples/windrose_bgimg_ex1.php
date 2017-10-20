@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once ('jpgraph/jpgraph.php');
 require_once ('jpgraph/jpgraph_windrose.php');
 require_once ('jpgraph/jpgraph_flags.php');

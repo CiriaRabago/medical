@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
@@ -34,12 +34,12 @@ function generar_pdf()
     <td height="55" bgcolor="#E3E3C6" ><div align="left"><img src="imagenes/Logo1.png" /></div>
 	  </td>
     <td bgcolor="#E3E3C6" class="texto">
-	  <span class="textoN">FECHA</span>:  <?php echo date('d-m-Y'); ?><br>
-	  <span class="textoN">CÉDULA: <?php echo $_POST['cedula']; ?></span><input name="cedula" id="cedula" type="hidden" value="<?php echo $_POST['cedula']; ?>" />
-	  <input name="idpac" type="hidden" id="idpac" value="<?php echo $_POST['idpac']; ?>"/>
+	  <span class="textoN">FECHA</span>:  <?php  echo date('d-m-Y'); ?><br>
+	  <span class="textoN">CÉDULA: <?php  echo $_POST['cedula']; ?></span><input name="cedula" id="cedula" type="hidden" value="<?php  echo $_POST['cedula']; ?>" />
+	  <input name="idpac" type="hidden" id="idpac" value="<?php  echo $_POST['idpac']; ?>"/>
 	  <br>
-      <span class="textoN">NOMBRE</span>: <?php echo $_POST['nombre']; ?><input name="nombre" id="nombre" type="hidden" value="<?php echo $_POST['nombre']; ?>" /><br>
-  <span class="textoN">TELEFONO</span>: <?php echo $_POST['telefono']; ?><input name="telefono" id="telefono" type="hidden" value="<?php echo $_POST['telefono']; ?>" /><input name="empresanom" id="empresanom" type="hidden" value="<?php echo $_POST['empresanom']; ?>" /><br>
+      <span class="textoN">NOMBRE</span>: <?php  echo $_POST['nombre']; ?><input name="nombre" id="nombre" type="hidden" value="<?php  echo $_POST['nombre']; ?>" /><br>
+  <span class="textoN">TELEFONO</span>: <?php  echo $_POST['telefono']; ?><input name="telefono" id="telefono" type="hidden" value="<?php  echo $_POST['telefono']; ?>" /><input name="empresanom" id="empresanom" type="hidden" value="<?php  echo $_POST['empresanom']; ?>" /><br>
 	
 	</td>
     </tr>
@@ -57,7 +57,7 @@ function generar_pdf()
 				<td width="600">EXAMEN</td>
 				<td width="100">MONTO</td>
 			  </tr>
-<?php	         $x=0;
+<?php 	         $x=0;
 	         $acum=0;
 			$bandet=0;
 			$perfil=$_POST['maxper'];
@@ -88,7 +88,7 @@ function generar_pdf()
 			
 		<tr class="textoN">
 			<td align="left" class="textoN">Total</td>
-			<td align="right" class="textoN"><?php echo $acum; ?></td>
+			<td align="right" class="textoN"><?php  echo $acum; ?></td>
 		</tr>
 		</table>
 
@@ -105,13 +105,13 @@ function generar_pdf()
 	  	onmouseover="this.src='imagenes/a_imprimir1.gif'"  
 	  	onmouseout="this.src='imagenes/p_imprimir1.gif'"/>
 		
-	 <?php if($_POST['visita']!='') { ?>
+	 <?php  if($_POST['visita']!='') { ?>
 	    <img src="imagenes/p_salir1.gif" alt="salir al men&uacute; de an&aacute;lisis" width="140" height="50" style="cursor:hand" onclick="window.close();" 
 		onmouseover="this.src='imagenes/a_salir1.gif'"  onmouseout="this.src='imagenes/p_salir1.gif'"/>	</td>
-	 <?php } else{ ?>
+	 <?php  } else{ ?>
 	    <img src="imagenes/p_salir1.gif" alt="salir al men&uacute; de an&aacute;lisis" width="140" height="50" style="cursor:hand" onclick="top.mainFrame.location.href='servicio.php'" 
 		onmouseover="this.src='imagenes/a_salir1.gif'"  onmouseout="this.src='imagenes/p_salir1.gif'"/>	</td>
-	 <?php } ?>
+	 <?php  } ?>
   </tr>
 </table>
 

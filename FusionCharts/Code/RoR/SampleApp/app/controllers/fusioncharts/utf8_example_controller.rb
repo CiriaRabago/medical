@@ -6,9 +6,9 @@
   #Steps to ensure correct UTF-8 output:
   #* <meta http-equiv="content-type" content="text/html; charset=utf-8" />	has to be present in the <head> section of the page which contains UTF8 characters. Notice that we have included this in the "common.html.erb" layout, so that it is avialable to all pages.
   #* Put this, headers["Content-Type"] = "text/xml; charset=utf-8"  in the action which is the XML provider. ( Here, pie_data_french or pie_data_japanese actions)
-  #* If you are using a xml file for the data, then the file should be saved with UTF-8 encoding with UTF-8 BOM.  It should have the xml declaration also:  <?phpxml version="1.0" encoding="UTF-8" ?>
+  #* If you are using a xml file for the data, then the file should be saved with UTF-8 encoding with UTF-8 BOM.  It should have the xml declaration also:  <?php xml version="1.0" encoding="UTF-8" ?>
   #* If you are generating xml dynamically, then in the xml provider ( here, pie_data_japanese.html.erb and pie_data_french.html.erb ), use get_UTF8_BOM and assign the BOM to the xml as initial value. This function present in fusioncharts_helper library.
-  #* After placing the BOM in the xml string, append the xml declaration: <?phpxml version='1.0' encoding='UTF-8'?>. Finally, append the actual chart xml.
+  #* After placing the BOM in the xml string, append the xml declaration: <?php xml version='1.0' encoding='UTF-8'?>. Finally, append the actual chart xml.
   #* For using data from database, the default character set of the database should be UTF-8. This can be done using the sql command: 
   #ALTER DATABASE DEFAULT CHARACTER SET = utf8; 
   # The default charset of the table containing the UTF characters should be UTF-8. This can be done by adding "DEFAULT CHARSET=utf8;" at the end of the table definition.

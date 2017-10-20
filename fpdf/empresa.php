@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_empresa.php";
@@ -96,7 +96,7 @@ document.form1.submit();
 </script>
 <body>
 <form name="form1" method="post" action="empresa.php">
-<?php 
+<?php  
  $emp= new empresa('','','','','','','','','','');
 
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
@@ -206,7 +206,7 @@ document.form1.submit();
          </td>
     </tr>
   </table>
-       <?php 
+       <?php  
 $ver=$emp->ver_empresa();
         if ($ver==false)
 		{

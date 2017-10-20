@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_feriado.php";
@@ -68,7 +68,7 @@ function ver_modif(cadena)
 </script>
 <body>
 <form id="form1" name="form1" method="post" action="feriados.php">
-<?php
+<?php 
  $fer=new feriado('',$_POST["dia"],$_POST["mes"],$_POST["descr"]);
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
   { 
@@ -108,7 +108,7 @@ function ver_modif(cadena)
       <td colspan="3" class="texto Estilo2"><label>
           <select name="dia" class="texto" id="dia" >
 			<option value="0" selected="selected">Seleccione---&gt;</option>
-			<?php for($x=1;$x<32;$x++) echo "<option value='".$x."'>".$x."</option>";?>			
+			<?php  for($x=1;$x<32;$x++) echo "<option value='".$x."'>".$x."</option>";?>			
           </select>		   
           <span class="Estilo3">* </span> </label></td>
     </tr>
@@ -117,7 +117,7 @@ function ver_modif(cadena)
       <td colspan="3"><label>      
 	  <select name="mes" class="texto" id="mes">
 		<option value="0" selected="selected">Seleccione---&gt;</option>
-		<?php for($x=1;$x<13;$x++) echo "<option value='".$x."'>".$x."</option>";?>			
+		<?php  for($x=1;$x<13;$x++) echo "<option value='".$x."'>".$x."</option>";?>			
       </select>
       <input name="ocu_N" type="hidden" value="0"/>
       <span class="texto Estilo2"><span class="Estilo3">* </span> </span> </label></td>
@@ -148,7 +148,7 @@ function ver_modif(cadena)
       <input name="ocu_g" type="hidden" value="0"/>  <input type="hidden" name="ocu_e" value="0"/>  </td>
     </tr>
   </table>
- <?php   
+ <?php    
    $ver=$fer->ver_feriados();
         if ($ver==false)
 		{

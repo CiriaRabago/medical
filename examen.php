@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_examen.php";
@@ -106,7 +106,7 @@ function soloNumeros(evt){
 </script>
 <body>
 <form name="form1" id="form1" method="post" action="examen.php">
-<?php 
+<?php  
  $exa= new examen($_POST["ocu_N"],$_POST["nomb"],$_POST["abrev"],$_POST["obser"], $_POST["proc"], $_POST["valo"], $_POST["meto"], $_POST["pre"], $_POST["tipm"]);
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
   { 
@@ -218,7 +218,7 @@ function soloNumeros(evt){
              <input name="ocu_g" type="hidden" value="0"/>   <input type="hidden" name="ocu_e" value="0"/>       </td>
     </tr>
   </table>
- <div><?php 
+ <div><?php  
  $ver=$exa->ver_examen();
         if ($ver==false)
 		{

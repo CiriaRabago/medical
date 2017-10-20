@@ -1,4 +1,4 @@
-<?php
+<?php 
 //We've included ../Includes/FusionCharts.php, which contains functions
 //to help us easily embed the charts.
 include("../Includes/FusionCharts.php");
@@ -23,7 +23,7 @@ include("../Includes/FusionCharts.php");
 <h2><a href="http://www.fusioncharts.com" target="_blank">FusionCharts Free</a> Examples</h2>
 <h4>Basic example using dataXML method (with XML data hard-coded in PHP page itself)</h4>
 <p>If you view the source of this page, you'll see that the XML data is present in this same page (inside HTML code). We're not calling any external XML (or script) files to serve XML data. dataXML method is ideal when you've to plot small amounts of data.</p>
-<?php
+<?php 
 	
 	//This page demonstrates the ease of generating charts using FusionCharts.
 	//For this chart, we've used a string variable to contain our entire XML data.

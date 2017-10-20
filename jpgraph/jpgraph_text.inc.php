@@ -1,4 +1,4 @@
-<?php
+<?php 
 //=======================================================================
 // File:        JPGRAPH_TEXT.INC.PHP
 // Description: Class to handle text as object in the graph.

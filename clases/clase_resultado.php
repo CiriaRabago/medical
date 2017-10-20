@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE ORDEN
 CREADA POR: Ing. Mónica María Batista Contreras

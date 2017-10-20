@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE EMPRESA
 CREADA POR: MONICA BATISTA

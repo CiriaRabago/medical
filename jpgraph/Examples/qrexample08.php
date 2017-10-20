@@ -1,4 +1,4 @@
-<?php
+<?php 
     // Example 8 : QR Barcode with data read from file
 
     // Include the library

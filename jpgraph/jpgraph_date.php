@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*=======================================================================
  // File:        JPGRAPH_DATE.PHP
  // Description: Classes to handle Date scaling

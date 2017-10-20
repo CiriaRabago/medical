@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -162,7 +162,7 @@ function inac_vis(visit)
                   </tr>
                   <tr>
                     <td>
-					<?php  
+					<?php   
 					   if($_POST['fna3']==''){
 					   $fecha=gmdate("d-m-Y", time() + $zone);
 					   $dia1=substr($fecha,0,2); 
@@ -183,7 +183,7 @@ function inac_vis(visit)
 					   ?>
 					<select name="fna1" class="texto" id="fna1" onchange="submit()" >
                        <option value="">--</option>
-		               <?php for($x=1;$x<32;$x++)
+		               <?php  for($x=1;$x<32;$x++)
 					      { if($x<10)$x='0'.$x; 
 					        if($x==$dia1)
 		                      echo "<option value='".$x."' selected>".$x."</option>";
@@ -194,7 +194,7 @@ function inac_vis(visit)
 		                 /
                     <select name="fna2" class="texto" id="fna2" onchange="submit()">
                        <option value="">--</option>
-					   <?php for($x=1;$x<13;$x++)
+					   <?php  for($x=1;$x<13;$x++)
 		                   {if($x<10)$x='0'.$x; 
 					        if($x==$mes1)
 		                      echo "<option value='".$x."' selected>".$x."</option>";
@@ -203,7 +203,7 @@ function inac_vis(visit)
 						   }?>         
                      </select>
                          /
-<input name="fna3" type="text" class="texto" id="fna3" onChange="ver1()" onkeypress='return soloNumeros(event)' size="4" maxlength="4" value="<?php echo $ano1;?>">
+<input name="fna3" type="text" class="texto" id="fna3" onChange="ver1()" onkeypress='return soloNumeros(event)' size="4" maxlength="4" value="<?php  echo $ano1;?>">
 
 <span class="Estilo2"><strong>d&iacute;a/mes/a&ntilde;o </strong></span>
 <input name="ocu_fi" id="ocu_fi" type="hidden" value="" />
@@ -211,7 +211,7 @@ function inac_vis(visit)
                     <td>
 					<select name="fnf1" class="texto" id="fnf1" onchange="submit()">
                         <option value="">--</option>
-		                <?php for($x=1;$x<32;$x++){
+		                <?php  for($x=1;$x<32;$x++){
 						    if($x<10)$x='0'.$x; 
 					        if($x==$dia2)
 		                      echo "<option value='".$x."' selected>".$x."</option>";
@@ -222,7 +222,7 @@ function inac_vis(visit)
 		                /
                     <select name="fnf2" class="texto" id="fnf2" onchange="submit()">
                        <option value="">--</option>
-                       <?php for($x=1;$x<13;$x++){
+                       <?php  for($x=1;$x<13;$x++){
 					        if($x<10)$x='0'.$x; 
 					        if($x==$mes2)
 		                      echo "<option value='".$x."' selected>".$x."</option>";
@@ -231,7 +231,7 @@ function inac_vis(visit)
 						   }?>         
                     </select>
                        /
-<input name="fnf3" type="text" class="texto" id="fnf3" onChange="ver2()" onkeypress='return soloNumeros(event)' size="4" maxlength="4" value="<?php echo $ano2;?>">
+<input name="fnf3" type="text" class="texto" id="fnf3" onChange="ver2()" onkeypress='return soloNumeros(event)' size="4" maxlength="4" value="<?php  echo $ano2;?>">
 
 <span class="Estilo2"><strong>d&iacute;a/mes/a&ntilde;o </strong></span>
 <input name="ocu_ff" id="ocu_ff" type="hidden" value="" />					
@@ -241,7 +241,7 @@ function inac_vis(visit)
 						  <option value="0" selected="selected" >SELECCIONE --></option>
 						  <option value="1" >Fecha y Hora</option>
 						  <option value="2" >Perfil Examen</option>
-						  <?php						    
+						  <?php 						    
 							$sql="select abrev_examen                                    
                                    from slc_orden,                                       
                   					    slc_det_orden,                                   
@@ -269,11 +269,11 @@ function inac_vis(visit)
 							  }		 
 						  ?>
    					    </select>
-						<?php //echo "aca ".$sql;?>
+						<?php  //echo "aca ".$sql;?>
 					</td>
 				  <tr>
-				    <td class="textoN" colspan="2">Desde la Orden :<input type="text" class="texto" name="noi" id="noi" value="<?php echo $_POST['noi'];?>" /></td>
-					<td class="textoN" colspan="2">Hasta la Orden :<input type="text" class="texto" name="nof" id="nof" value="<?php echo $_POST['nof'];?>" /></td>
+				    <td class="textoN" colspan="2">Desde la Orden :<input type="text" class="texto" name="noi" id="noi" value="<?php  echo $_POST['noi'];?>" /></td>
+					<td class="textoN" colspan="2">Hasta la Orden :<input type="text" class="texto" name="nof" id="nof" value="<?php  echo $_POST['nof'];?>" /></td>
 				  </tr>	                    
                   </tr>
 				  <tr>
@@ -305,7 +305,7 @@ function inac_vis(visit)
 			</tr>
 		  </table>
 </form>
-<?php
+<?php 
   if($_POST['ingreso']=='1')
   {
     /*echo "<script>alert('".$fna1."-".$fna2."-".$fna3."-".$fnf1."-".$fnf2."-".$fnf3."-".$servicio."');</script>";
@@ -342,9 +342,9 @@ function inac_vis(visit)
 			  //echo $sql;
 		?>
 		<table align="center">		   
-		<tr><td colspan="5"><div align="center" class="titulofor">Listado de Ordenes Laboratorio del <?php echo $f1." al ".$f2;?> </div></td></tr>
+		<tr><td colspan="5"><div align="center" class="titulofor">Listado de Ordenes Laboratorio del <?php  echo $f1." al ".$f2;?> </div></td></tr>
 		<tr class="titulorep"><td>ORDEN</td><td>PACIENTE</td><td>FECHA ORDEN</td><td>EXAMEN</td><td>PERFIL</td></tr>
-		<?php
+		<?php 
 		  
 		  $result=mysql_query($sql,$conexion);
 		  $cont=1;
@@ -376,13 +376,13 @@ function inac_vis(visit)
 			if($cont>1){
 			?>
 			<tr><td colspan="5" align="center"><img src="imagenes/p_imprimir1.gif" alt="Imprimir" 
-				width="140" height="50"  style="cursor:hand" onclick="irpdf('listado_ord_pdf.php?fi=<?php echo $_POST['ocu_fi'];?>&ff=<?php echo $_POST['ocu_ff'];?>&serv=<?php echo $_POST['servicio'];?>')" 
+				width="140" height="50"  style="cursor:hand" onclick="irpdf('listado_ord_pdf.php?fi=<?php  echo $_POST['ocu_fi'];?>&ff=<?php  echo $_POST['ocu_ff'];?>&serv=<?php  echo $_POST['servicio'];?>')" 
 				onmouseover="this.src='imagenes/a_imprimir1.gif'"  onmouseout="this.src='imagenes/p_imprimir1.gif'"/></td></tr>
-			<?php	}
+			<?php 	}
 			else
 			 {?>
 			 <tr><td colspan="5" align="center" class="texto" bgcolor="#FF9999">NO EXISTEN REGISTROS EN ESA FECHA..</td></tr>
-			  <?php }		
+			  <?php  }		
 		  echo "</table>";	  
 	  }
 	if ($_POST['servicio']=='2')
@@ -415,8 +415,8 @@ function inac_vis(visit)
 			  //echo $sql;
 		?>
 		<table align="center">		   
-		<tr><td colspan="4"><div align="center" class="titulofor">Listado de Ordenes Laboratorio del <?php echo $f1." al ".$f2;?> </div></td></tr>		
-		<?php
+		<tr><td colspan="4"><div align="center" class="titulofor">Listado de Ordenes Laboratorio del <?php  echo $f1." al ".$f2;?> </div></td></tr>		
+		<?php 
 		  $conexion=Conectarse(); 
 		  $result=mysql_query($sql,$conexion);
 		  $cont=1;
@@ -447,13 +447,13 @@ function inac_vis(visit)
 			if($cont>1){
 			?>
 			<tr><td colspan="5" align="center"><img src="imagenes/p_imprimir1.gif" alt="Imprimir" 
-				width="140" height="50"  style="cursor:hand" onclick="irpdf('listado_ord_pdf.php?fi=<?php echo $_POST['ocu_fi'];?>&ff=<?php echo $_POST['ocu_ff'];?>&serv=<?php echo $_POST['servicio'];?>')" 
+				width="140" height="50"  style="cursor:hand" onclick="irpdf('listado_ord_pdf.php?fi=<?php  echo $_POST['ocu_fi'];?>&ff=<?php  echo $_POST['ocu_ff'];?>&serv=<?php  echo $_POST['servicio'];?>')" 
 				onmouseover="this.src='imagenes/a_imprimir1.gif'"  onmouseout="this.src='imagenes/p_imprimir1.gif'"/></td></tr>
-			<?php	}
+			<?php 	}
 			else
 			 {?>
 			 <tr><td colspan="5" align="center" class="texto" bgcolor="#FF9999">NO EXISTEN REGISTROS EN ESA FECHA..</td></tr>
-			  <?php }		
+			  <?php  }		
 		  echo "</table>";
 	 }
 	 if($_POST['servicio']!='1' && $_POST['servicio']!='2')
@@ -496,8 +496,8 @@ function inac_vis(visit)
 			  //echo $sql;
 		?>
 		<table align="center">		   
-		<tr><td colspan="6"><div align="center" class="titulofor">Listado de Ordenes Laboratorio del <?php echo $f1." al ".$f2;?> </div></td></tr>		
-		<?php	
+		<tr><td colspan="6"><div align="center" class="titulofor">Listado de Ordenes Laboratorio del <?php  echo $f1." al ".$f2;?> </div></td></tr>		
+		<?php 	
 		  $conexion=Conectarse(); 
 		  $result=mysql_query($sql,$conexion);
 		  $cont=0;
@@ -539,13 +539,13 @@ function inac_vis(visit)
 			if($cont>0){
 			?>
 			<tr><td colspan="5" align="center"><img src="imagenes/p_imprimir1.gif" alt="Imprimir" 
-				width="140" height="50"  style="cursor:hand" onclick="irpdf('listado_ord_pdf.php?fi=<?php echo $_POST['ocu_fi'];?>&ff=<?php echo $_POST['ocu_ff'];?>&serv=<?php echo $_POST['servicio'];?>')" 
+				width="140" height="50"  style="cursor:hand" onclick="irpdf('listado_ord_pdf.php?fi=<?php  echo $_POST['ocu_fi'];?>&ff=<?php  echo $_POST['ocu_ff'];?>&serv=<?php  echo $_POST['servicio'];?>')" 
 				onmouseover="this.src='imagenes/a_imprimir1.gif'"  onmouseout="this.src='imagenes/p_imprimir1.gif'"/></td></tr>
-			<?php	}
+			<?php 	}
 			else
 			 {?>
 			 <tr><td colspan="5" align="center" class="texto" bgcolor="#FF9999">NO EXISTEN REGISTROS EN ESA FECHA..</td></tr>
-			  <?php }		
+			  <?php  }		
 		  echo "</table>";
 	   
 	 } 

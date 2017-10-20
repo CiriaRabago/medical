@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 /**
 * Rose Theme class

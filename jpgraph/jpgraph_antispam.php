@@ -1,4 +1,4 @@
-<?php
+<?php 
 //=======================================================================
 // File:        JPGRAPH_ANTISPAM.PHP
 // Description: Genarate anti-spam challenge

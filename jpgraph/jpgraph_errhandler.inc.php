@@ -1,4 +1,4 @@
-<?php
+<?php 
 //=======================================================================
 // File:        JPGRAPH_ERRHANDLER.PHP
 // Description: Error handler class together with handling of localized

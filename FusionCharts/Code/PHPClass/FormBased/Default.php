@@ -18,7 +18,7 @@
 </HEAD>
 <BODY>
 
-<?php
+<?php 
 //In this example, we first present a form to the user, to input data.
 //For a demo, we present a very simple form intended for a Restaurant to indicate
 //sales of its various product categories at lunch time (for a week). 

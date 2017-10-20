@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE EMPLEADO
 CREADA POR: Ing. GRATELLY GARZA MORILLO

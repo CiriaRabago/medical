@@ -30,7 +30,7 @@ function ver_planti(idexa,idper)
 
 </script>
 <body>
-<?php 
+<?php  
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
 include "clases/clase_examen.php";
@@ -39,7 +39,7 @@ include "clases/clase_perexa.php";
 ?>
 
 <form name="form1" id="form1" method="post" action="ver_plantilla.php">
-<?php
+<?php 
  
 if ($_POST["perfil"]>'0')
 		$val=$_POST["perfil"]; 
@@ -54,15 +54,15 @@ if ($_POST["perfil"]>'0')
     <tr>
       <td width="139" class="etiqueta">Perfil:</td>
       <td colspan="3" class="texto Estilo2"><label>
-         <?php $perf=new perfil('','','','');
+         <?php  $perf=new perfil('','','','');
 	        $listaperf=$perf->combo_perfil(); ?>
 
           <select name="perfil" class="texto" id="perfil" onchange="ver();" >
 			<option value="0">Seleccione---&gt;</option>
-			<?php if ($listaperf!=false) echo $listaperf;?>
+			<?php  if ($listaperf!=false) echo $listaperf;?>
 			
           </select>
-		   <script> document.getElementById("perfil").value="<?php echo $val; ?>"; </script>
+		   <script> document.getElementById("perfil").value="<?php  echo $val; ?>"; </script>
           <span class="Estilo3">* </span> </label></td>
     </tr>
     
@@ -79,7 +79,7 @@ if ($_POST["perfil"]>'0')
 		onmouseover="this.src='imagenes/a_salir1.gif'"  onmouseout="this.src='imagenes/p_salir1.gif'"/></div></td>
     </tr>
   </table>
- <?php 
+ <?php  
    $ver=$pex->ver_exa_per_planti($val);
         if ($ver==false)
 		{

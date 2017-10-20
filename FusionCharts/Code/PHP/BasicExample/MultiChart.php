@@ -1,4 +1,4 @@
-<?php
+<?php 
 //We've included ../Includes/FusionCharts.php, which contains functions
 //to help us easily embed the charts.
 include("../Includes/FusionCharts.php");
@@ -8,7 +8,7 @@ include("../Includes/FusionCharts.php");
 	<TITLE>
 	FusionCharts Free - Multiple Charts on one Page
 	</TITLE>
-	<?php
+	<?php 
 	//You need to include the following JS file, if you intend to embed the chart using JavaScript.
 	//Embedding using JavaScripts avoids the "Click to Activate..." issue in Internet Explorer
 	//When you make your own charts, make sure that the path to this JS file is correct. Else, you would get JavaScript errors.
@@ -28,7 +28,7 @@ include("../Includes/FusionCharts.php");
 <CENTER>
 <h2><a href="http://www.fusioncharts.com" target="_blank">FusionCharts Free</a> Examples</h2>
 <h4>Multiple Charts on the same page. Each chart has a unique ID.</h4>
-<?php
+<?php 
 	
 	//This page demonstrates how you can show multiple charts on the same page.
 	//For this example, all the charts use the pre-built Data.xml (contained in /Data/ folder)
@@ -42,12 +42,12 @@ include("../Includes/FusionCharts.php");
 	echo renderChart("../../FusionCharts/FCF_Column3D.swf", "Data/Data.xml", "", "chart1", 600, 300);
 ?>
 	<BR><BR>
-<?php	
+<?php 	
 	//Now, create a Column 2D Chart
 	echo renderChart("../../FusionCharts/FCF_Column2D.swf", "Data/Data.xml", "", "chart2", 600, 300);
 ?>
 	<BR><BR>
-<?php	
+<?php 	
 	//Now, create a Line 2D Chart
 	echo renderChart("../../FusionCharts/FCF_Line.swf", "Data/Data.xml", "", "chart3", 600, 300);
 ?>

@@ -1,4 +1,4 @@
-<?php session_start();
+<?php  session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_usuario.php";
 include("securimage.php");
@@ -13,7 +13,7 @@ include("securimage.php");
 <!-- <link href="clases/Estilos.css" rel="stylesheet" type="text/css"> -->
 <body>
 <form name="ing" action="centro.php">
-<?php
+<?php 
 $usu=$_POST["USUARIO"];
 $cla=$_POST["CLAVE"];
 $cod=$_POST["code"];   
@@ -50,7 +50,7 @@ if (($us!='0') && ($us!='1'))
 	    		<script>
 				timerId = setTimeout("top.leftFrame.location.href = 'izquierdo.php'",0)
 				</script> 
-	    	<?php
+	    	<?php 
 	   }
 if ($us=='1')
 		{  

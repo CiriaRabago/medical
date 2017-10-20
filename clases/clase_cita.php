@@ -1,4 +1,4 @@
-<?php 
+<?php  
 class cita
 {
    var $id_cit;

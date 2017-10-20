@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -80,7 +80,7 @@ function irpdf(ord,pag)
 <body>
 <form name="form1" id="form1" method="post">
 
-<?php 
+<?php  
  if($_POST['ingreso']==1)
  {
     //echo 'entro a verificar';
@@ -106,11 +106,11 @@ function irpdf(ord,pag)
 			
 			<tr class="texto">
 			  <td height="30" colspan="5"><div align="left" class="texto"> 
-	  			<span class="textoN">CÉDULA: <?php echo $datos[11]; ?></span><input name="cedula" id="cedula" type="hidden" value="<?php echo $datos[11]; ?>" /><br>
-      			<span class="textoN">NOMBRE</span>: <?php echo $datos[1].' '.$datos[2].' '.$datos[3].' '.$datos[4]; ?><input name="nombre" id="nombre" type="hidden" value="<?php echo $datos[1].' '.$datos[2].' '.$datos[3].' '.$datos[4]; ?>" /><br>
-	  			<span class="textoN">EDAD</span>: <?php echo calculaedad($datos[5]); ?><input name="edad" id="edad" type="hidden" value="<?php echo calculaedad($datos[5]); ?>" /><br>
-	  			<span class="textoN">SEXO</span>: <?php echo $sexo; ?><input name="sexo" id="sexo" type="hidden" value="<?php echo $datos[6]; ?>" /><input name="sexonom" id="sexonom" type="hidden" value="<?php echo $sexo; ?>" /><br>
-	  			<span class="textoN">EMPRESA: </span><?php echo $datos[8]; ?><input name="empresa" id="empresa" type="hidden" value="<?php echo $datos[7]; ?>" /><input name="empresanom" id="empresanom" type="hidden" value="<?php echo $datos[8]; ?>" />
+	  			<span class="textoN">CÉDULA: <?php  echo $datos[11]; ?></span><input name="cedula" id="cedula" type="hidden" value="<?php  echo $datos[11]; ?>" /><br>
+      			<span class="textoN">NOMBRE</span>: <?php  echo $datos[1].' '.$datos[2].' '.$datos[3].' '.$datos[4]; ?><input name="nombre" id="nombre" type="hidden" value="<?php  echo $datos[1].' '.$datos[2].' '.$datos[3].' '.$datos[4]; ?>" /><br>
+	  			<span class="textoN">EDAD</span>: <?php  echo calculaedad($datos[5]); ?><input name="edad" id="edad" type="hidden" value="<?php  echo calculaedad($datos[5]); ?>" /><br>
+	  			<span class="textoN">SEXO</span>: <?php  echo $sexo; ?><input name="sexo" id="sexo" type="hidden" value="<?php  echo $datos[6]; ?>" /><input name="sexonom" id="sexonom" type="hidden" value="<?php  echo $sexo; ?>" /><br>
+	  			<span class="textoN">EMPRESA: </span><?php  echo $datos[8]; ?><input name="empresa" id="empresa" type="hidden" value="<?php  echo $datos[7]; ?>" /><input name="empresanom" id="empresanom" type="hidden" value="<?php  echo $datos[8]; ?>" />
 				</div><br></td>
 			</tr>
 			
@@ -122,20 +122,20 @@ function irpdf(ord,pag)
 			  <td width="150">IMPRIMIR ORDEN</td>
 			</tr>	   
 	   
-<?php	   $cont=0;
+<?php 	   $cont=0;
 	   while ($row=mysql_fetch_array($reg))
 	   { 
 	      if ($cont%2!=0) $color='bgcolor="#E3E3E6"'; else $color='';
 		  $cont++;
 	   ?>
-			<tr class="texto" <?php echo $color; ?>>
-			  <td width="20"><?php echo $row[0]; ?></td>
-			  <td width="100"><?php echo $row[1]; ?></td>
-			  <td width="100"><?php echo $row[2]; ?></td>
-			  <td width="80"><?php echo $row[3]; ?></td>
-			  <td width="200"><a href="det_orden_pac.php?orden=<?php echo $row[0]; ?>&ced=<?php echo $datos[11]; ?>">ORDEN</a></td>
+			<tr class="texto" <?php  echo $color; ?>>
+			  <td width="20"><?php  echo $row[0]; ?></td>
+			  <td width="100"><?php  echo $row[1]; ?></td>
+			  <td width="100"><?php  echo $row[2]; ?></td>
+			  <td width="80"><?php  echo $row[3]; ?></td>
+			  <td width="200"><a href="det_orden_pac.php?orden=<?php  echo $row[0]; ?>&ced=<?php  echo $datos[11]; ?>">ORDEN</a></td>
 			</tr>
-           <?php } ?>  
+           <?php  } ?>  
 			<tr>
 			  <td colspan="5"><div align="center">
 				<img src="imagenes/p_salir1.gif" alt="salir al men&uacute; de an&aacute;lisis" 
@@ -145,7 +145,7 @@ function irpdf(ord,pag)
 			</tr>
 		  </table>
 	   
-	<?php   
+	<?php    
 	}
 	die();
  }

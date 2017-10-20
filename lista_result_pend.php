@@ -42,7 +42,7 @@ function volver()
 }
 </script>
 <body>
-<?php 
+<?php  
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
 include "clases/clase_examen.php";
@@ -56,7 +56,7 @@ include "clases/clase_orden.php";
     </tr>
 	<tr>
       <td height="30" colspan="2"><div align="center">
-  <?php    $ord= new orden('','','','','','','');
+  <?php     $ord= new orden('','','','','','','');
 		$resu=$ord->result_ordenes_pend();
 		echo  $resu;
 	 ?>

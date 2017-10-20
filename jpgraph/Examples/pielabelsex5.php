@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 include ("../jpgraph.php");
 include ("../jpgraph_pie.php");
 

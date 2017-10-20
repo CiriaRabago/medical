@@ -1,4 +1,4 @@
-<?php 
+<?php  
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
@@ -41,7 +41,7 @@ function firmar(c)
 </head>
 <body>
 <form name="form1" method="post">
-<?php
+<?php 
   $usu=$_SESSION["cedu_usu"]; 
   if($_POST['xxx']=='69')
     {
@@ -107,13 +107,13 @@ function firmar(c)
 		<td height="55" colspan="2" bgcolor="#E3E3C6">
 		  <div align="left"><img src="imagenes/Logo1.png" /></div>
 		</td>  
-		<input name="orden" id="orden" type="hidden" value="<?php echo $orden; ?>"/>
+		<input name="orden" id="orden" type="hidden" value="<?php  echo $orden; ?>"/>
 		<td colspan="2" bgcolor="#E3E3C6"  class="texto">
-		  <span class="textoN">FECHA</span>:  <?php echo date('d-m-Y'); ?><br>
-		  <span class="textoN">ORDEN No. </span>: <?php echo $orden; ?><br>		  
-		  <span class="textoN">CÉDULA</span>: <?php echo $cedula; ?><br>
-		  <span class="textoN">NOMBRE</span>: <?php echo $datosp[2].' '.$datosp[3].' '.$datosp[4].' '.$datosp[5]; ?><br>
-		  <span class="textoN">EDAD</span>: <?php echo calculaedad($datosp[10]);?><br>
+		  <span class="textoN">FECHA</span>:  <?php  echo date('d-m-Y'); ?><br>
+		  <span class="textoN">ORDEN No. </span>: <?php  echo $orden; ?><br>		  
+		  <span class="textoN">CÉDULA</span>: <?php  echo $cedula; ?><br>
+		  <span class="textoN">NOMBRE</span>: <?php  echo $datosp[2].' '.$datosp[3].' '.$datosp[4].' '.$datosp[5]; ?><br>
+		  <span class="textoN">EDAD</span>: <?php  echo calculaedad($datosp[10]);?><br>
 		</td>
 		</tr>
 	    <tr>
@@ -128,10 +128,10 @@ function firmar(c)
 </table> 
 <table width="800" border="0" align="center">
     <tr class="titulofor">
-      <td height="30" colspan="7"><div align="center" class="titulofor">Bioanalista : <?php echo $datos[1]." ".$datos[2]." ".$datos[3]." ".$datos[4];  ?></div></td>
+      <td height="30" colspan="7"><div align="center" class="titulofor">Bioanalista : <?php  echo $datos[1]." ".$datos[2]." ".$datos[3]." ".$datos[4];  ?></div></td>
     </tr>
     <tr class="titulofor">
-      <td height="30" colspan="7"><div align="center" class="titulofor">Resultados de la Orden No. <?php echo $orden;  ?></div></td>
+      <td height="30" colspan="7"><div align="center" class="titulofor">Resultados de la Orden No. <?php  echo $orden;  ?></div></td>
     </tr>
 	<tr class="textoN" class="titulorep">
 	   <td >Perfil</td>
@@ -141,7 +141,7 @@ function firmar(c)
 	   <td >U. Medida:</td>
    	   <td >Firmar</td>	   
 	</tr>
-	<?php
+	<?php 
 	  $sw=0; 
       $resultadito=$ord->result_orden_new();
       if($resultadito!='')
@@ -167,11 +167,11 @@ function firmar(c)
 						  {
 						   $swo=1;
 						 ?>
-		 	                 <tr <?php echo $color;?>> 
-	                           <td class="texto">Observaciones <?php echo $perf;?>:</td>
-	                           <td class="texto" colspan="6" ><textarea <?php echo "name='obs".$perf."' id='obs".$perf."'";?> cols="90" rows="3" class="texto"><?php echo $inforesult[1];?></textarea></td>
+		 	                 <tr <?php  echo $color;?>> 
+	                           <td class="texto">Observaciones <?php  echo $perf;?>:</td>
+	                           <td class="texto" colspan="6" ><textarea <?php  echo "name='obs".$perf."' id='obs".$perf."'";?> cols="90" rows="3" class="texto"><?php  echo $inforesult[1];?></textarea></td>
 	                         </tr>
-			<?php             } 
+			<?php              } 
 						  $cont++;
 						  $perf=$row2[8];
 						  } 
@@ -189,8 +189,8 @@ function firmar(c)
 						$exa=new examen($examen,'','','','','','','','');
 		                $caractexa=$exa->consul_caract_examen();
 		                $n=mysql_num_rows($caractexa);						
-	?>	                <input name="canticar" id="canticar" type="hidden" value="<?php echo $n; ?>" />
-	<?php
+	?>	                <input name="canticar" id="canticar" type="hidden" value="<?php  echo $n; ?>" />
+	<?php 
 	  	  	            if($n!=0)
 		                 {						 
 				           if($n<=20)
@@ -218,44 +218,44 @@ function firmar(c)
 					            <tr>
 						          <td height="3" colspan="4"><img src="imagenes/morado.gif" width="100%" height="3" /></td>
 					            </tr> 
-	                        <?php	}
+	                        <?php 	}
 							 							       
 							   if($row[7]!='CALCULADO'){ 	
 							     $swo=2;?>
-					           <tr class="texto" <?php echo $color;?>>
-							      <td width="100"><?php echo $row2[8]."-".$row2[5];?></td>
-						          <td colspan="2"><?php  echo $row[2];  ?> <input name="nombcar<?php echo $indi-1;?>" id="nombcar<?php echo $indi-1;?>" type="hidden" value="<?php echo $row[2];?>" /></td>
+					           <tr class="texto" <?php  echo $color;?>>
+							      <td width="100"><?php  echo $row2[8]."-".$row2[5];?></td>
+						          <td colspan="2"><?php   echo $row[2];  ?> <input name="nombcar<?php  echo $indi-1;?>" id="nombcar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $row[2];?>" /></td>
 						         <td colspan="2">
-						<?php  	 $resu= new resultado('',$orden,'','','','','');
+						<?php   	 $resu= new resultado('',$orden,'','','','','');
 						         $valo= $resu->consul_det_result($examen,$row[1]);	
 						         if($row[5]==1)
 						            { 	?> 
-						             <select name="caract<?php echo $examen.$row[1];?>" id="caract<?php echo $examen.$row[1];?>" class="texto">
-						                <option value="P" <?php if($valo[0]== 'P') echo 'selected'; ?> >Positivo</option>
-						                <option value="N" <?php if($valo[0]== 'N') echo 'selected'; ?> >Negativo</option>
+						             <select name="caract<?php  echo $examen.$row[1];?>" id="caract<?php  echo $examen.$row[1];?>" class="texto">
+						                <option value="P" <?php  if($valo[0]== 'P') echo 'selected'; ?> >Positivo</option>
+						                <option value="N" <?php  if($valo[0]== 'N') echo 'selected'; ?> >Negativo</option>
 						             </select> 
-						             <input name="ocucaract<?php echo $indi-1;?>" id="ocucaract<?php echo $indi-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-						             <input name="tabla<?php echo $row[1];?>" id="tabla<?php echo $row[1];?>" type="hidden" value="" />
+						             <input name="ocucaract<?php  echo $indi-1;?>" id="ocucaract<?php  echo $indi-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+						             <input name="tabla<?php  echo $row[1];?>" id="tabla<?php  echo $row[1];?>" type="hidden" value="" />
 
-						<?php			}
+						<?php 			}
 						           else
 						            {
 							         $valores=$exa->consul_valores_caract2($row[1],$valo[0]);
 							         if($valores==false)
 							            { 			?>
-							            <input name="caract<?php echo $examen.$row[1];?>" id="caract<?php echo $examen.$row[1];?>" type="text" class="texto"  value="<?php echo $valo[0];  ?>" size="5" />
-							            <input name="ocucaract<?php echo $indi-1;?>" id="ocucaract<?php echo $indi-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-							            <input name="tabla<?php echo $examen.$row[1];?>" id="tabla<?php echo $examen.$row[1];?>" type="hidden" value="" />
-			<?php				
+							            <input name="caract<?php  echo $examen.$row[1];?>" id="caract<?php  echo $examen.$row[1];?>" type="text" class="texto"  value="<?php  echo $valo[0];  ?>" size="5" />
+							            <input name="ocucaract<?php  echo $indi-1;?>" id="ocucaract<?php  echo $indi-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+							            <input name="tabla<?php  echo $examen.$row[1];?>" id="tabla<?php  echo $examen.$row[1];?>" type="hidden" value="" />
+			<?php 				
 							            }
 							         else
 							          {							?>
-							            <select name="caract<?php echo $examen.$row[1];?>" id="caract<?php echo $examen.$row[1];?>" class="texto" >								          
-								          <?php echo $valores; ?>
+							            <select name="caract<?php  echo $examen.$row[1];?>" id="caract<?php  echo $examen.$row[1];?>" class="texto" >								          
+								          <?php  echo $valores; ?>
 							            </select>	
-							            <input name="ocucaract<?php echo $indi-1;?>" id="ocucaract<?php echo $indi-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-							            <input name="tabla<?php echo $examen.$row[1];?>" id="tabla<?php echo $examen.$row[1];?>" type="hidden" value="slc_lista_Valores" />
-<?php							           }
+							            <input name="ocucaract<?php  echo $indi-1;?>" id="ocucaract<?php  echo $indi-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+							            <input name="tabla<?php  echo $examen.$row[1];?>" id="tabla<?php  echo $examen.$row[1];?>" type="hidden" value="slc_lista_Valores" />
+<?php 							           }
 						             }
 									 
 						         $valoresref=$exa->consul_valores_ref($row[1],$datos[6],calculaedad($datos[5]));
@@ -273,17 +273,17 @@ function firmar(c)
 						             echo ' ('.$row[4].')'; 
 						             $dato.=' ('.$row[4].')';
 						             }				 ?>
-						             <input name="unime<?php echo $row[1];?>" id="unime<?php echo $row[1];?>" type="hidden" value="<?php echo $row[6];?>" />
-						             <input name="datoscar<?php echo $indi-1;?>" id="datoscar<?php echo $indi-1;?>" type="hidden" value="<?php echo $dato;?>" />
-						             <input name="tipocar<?php echo $indi-1;?>" id="tipocar<?php echo $indi-1;?>" type="hidden" value="<?php echo $row[0];?>" />
+						             <input name="unime<?php  echo $row[1];?>" id="unime<?php  echo $row[1];?>" type="hidden" value="<?php  echo $row[6];?>" />
+						             <input name="datoscar<?php  echo $indi-1;?>" id="datoscar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $dato;?>" />
+						             <input name="tipocar<?php  echo $indi-1;?>" id="tipocar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $row[0];?>" />
 	                               </td>
-							<?php  if($examen!=$sw)
+							<?php   if($examen!=$sw)
 						           {	$sw=$examen; ?>
 								   <td align="center" bgcolor="#FF0000" rowspan="<?=$n;?>"><input type="checkbox" name="<?='f'.$examen;?>" id="<?='f'.$examen;?>" /></td>
-						     <?php     }?>
+						     <?php      }?>
 					            </tr>
 								
-			<?php 	            
+			<?php  	            
 			 	           }}} 
 						   }						   	  
 				    ///////////////////////////////////////FIN DE NUEVO///////////////////////////////////////////////////////////////	   
@@ -297,11 +297,11 @@ function firmar(c)
 	     echo '<script>volver();</script>';
 	  if($swo>1)
 	    {?>
-		  <tr <?php echo $color;?>> 
-	         <td class="texto">Observaciones <?php echo $perf;?>:</td>
-	         <td class="texto" colspan="3" ><textarea <?php echo "name='obs".$perf."' id='obs".$perf."'";?> cols="90" rows="3" class="texto"><?php echo $inforesult[1];?></textarea></td>
+		  <tr <?php  echo $color;?>> 
+	         <td class="texto">Observaciones <?php  echo $perf;?>:</td>
+	         <td class="texto" colspan="3" ><textarea <?php  echo "name='obs".$perf."' id='obs".$perf."'";?> cols="90" rows="3" class="texto"><?php  echo $inforesult[1];?></textarea></td>
 	      </tr>
-		<?php }
+		<?php  }
 		if($swo==0) echo '<script>volver();</script>';?>
 	<tr>
 	   <td height="30" colspan="7"><div align="center">	      
@@ -314,7 +314,7 @@ function firmar(c)
 	</tr>
     <tr>
       <td height="30" colspan="7"><div align="center">
-	  <input name="orden" id="orden" type="hidden" value="<?php echo $orden; ?>" />
+	  <input name="orden" id="orden" type="hidden" value="<?php  echo $orden; ?>" />
 	  <img src="imagenes/p_guardar1.gif" alt="Guardar Resultado" width="130" height="50" 
 	  style="cursor:hand" 
 	  onclick="Guardar('G');" 

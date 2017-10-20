@@ -1,4 +1,4 @@
-<?php 
+<?php  
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
@@ -27,7 +27,7 @@ function generar_pdf()
 
 <body>
 <form name="form1" method="post">
-<?php
+<?php 
   $usu=$_SESSION["cedu_usu"];
   $verif= new usuario($usu,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
   $datusu=$verif->buscar_usuario_perm();
@@ -53,13 +53,13 @@ function generar_pdf()
 		<td height="55" colspan="2" bgcolor="#E3E3C6">
 		  <div align="left"><img src="imagenes/Logo1.png" /></div>
 		</td>  
-		<input name="orden" id="orden" type="hidden" value="<?php echo $orden; ?>"/>
+		<input name="orden" id="orden" type="hidden" value="<?php  echo $orden; ?>"/>
 		<td colspan="2" bgcolor="#E3E3C6"  class="texto">
-		  <span class="textoN">FECHA</span>:  <?php echo date('d-m-Y'); ?><br>
-		  <span class="textoN">ORDEN No. </span>: <?php echo $orden; ?><br>		  
-		  <span class="textoN">CÉDULA</span>: <?php echo $cedula; ?><br>
-		  <span class="textoN">NOMBRE</span>: <?php echo $datosp[2].' '.$datosp[3].' '.$datosp[4].' '.$datosp[5]; ?><br>
-		  <span class="textoN">EDAD</span>: <?php echo calculaedad($datosp[10]);?><br>
+		  <span class="textoN">FECHA</span>:  <?php  echo date('d-m-Y'); ?><br>
+		  <span class="textoN">ORDEN No. </span>: <?php  echo $orden; ?><br>		  
+		  <span class="textoN">CÉDULA</span>: <?php  echo $cedula; ?><br>
+		  <span class="textoN">NOMBRE</span>: <?php  echo $datosp[2].' '.$datosp[3].' '.$datosp[4].' '.$datosp[5]; ?><br>
+		  <span class="textoN">EDAD</span>: <?php  echo calculaedad($datosp[10]);?><br>
 		</td>
 		</tr>
 	    <tr>
@@ -74,7 +74,7 @@ function generar_pdf()
 </table> 
 <table width="800" border="0" align="center">    
     <tr class="titulofor">
-      <td height="30" colspan="7"><div align="center" class="titulofor">Resultados de la Orden No. <?php echo $orden;  ?></div></td>
+      <td height="30" colspan="7"><div align="center" class="titulofor">Resultados de la Orden No. <?php  echo $orden;  ?></div></td>
     </tr>
 	<tr class="textoN" class="titulorep">
 	   <td >Perfil</td>
@@ -83,7 +83,7 @@ function generar_pdf()
 	   <td >Valor Referencia:</td>	   
 	   <td >U. Medida:</td>	   
 	</tr>
-	<?php
+	<?php 
       $resultadito=$ord->result_orden_new();
       if($resultadito!='')
 	     {
@@ -101,11 +101,11 @@ function generar_pdf()
 						 {
 						  if($perf!=''){
 						 ?>
-			<tr <?php echo $color;?>> 
-	  <td class="texto">Observaciones <?php echo $perf;?>:</td>
-	  <td class="texto" colspan="3" ><?php echo $inforesult[1];?></td>
+			<tr <?php  echo $color;?>> 
+	  <td class="texto">Observaciones <?php  echo $perf;?>:</td>
+	  <td class="texto" colspan="3" ><?php  echo $inforesult[1];?></td>
 	</tr>
-			<?php             } 
+			<?php              } 
 						  $cont++;
 						  $perf=$row2[8];
 						  } 
@@ -123,8 +123,8 @@ function generar_pdf()
 						$exa=new examen($examen,'','','','','','','','');
 		                $caractexa=$exa->consul_caract_examen();
 		                $n=mysql_num_rows($caractexa);						
-	?>	                <input name="canticar" id="canticar" type="hidden" value="<?php echo $n; ?>" />
-	<?php
+	?>	                <input name="canticar" id="canticar" type="hidden" value="<?php  echo $n; ?>" />
+	<?php 
 	  	  	            if($n!=0)
 		                 {						 
 				           if($n<=20)
@@ -152,39 +152,39 @@ function generar_pdf()
 					            <tr>
 						          <td height="3" colspan="4"><img src="imagenes/morado.gif" width="100%" height="3" /></td>
 					            </tr> 
-	                        <?php	} 							       
+	                        <?php 	} 							       
 							   if($row[7]!='CALCULADO'){ 	?>
-					           <tr class="texto" <?php echo $color;?>>
-							      <td width="100"><?php echo $row2[8]."-".$row2[5];?></td>
-						         <td colspan="2"><?php  echo $row[2];  ?> <input name="nombcar<?php echo $indi-1;?>" id="nombcar<?php echo $indi-1;?>" type="hidden" value="<?php echo $row[2];?>" /></td>
+					           <tr class="texto" <?php  echo $color;?>>
+							      <td width="100"><?php  echo $row2[8]."-".$row2[5];?></td>
+						         <td colspan="2"><?php   echo $row[2];  ?> <input name="nombcar<?php  echo $indi-1;?>" id="nombcar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $row[2];?>" /></td>
 						         <td colspan="2">
-						<?php  	 $resu= new resultado('',$orden,'','','','','');
+						<?php   	 $resu= new resultado('',$orden,'','','','','');
 						         $valo= $resu->consul_det_result($examen,$row[1]);	
 						         if($row[5]==1)
 						            {  if($valo[0]== 'P') echo 'Positivo';
 						               if($valo[0]== 'N') echo 'Negativo';?>
-						             <input name="ocucaract<?php echo $indi-1;?>" id="ocucaract<?php echo $indi-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-						             <input name="tabla<?php echo $row[1];?>" id="tabla<?php echo $row[1];?>" type="hidden" value="" />
+						             <input name="ocucaract<?php  echo $indi-1;?>" id="ocucaract<?php  echo $indi-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+						             <input name="tabla<?php  echo $row[1];?>" id="tabla<?php  echo $row[1];?>" type="hidden" value="" />
 
-						<?php			}
+						<?php 			}
 						           else
 						            {
 							         $valores=$exa->consul_valores_caract3($row[1],$valo[0]);
 							         if($valores==false)
 							            { 			?>
-							            <input name="caract<?php echo $examen.$row[1];?>" id="caract<?php echo $examen.$row[1];?>" type="hidden" class="texto"  value="<?php echo $valo[0]; if($examen=='461') echo '12';if($examen=='462') echo '1.07'; ?>" size="5" /> <?php if(empty($valo[0]))echo "-"; else echo $valo[0]; ?>
-							            <input name="ocucaract<?php echo $indi-1;?>" id="ocucaract<?php echo $indi-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-							            <input name="tabla<?php echo $examen.$row[1];?>" id="tabla<?php echo $examen.$row[1];?>" type="hidden" value="" />
-			<?php				
+							            <input name="caract<?php  echo $examen.$row[1];?>" id="caract<?php  echo $examen.$row[1];?>" type="hidden" class="texto"  value="<?php  echo $valo[0]; if($examen=='461') echo '12';if($examen=='462') echo '1.07'; ?>" size="5" /> <?php  if(empty($valo[0]))echo "-"; else echo $valo[0]; ?>
+							            <input name="ocucaract<?php  echo $indi-1;?>" id="ocucaract<?php  echo $indi-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+							            <input name="tabla<?php  echo $examen.$row[1];?>" id="tabla<?php  echo $examen.$row[1];?>" type="hidden" value="" />
+			<?php 				
 							            }
 							         else
 							          {							?>
 							           
-								          <?php echo $valores; ?>
+								          <?php  echo $valores; ?>
 							           
-							            <input name="ocucaract<?php echo $indi-1;?>" id="ocucaract<?php echo $indi-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-							            <input name="tabla<?php echo $examen.$row[1];?>" id="tabla<?php echo $examen.$row[1];?>" type="hidden" value="slc_lista_Valores" />
-<?php							           }
+							            <input name="ocucaract<?php  echo $indi-1;?>" id="ocucaract<?php  echo $indi-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+							            <input name="tabla<?php  echo $examen.$row[1];?>" id="tabla<?php  echo $examen.$row[1];?>" type="hidden" value="slc_lista_Valores" />
+<?php 							           }
 						             }
 									 
 						         $valoresref=$exa->consul_valores_ref($row[1],$datos[6],calculaedad($datos[5]));
@@ -202,13 +202,13 @@ function generar_pdf()
 						             echo ' ('.$row[4].')'; 
 						             $dato.=' ('.$row[4].')';
 						             }				 ?>
-						             <input name="unime<?php echo $row[1];?>" id="unime<?php echo $row[1];?>" type="hidden" value="<?php echo $row[6];?>" />
-						             <input name="datoscar<?php echo $indi-1;?>" id="datoscar<?php echo $indi-1;?>" type="hidden" value="<?php echo $dato;?>" />
-						             <input name="tipocar<?php echo $indi-1;?>" id="tipocar<?php echo $indi-1;?>" type="hidden" value="<?php echo $row[0];?>" />
+						             <input name="unime<?php  echo $row[1];?>" id="unime<?php  echo $row[1];?>" type="hidden" value="<?php  echo $row[6];?>" />
+						             <input name="datoscar<?php  echo $indi-1;?>" id="datoscar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $dato;?>" />
+						             <input name="tipocar<?php  echo $indi-1;?>" id="tipocar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $row[0];?>" />
 	                               </td>
 					            </tr>
 								
-			<?php 	            
+			<?php  	            
 			 	           }}} 
 						   }						   	  
 				    ///////////////////////////////////////FIN DE NUEVO///////////////////////////////////////////////////////////////	   
@@ -224,11 +224,11 @@ function generar_pdf()
       else  
 	     echo '<script>volver();</script>';
 	?>
-		<tr <?php echo $color;?>> 
-	  <td class="texto">Observaciones <?php echo $perf;?>:</td>
-	  <td class="texto" colspan="3" ><?php echo $inforesult[1];?></td>
+		<tr <?php  echo $color;?>> 
+	  <td class="texto">Observaciones <?php  echo $perf;?>:</td>
+	  <td class="texto" colspan="3" ><?php  echo $inforesult[1];?></td>
 	</tr>
-<?php
+<?php 
       $f=new firma($orden,'','','','');
 	  $firm=$f->busca_firma_medico();
 	  $sw=0;
@@ -249,13 +249,13 @@ function generar_pdf()
 	  onclick="history.back();" 
 	  onmouseover="this.src='imagenes/atras.png'"  
 	  onmouseout="this.src='imagenes/atras.png'"/>
-	  <?php if($sw!=0){?>
+	  <?php  if($sw!=0){?>
 	  <img src="imagenes/p_imprimir1.gif" alt="Imprimir Resultados" width="140" height="50" 
 	  style="cursor:hand" 
 	  onclick="generar_pdf();" 
 	  onmouseover="this.src='imagenes/a_imprimir1.gif'"  
 	  onmouseout="this.src='imagenes/p_imprimir1.gif'"/>
-	<?php }?>
+	<?php  }?>
 	    </div>
 	  </td>	  
     </tr>

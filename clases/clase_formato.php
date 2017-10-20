@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE FORMATOS
 CREADA POR: Ing. Monica Batista

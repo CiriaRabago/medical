@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 /**
 * Universal Theme class

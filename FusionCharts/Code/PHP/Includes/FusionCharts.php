@@ -1,4 +1,4 @@
-<?php
+<?php 
 // Page: FusionCharts.php
 // Author: InfoSoft Global (P) Ltd.
 // This page contains functions that can be used to render FusionCharts.

@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once ('jpgraph/QR/qrencoder.inc.php');
 
 // Data to be encoded

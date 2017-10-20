@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_motivo_con.php";
@@ -77,7 +77,7 @@ function eliminar()
 </script>
  
 <form id="form1" name="form1" method="post"  action="motivo.php">
-<?php
+<?php 
 $motivo= new motivo_v();
 
   if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
@@ -165,7 +165,7 @@ $motivo= new motivo_v();
     </tr>
   </table>
  <div>    
- <?php 
+ <?php  
  $ver=$motivo->ver_motivo_v();
         if ($ver==false)
 		{

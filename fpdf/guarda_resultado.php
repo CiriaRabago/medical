@@ -1,4 +1,4 @@
-<?php 
+<?php  
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
@@ -17,7 +17,7 @@ include "clases/clase_resultado.php";
 <body>
 <form method="post" name="form1">
 <input type="hidden" name="orden" id="orden" value="<?=$_POST['orden'];?>"  />
- <?php
+ <?php 
   $orden = $_POST['orden'];
   $usu=$_SESSION["cedu_usu"];
   $verif= new usuario($usu,NULL,NULL,NULL,NULL,NULL,NULL,NULL);

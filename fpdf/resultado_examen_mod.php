@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
@@ -41,26 +41,26 @@ function retorna()
 <body>
 <form name="form1" id="form1" method="post" action="resultado_examen_mod.php">
 
-<?php 
+<?php  
 $pagina='';
 
 if($_POST['guaocu']!='')
 {
 	$orden=$_POST['orden'];
-	?>  <input name="orden" id="orden" type="hidden" value="<?php echo $orden; ?>" /> <?php
+	?>  <input name="orden" id="orden" type="hidden" value="<?php  echo $orden; ?>" /> <?php 
 	$examen=$_POST['examen'];
-	?>  <input name="examen" id="examen" type="hidden" value="<?php echo $examen; ?>" /> <?php
+	?>  <input name="examen" id="examen" type="hidden" value="<?php  echo $examen; ?>" /> <?php 
 	$empleado=$_POST['empleado'];
-	?>  <input name="empleado" id="empleado" type="hidden" value="<?php echo $empleado; ?>" /> <?php
+	?>  <input name="empleado" id="empleado" type="hidden" value="<?php  echo $empleado; ?>" /> <?php 
 	$empleado=explode("**",$empleado);
 	$pagina=$_POST['pagiocu'];
-	?> <input name="pagiocu" id="pagiocu" type="hidden" value="<?php echo $pagina; ?>" /> <?php
+	?> <input name="pagiocu" id="pagiocu" type="hidden" value="<?php  echo $pagina; ?>" /> <?php 
 	$idresulta=$_POST['idresulta'];
-	?>  <input name="idresulta" id="idresulta" type="hidden" value="<?php echo $idresulta; ?>" /> <?php
+	?>  <input name="idresulta" id="idresulta" type="hidden" value="<?php  echo $idresulta; ?>" /> <?php 
 
 
 	$obs=$_POST['obs'];
-	?>  <input name="obs" id="obs" type="hidden" value="<?php echo $obs; ?>" /> <?php
+	?>  <input name="obs" id="obs" type="hidden" value="<?php  echo $obs; ?>" /> <?php 
 	$rr= new resultado($idresulta,$orden,$examen,$empleado[0],$obs,'','');
 	$idresul=$rr->mod_result();
 	if($idresul)
@@ -103,11 +103,11 @@ if($_POST['guaocu']!='')
 else
 {
 	$orden=$_GET['ord'];
-		?>  <input name="orden" id="orden" type="hidden" value="<?php echo $orden; ?>" /> <?php
+		?>  <input name="orden" id="orden" type="hidden" value="<?php  echo $orden; ?>" /> <?php 
 		$examen=$_GET['exa'];
 		$cedula=$_GET['ced'];
 		$pagina=$_GET['pagi'];
-		?> <input name="pagiocu" id="pagiocu" type="hidden" value="<?php echo $pagina; ?>" /> <?php
+		?> <input name="pagiocu" id="pagiocu" type="hidden" value="<?php  echo $pagina; ?>" /> <?php 
 
 	$ord= new orden($id,$cedula,'','','','','');
 	$paci=$ord->consul_pac_ID($cedula);
@@ -124,9 +124,9 @@ else
 		<td height="55" colspan="2" bgcolor="#E3E3C6">
 		  <div align="left"><img src="imagenes/Logo1.png" /></div>
 		<td colspan="2" bgcolor="#E3E3C6"  class="texto">
-		  <span class="textoN">FECHA</span>:  <?php echo date('d-m-Y'); ?><br>
-		  <span class="textoN">ORDEN No. </span>: <?php echo $orden; ?><br>
-		  <span class="textoN">CÉDULA</span>: <?php echo $datos[11]; ?><input name="cedula" id="cedula" type="hidden" value="<?php echo $datos[11]; ?>" /><br>
+		  <span class="textoN">FECHA</span>:  <?php  echo date('d-m-Y'); ?><br>
+		  <span class="textoN">ORDEN No. </span>: <?php  echo $orden; ?><br>
+		  <span class="textoN">CÉDULA</span>: <?php  echo $datos[11]; ?><input name="cedula" id="cedula" type="hidden" value="<?php  echo $datos[11]; ?>" /><br>
 		</td>
 		</tr>
 		  <tr>
@@ -143,20 +143,20 @@ else
 		<td width="200">Muestra:</td>
 		<td width="200">M&eacute;todo:</td>
 	  </tr>
-	<?php 
+	<?php  
 	
 		$exa=new examen($examen,'','','','','','','','');
 		$datosexa=$exa->consul_examen();
 	   ?>
 	  <tr class="texto">
-		<td colspan="2"><?php echo $datosexa[0]; ?><input name="examen" id="examen" type="hidden" value="<?php echo $datosexa[3]; ?>" /></td>
-		<td><?php echo $datosexa[2]; ?><input name="muestra" id="muestra" type="hidden" value="<?php echo $datosexa[2]; ?>" /></td>
-		<td><?php echo $datosexa[1]; ?><input name="metodo" id="metodo" type="hidden" value="<?php echo $datosexa[1]; ?>" /></td>
+		<td colspan="2"><?php  echo $datosexa[0]; ?><input name="examen" id="examen" type="hidden" value="<?php  echo $datosexa[3]; ?>" /></td>
+		<td><?php  echo $datosexa[2]; ?><input name="muestra" id="muestra" type="hidden" value="<?php  echo $datosexa[2]; ?>" /></td>
+		<td><?php  echo $datosexa[1]; ?><input name="metodo" id="metodo" type="hidden" value="<?php  echo $datosexa[1]; ?>" /></td>
 	  </tr>
 	  <tr>
 		<td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
 	  </tr>
-	<?php 
+	<?php  
 	$rr= new resultado('',$orden,$examen,'','','','');
 	$inforesult=$rr->ver_resultado();
 	if($inforesult==false)
@@ -168,8 +168,8 @@ else
 	
 		$caractexa=$exa->consul_caract_examen($examen);
 		$n=mysql_num_rows($caractexa);
-	?>	<input name="canticar" id="canticar" type="hidden" value="<?php echo $n; ?>" />
-	<?php
+	?>	<input name="canticar" id="canticar" type="hidden" value="<?php  echo $n; ?>" />
+	<?php 
 		//$n=15;
 		if($n!=0)
 		{
@@ -198,11 +198,11 @@ else
 					  <tr>
 						<td height="3" colspan="4"><img src="imagenes/morado.gif" width="100%" height="3" /></td>
 					  </tr> 
-	<?php				 } 
+	<?php 				 } 
 					?>
 					  <tr class="texto">
-						<td colspan="2"><?php  echo $row[2];  ?> <input name="nombcar<?php echo $indi-1;?>" id="nombcar<?php echo $indi-1;?>" type="hidden" value="<?php echo $row[2];?>" /></td>
-						<td colspan="2"><?php 
+						<td colspan="2"><?php   echo $row[2];  ?> <input name="nombcar<?php  echo $indi-1;?>" id="nombcar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $row[2];?>" /></td>
+						<td colspan="2"><?php  
 						
 						$resu= new resultado('',$orden,'','','','','');
 						$valo= $resu->consul_det_result($examen,$row[1]);
@@ -210,36 +210,36 @@ else
 						
 						if($row[5]==1)
 						{ 
-						?> <select name="caract<?php echo $row[1];?>" id="caract<?php echo $row[1];?>" class="texto">
+						?> <select name="caract<?php  echo $row[1];?>" id="caract<?php  echo $row[1];?>" class="texto">
 						  <option value="">Seleccione</option>
-						  <option value="P" <?php if($valo[0]== 'P') echo 'selected'; ?> >Positivo</option>
-						  <option value="N" <?php if($valo[0]== 'N') echo 'selected'; ?> >Negativo</option>
+						  <option value="P" <?php  if($valo[0]== 'P') echo 'selected'; ?> >Positivo</option>
+						  <option value="N" <?php  if($valo[0]== 'N') echo 'selected'; ?> >Negativo</option>
 						</select> 
-						<input name="ocucaract<?php echo $indi-1;?>" id="ocucaract<?php echo $indi-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-						<input name="tabla<?php echo $row[1];?>" id="tabla<?php echo $row[1];?>" type="hidden" value="" />
+						<input name="ocucaract<?php  echo $indi-1;?>" id="ocucaract<?php  echo $indi-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+						<input name="tabla<?php  echo $row[1];?>" id="tabla<?php  echo $row[1];?>" type="hidden" value="" />
 
-						<?php
+						<?php 
 						}
 						else
 						{
 							$valores=$exa->consul_valores_caract2($row[1],$valo[0]);
 							if($valores==false)
 							{ 			?>
-							<input name="caract<?php echo $row[1];?>" id="caract<?php echo $row[1];?>" type="text" class="texto"  value="<?php echo $valo[0]; ?>" size="5" />
-							<input name="ocucaract<?php echo $indi-1;?>" id="ocucaract<?php echo $indi-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-							<input name="tabla<?php echo $row[1];?>" id="tabla<?php echo $row[1];?>" type="hidden" value="" />
-			<?php				
+							<input name="caract<?php  echo $row[1];?>" id="caract<?php  echo $row[1];?>" type="text" class="texto"  value="<?php  echo $valo[0]; ?>" size="5" />
+							<input name="ocucaract<?php  echo $indi-1;?>" id="ocucaract<?php  echo $indi-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+							<input name="tabla<?php  echo $row[1];?>" id="tabla<?php  echo $row[1];?>" type="hidden" value="" />
+			<?php 				
 							}
 							else
 							{
 							?>
-							  <select name="caract<?php echo $row[1];?>" id="caract<?php echo $row[1];?>" class="texto" >
+							  <select name="caract<?php  echo $row[1];?>" id="caract<?php  echo $row[1];?>" class="texto" >
 								<option value="">Seleccione</option>
-								<?php echo $valores; ?>
+								<?php  echo $valores; ?>
 							  </select>	
-							  <input name="ocucaract<?php echo $indi-1;?>" id="ocucaract<?php echo $indi-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-							  <input name="tabla<?php echo $row[1];?>" id="tabla<?php echo $row[1];?>" type="hidden" value="slc_lista_Valores" />
-<?php							}
+							  <input name="ocucaract<?php  echo $indi-1;?>" id="ocucaract<?php  echo $indi-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+							  <input name="tabla<?php  echo $row[1];?>" id="tabla<?php  echo $row[1];?>" type="hidden" value="slc_lista_Valores" />
+<?php 							}
 						}
 						$valoresref=$exa->consul_valores_ref($row[1],$datos[6],calculaedad($datos[5]));
 						$dato='';
@@ -254,13 +254,13 @@ else
 						  $dato.=' ('.$row[4].')';
 						}				
 						 ?>
-						 <input name="unime<?php echo $row[1];?>" id="unime<?php echo $row[1];?>" type="hidden" value="<?php echo $row[6];?>" />
-						 <input name="datoscar<?php echo $indi-1;?>" id="datoscar<?php echo $indi-1;?>" type="hidden" value="<?php echo $dato;?>" />
-						 <input name="tipocar<?php echo $indi-1;?>" id="tipocar<?php echo $indi-1;?>" type="hidden" value="<?php echo $row[0];?>" />
+						 <input name="unime<?php  echo $row[1];?>" id="unime<?php  echo $row[1];?>" type="hidden" value="<?php  echo $row[6];?>" />
+						 <input name="datoscar<?php  echo $indi-1;?>" id="datoscar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $dato;?>" />
+						 <input name="tipocar<?php  echo $indi-1;?>" id="tipocar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $row[0];?>" />
 	
 						</td>
 					  </tr>
-			<?php 	}
+			<?php  	}
 				}
 				else //Si $n>10
 				{
@@ -296,12 +296,12 @@ else
 						<td height="3" colspan="4"><img src="imagenes/morado.gif" width="100%" height="3" /></td>
 					  </tr> 
 					 
-	<?php			 
+	<?php 			 
 					 }
 	
 					   if($cont%2==1) echo '<tr class="texto">';
-	?>					<td width="200"><?php echo $row[2];?> <input name="nombcar<?php echo $cont-1;?>" id="nombcar<?php echo $cont-1;?>" type="hidden" value="<?php echo $row[2];?>" /></td>
-						<td width="200"><?php 
+	?>					<td width="200"><?php  echo $row[2];?> <input name="nombcar<?php  echo $cont-1;?>" id="nombcar<?php  echo $cont-1;?>" type="hidden" value="<?php  echo $row[2];?>" /></td>
+						<td width="200"><?php  
 						
 						$resu= new resultado('',$orden,'','','','','');
 						$valo= $resu->consul_det_result($examen,$row[1]);
@@ -309,14 +309,14 @@ else
 						
 						if($row[5]==1)
 						{ 
-						?> <select name="caract<?php echo $row[1];?>" id="caract<?php echo $row[1];?>" class="texto">
+						?> <select name="caract<?php  echo $row[1];?>" id="caract<?php  echo $row[1];?>" class="texto">
 						  <option value="">Seleccione</option>
-						  <option value="P" <?php if($valo[0]== 'P') echo 'selected'; ?> >Positivo</option>
-						  <option value="N" <?php if($valo[0]== 'N') echo 'selected'; ?> >Negativo</option>
+						  <option value="P" <?php  if($valo[0]== 'P') echo 'selected'; ?> >Positivo</option>
+						  <option value="N" <?php  if($valo[0]== 'N') echo 'selected'; ?> >Negativo</option>
 						</select>
-						<input name="ocucaract<?php echo $indi-1;?>" id="ocucaract<?php echo $indi-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-						<input name="tabla<?php echo $row[1];?>" id="tabla<?php echo $row[1];?>" type="hidden" value="" />
-						 <?php
+						<input name="ocucaract<?php  echo $indi-1;?>" id="ocucaract<?php  echo $indi-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+						<input name="tabla<?php  echo $row[1];?>" id="tabla<?php  echo $row[1];?>" type="hidden" value="" />
+						 <?php 
 						}
 						else
 						{
@@ -324,20 +324,20 @@ else
 							$valores=$exa->consul_valores_caract2($row[1],$valo[0]);
 							if ($valores==false)
 							{ 			?>
-							<input name="caract<?php echo $row[1];?>" type="text" class="texto" id="caract<?php echo $row[1];?>" value="<?php echo $valo[0]; ?>" size="5" />
-							<input name="ocucaract<?php echo $cont-1;?>" id="ocucaract<?php echo $cont-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-							<input name="tabla<?php echo $row[1];?>" id="tabla<?php echo $row[1];?>" type="hidden" value="" />
-			<?php				}
+							<input name="caract<?php  echo $row[1];?>" type="text" class="texto" id="caract<?php  echo $row[1];?>" value="<?php  echo $valo[0]; ?>" size="5" />
+							<input name="ocucaract<?php  echo $cont-1;?>" id="ocucaract<?php  echo $cont-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+							<input name="tabla<?php  echo $row[1];?>" id="tabla<?php  echo $row[1];?>" type="hidden" value="" />
+			<?php 				}
 							else
 							{
 							?>
-							  <select name="caract<?php echo $row[1];?>" id="caract<?php echo $row[1];?>" class="texto" >
+							  <select name="caract<?php  echo $row[1];?>" id="caract<?php  echo $row[1];?>" class="texto" >
 								<option value="">Seleccione</option>
-								<?php echo $valores; ?>
+								<?php  echo $valores; ?>
 							  </select>					
-							  <input name="ocucaract<?php echo $cont-1;?>" id="ocucaract<?php echo $cont-1;?>" type="hidden" value="caract<?php echo $row[1];?>" />
-							  <input name="tabla<?php echo $row[1];?>" id="tabla<?php echo $row[1];?>" type="hidden" value="slc_lista_Valores" />
-		<?php	
+							  <input name="ocucaract<?php  echo $cont-1;?>" id="ocucaract<?php  echo $cont-1;?>" type="hidden" value="caract<?php  echo $row[1];?>" />
+							  <input name="tabla<?php  echo $row[1];?>" id="tabla<?php  echo $row[1];?>" type="hidden" value="slc_lista_Valores" />
+		<?php 	
 							}
 						}
 						$valoresref=$exa->consul_valores_ref($row[1],$_POST['sexo'],$_POST['edad']);
@@ -352,13 +352,13 @@ else
 						  echo ' ('.$row[4].')'; 
 						  $dato.=' ('.$row[4].')';
 						}				 ?>			
-						<input name="unime<?php echo $row[1];?>" id="unime<?php echo $row[1];?>" type="hidden" value="<?php echo $row[6];?>" />
-						<input name="datoscar<?php echo $cont-1;?>" id="datoscar<?php echo $cont-1;?>" type="hidden" value="<?php echo $dato;?>" />
-						<input name="tipocar<?php echo $cont-1;?>" id="tipocar<?php echo $cont-1;?>" type="hidden" value="<?php echo $row[0];?>" />
+						<input name="unime<?php  echo $row[1];?>" id="unime<?php  echo $row[1];?>" type="hidden" value="<?php  echo $row[6];?>" />
+						<input name="datoscar<?php  echo $cont-1;?>" id="datoscar<?php  echo $cont-1;?>" type="hidden" value="<?php  echo $dato;?>" />
+						<input name="tipocar<?php  echo $cont-1;?>" id="tipocar<?php  echo $cont-1;?>" type="hidden" value="<?php  echo $row[0];?>" />
 	
 						
 						</td>
-	<?php 			   if($cont%2==0) echo  '</tr>';
+	<?php  			   if($cont%2==0) echo  '</tr>';
 					}	
 				}
 		}
@@ -368,22 +368,22 @@ else
 			<tr class="texto">
 				<td colspan="4">No hay valores Asociados Transcriba el resultado</td>
 			</tr>
-	<?php	}
+	<?php 	}
 			?>
 	  <tr class="texto" align="center">
-				<td height="82" colspan="4" align="center"><div style="background-position:center">Observación:</div><textarea name="obs" cols="70" rows="3" id="obs"><?php echo $inforesult[1]; ?></textarea></td>
+				<td height="82" colspan="4" align="center"><div style="background-position:center">Observación:</div><textarea name="obs" cols="70" rows="3" id="obs"><?php  echo $inforesult[1]; ?></textarea></td>
 	  </tr>
 	  <tr>
 		<td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
 	  </tr>
 	  <tr class="texto">
 		<td colspan="2">
-	<?php		$bio= new empleado('','','','','','','','','','','','','','','','','','','');
+	<?php 		$bio= new empleado('','','','','','','','','','','','','','','','','','','');
 		$result= $bio->buscar_bioanalista(); ?>
 		
 		Bioanalista: <select name="empleado" id="empleado" class="texto">
 		  <option value="">Seleccione</option>
-		<?php
+		<?php 
 	
 		if($result)
 			while ($row = mysql_fetch_row($result))
@@ -411,7 +411,7 @@ else
 	  </tr>
 	</table>
 
-<?php } ?>
+<?php  } ?>
 
 </form>
 </body>

@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_tipcar.php";
@@ -68,7 +68,7 @@ function ver_modif(cadena)
 
 <p>&nbsp;</p>
 <form name="form1" id="form1" method="post" action="tipcar.php">
-<?php 
+<?php  
  $tip= new tipcar($_POST["ocu_N"],$_POST["nomb"],$_POST["descrip"]);
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
   { 
@@ -143,7 +143,7 @@ function ver_modif(cadena)
 	</td>
     </tr>
   </table>
-  <div><?php 
+  <div><?php  
    $ver=$tip->ver_tipcar();
         if ($ver==false)
 		{

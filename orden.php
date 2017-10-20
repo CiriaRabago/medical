@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -72,7 +72,7 @@ function soloNumeros(evt){
 <body onload="posicion();">
 <form name="form1" id="form1" method="post"  action="orden.php">
 
-<?php 
+<?php  
  if($_POST['ingreso']==1)
  {
     //echo 'entro a verificar';
@@ -82,8 +82,8 @@ function soloNumeros(evt){
 	if($reg)
 	{
 	   ?>
-	   <input name="paci" id="paci" type="hidden" value="<?php echo $reg; ?>" />
-	   <?php
+	   <input name="paci" id="paci" type="hidden" value="<?php  echo $reg; ?>" />
+	   <?php 
 	   echo "<script>ir_orden_pac('S');</script>";
 	}
 	else

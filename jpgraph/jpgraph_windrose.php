@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*=======================================================================
  // File:        JPGRAPH_WINDROSE.PHP
  // Description: Windrose extension for JpGraph

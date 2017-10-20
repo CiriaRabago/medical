@@ -1,4 +1,4 @@
-<?php
+<?php 
     // Example 7 : QR Barcode with multiple manually specified encodation schemas
     // (Note: Normally there would be no need to ever use manually specified encodation)
 

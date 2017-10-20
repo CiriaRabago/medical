@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 // Change this defines to where Your fonts are stored
 DEFINE("TTF_DIR","/usr/share/fonts/truetype/");
 

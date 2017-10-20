@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_tipcar.php";
@@ -120,7 +120,7 @@ function valores(cadena)
 
 </script>
 <body>
-<?php 
+<?php  
 	
  if ($_POST["primera"]=='')
  {
@@ -137,7 +137,7 @@ function valores(cadena)
  } 
 ?>
 <form name="form1" id="form1" method="post" action="caract.php">
-  <?php 
+  <?php  
 //--------------Guardar en Bitacora la Consulta--------------//
 if(isset($_POST["ocu_con"]) && $_POST["ocu_con"]=='1' )
 {
@@ -272,7 +272,7 @@ $car= new caract($_POST["ocu_N"],$_POST["comuni"],$_POST["comtip"],$_POST["nomb"
       <td colspan="3" class="texto"><label>
         <select name="comtip" class="texto" id="comtip">
        <option value="0" selected="selected" >Seleccione -------&gt;</option>
-		 <?php 
+		 <?php  
 		 if ($tip->combo_tipcar()!= false)
 		        echo $tip->combo_tipcar(); ?>
         </select>
@@ -285,7 +285,7 @@ $car= new caract($_POST["ocu_N"],$_POST["comuni"],$_POST["comtip"],$_POST["nomb"
       <td colspan="3" class="texto"><label>
         <select name="comuni" class="texto" id="comuni">
 		<option value="0" selected="selected" >Seleccione -------&gt;</option>
-		 <?php 
+		 <?php  
 		 if ($uni->combo_unimed()!= false)
 		        echo $uni->combo_unimed(); ?>
         </select>
@@ -374,13 +374,13 @@ $car= new caract($_POST["ocu_N"],$_POST["comuni"],$_POST["comtip"],$_POST["nomb"
 
 	<a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Nuevo"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a>
 
-      <input name="primera" type="hidden" id="primera" value="<?php echo $_POST["primera"]; ?>" />
-      <input name="busper" type="hidden" id="busper" value="<?php echo $_POST["busper"]; ?>" />
+      <input name="primera" type="hidden" id="primera" value="<?php  echo $_POST["primera"]; ?>" />
+      <input name="busper" type="hidden" id="busper" value="<?php  echo $_POST["busper"]; ?>" />
       <input name="ocu_con" type="hidden" id="ocu_con" value="0" /></td>
     </tr>
   </table>
   <div>
-    <?php 
+    <?php  
 	if ($ope2=='1')//
     { //
 		$ver=$car->ver_caract();

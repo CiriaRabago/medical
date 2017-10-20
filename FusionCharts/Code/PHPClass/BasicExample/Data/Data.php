@@ -1,10 +1,10 @@
-<?php
+<?php 
 //We've included ../../Includes/FusionCharts_Gen.php - FusionCharts PHP Class
 //to help us easily embed the charts.
 include("../../Includes/FusionCharts_Gen.php");
 ?>
 
-<?php
+<?php 
 	
 	//This page demonstrates the ease of generating charts using FusionCharts PHPClass.
 	//We creata a FusionCharts object instance

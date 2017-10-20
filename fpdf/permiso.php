@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_permiso.php";
@@ -140,7 +140,7 @@ function soloNumeros(evt){
 <body>
 <form name="form1" method="post" action="permiso.php">
 <input name="ingreso" id="ingreso" type="hidden" value="0" />
-<?php 
+<?php  
 if($_POST['ingreso']==1)
  {
     $usua= new usuario($_POST["cedula"],'','','','','','','');
@@ -158,17 +158,17 @@ if($_POST['ingreso']==1)
 		  <td width="222" height="20"><div align="center" class="textoN">
 		    <div align="center">Cedula</div>
 		  </div></td>
-		  <td width="204" height="20" ><?php echo $usuario[0]; ?>
-	      <input name="cedula" id="cedula" type="hidden" value="<?php echo $usuario[0]; ?>"></td>
+		  <td width="204" height="20" ><?php  echo $usuario[0]; ?>
+	      <input name="cedula" id="cedula" type="hidden" value="<?php  echo $usuario[0]; ?>"></td>
 		</tr>
 		<tr>
 		  <td height="20"><div align="center" class="textoN">
 		    <div align="center">Nombre</div>
 		  </div></td>
-		  <td height="20" ><?php echo $usuario[1].' '.$usuario[2].' '.$usuario[3].' '.$usuario[4]; ?>
+		  <td height="20" ><?php  echo $usuario[1].' '.$usuario[2].' '.$usuario[3].' '.$usuario[4]; ?>
 	      <div align="left"></div> </td>
 		</tr>
-<?php
+<?php 
 			$men= new menu_perm('','','','','','','','');
 			$ver=$men->ver_menu_perm($usuario[0]);
 			if ($ver==false)
@@ -178,9 +178,9 @@ if($_POST['ingreso']==1)
 			else
 			{ ?>
 				<tr><td colspan="2">
-				<?php echo $ver; ?>
+				<?php  echo $ver; ?>
 				</td></tr>
-		<?php  }
+		<?php   }
 	   }
 	   else
 	   {
@@ -196,13 +196,13 @@ if($_POST['ingreso']==1)
 		onmouseover="this.src='imagenes/a_salir1.gif'"  onmouseout="this.src='imagenes/p_salir1.gif'"/>
 			</td></tr>
 	</table>
-<?php
+<?php 
  }
  else
  {
 	 if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
 	  {  
-			?> <input name="cedula" id="cedula" type="hidden" value="<?php echo $_POST["cedula"]; ?>"> <?php
+			?> <input name="cedula" id="cedula" type="hidden" value="<?php  echo $_POST["cedula"]; ?>"> <?php 
 			$permi= new permisologia('', '', $_POST["cedula"], '', '', '', '', '');
 			$elimi=$permi->eli_permisos();
 			if($elimi)
@@ -257,7 +257,7 @@ if($_POST['ingreso']==1)
 		</tr>
 	  </table>
 
-<?php }?>
+<?php  }?>
 
 <input name="ocu_g" id="ocu_g" type="hidden" value="0"/>
 </form>

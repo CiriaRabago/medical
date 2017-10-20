@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_nivmenu.php";
@@ -117,7 +117,7 @@ function ver_modif(cadena)
 <body>
 <p>&nbsp;</p>
 <form name="form1" id="form1" method="post" action="nivel.php" enctype="multipart/form-data">
-<?php 
+<?php  
 //nivel($c, $n, $ia, $ip, $o, $co)
  $niv= new nivel($_POST["ocu_N"],$_POST["nomb"],'','',$_POST["orden"],$_POST["colo"]);
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
@@ -304,7 +304,7 @@ function ver_modif(cadena)
      </div></td>
     </tr>
   </table>
-  <?php 
+  <?php  
    $ver=$niv->ver_nivel();
         if ($ver==false)
 		{

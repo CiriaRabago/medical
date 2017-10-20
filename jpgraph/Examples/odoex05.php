@@ -1,4 +1,4 @@
-<?php
+<?php 
 //=============================================================================
 // File:	ODOEX05.PHP
 // Description: Example 1 for odometer graphs

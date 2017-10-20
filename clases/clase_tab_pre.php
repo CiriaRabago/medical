@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE TAB_PRE
 CREADA POR: JOSE RAMIREZ

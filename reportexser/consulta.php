@@ -1,7 +1,7 @@
 <script type="text/javascript" src="../javascript/js.js"></script>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <link href="../estilos/estilos.css" rel="stylesheet" type="text/css" />
-<?php
+<?php 
 session_start();
 include ("../clases/claseconexion.php");
 include ("../clases/proveedor.php");
@@ -32,7 +32,7 @@ $indemnizacion=$obj_indemnizacion->consultar();*/
      ?>
 		 <select name="local" id="local">
     <option value="0">---Seleccione---</option>
-    <?php
+    <?php 
     while($fila=$conn->siguiente($datos))
 	{if(isset($buscar)){
 			if ($fila[0] == $DATOS['muni']){
@@ -44,7 +44,7 @@ $indemnizacion=$obj_indemnizacion->consultar();*/
 	
 	?>      
     </select>
-		<?php
+		<?php 
 	} //fin de consulta ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	if($accion=="insertar_insumos")	//se insertan los insumos por requisicion de inventario !!!!!!!!!!!!!
 	{	
@@ -215,9 +215,9 @@ if($accion=="person")
 	<table width="650" height="" border="0" align="center" cellpadding="0" cellspacing="0" id="indemnizacion">
   <tr>
     <td width="100" height="30"><label>
-    <select name="med_id<?phpecho $word;?>" id="med_nom_ape<?phpecho $word;?>" onchange="cargarCombo('../ajax/inde_sele.php', 'med_nom_ape<?phpecho $word;?>', 'indemnizacion<?phpecho $word;?>',<?php echo $word; ?> );">
+    <select name="med_id<?php echo $word;?>" id="med_nom_ape<?php echo $word;?>" onchange="cargarCombo('../ajax/inde_sele.php', 'med_nom_ape<?php echo $word;?>', 'indemnizacion<?php echo $word;?>',<?php  echo $word; ?> );">
     <option value="0">-----------------SELECCIONE-----------------</option>
-    <?php
+    <?php 
     while($fila=$conn->siguiente($indemnizacion))
 	{
 	echo  '<option value='.$fila[0].'>'.utf8_encode($fila[1]).'</option>';
@@ -225,20 +225,20 @@ if($accion=="person")
 	?>      
     </select>
     </label></td>
-    <td height="30" class="subSubTitulo2"><div  id="indemnizacion<?phpecho $word;?>"></div></td>
+    <td height="30" class="subSubTitulo2"><div  id="indemnizacion<?php echo $word;?>"></div></td>
     </tr>
     </table>
-   <?php
+   <?php 
 	}		
 	if($accion=="autorizacion")	
 	{
 	?>
 			<form name="fomulario2" action="../Autorizacion.php" method ="post" target="_blank">
-			<input type="text" size="40" readonly="true"  name="palabra" value="<?phpecho$word;?>" >
+			<input type="text" size="40" readonly="true"  name="palabra" value="<?php echo$word;?>" >
 			<input  type="submit" value="Generar pdf"  /></br></br>
 			
 			</form>
-	<?php
+	<?php 
 		//echo "estoy a punto de crear el pdf";
 		
 	}		//echo "no recibo accion";
@@ -299,7 +299,7 @@ if($accion=="person")
 	Total
 	</div>
 	</td>
-	</tr><?php
+	</tr><?php 
 	$i=1;
 		while($fila=$conn->siguiente($mat))
 		{ 
@@ -307,26 +307,26 @@ if($accion=="person")
           <tr>
             <td height="25">&nbsp;</td>
             <td width="498" height="25"><span class="subSubTitulo2">
-              <input type="hidden" name="cob_id<?php echo $i ?>" id="cob_id<?php echo $i ?>" value="<?php echo $fila[0]?>"/>
-              <input name="dsc_cover<?php echo $i ?>" type="text" class="cuadros_de_texto" id="dsc_cover<?php echo $i ?>" size="50" value="<?php echo utf8_encode($fila[1])?>"  readonly="readonly" />
+              <input type="hidden" name="cob_id<?php  echo $i ?>" id="cob_id<?php  echo $i ?>" value="<?php  echo $fila[0]?>"/>
+              <input name="dsc_cover<?php  echo $i ?>" type="text" class="cuadros_de_texto" id="dsc_cover<?php  echo $i ?>" size="50" value="<?php  echo utf8_encode($fila[1])?>"  readonly="readonly" />
             </span></td>
              <td width="233" height="25"><div align="center">
-                <input name="unidad<?php echo $i ?>" type="text" class="cuadros_de_texto" id="unidad<?php echo $i ?>" size="14" value="<?php echo utf8_encode($fila[2])?>"readonly="readonly" />
+                <input name="unidad<?php  echo $i ?>" type="text" class="cuadros_de_texto" id="unidad<?php  echo $i ?>" size="14" value="<?php  echo utf8_encode($fila[2])?>"readonly="readonly" />
             </div></td>
             <td width="233" height="25"><div align="center">
-                <input name="cantidad<?php echo $i ?>" type="text" class="input_numerico" id="cantidad<?php echo $i ?>" size="10"  onblur="calculo_total(<?phpecho $i?>);" />
+                <input name="cantidad<?php  echo $i ?>" type="text" class="input_numerico" id="cantidad<?php  echo $i ?>" size="10"  onblur="calculo_total(<?php echo $i?>);" />
             </div></td>
             <td width="233" height="25"><div align="center">
-                <input name="bs_cover<?php echo $i ?>" type="text" class="input_numerico" id="bs_cover<?php echo $i ?>" size="10" value="<?php echo ($fila[3])?>"  readonly="readonly" />
+                <input name="bs_cover<?php  echo $i ?>" type="text" class="input_numerico" id="bs_cover<?php  echo $i ?>" size="10" value="<?php  echo ($fila[3])?>"  readonly="readonly" />
             </div></td>
             <td width="233" height="25"><div align="center">
-                <input name="total<?php echo $i ?>" type="text" class="input_numerico" id="total<?php echo $i ?>" size="10"  readonly="readonly" />
+                <input name="total<?php  echo $i ?>" type="text" class="input_numerico" id="total<?php  echo $i ?>" size="10"  readonly="readonly" />
             </div></td>
           
         </tr>
-        <?php $i++;}
+        <?php  $i++;}
       ?>
-		<tr><input name="posicion" type="hidden" class="input_numerico" id="posicion" size="10" value="<?phpecho $i?>"/></td><td></td><td></td><td></td><td></td>
+		<tr><input name="posicion" type="hidden" class="input_numerico" id="posicion" size="10" value="<?php echo $i?>"/></td><td></td><td></td><td></td><td></td>
            <td  width="233" height="25" class="subSubTitulo2">
 	<div align="center">
 	SUB-Total
@@ -358,7 +358,7 @@ if($accion=="person")
             </div></td></tr>
 		</table>
 		
-		<?php
+		<?php 
 		
 	}
 }	

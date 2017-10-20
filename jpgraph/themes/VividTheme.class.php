@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 /**
 * Vivid Theme class

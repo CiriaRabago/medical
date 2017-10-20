@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_medico.php";
@@ -124,7 +124,7 @@ function fotox()
 </script>
 <body>
 <form action="" method="post" name="form1" enctype="multipart/form-data">
-<?php   
+<?php    
  $med= new medico('','','','','','','','','','','','','','','');
  $esp= new especialidad('','');
 
@@ -210,8 +210,8 @@ function fotox()
       <td class="etiqueta">Sexo:</td>
       <td class="texto"><select name="sex" class="texto" id="sex">
         <option value="">Seleccione---&gt;</option>
-        <option value="F" <?php if($_POST['sex']=='F') echo 'selected';?>>Femenino</option>
-        <option value="M" <?php if($_POST['sex']=='M') echo 'selected';?>>Masculino</option>
+        <option value="F" <?php  if($_POST['sex']=='F') echo 'selected';?>>Femenino</option>
+        <option value="M" <?php  if($_POST['sex']=='M') echo 'selected';?>>Masculino</option>
       </select>
         <span class="Estilo1">*</span></td>
     </tr>
@@ -260,7 +260,7 @@ function fotox()
       <td class="etiqueta">Especialidad:</td>
       <td class="texto"><select name="espec" id="espec" class="texto">
         <option value="">Seleccione --&gt;</option>
-		<?php $esp= new especialidad($_POST['espec'],'');
+		<?php  $esp= new especialidad($_POST['espec'],'');
 	   echo $esp->combo_esp(); ?> 
       </select>
        <span class="texto Estilo2"><span class="Estilo1">*</span></span></td>
@@ -271,9 +271,9 @@ function fotox()
 	         <div id="archivos">
 			    <input type="text" name="firma" id="firma" class="texto"  value="<?=$_POST['firma'];?>"/>
 			    <input name="fotofile" type="file" class="texto" id="fotofile" size="30" onChange="fotox()" />
-				<?php if(substr($_POST['firma'],0,5)=='firm/'){?>
+				<?php  if(substr($_POST['firma'],0,5)=='firm/'){?>
 				<img src="<?=$_POST["firma"]?>?<?=time()?>" width="120" height="100" id="foto" name="foto">
-				<?php }?>
+				<?php  }?>
 	         </div>
         <span class="Estilo2">Los Archivos pueden ser tipo JPEG, jpg, bmp, GIF &oacute; gif. </span>      </td>
     </tr>
@@ -295,7 +295,7 @@ function fotox()
 			<a href="#" onclick="medico_pdf();" class="button-print" alt="Imprimir"  > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a></p>      </td>
     </tr>
   </table>
-       <?php 
+       <?php  
 $ver=$med->ver_medico();
         if ($ver==false)
 		{

@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*
 FUNCIÓN DE CONEXION
 CREADA POR: Gratelly Garza Morillo

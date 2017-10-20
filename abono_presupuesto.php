@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 if ($_SESSION["cedu_usu"]!='') {
 include "clases/clase_conexion.php";
@@ -194,7 +194,7 @@ document.getElementById('n_estado').focus();
 }
 </script>
 <body>
-<?php if ($_POST["primera"]=='')
+<?php  if ($_POST["primera"]=='')
  {
    //// buscar el id de menu que le corresponde esta pagina
    $men= new menu('', '', '', 'listado_presupuestos.php', '','', '', '');
@@ -209,7 +209,7 @@ document.getElementById('n_estado').focus();
 <input name="ingreso" id="ingreso" type="hidden" value="0" />
 <input name="id_a_eliminar" id="id_a_eliminar" type="hidden" value="0" />
 
-<?php /////////////////////////Mostrar u ocultar Botones///////////////////////////
+<?php  /////////////////////////Mostrar u ocultar Botones///////////////////////////
   $ope1='style="display:none"'; 
   $ope4='style="display:none"';
   $ope5='style="display:none"';
@@ -350,14 +350,14 @@ $emp= new empresa_pres('','','','','','','','','','');
  ?>
 	   		<table width="520" border="0" align="center" >
 			<tr class="titulofor">
-			  <td height="30" colspan="3"><div align="center" class="titulofor">Presupuesto N: <?phpecho $id_presupuesto?> </div></td>
+			  <td height="30" colspan="3"><div align="center" class="titulofor">Presupuesto N: <?php echo $id_presupuesto?> </div></td>
 			</tr>
 			<tr class="texto">
 			<td height="30" colspan="5">
 			<table width="520" border="0" cellpadding="0" cellspacing="0">
 			<tr class="textoN">
-			<td width="160" height="22">Proveedor:</td><input name="c_prov" type="hidden" class="texto" id="c_prov" value="<?phpecho $datos[0]?>" />
-			<td class="texto" colspan="3" ><?phpecho $datos[1]?>
+			<td width="160" height="22">Proveedor:</td><input name="c_prov" type="hidden" class="texto" id="c_prov" value="<?php echo $datos[0]?>" />
+			<td class="texto" colspan="3" ><?php echo $datos[1]?>
 			</td>
 			</tr>
 			<tr class="textoN">
@@ -366,39 +366,39 @@ $emp= new empresa_pres('','','','','','','','','','');
 			<td width="160" height="22">Monto Factura</td>
 			</tr>
 			<tr>
-			<td><input name="fecha_p_i" type="date" class="texto" id="fecha_p_i" size="15" value="<?phpecho $datos[3]?>" /></td>	
-			<td><input name="fecha_p_f" type="date" class="texto" id="fecha_p_f" size="15" value="<?phpecho $datos[4]?>" /></td>	
-			<td><input name="monto" type="text" class="texto" id="monto" size="15" value="<?phpecho $datos[8]?>" />
+			<td><input name="fecha_p_i" type="date" class="texto" id="fecha_p_i" size="15" value="<?php echo $datos[3]?>" /></td>	
+			<td><input name="fecha_p_f" type="date" class="texto" id="fecha_p_f" size="15" value="<?php echo $datos[4]?>" /></td>	
+			<td><input name="monto" type="text" class="texto" id="monto" size="15" value="<?php echo $datos[8]?>" />
 			<input name="monto_r" type="hidden" class="texto" id="monto_r" size="15" />
 			</tr>
 			<tr class="textoN">
-			<td width="160" height="35">B. Imponible <input name="b_imp" type="text" class="texto" id="b_imp" size="10" value="<?phpecho $datos[12]?>" onblur="cal_iva();"/></td>
-			<td width="160" height="35">% Ret. IVA: <input name="iva" type="text" class="texto" id="iva" size="10" readonly="readonly" value="<?phpecho $datos[11]?>" /></td>
-			<td>T. Ret. IVA: <input name="t_IVA" type="text" class="texto" id="t_IVA" size="10" value="<?phpecho $datos[6]?>" /> Bs</td>
+			<td width="160" height="35">B. Imponible <input name="b_imp" type="text" class="texto" id="b_imp" size="10" value="<?php echo $datos[12]?>" onblur="cal_iva();"/></td>
+			<td width="160" height="35">% Ret. IVA: <input name="iva" type="text" class="texto" id="iva" size="10" readonly="readonly" value="<?php echo $datos[11]?>" /></td>
+			<td>T. Ret. IVA: <input name="t_IVA" type="text" class="texto" id="t_IVA" size="10" value="<?php echo $datos[6]?>" /> Bs</td>
 			</tr>
 			<tr class="textoN">
 			<td width="160" height="35">&nbsp;</td>
 			<td width="160" height="35">&nbsp;</td>
-			<td width="160" height="35">T. Ret. ISR: <input name="t_ISR" type="text" class="texto" id="t_ISR" size="10"  value="<?phpecho $datos[7]?>"onblur="total_monto();" /> Bs</td>
+			<td width="160" height="35">T. Ret. ISR: <input name="t_ISR" type="text" class="texto" id="t_ISR" size="10"  value="<?php echo $datos[7]?>"onblur="total_monto();" /> Bs</td>
 			</tr>
 			<tr class="textoN">
 			<td width="160" height="35">&nbsp;</td>
 			<td width="160" height="35">&nbsp;</td>
-			<td width="160" height="35">T. Cancelar: <input name="t_monto" type="text" class="texto" id="t_monto" size="10" value="<?phpecho $datos[5]?>" /> Bs</td>
+			<td width="160" height="35">T. Cancelar: <input name="t_monto" type="text" class="texto" id="t_monto" size="10" value="<?php echo $datos[5]?>" /> Bs</td>
 			</tr>
 			<tr>
 			<td width="160" height="22" class="textoN">Descripci&oacute;n:</td>
 			</tr>
 			<tr>
 			<td width="73" colspan="3" class="texto"><label>
-			<textarea name="des" cols="80" rows="3" class="texto" id="des" ><?phpecho $datos[2]?></textarea>
+			<textarea name="des" cols="80" rows="3" class="texto" id="des" ><?php echo $datos[2]?></textarea>
 			<span class="Estilo1"> &nbsp;* </span>
 			</tr>
 			<tr>
 			  <td colspan="5"><div id="cargar" align="center">
-				<a href="#" onclick="validar2();" class="button" alt="Actualizar" <?php echo $ope1;?>  >
+				<a href="#" onclick="validar2();" class="button" alt="Actualizar" <?php  echo $ope1;?>  >
   					<i class="fa fa-edit" aria-hidden="true"></i> Actualizar </a>
-				<a href="#" onclick="eliminar_presu();" class="button" alt="Eliminar" <?php echo $ope4;?>  ><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar </a>
+				<a href="#" onclick="eliminar_presu();" class="button" alt="Eliminar" <?php  echo $ope4;?>  ><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar </a>
 				</div>
 				<input name="orden" id="orden" type="hidden" value="0" /></td>
 			</tr>
@@ -411,9 +411,9 @@ $emp= new empresa_pres('','','','','','','','','','');
 			<td width="160" height="22">Saldo</td>
 			</tr>
 			<tr>
-			<td><input type="text" name="t_p" id="t_p" readonly="readonly" value="<?phpecho $datos[5]?>" size="15" ></td>	
-			<td><input type="text" name="t_a" id="t_a" readonly="readonly" value="<?phpecho $datos[9]?>" size="15"></td>	
-			<td><input type="text" name="t_s" id="t_s" readonly="readonly" value="<?phpecho $datos[10]?>" size="15"></td>	
+			<td><input type="text" name="t_p" id="t_p" readonly="readonly" value="<?php echo $datos[5]?>" size="15" ></td>	
+			<td><input type="text" name="t_a" id="t_a" readonly="readonly" value="<?php echo $datos[9]?>" size="15"></td>	
+			<td><input type="text" name="t_s" id="t_s" readonly="readonly" value="<?php echo $datos[10]?>" size="15"></td>	
 			</tr>
 			<tr class="textoN">
 			<td width="60" height="22">Agregar Abono<img src="imagenes/add_16x16.gif" id="agred'.$contdi.'" title="Agregar Abono" alt="Agregar Abono" onClick="mostrar('.$contdi.');" '.$impagre.'></td>
@@ -423,7 +423,7 @@ $emp= new empresa_pres('','','','','','','','','','');
 			<td width="160" height="22">Fecha Abono</td>
 			<td width="160" height="22">Detalle</td>
 			</tr>
-			<?php
+			<?php 
 				$ver_d_abono=$pres->ver_det_abono($_GET['id_p']);
 				echo $ver_d_abono;
 
@@ -444,7 +444,7 @@ $emp= new empresa_pres('','','','','','','','','','');
 				<td colspan="3"><div id="div_abono5" ></div></td>
 			</tr>
 			<tr class="textoN">
-				<?php
+				<?php 
 				if ( $datos[10]==0) {
 		$pres= new presup();
  		$ver_fa=$pres->ver_fact($id_presupuesto);
@@ -456,15 +456,15 @@ $emp= new empresa_pres('','','','','','','','','','');
 				
 			?>
 								
-			<td>N de Factura <input type="text" name="n_factura" id="n_factura"  value="<?phpecho $Factura?>" size="15">
+			<td>N de Factura <input type="text" name="n_factura" id="n_factura"  value="<?php echo $Factura?>" size="15">
 				<input name="orden" id="orden" type="hidden" value="0" />
-				<input type="radio" name="n_estado" id="n_estado" value="F"  <?phpif ($n_est==F) 
+				<input type="radio" name="n_estado" id="n_estado" value="F"  <?php if ($n_est==F) 
         { echo "checked='checked'"; } ?>>Finalizado
-				<input type="radio" name="n_estado" id="n_estado" value="X"  <?phpif ($n_est==X)
+				<input type="radio" name="n_estado" id="n_estado" value="X"  <?php if ($n_est==X)
         { echo "checked='checked'"; } ?>>X Ejecutar
 				<input type="hidden" name="n_estado2" id="n_estado2" value="">
-				<img src="imagenes/save_16x16.gif" title="Modificar" alt="Modificar" onclick="finalizar();" border="0" <?php echo $ope1;?>/></td>	
-				<?php}else{
+				<img src="imagenes/save_16x16.gif" title="Modificar" alt="Modificar" onclick="finalizar();" border="0" <?php  echo $ope1;?>/></td>	
+				<?php }else{
 				$pres= new presup();
  		$ver_fa=$pres->ver_fact($id_presupuesto);
  		if ($ver_fa){
@@ -474,13 +474,13 @@ $emp= new empresa_pres('','','','','','','','','','');
 				}			
 				?>
 				<td>Estatus:
-				<input type="radio" name="n_estado" id="n_estado" value="J"  <?phpif ($n_est==J) 
+				<input type="radio" name="n_estado" id="n_estado" value="J"  <?php if ($n_est==J) 
         { echo "checked='checked'"; } ?>>Ejecutado
-				<input type="radio" name="n_estado" id="n_estado" value="I"  <?phpif ($n_est==I)
+				<input type="radio" name="n_estado" id="n_estado" value="I"  <?php if ($n_est==I)
         { echo "checked='checked'"; } ?>>Inactivo
 				<input type="hidden" name="n_estado2" id="n_estado2" value="">
-				<img src="imagenes/save_16x16.gif" title="Cambiar Estatus" alt="Cambiar Estatus" onclick="ejecutar();" border="0" <?php echo $ope1;?>/></td>
-				<?php}?>
+				<img src="imagenes/save_16x16.gif" title="Cambiar Estatus" alt="Cambiar Estatus" onclick="ejecutar();" border="0" <?php  echo $ope1;?>/></td>
+				<?php }?>
 			</tr>
 				  <input name="empresa" type="hidden"  id="empresa" value="" />
 				  <input name="servicio" type="hidden"  id="servicio" value="" />
@@ -499,11 +499,11 @@ $emp= new empresa_pres('','','','','','','','','','');
 			
 			<tr>
 			  <td colspan="5"><div id="cargar" align="center">
-				<img src="imagenes/p_guardar1.gif" alt="Guardar"  <?php echo $ope1;?>
+				<img src="imagenes/p_guardar1.gif" alt="Guardar"  <?php  echo $ope1;?>
 				width="140" height="50" style="cursor:hand" onclick="validar()" 
 				onmouseover="this.src='imagenes/a_guardar1.gif'"  onmouseout="this.src='imagenes/p_guardar1.gif'"/>
 				<input name="orden" id="orden" type="hidden" value="0" />
-				<img src="imagenes/p_imprimir1.gif" alt="Imprimir" width="140" height="50" style="cursor:hand" onclick="irpdf('detalle_presupuesto_pdf.php?id_p=<?phpecho $id_presupuesto?>')" onmouseover="this.src='imagenes/a_imprimir1.gif'" onmouseout="this.src='imagenes/p_imprimir1.gif'"></div></td>
+				<img src="imagenes/p_imprimir1.gif" alt="Imprimir" width="140" height="50" style="cursor:hand" onclick="irpdf('detalle_presupuesto_pdf.php?id_p=<?php echo $id_presupuesto?>')" onmouseover="this.src='imagenes/a_imprimir1.gif'" onmouseout="this.src='imagenes/p_imprimir1.gif'"></div></td>
 
 			</tr>
 		  </table>
@@ -511,6 +511,6 @@ $emp= new empresa_pres('','','','','','','','','','');
 </form>
 </body>
 </html>
-<?php
+<?php 
 }else echo "No tiene permisos para visualizar esta pagina!!<br> Cierre he ingrese nuevamente al sistema";
 ?>

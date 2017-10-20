@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -95,7 +95,7 @@ function ver_modif($pag)
 
 </script>
 <body>
-<?php if ($_POST["primera"]=='')
+<?php  if ($_POST["primera"]=='')
  {
    //// buscar el id de menu que le corresponde esta pagina
    $men= new menu('', '', '', 'listado_pac.php', '','', '', '');
@@ -111,7 +111,7 @@ function ver_modif($pag)
 <input name="nemp" id="nemp" type="hidden" value="" />
 <input name="nmed" id="nmed" type="hidden" value="" />
 <input name="nsta" id="nsta" type="hidden" value="" />
-<?php /////////////////////////Mostrar u ocultar Botones///////////////////////////
+<?php  /////////////////////////Mostrar u ocultar Botones///////////////////////////
   $ope1='style="display:none"'; 
   $ope4='style="display:none"';
   $ope5='style="display:none"';
@@ -155,7 +155,7 @@ function ver_modif($pag)
       <td width="160" height="22" colspan="2"> Proveedor: 
       <select name="comemp" class="texto" id="comemp">
       <option value="0" selected="selected" >SELECCIONE --></option>
-      <?php  $emp= new empresa_pres('','','','','','','','','','');
+      <?php   $emp= new empresa_pres('','','','','','','','','','');
       $cemp=$emp->combo_emp_pres2($_POST['comemp']);
             if($cemp!=false) echo $cemp;
       
@@ -164,12 +164,12 @@ function ver_modif($pag)
       <td width="160" colspan="2"> Estatus: 
       <select name="estado" class="texto" id="estado" height="22">
       <option value="" selected="selected" >SELECCIONE --></option>
-      <option value="A"  <?php if($_POST['estado']=="A" ) echo "selected='selected'";?>>Activo</option>
-      <option value="F" <?php if($_POST['estado']=="F") echo "selected='selected'";?>>Finalizado</option>
-      <option value="J" <?php if($_POST['estado']=="J") echo "selected='selected'";?>>Ejecutado</option>
-      <option value="F" <?php if($_POST['estado']=="X") echo "selected='selected'";?>>X Ejecutar</option>
-      <option value="V" <?php if($_POST['estado']=="V") echo "selected='selected'";?>>Vencido</option>
-      <option value="E" <?php if($_POST['estado']=="E") echo "selected='selected'";?>>Eliminado</option>
+      <option value="A"  <?php  if($_POST['estado']=="A" ) echo "selected='selected'";?>>Activo</option>
+      <option value="F" <?php  if($_POST['estado']=="F") echo "selected='selected'";?>>Finalizado</option>
+      <option value="J" <?php  if($_POST['estado']=="J") echo "selected='selected'";?>>Ejecutado</option>
+      <option value="F" <?php  if($_POST['estado']=="X") echo "selected='selected'";?>>X Ejecutar</option>
+      <option value="V" <?php  if($_POST['estado']=="V") echo "selected='selected'";?>>Vencido</option>
+      <option value="E" <?php  if($_POST['estado']=="E") echo "selected='selected'";?>>Eliminado</option>
       </select></td>
       </tr>
       <tr class="textoN">
@@ -177,9 +177,9 @@ function ver_modif($pag)
         </td>
         </tr>
         <tr class="textoN">
-        <td height="22" colspan="2"> Desde: <input type="date" name="c_desde" id="c_desde" value="<?phpecho $_POST['c_desde']?>">
+        <td height="22" colspan="2"> Desde: <input type="date" name="c_desde" id="c_desde" value="<?php echo $_POST['c_desde']?>">
         </td>
-        <td height="22" colspan="2"> Hasta: <input type="date" name="c_hasta" id="c_hast" value="<?phpecho $_POST['c_hasta']?>">
+        <td height="22" colspan="2"> Hasta: <input type="date" name="c_hasta" id="c_hast" value="<?php echo $_POST['c_hasta']?>">
         </td>
       </tr>
        <tr class="textoN">
@@ -187,9 +187,9 @@ function ver_modif($pag)
         </td>
         </tr>
         <tr class="textoN">
-        <td height="22" colspan="2"> Desde: <input type="date" name="v_desde" id="c_desde" value="<?phpecho $_POST['v_desde']?>">
+        <td height="22" colspan="2"> Desde: <input type="date" name="v_desde" id="c_desde" value="<?php echo $_POST['v_desde']?>">
         </td>
-        <td height="22" colspan="2"> Hasta: <input type="date" name="v_hasta" id="c_hast" value="<?phpecho $_POST['v_hasta']?>">
+        <td height="22" colspan="2"> Hasta: <input type="date" name="v_hasta" id="c_hast" value="<?php echo $_POST['v_hasta']?>">
         </td>
       </tr>
        <tr class="textoN">
@@ -198,13 +198,13 @@ function ver_modif($pag)
         </tr>
           <tr class="textoN">
         <td width="160" colspan="4" height="22" align="center">
-        Proveedor<input type="checkbox" name="ch_p" id="ch_p" <?phpif ($_POST['ch_p2']!='') 
+        Proveedor<input type="checkbox" name="ch_p" id="ch_p" <?php if ($_POST['ch_p2']!='') 
         { echo "checked='checked'"; } ?>> <input type="hidden" name="ch_p2" id="ch_p2" value=''>
-        Monto<input type="checkbox" name="ch_m" id="ch_m" <?phpif ($_POST['ch_m2']!='')
+        Monto<input type="checkbox" name="ch_m" id="ch_m" <?php if ($_POST['ch_m2']!='')
          { echo "checked='checked'"; } ?>> <input type="hidden" name="ch_m2" id="ch_m2" value=''>
-        Creaci&oacute;n<input type="checkbox" name="ch_c" id="ch_c" <?phpif ($_POST['ch_c2']!='')
+        Creaci&oacute;n<input type="checkbox" name="ch_c" id="ch_c" <?php if ($_POST['ch_c2']!='')
          { echo "checked='checked'"; } ?>> <input type="hidden" name="ch_c2" id="ch_c2" value=''>
-        Vencimiento<input type="checkbox" name="ch_v" id="ch_v"<?phpif ($_POST['ch_v2']!='')
+        Vencimiento<input type="checkbox" name="ch_v" id="ch_v"<?php if ($_POST['ch_v2']!='')
          { echo "checked='checked'"; } ?>> <input type="hidden" name="ch_v2" id="ch_v2" value=''>
         </td>
         </tr>
@@ -214,7 +214,7 @@ function ver_modif($pag)
         <input name="orden" id="orden" type="hidden" value="0" /></td>
       </tr>
       
-		<?php   
+		<?php    
 
 	if($_POST['elimvis']!=0)
  	{
@@ -240,15 +240,15 @@ function ver_modif($pag)
 	
 //echo 'estoy en la busqueda '.$_POST['comemp'].'estado '.$_POST['estado'].'f_c_d '.$_POST['c_desde'].'f_c_h '.$_POST['c_hasta'].'fv_d '.$_POST['v_desde'].'fv_h'.$_POST['v_hasta'];
 } ?>
-<?phpif($_POST['ingreso']==1)
+<?php if($_POST['ingreso']==1)
   {?>
 <tr>
 <td class="td-btn"><div align="center">
-<a href="#" class="button-print" alt="Imprimir"   onclick="irpdf('listado_presupuestos_pdf.php?comemp=<?phpecho $_POST['comemp']?>&amp;estado=<?phpecho $_POST['estado']?>&amp;c_desde=<?phpecho $_POST['c_desde']?>&amp;c_hasta=<?phpecho $_POST['c_hasta']?>&amp;v_desde=<?phpecho $_POST['v_desde']?>&amp;v_hasta=<?phpecho $_POST['v_hasta']?>')" > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
+<a href="#" class="button-print" alt="Imprimir"   onclick="irpdf('listado_presupuestos_pdf.php?comemp=<?php echo $_POST['comemp']?>&amp;estado=<?php echo $_POST['estado']?>&amp;c_desde=<?php echo $_POST['c_desde']?>&amp;c_hasta=<?php echo $_POST['c_hasta']?>&amp;v_desde=<?php echo $_POST['v_desde']?>&amp;v_hasta=<?php echo $_POST['v_hasta']?>')" > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
 </div>
 </td>
 </tr>
-<?php}?>
+<?php }?>
 </table>
 </form>
 </body>

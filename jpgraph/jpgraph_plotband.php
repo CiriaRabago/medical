@@ -1,4 +1,4 @@
-<?php
+<?php 
 //=======================================================================
 // File:        JPGRAPH_PLOTBAND.PHP
 // Description: PHP4 Graph Plotting library. Extension module.

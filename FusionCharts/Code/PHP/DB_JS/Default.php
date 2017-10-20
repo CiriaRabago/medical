@@ -1,4 +1,4 @@
-<?php
+<?php 
 //We've included ../Includes/FusionCharts.php and ../Includes/DBConn.php, which contains
 //functions to help us easily embed the charts and connect to a database.
 include("../Includes/FusionCharts.php");
@@ -10,7 +10,7 @@ include("../Includes/DBConn.php");
     FusionCharts Free - Database + JavaScript Example
     </TITLE>
 
-    <?php
+    <?php 
     //In this example, we show a combination of database + JavaScript rendering using FusionCharts.
 
     //The entire app (page) can be summarized as under. This app shows the break-down
@@ -100,7 +100,7 @@ include("../Includes/DBConn.php");
 		//each recordset of data and then store it as nested arrays in this data array.
 		var data = new Array();
 		
-		<?php
+		<?php 
 		//Write the data as JavaScript variables here
 		echo $jsVarString;
 		//The data is now present as arrays in JavaScript. Local JavaScript functions
@@ -158,7 +158,7 @@ include("../Includes/DBConn.php");
 <h3><a href="http://www.fusioncharts.com" target="_blank">FusionCharts Free</a> - Database + JavaScript Example</h3>
 <h5>Inter-connected charts - Click on any pie slice to see detailed chart below.</h5>
 <p>The charts in this page have been dynamically generated using data contained in a database. We've NOT hard-coded the data in JavaScript.</p>
-<?php		
+<?php 		
 	//Initialize the Pie chart with sum of production for each of the factories
 	//$strXML will be used to store the entire XML document generated
 		
@@ -166,7 +166,7 @@ include("../Includes/DBConn.php");
 	echo renderChart("../../FusionCharts/FCF_Pie3D.swf", "", $strXML, "FactorySum",650,300,false,false);
 ?>
 	<BR>
-<?php
+<?php 
 	//Column 2D Chart with changed "No data to display" message
 	//We initialize the chart with <graph></graph>
 	echo renderChart("../../FusionCharts/FCF_Column2D.swf?ChartNoDataText=Please click on a pie slice above to view detailed data.", "", "<graph></graph>", "FactoryDetailed",600,300,false,false);

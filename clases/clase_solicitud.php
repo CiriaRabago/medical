@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE SOLICITUDES
 CREADA POR: MONICA BATISTA

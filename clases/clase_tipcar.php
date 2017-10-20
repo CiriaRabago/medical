@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE TIPO DE CARACTERISTICAS
 CREADA POR: Gratelly Garza Morillo

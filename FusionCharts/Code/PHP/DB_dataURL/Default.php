@@ -1,4 +1,4 @@
-<?php
+<?php 
 //We've included ../Includes/FusionCharts.php, which contains functions
 //to help us easily embed the charts.
 include("../Includes/FusionCharts.php");
@@ -8,7 +8,7 @@ include("../Includes/FusionCharts.php");
 	<TITLE>
 	FusionCharts Free - dataURL and Database  Example
 	</TITLE>
-	<?php
+	<?php 
 	//You need to include the following JS file, if you intend to embed the chart using JavaScript.
 	//Embedding using JavaScripts avoids the "Click to Activate..." issue in Internet Explorer
 	//When you make your own charts, make sure that the path to this JS file is correct. Else, you would get JavaScript errors.
@@ -32,7 +32,7 @@ include("../Includes/FusionCharts.php");
 <CENTER>
 <h2><a href="http://www.fusioncharts.com" target="_blank">FusionCharts Free</a> - dataURL and Database</h2>
 
-<?php
+<?php 
 	//In this example, we show how to connect FusionCharts to a database 
 	//using dataURL method. In our other examples, we've used dataXML method
 	//where the XML is generated in the same page as chart. Here, the XML data

@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<?php
+<?php 
 // The names of the graph scripts
 $_graphfilename1 = 'csim_in_html_graph_ex1.php';
 $_graphfilename2 = 'csim_in_html_graph_ex2.php';
@@ -28,7 +28,7 @@ echo $imgmap2;
 
 <h2>This is an example page with CSIM graphs with arbitrary HTML text</h2>
 
-<?php
+<?php 
 if( empty($_GET['clickedon']) ) {
    echo '<b style="color:darkred;">Clicked on bar: &lt;none></b>';
 }
@@ -48,19 +48,19 @@ echo '<p />';
 <p>First we need to get hold of the image maps and include them in the HTML
   page.</p>
 <p>For these graphs the maps are:</p>
-<?php
+<?php 
 // The we display the image map as well
 echo '<small><pre>'.htmlentities($imgmap1).'</pre></small>';
 ?>
 <p>
 and
 </p>
-<?php
+<?php 
 // The we display the image map as well
 echo '<small><pre>'.htmlentities($imgmap2).'</pre></small>';
 ?>
 
-<?php
+<?php 
 // Construct the <img> tags for Figure 1 &amp; 2 and rebuild the URL arguments
 $imgtag1 = $graph->GetCSIMImgHTML($_mapname1,$_graphfilename1);
 $imgtag2 = $piegraph->GetCSIMImgHTML($_mapname2,$_graphfilename2);
@@ -68,7 +68,7 @@ $imgtag2 = $piegraph->GetCSIMImgHTML($_mapname2,$_graphfilename2);
 <p>The graphs are then displayed as shown in figure 1 &amp; 2. With the following
   created &lt;img> tags:</p>
 <small><pre>
-<?php 
+<?php  
 echo htmlentities($imgtag1); 
 echo htmlentities($imgtag2); 
 ?>
@@ -81,14 +81,14 @@ Note: For the Pie the center is counted as the first slice.
 <p>
 <table border=0>
 <tr><td valign="bottom">
-<?php
+<?php 
 echo $imgtag1;
 ?>
 <br><b>Figure 1. </b>The included Bar CSIM graph.
 </p>
 </td>
 <td valign="bottom">
-<?php
+<?php 
 echo $imgtag2;
 ?>
 <br><b>Figure 2. </b>The included Pie CSIM graph.

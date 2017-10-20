@@ -1,4 +1,4 @@
-<?php
+<?php 
 //=======================================================================
 // File:        JPGRAPH_LED.PHP
 // Description: Module to generate Dotted LED-like digits

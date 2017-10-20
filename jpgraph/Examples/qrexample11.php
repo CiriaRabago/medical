@@ -1,4 +1,4 @@
-<?php
+<?php 
 // Include the library
 require_once ('jpgraph/QR/qrencoder.inc.php');
 

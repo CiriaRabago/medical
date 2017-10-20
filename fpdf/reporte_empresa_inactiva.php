@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_empresa.php";
@@ -119,7 +119,7 @@ function fotox()
 </script>
 <body>
 <form action="" method="post" name="form1" enctype="multipart/form-data">
-<?php   
+<?php    
 /* 
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' && $_POST["ocu_g"]!='')
   {  
@@ -189,7 +189,7 @@ function fotox()
     </tr>
 	 <tr >
       <td height="30" colspan="4">
-       <?php 
+       <?php  
 	    $emp=new empresa('','','','','','','','','','');
         $ver=$emp->ver_empresa_inactiva();
         if ($ver!=false)

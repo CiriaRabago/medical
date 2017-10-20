@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*=======================================================================
 // File: 	PROD.INC.PHP
 // Description: Special localization file with the same error messages

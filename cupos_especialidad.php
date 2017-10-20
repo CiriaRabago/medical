@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php";
@@ -78,7 +78,7 @@ function ver_modif(cadena)
 </script>
 <body>
 <form id="form1" name="form1" method="post" action="cupos_especialidad.php">
-<?php
+<?php 
  
 if ($_POST["espe"]>'0')
 		$val=$_POST["espe"]; 
@@ -130,15 +130,15 @@ if ($_POST["espe"]>'0')
     <tr>
       <td width="139" class="etiqueta">Especialidad:</td>
       <td colspan="3" class="texto Estilo2"><label>
-         <?php $esp=new especialidad($_POST['espe'],'');
+         <?php  $esp=new especialidad($_POST['espe'],'');
 	        $listaperf=$esp->combo_esp(); ?>
 
           <select name="espe" class="texto" id="espe" onchange="ver();" >
 			<option value="0">Seleccione---&gt;</option>
-			<?php if ($listaperf!=false) echo $listaperf;?>
+			<?php  if ($listaperf!=false) echo $listaperf;?>
 			
           </select>
-		   <script> document.getElementById("perfil").value="<?php echo $val; ?>"; </script>
+		   <script> document.getElementById("perfil").value="<?php  echo $val; ?>"; </script>
           <span class="Estilo3">* </span> </label></td>
     </tr>
     <tr>
@@ -146,7 +146,7 @@ if ($_POST["espe"]>'0')
       <td colspan="3"><label>      
 	  <select name="exame" class="texto"  id="exame" onchange="ver();">
 		<option value="0">Seleccione---&gt;</option>
-		<?php 
+		<?php  
 				$exa=new medico('','','','','','','','','','','','','','','');
 	    $listaexa=$exa->combo_medico_new($_POST['espe'],$_POST['exame']);
 		if ($listaexa!=false) echo $listaexa;?>
@@ -157,7 +157,7 @@ if ($_POST["espe"]>'0')
 	<tr>
       <td class="etiqueta">Cantidad de pacientes por dia:</td>
       <td colspan="3"><label>      	  
-		<?php 
+		<?php  
 		$cup=new cupos('',$_POST['espe'],$_POST['exame'],'','','');
 	    $cantid=$cup->ver_cantidad();
 		if ($cantid!=false)  
@@ -165,7 +165,7 @@ if ($_POST["espe"]>'0')
 		   $totcan=$dat[3];
 		   $labor=$dat[6];}
 		else $totcan=0;?>      
-      <input name="cantida" id="cantida" type="text" value="<?php echo $totcan;?>" class="texto"/>
+      <input name="cantida" id="cantida" type="text" value="<?php  echo $totcan;?>" class="texto"/>
       <span class="texto Estilo2"><span class="Estilo3">* </span> </span> </label></td>
     </tr>
 	<tr>
@@ -186,13 +186,13 @@ if ($_POST["espe"]>'0')
 	 </tr>
 	 <tr>	 
 	  <input type="hidden" id="labor" name="labor" value="<?=$labor;?>"  />
-      <td class="etiqueta" align="center"><input type="checkbox" name="lu" <?php if(substr($labor,0,1)=='1') echo 'checked="checked"';?> /></td>      
-	  <td class="etiqueta" align="center"><input type="checkbox" name="ma" <?php if(substr($labor,1,1)=='1') echo 'checked="checked"';?>/></td>      
-	  <td class="etiqueta" align="center"><input type="checkbox" name="mi" <?php if(substr($labor,2,1)=='1') echo 'checked="checked"';?>/></td>      
-	  <td class="etiqueta" align="center"><input type="checkbox" name="ju" <?php if(substr($labor,3,1)=='1') echo 'checked="checked"';?>/></td>      
-	  <td class="etiqueta" align="center"><input type="checkbox" name="vi" <?php if(substr($labor,4,1)=='1') echo 'checked="checked"';?>/></td>      
-	  <td class="etiqueta" align="center"><input type="checkbox" name="sa" <?php if(substr($labor,5,1)=='1') echo 'checked="checked"';?>/></td>      
-	  <td class="etiqueta" align="center"><input type="checkbox" name="do" <?php if(substr($labor,6,1)=='1') echo 'checked="checked"';?>/></td>      
+      <td class="etiqueta" align="center"><input type="checkbox" name="lu" <?php  if(substr($labor,0,1)=='1') echo 'checked="checked"';?> /></td>      
+	  <td class="etiqueta" align="center"><input type="checkbox" name="ma" <?php  if(substr($labor,1,1)=='1') echo 'checked="checked"';?>/></td>      
+	  <td class="etiqueta" align="center"><input type="checkbox" name="mi" <?php  if(substr($labor,2,1)=='1') echo 'checked="checked"';?>/></td>      
+	  <td class="etiqueta" align="center"><input type="checkbox" name="ju" <?php  if(substr($labor,3,1)=='1') echo 'checked="checked"';?>/></td>      
+	  <td class="etiqueta" align="center"><input type="checkbox" name="vi" <?php  if(substr($labor,4,1)=='1') echo 'checked="checked"';?>/></td>      
+	  <td class="etiqueta" align="center"><input type="checkbox" name="sa" <?php  if(substr($labor,5,1)=='1') echo 'checked="checked"';?>/></td>      
+	  <td class="etiqueta" align="center"><input type="checkbox" name="do" <?php  if(substr($labor,6,1)=='1') echo 'checked="checked"';?>/></td>      
 	 </tr>
 	 </table>
 	 </td>
@@ -217,7 +217,7 @@ if ($_POST["espe"]>'0')
       </td>
     </tr>
   </table>
- <?php 
+ <?php  
    $ver=$cup->ver_cupos($val);
         if ($ver==false)
 		{

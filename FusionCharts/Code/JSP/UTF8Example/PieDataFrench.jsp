@@ -1,6 +1,6 @@
 <%	 byte[] utf8Bom =  new byte[]{(byte) 0xef, (byte) 0xbb, (byte) 0xbf};
 String utf8BomStr = new String(utf8Bom,"UTF-8");
-%><%=utf8BomStr%><?phpxml version='1.0' encoding='UTF-8'?><%@ page language="java" contentType="text/xml; charset=UTF-8"
+%><%=utf8BomStr%><?php xml version='1.0' encoding='UTF-8'?><%@ page language="java" contentType="text/xml; charset=UTF-8"
     pageEncoding="UTF-8"%><%request.setCharacterEncoding("UTF-8");%><%@ include file="../Includes/DBConn.jsp" %><%@ page import="java.sql.Statement,java.sql.ResultSet"%><%
 	/*
 	This page generates the XML data for the Pie Chart contained in FrenchDBExample.jsp. 	
@@ -10,7 +10,7 @@ String utf8BomStr = new String(utf8Bom,"UTF-8");
 	
 	Steps to ensure UTF8 xml output for FusionCharts:
 		1. Output the BOM bytes 0xef 0xbb 0xbf as shown above in the first few lines
-		2. Put the xml declaration <?phpxml version='1.0' encoding='UTF-8'?> immediately after the output from previous step.
+		2. Put the xml declaration <?php xml version='1.0' encoding='UTF-8'?> immediately after the output from previous step.
 		3. Declare contentType to be text/xml, charSet and pageEncoding to be UTF-8
 		4. Use getBytes to get the data from UTF field in the database and to convert it into String, use new String(bytes,"UTF-8")
 	Do not output anything other than the BOM, xml declaration and the xml itself. (no empty lines too!)

@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 //=======================================================================
 // File:	    MKGRAD.PHP
 // Description:	Simple tool to create a gradient background

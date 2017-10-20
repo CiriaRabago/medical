@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*=======================================================================
 // File:        DE.INC.PHP
 // Description: German language file for error messages

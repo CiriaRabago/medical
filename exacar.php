@@ -29,7 +29,7 @@ function enviar()
 }
 </script>
 <body>
-<?php 
+<?php  
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
 include "clases/clase_examen.php"; 
@@ -42,16 +42,16 @@ include "clases/clase_examen.php";
   <tr>
     <td width="60" class="etiqueta">Perfil:</td>
     <td width="366" colspan="2">
-      <?php $perf=new perfil($_POST['perfil'],'','','');
+      <?php  $perf=new perfil($_POST['perfil'],'','','');
 	        $listaperf=$perf->combo_perfil(); ?>
       <select name="perfil" class="texto" id="perfil" onchange="submit();">
         <option value="0">Seleccione</option>
-        <?php if ($listaperf!=false) echo $listaperf;?>
+        <?php  if ($listaperf!=false) echo $listaperf;?>
       </select>
       <input name="perfilocu" type="hidden" value="0" />
     </td>
   </tr>
-  <?php if($_POST['perfil']!='')
+  <?php  if($_POST['perfil']!='')
 	{ 
 		$exa=new examen('','','','','','','','','');
 	    $listaexa=$exa->combo_examen_perf($_POST['perfil']);
@@ -62,7 +62,7 @@ include "clases/clase_examen.php";
     <td colspan="2">
       <select name="exame" class="texto" id="exame">
         <option value="0">Seleccione</option>
-        <?php if ($listaexa!=false) echo $listaexa;?>
+        <?php  if ($listaexa!=false) echo $listaexa;?>
       </select>
 	  <input name="exaocu" type="hidden" value="0" />
     </td>

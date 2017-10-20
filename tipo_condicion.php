@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_tipocondicion.php";
@@ -93,7 +93,7 @@ function soloNumeros(evt){
 </script>
 <body>
 <form name="form1" id="form1" method="post" action="tipo_condicion.php">
-<?php 
+<?php  
  $con= new tipcon($_POST["ocu_N"],$_POST["nom"],$_POST["des"],$_POST["ord"],$_POST["his"],$_SESSION["cedu_usu"],'');
  
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
@@ -104,8 +104,8 @@ function soloNumeros(evt){
 		if ($gua)
 			{
 				?>
-	   				<input name="condic" id="condic" type="hidden" value="<?php echo $_POST["ocu_N"]; ?>" />
-	   			<?php
+	   				<input name="condic" id="condic" type="hidden" value="<?php  echo $_POST["ocu_N"]; ?>" />
+	   			<?php 
 				echo '<script>document.form1.action="condicion_hist.php";document.form1.submit();</script>';
 			}
 			else
@@ -122,8 +122,8 @@ function soloNumeros(evt){
 			if ($gua!='false')
 			{
 				?>
-	   				<input name="condic" id="condic" type="hidden" value="<?php echo $gua; ?>" />
-	   			<?php
+	   				<input name="condic" id="condic" type="hidden" value="<?php  echo $gua; ?>" />
+	   			<?php 
 				echo '<script>document.form1.action="condicion_hist.php";document.form1.submit();</script>';
 			}
 			else
@@ -192,7 +192,7 @@ function soloNumeros(evt){
       </span></td>
     </tr>
   </table>
- <div><?php 
+ <div><?php  
  $ver=$con->ver_tipcon();
         if ($ver==false)
 		{

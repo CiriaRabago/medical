@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 /**
 * Softy Theme class

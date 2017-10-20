@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_empresa.php";
@@ -61,7 +61,7 @@ window.open(msg,'','width=700,height=450,resizable=yes,scrollbars=yes');
 <input type="hidden" id="fe1" name="fe1" value="<?=$_POST['fe1'];?>">
 <input type="hidden" id="fe2" name="fe2" value="<?=$_POST['fe2'];?>">
 
-<?php
+<?php 
 $emp= new empresa('','','','','','','','','','');
 $vis= new visita('','','','','','','','','','','','','');
 if ($_POST["ocu_atr"]!=0)
@@ -106,7 +106,7 @@ if($valm2<10)$valm2='0'.$valm2;
 }
 
 ?>
-  <table width="440" border="0" align="center" <?php echo $mos; ?>>
+  <table width="440" border="0" align="center" <?php  echo $mos; ?>>
     <tr class="titulofor">
       <td colspan="4"><div align="center">Vigilancia Epidemiol&oacute;gica </div></td>
     </tr>
@@ -114,53 +114,53 @@ if($valm2<10)$valm2='0'.$valm2;
       <td width="62" class="etiqueta">Empresa:</td>
       <td width="368" colspan="3"><select name="comemp" class="texto" id="comemp" onchange="ver();">
         <option value="0" selected="selected" >Particular</option>
-        <?php  
+        <?php   
 		  $em=$emp->combo_emp();
 		 if ($em!= false)
 		        echo $em; ?>
-      </select><script> document.getElementById("comemp").value="<?php echo $val; ?>"; </script>
+      </select><script> document.getElementById("comemp").value="<?php  echo $val; ?>"; </script>
       <span class="etiqueta"><span class="texto"><span class="Estilo2">*</span></span></span></td>
     </tr>
     <tr>
       <td class="etiqueta">A&ntilde;o desde:</td>
       <td><select name="año" class="texto" id="año" onchange="ver();">
         <option value="0" selected="selected" >Seleccione---></option>
-        <?php 
+        <?php  
 		  $an=false;
 		  $an=$vis->buscar_año($_POST['comemp']);
 		  if ($an!= false)
 		        echo $an; ?>
-      </select><script> document.getElementById("año").value="<?php echo $vala; ?>"; </script>
+      </select><script> document.getElementById("año").value="<?php  echo $vala; ?>"; </script>
       <span class="etiqueta"><span class="texto"><span class="Estilo2">*</span></span></span></td>
     
       <td class="etiqueta">Mes desde:</td>
       <td><select name="mes" class="texto" id="mes">
         <option value="0" selected="selected" >Seleccione---></option>
-        <?php  
+        <?php   
 		 if ($vis->buscar_mes($vala,$val)!= false)
 		        echo $vis->buscar_mes($vala,$val); ?>
-      </select><script> document.getElementById("mes").value="<?php echo $valm; ?>"; </script>
+      </select><script> document.getElementById("mes").value="<?php  echo $valm; ?>"; </script>
       <span class="etiqueta"><span class="texto"><span class="Estilo2">*</span></span></span></td>
     </tr>
 	<tr>
       <td class="etiqueta">A&ntilde;o hasta:</td>
       <td><select name="año2" class="texto" id="año2" onchange="ver();">
         <option value="0" selected="selected" >Seleccione---></option>
-        <?php  
+        <?php   
 		  $an2=false;
 		  $an2=$vis->buscar_año($_POST['comemp']);
 		 if ($an2!= false)
 		        echo $an2; ?>
-      </select><script> document.getElementById("año2").value="<?php echo $vala2; ?>"; </script>
+      </select><script> document.getElementById("año2").value="<?php  echo $vala2; ?>"; </script>
       <span class="etiqueta"><span class="texto"><span class="Estilo2">*</span></span></span></td>
     
       <td class="etiqueta">Mes hasta:</td>
       <td><select name="mes2" class="texto" id="mes2">
         <option value="0" selected="selected" >Seleccione---></option>
-        <?php  
+        <?php   
 		 if ($vis->buscar_mes($vala2,$val)!= false)
 		        echo $vis->buscar_mes($vala2,$val); ?>
-      </select><script> document.getElementById("mes2").value="<?php echo $valm2; ?>"; </script>
+      </select><script> document.getElementById("mes2").value="<?php  echo $valm2; ?>"; </script>
       <span class="etiqueta"><span class="texto"><span class="Estilo2">*</span></span></span></td>
     </tr>
     <tr>
@@ -177,7 +177,7 @@ if($valm2<10)$valm2='0'.$valm2;
     </tr>
   </table>
   
-  <p><?php
+  <p><?php 
   if(isset($_POST["ocu_b"]) && $_POST["ocu_b"]=='1' )
 {
 	if ($vige)
@@ -185,7 +185,7 @@ if($valm2<10)$valm2='0'.$valm2;
   <p><a href="#" onclick="atras();" class="button-close" alt="Salir"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Atras </a>
 </p> 
   <p>
-  <?php
+  <?php 
 		echo $vige;		
 		$f1=$vala.$valm;
 	    $f2=$vala2.$valm2;
@@ -224,7 +224,7 @@ if($valm2<10)$valm2='0'.$valm2;
   <a href="#" onclick="imprimir(<?=$msg;?>);" class="button-print" alt="Imprimir"  > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
   	<a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Salir"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a></p>
   <p align="center">&nbsp;</p>
-  <?php
+  <?php 
 	}
 	
 }

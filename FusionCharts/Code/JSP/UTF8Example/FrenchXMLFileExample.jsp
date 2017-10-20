@@ -35,7 +35,7 @@
 				Here, the XML data for the chart is present in Data/FrenchData.xml. 
 				The xml file should be created and saved with an editor
 				which places the UTF8 BOM. The first line of the xml should contain the
-				xml declaration like this: <?phpxml version="1.0" encoding="UTF-8" ?>
+				xml declaration like this: <?php xml version="1.0" encoding="UTF-8" ?>
 				*/
 				/*
 				The pageEncoding and chartSet headers for the page have been set to UTF-8

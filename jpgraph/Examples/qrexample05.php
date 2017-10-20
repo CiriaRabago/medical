@@ -1,4 +1,4 @@
-<?php
+<?php 
     // Example 5 : QR Barcode with manually specified encodation
 
     // Include the library

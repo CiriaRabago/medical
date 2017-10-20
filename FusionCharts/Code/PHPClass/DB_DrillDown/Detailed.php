@@ -1,4 +1,4 @@
-<?php
+<?php 
 //We've included ../Includes/FusionCharts_Gen.php, which contains
 //FusionCharts PHP Class to help us easily embed charts 
 //We've also used ../Includes/DBConn.php to easily connect to a database
@@ -10,7 +10,7 @@ include("../Includes/DBConn.php");
 	<TITLE>
 	FusionCharts Free - Database and Drill-Down Example
 	</TITLE>
-	<?php
+	<?php 
 	//You need to include the following JS file, if you intend to embed the chart using JavaScript.
 	//Embedding using JavaScripts avoids the "Click to Activate..." issue in Internet Explorer
 	//When you make your own charts, make sure that the path to this JS file is correct. Else, you would get JavaScript errors.
@@ -34,7 +34,7 @@ include("../Includes/DBConn.php");
 <CENTER>
 <h2><a href="http://www.fusioncharts.com" target="_blank">FusionCharts Free</a> - Database and Drill-Down Example</h2>
 <h4>Detailed report for the factory</h4>
-<?php
+<?php 
     //This page is invoked from Default.php. When the user clicks on a pie
     //slice in Default.php, the factory Id is passed to this page. We need
     //to get that factory id, get information from database and then show

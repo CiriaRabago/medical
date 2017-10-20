@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php";
@@ -51,7 +51,7 @@ function ver_modif(cadena)
 </script>
 <body>
 <form id="form1" name="form1" method="post" action="">
-<?php
+<?php 
  
 if ($_POST["perfil"]>'0')
 		$val=$_POST["perfil"]; 
@@ -74,14 +74,14 @@ if ($_POST["perfil"]>'0')
     <tr>
       <td width="139" class="etiqueta">Area:</td>
       <td colspan="3" class="texto Estilo2"><label>
-         <?php 
+         <?php  
 	        $listaperf=$pex->combo_perfil(); ?>
           <select name="perfil" class="texto" id="perfil" onchange="ver();" >
 			<option value="0">Seleccione---&gt;</option>
-			<?php if ($listaperf!=false) echo $listaperf;?>
+			<?php  if ($listaperf!=false) echo $listaperf;?>
 			
           </select>
-		   <script> document.getElementById("perfil").value="<?php echo $val; ?>"; </script>
+		   <script> document.getElementById("perfil").value="<?php  echo $val; ?>"; </script>
           <span class="Estilo3">* </span> </label></td>
     </tr>
     <tr>
@@ -89,7 +89,7 @@ if ($_POST["perfil"]>'0')
       <td colspan="3"><label>      
 	  <select name="exame" class="texto" id="exame">
 		<option value="0">Seleccione---&gt;</option>
-		<?php 
+		<?php  
 		 $listaexa=$pex->combo_exam($_POST['perfil']);
 		if ($listaexa!=false) echo $listaexa;?>
       </select>
@@ -113,7 +113,7 @@ if ($_POST["perfil"]>'0')
 		onmouseover="this.src='imagenes/a_salir1.gif'"  onmouseout="this.src='imagenes/p_salir1.gif'"/></td>
     </tr>
   </table>
- <?php 
+ <?php  
    $ver=$pex->ver_ordexa($val);
         if ($ver==false)
 		{

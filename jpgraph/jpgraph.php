@@ -1,4 +1,4 @@
-<?php
+<?php 
 //=======================================================================
 // File:        JPGRAPH.PHP
 // Description: PHP Graph Plotting library. Base module.

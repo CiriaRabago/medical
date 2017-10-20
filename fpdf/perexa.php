@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php";
@@ -75,7 +75,7 @@ function ver_modif(cadena)
 </script>
 <body>
 <form id="form1" name="form1" method="post" action="perexa.php">
-<?php
+<?php 
  
 if ($_POST["perfil"]>'0')
 		$val=$_POST["perfil"]; 
@@ -121,15 +121,15 @@ if ($_POST["perfil"]>'0')
     <tr>
       <td width="139" class="etiqueta">Perfil:</td>
       <td colspan="3" class="texto Estilo2"><label>
-         <?php $perf=new perfil('','','','');
+         <?php  $perf=new perfil('','','','');
 	        $listaperf=$perf->combo_perfil(); ?>
 
           <select name="perfil" class="texto" id="perfil" onchange="ver();" >
 			<option value="0">Seleccione---&gt;</option>
-			<?php if ($listaperf!=false) echo $listaperf;?>
+			<?php  if ($listaperf!=false) echo $listaperf;?>
 			
           </select>
-		   <script> document.getElementById("perfil").value="<?php echo $val; ?>"; </script>
+		   <script> document.getElementById("perfil").value="<?php  echo $val; ?>"; </script>
           <span class="Estilo3">* </span> </label></td>
     </tr>
     <tr>
@@ -137,7 +137,7 @@ if ($_POST["perfil"]>'0')
       <td colspan="3"><label>      
 	  <select name="exame" class="texto" id="exame">
 		<option value="0">Seleccione---&gt;</option>
-		<?php 
+		<?php  
 				$exa=new examen('','','','','','','','','');
 	    $listaexa=$exa->combo_examen_perf('');
 		if ($listaexa!=false) echo $listaexa;?>
@@ -170,7 +170,7 @@ if ($_POST["perfil"]>'0')
       <input name="ocu_g" type="hidden" value="0"/>  <input type="hidden" name="ocu_e" value="0"/>   </td>
     </tr>
   </table>
- <?php 
+ <?php  
    $ver=$pex->ver_perexa($val);
         if ($ver==false)
 		{

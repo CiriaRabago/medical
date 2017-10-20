@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_espec.php";
@@ -248,7 +248,7 @@ function ver_refe(codi)
 </script>
 <body>
 <form name="form1" id="form1" method="post" action="especialidad.php">
-<?php 
+<?php  
  //$exa= new examen($_POST["ocu_N"],$_POST["nomb"],$_POST["abrev"],$_POST["obser"], $_POST["proc"], $_POST["valo"], $_POST["meto"], $_POST["pre"], $_POST["tipm"]);
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
   { 
@@ -356,7 +356,7 @@ function ver_refe(codi)
       <td class="etiqueta" colspan="2">Especialidad: <span class="Estilo1">*</span></td>
       <td class="texto" colspan="2"><label><select name="espec" id="espec" class="texto"  style="display:block">
         <option value="">Seleccione --&gt;</option>
-		<?php $espe= new especialidad('','');
+		<?php  $espe= new especialidad('','');
 	   echo $espe->combo_esp(); ?> 
       </select>
         <input name="nombes" id="nombes" type="text" class="texto"  size="50"  onkeypress='return sincomillas(event)' style="display:none "/>
@@ -432,7 +432,7 @@ function ver_refe(codi)
     </tr>
   </table>
   <p>&nbsp;</p>
-  <div id="tablaespe" style="display:block"><?php 
+  <div id="tablaespe" style="display:block"><?php  
     $ver=$espe->ver_especialidad();
         if ($ver==false)
 		{

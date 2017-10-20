@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_diagnostico.php";
@@ -79,7 +79,7 @@ function ver_modif(cadena)
 <body>
  
 <form id="form1" name="form1" method="post"  action="diagnostico.php">
-<?php
+<?php 
  $dia= new diagnostico('', '','');
   if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
   {  $dia= new diagnostico($_POST["ocu_N"], $_POST["nom"],$_POST["des"]);
@@ -173,7 +173,7 @@ function ver_modif(cadena)
     </tr>
   </table>
  <div>    
- <?php 
+ <?php  
  $ver=$dia->ver_diagnostico();
         if ($ver==false)
 		{

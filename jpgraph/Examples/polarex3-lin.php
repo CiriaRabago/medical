@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 // A simple Polar graph, example 2
 
 require_once ('jpgraph/jpgraph.php');

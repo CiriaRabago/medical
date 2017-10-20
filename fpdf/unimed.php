@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_unimed.php";
@@ -79,7 +79,7 @@ function ver_modif(cadena)
 <body>
 <p>&nbsp;</p>
 <form name="form1" id="form1" method="post" action="unimed.php">
-<?php 
+<?php  
  $uni= new unimed($_POST["ocu_N"],$_POST["abrev"],$_POST["descrip"]);
  if(isset($_POST["ocu_g"]) && $_POST["ocu_g"]!='0' )
   { 
@@ -157,7 +157,7 @@ function ver_modif(cadena)
 	<a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Nuevo"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a> </td>
     </tr>
   </table>
-  <div><?php 
+  <div><?php  
    $ver=$uni->ver_unimed();
         if ($ver==false)
 		{

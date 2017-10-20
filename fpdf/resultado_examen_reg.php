@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 ?>
 
@@ -34,7 +34,7 @@ function enviar()
 
 </script>
 <body>
-<?php 
+<?php  
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
 include "clases/clase_examen.php"; 
@@ -47,47 +47,47 @@ include "clases/clase_examen.php";
     </tr>
     <tr>
       <td width="130" class="etiqueta">C&eacute;dula de Identidad:</td>
-      <td width="360" colspan="2" class="texto"><?php echo $_POST['cedula']; ?>
-	  <input name="cedula" id="cedula" type="hidden" value="<?php echo $_POST['cedula']; ?>" /></td>
+      <td width="360" colspan="2" class="texto"><?php  echo $_POST['cedula']; ?>
+	  <input name="cedula" id="cedula" type="hidden" value="<?php  echo $_POST['cedula']; ?>" /></td>
     </tr>
     <tr>
       <td class="etiqueta">Nombre y Apellido:</td>
-      <td colspan="2"  class="texto"><?php echo $_POST['nombre']; ?>
-            <input name="nombre" id="nombre" type="hidden" value="<?php echo $_POST['nombre']; ?>" />
+      <td colspan="2"  class="texto"><?php  echo $_POST['nombre']; ?>
+            <input name="nombre" id="nombre" type="hidden" value="<?php  echo $_POST['nombre']; ?>" />
       </td>
     </tr>
 	<tr>
       <td class="etiqueta">Edad:</td>
-      <td colspan="2"  class="texto"><?php echo $_POST['edad']; ?>
-            <input name="edad" id="edad" type="hidden" value="<?php echo $_POST['edad']; ?>" />
+      <td colspan="2"  class="texto"><?php  echo $_POST['edad']; ?>
+            <input name="edad" id="edad" type="hidden" value="<?php  echo $_POST['edad']; ?>" />
       </td>
     </tr>
-	<?php 
+	<?php  
 	if($_POST['sexo']=='F') $nombsexo='Femenino';
 	     else
     if($_POST['sexo']=='M') $nombsexo='Masculino'; ?>
 	<tr>
       <td class="etiqueta">Sexo:</td>
-      <td colspan="2"  class="texto"><?php echo $nombsexo; ?>
-            <input name="sexo" id="sexo" type="hidden" value="<?php echo $_POST['sexo']; ?>" />
-			<input name="sexonom" id="sexonom" type="hidden" value="<?php echo $nombsexo; ?>" />
+      <td colspan="2"  class="texto"><?php  echo $nombsexo; ?>
+            <input name="sexo" id="sexo" type="hidden" value="<?php  echo $_POST['sexo']; ?>" />
+			<input name="sexonom" id="sexonom" type="hidden" value="<?php  echo $nombsexo; ?>" />
       </td>
     </tr>
 	<tr>
       <td class="etiqueta">Perfil:</td>
       <td colspan="2">
-	  <?php $perf=new perfil($_POST['perfil'],'','');
+	  <?php  $perf=new perfil($_POST['perfil'],'','');
 	        $listaperf=$perf->combo_perfil(); ?>
 
           <select name="perfil" class="texto" id="perfil" onchange="submit();">
             <option value="0">Seleccione</option>
-			<?php if ($listaperf!=false) echo $listaperf;?>
+			<?php  if ($listaperf!=false) echo $listaperf;?>
 			
         </select>
         <input name="perfilocu" type="hidden" value="0" />
       </td>
     </tr>
-	<?php if($_POST['perfil']!='')
+	<?php  if($_POST['perfil']!='')
 	{ 
 		$exa=new examen('','','','','','','','','');
 	    $listaexa=$exa->combo_examen_perf($_POST['perfil']);
@@ -98,7 +98,7 @@ include "clases/clase_examen.php";
       <td colspan="2">
       <select name="exame" class="texto" id="exame">
         <option value="0">Seleccione</option>
-		<?php if ($listaexa!=false) echo $listaexa;?>
+		<?php  if ($listaexa!=false) echo $listaexa;?>
       </select>
       </td>
     </tr>

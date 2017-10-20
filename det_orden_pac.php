@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
@@ -227,7 +227,7 @@ document.form1.submit();
 <body>
 
 <form name="form1" id="form1" method="post" action="">
-<?php 
+<?php  
    $ord= new orden('','','','','','','');  
    if($_POST['guar']==1)
     { 	$ordenver=$gua;	}
@@ -313,15 +313,15 @@ document.form1.submit();
     <td height="55" bgcolor="#E3E3C6" ><div align="left"><img src="imagenes/Logo1.png" /></div>
 	  </td>
     <td bgcolor="#E3E3C6" class="texto">
-	  <span class="textoN">FECHA</span>:  <?php echo date('d-m-Y'); ?><br>
-	  <span class="textoN">CÉDULA: <?php echo $ced; ?></span><input name="cedula" id="cedula" type="hidden" value="<?php echo $ced; ?>" />
-	  <input name="idpac" type="hidden" id="idpac" value="<?php echo $_POST['idpac']; ?>"/>
+	  <span class="textoN">FECHA</span>:  <?php  echo date('d-m-Y'); ?><br>
+	  <span class="textoN">CÉDULA: <?php  echo $ced; ?></span><input name="cedula" id="cedula" type="hidden" value="<?php  echo $ced; ?>" />
+	  <input name="idpac" type="hidden" id="idpac" value="<?php  echo $_POST['idpac']; ?>"/>
 	  <br>
-      <span class="textoN">NOMBRE</span>: <?php echo $datos[1].' '.$datos[2].' '.$datos[3].' '.$datos[4]; ?><input name="nombre" id="nombre" type="hidden" value="<?php echo  $datos[1].' '.$datos[2].' '.$datos[3].' '.$datos[4]; ?>" /><br>
-	  <span class="textoN">EDAD</span>: <?php echo calculaedad($datos[5]); ?><input name="edad" id="edad" type="hidden" value="<?php echo $_POST['edad']; ?>" /><br>
-	  <span class="textoN">SEXO</span>: <?php echo $sexo; ?><input name="sexo" id="sexo" type="hidden" value="<?php echo $_POST['sexo']; ?>" /><input name="sexonom" id="sexonom" type="hidden" value="<?php echo $_POST['sexonom']; ?>" /><br>
-	  <span class="textoN">EMPRESA</span>: <?php echo $datos[8]; ?><input name="empresa" id="empresa" type="hidden" value="<?php echo $_POST['empresa']; ?>" /><input name="empresanom" id="empresanom" type="hidden" value="<?php echo $_POST['empresanom']; ?>" /><br>
-	  <span class="textoN">ORDEN No. </span>: <?php echo $ordenver; ?><input name="orden" id="orden" type="hidden" value="<?php echo $ordenver; ?>" />
+      <span class="textoN">NOMBRE</span>: <?php  echo $datos[1].' '.$datos[2].' '.$datos[3].' '.$datos[4]; ?><input name="nombre" id="nombre" type="hidden" value="<?php  echo  $datos[1].' '.$datos[2].' '.$datos[3].' '.$datos[4]; ?>" /><br>
+	  <span class="textoN">EDAD</span>: <?php  echo calculaedad($datos[5]); ?><input name="edad" id="edad" type="hidden" value="<?php  echo $_POST['edad']; ?>" /><br>
+	  <span class="textoN">SEXO</span>: <?php  echo $sexo; ?><input name="sexo" id="sexo" type="hidden" value="<?php  echo $_POST['sexo']; ?>" /><input name="sexonom" id="sexonom" type="hidden" value="<?php  echo $_POST['sexonom']; ?>" /><br>
+	  <span class="textoN">EMPRESA</span>: <?php  echo $datos[8]; ?><input name="empresa" id="empresa" type="hidden" value="<?php  echo $_POST['empresa']; ?>" /><input name="empresanom" id="empresanom" type="hidden" value="<?php  echo $_POST['empresanom']; ?>" /><br>
+	  <span class="textoN">ORDEN No. </span>: <?php  echo $ordenver; ?><input name="orden" id="orden" type="hidden" value="<?php  echo $ordenver; ?>" />
 	</td>
     </tr>
 	  <tr>
@@ -331,7 +331,7 @@ document.form1.submit();
     <td height="3" colspan="2"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
   </tr>
   <tr>
-    <td colspan="2" ><?php 
+    <td colspan="2" ><?php  
 	$ord->id=$ordenver;
 	$result=$ord->ver_orden();
 	
@@ -343,23 +343,23 @@ document.form1.submit();
 				<td width="600">EXAMEN</td>
 				<td width="100">MONTO</td>
 			  </tr>
-<?php		
+<?php 		
 		$monto2=0;
 		while ($row = mysql_fetch_row($result))
 		{  ?>
 			<tr class="texto">
-				<td align="left"><input type="checkbox" name="<?php echo 'reg'.$row[0];?>" /><?php echo $row[1]; ?></td>
-				<td align="right">&nbsp;<?php echo $row[2]; ?></td>
+				<td align="left"><input type="checkbox" name="<?php  echo 'reg'.$row[0];?>" /><?php  echo $row[1]; ?></td>
+				<td align="right">&nbsp;<?php  echo $row[2]; ?></td>
 			</tr>
-<?php			$monto=$monto+(float)$row[2];
+<?php 			$monto=$monto+(float)$row[2];
             $monto2=$row[7];
 		} ?>
 		<tr class="textoN">
 			<td align="left" class="textoN">Total</td>
-			<td align="right" class="textoN"><?php echo $monto2; ?></td>
+			<td align="right" class="textoN"><?php  echo $monto2; ?></td>
 		</tr>
 		</table>
-<?php	} ?>
+<?php 	} ?>
 	</td>
   </tr>
   <tr>
@@ -380,16 +380,16 @@ document.form1.submit();
 	 	 onclick="printZPLImage(document.form1.cedula.value,document.form1.nombre.value,document.form1.orden.value)" 
 	  	onmouseover="this.src='imagenes/tag.png'"  
 	  	onmouseout="this.src='imagenes/tag.png'"/>
-	 <?php if($_POST['visita']!='') { ?>
+	 <?php  if($_POST['visita']!='') { ?>
 	    <a href="#" onclick="window.close();" class="button-close" alt="Salir"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a>
 	    </td>
-	 <?php } else{ ?>
+	 <?php  } else{ ?>
 	    <a href="#" onclick="volver();" class="button-close" alt="Salir"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a>	</td>
-	 <?php } ?>
+	 <?php  } ?>
 	 
   </tr>
   <tr>
-    <td colspan="2" ><?php 
+    <td colspan="2" ><?php  
 	echo $ord->perfil_exa(); ?>
 	
 	</td>

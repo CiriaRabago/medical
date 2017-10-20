@@ -1,4 +1,4 @@
-<?php 
+<?php  
 class cupos
 {
    var $id_can;

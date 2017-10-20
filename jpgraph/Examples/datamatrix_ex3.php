@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once('jpgraph/datamatrix/datamatrix.inc.php');
 
 $data = '123456';

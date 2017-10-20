@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -260,11 +260,11 @@ function ver2()
 					
 					</td>
                     <td colspan="2">
-					<?php  $ser= new servicio('','','','','','','','','','','',''); ?> 
+					<?php   $ser= new servicio('','','','','','','','','','','',''); ?> 
 						<select name="servicio" class="texto" id="servicio" >
 						  <option value="0" selected="selected" >SELECCIONE --></option>
 						  <option value="" >TODOS</option>
-						  <?php  if ($ser->combo_servicios()!= false)
+						  <?php   if ($ser->combo_servicios()!= false)
 								echo $ser->combo_servicios(); ?>
 					  </select>
 					
@@ -289,7 +289,7 @@ function ver2()
                     <td colspan="4"><select name="empresa" class="texto" id="empresa">
 					<option value="0" selected="selected" >SELECCIONE --></option>
 						  <option value="" >TODOS</option>
-                      <?php  $emp= new empresa('','','','','','','','','','');
+                      <?php   $emp= new empresa('','','','','','','','','','');
 						$cemp=$emp->combo_emp('');
 						if($cemp!=false) echo $cemp;
 						?>
@@ -318,7 +318,7 @@ function ver2()
 				<input name="orden" id="orden" type="hidden" value="0" /></div></td>
 			</tr>
 		  </table>
-	<?php   
+	<?php    
 	
 	if($_POST['ingreso']==1)
  	{
@@ -337,7 +337,7 @@ function ver2()
 	?> 
 		  <table width="930">
 		  	<tr class="titulofor">
-			  <td width="950" colspan="8" align="center"><?php echo $titulo; ?></td>
+			  <td width="950" colspan="8" align="center"><?php  echo $titulo; ?></td>
 			</tr>	
 			<tr class="titulorep">
 			  <td width="20">N°</td>
@@ -350,7 +350,7 @@ function ver2()
 			  <td width="90">ESTADO</td>
 			</tr>	   
 	   
-<?php		   while ($row=mysql_fetch_array($reg))
+<?php 		   while ($row=mysql_fetch_array($reg))
 		   { 
 			  if ($cont%2!=0) $color='bgcolor="#E3E3E6"'; else $color='';
 			  $cont++;
@@ -365,22 +365,22 @@ function ver2()
 				case 'I': $sta='INCOMPLETO'; break;
 				case 'E': $sta='ELIMINADO'; break; }
 		   ?>
-				<tr class="texto" <?php echo $color; ?>>
-				  <td width="20"><?php echo $cont; ?></td>
-				  <td width="70"><?php echo $row[5]; ?></td>
-				  <td width="70"><?php echo $row[2]; ?></td>
-				  <td width="220"><?php echo $row[3]; ?></td>
-				  <td width="200"><?php echo $empresa; ?></td>
-				  <td width="150"><?php echo $row[11]; ?></td>
-				  <td width="140"><?php echo $row[10]; ?></td>
-				  <td width="90"><?php echo $sta; ?></td>
+				<tr class="texto" <?php  echo $color; ?>>
+				  <td width="20"><?php  echo $cont; ?></td>
+				  <td width="70"><?php  echo $row[5]; ?></td>
+				  <td width="70"><?php  echo $row[2]; ?></td>
+				  <td width="220"><?php  echo $row[3]; ?></td>
+				  <td width="200"><?php  echo $empresa; ?></td>
+				  <td width="150"><?php  echo $row[11]; ?></td>
+				  <td width="140"><?php  echo $row[10]; ?></td>
+				  <td width="90"><?php  echo $sta; ?></td>
 				</tr>
-	<?php		}  ?>
+	<?php 		}  ?>
 	    </table>
-	<?php	}
+	<?php 	}
 		else
 		{ echo '<br><p class="textoN" align="center">No se encontró ninguna coincidencia</p>'; }?>
-<?php	} ?>
+<?php 	} ?>
 
 
 </form>

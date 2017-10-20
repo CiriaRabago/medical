@@ -1,5 +1,5 @@
 
-<?php 
+<?php  
 require('fpdf/fpdf.php');
 include "clases/clase_conexion.php";
 include "clases/clase_referencia.php"; 

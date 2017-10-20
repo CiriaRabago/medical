@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE DIAGNÓSTICO
 CREADA POR: MONICA BATISTA

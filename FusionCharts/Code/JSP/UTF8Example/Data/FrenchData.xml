@@ -1,4 +1,4 @@
-<?phpxml version="1.0" encoding="UTF-8" ?>
+<?php xml version="1.0" encoding="UTF-8" ?>
 <graph caption='Ventes mensuelles' xAxisName='Mois' yAxisName='Units' decimalPrecision='0' formatNumberScale='0'>
 <set name='Janvier' value='462' color='AFD8F8' />
 <set name='' value='857' color='F6BD0F' />

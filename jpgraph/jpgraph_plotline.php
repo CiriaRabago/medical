@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*=======================================================================
  // File:  		 JPGRAPH_PLOTLINE.PHP
  // Description: PlotLine extension for JpGraph

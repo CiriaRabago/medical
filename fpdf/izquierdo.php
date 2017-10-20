@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_menu.php";
@@ -67,7 +67,7 @@ body {
     <td class="titulofor">Bienvenido</td>
   </tr>
 </table>
-<?php
+<?php 
 
  $men= new menu('','','','','','','',$_SESSION["cedu_usu"]);
  echo $men->pinta_menu();

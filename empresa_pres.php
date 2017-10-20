@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_empresa_pres.php";
@@ -98,7 +98,7 @@ document.form1.submit();
 
 </script>
 <body>
-<?php if ($_POST["primera"]=='')
+<?php  if ($_POST["primera"]=='')
  {
    //// buscar el id de menu que le corresponde esta pagina
    $men= new menu('', '', '', 'empresa_pres.php', '','', '', '');
@@ -110,7 +110,7 @@ document.form1.submit();
  }
  ?>
 <form name="form1" method="post" action="empresa_pres.php">
-<?php /////////////////////////Mostrar u ocultar Botones///////////////////////////
+<?php  /////////////////////////Mostrar u ocultar Botones///////////////////////////
   $ope1='style="display:none"'; 
   $ope4='style="display:none"';
   $ope5='style="display:none"';
@@ -242,12 +242,12 @@ document.form1.submit();
     </tr>
     <tr>
       <td colspan="4" class="td-buttons">
-      	<a href="#" onclick="eliminar();" class="button-delete" alt="Eliminar"  <?php echo $ope4;?> ><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar </a>
+      	<a href="#" onclick="eliminar();" class="button-delete" alt="Eliminar"  <?php  echo $ope4;?> ><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar </a>
 
 	<a href="#" onclick="Nuevo();" class="button-new" alt="Nuevo"  > <i class="fa fa-file-o" aria-hidden="true"></i> Nuevo </a>
 
 
-	<a href="#" onclick="Guardar();" class="button-save" alt="Guardar" <?php echo $ope1;?>   > <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar </a>
+	<a href="#" onclick="Guardar();" class="button-save" alt="Guardar" <?php  echo $ope1;?>   > <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar </a>
 
 
           <input name="ocu_g" type="hidden" value="0"/>
@@ -255,7 +255,7 @@ document.form1.submit();
           </td>
     </tr>
   </table>
-       <?php 
+       <?php  
 $ver=$emp->ver_empresa_pres();
         if ($ver==false)
 		{

@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_servicio.php";
@@ -110,15 +110,15 @@ function resultados(ced)
 
 
 <div id="Contenido4"> 
-<input name="oidpac" id="oidpac" type="hidden" value="<?php echo $ipaci; ?>" />
-<input name="oidvis" id="oidvis" type="hidden" value="<?php echo $visita; ?>" />
+<input name="oidpac" id="oidpac" type="hidden" value="<?php  echo $ipaci; ?>" />
+<input name="oidvis" id="oidvis" type="hidden" value="<?php  echo $visita; ?>" />
 <input name="log" id="log" type="hidden" value="4" />
-<!-- <input name="oiddevi" id="oiddevi" type="hidden" value="<?php //echo $devi; ?>" /> -->
+<!-- <input name="oiddevi" id="oiddevi" type="hidden" value="<?php  //echo $devi; ?>" /> -->
 
 <table width="704" border="0" cellspacing="0" cellpadding="0" >
   <tr>
     <td height="30" colspan="4" align="center" class="titulofor">VISITA  DEL PACIENTE<br>
-	<?php echo $_GET['cpaci'].' - '.$_GET['npaci'];
+	<?php  echo $_GET['cpaci'].' - '.$_GET['npaci'];
 	?></td>
   </tr>
    <tr><td colspan="4"><img src="imagenes/blanco.gif" height="1" width="100%"></td></tr>
@@ -128,7 +128,7 @@ function resultados(ced)
 	<td  width="170">FECHA</td>
 	<td  width="104">ESTADO</td>
 
-<?php	 
+<?php 	 
 		$vis= new visita($visita,'','','','','','','','','','','','');
 		$nev=$vis->datos_empres_vis();
 		$rownev = mysql_fetch_row($nev);
@@ -141,21 +141,21 @@ function resultados(ced)
 		$cla=$apr->busca_clave();
 		?>
 		
-		<?php
+		<?php 
 		}	
 		?>
   <tr><td colspan="4"><img src="imagenes/naranja.gif" height="1" width="100%"></td></tr>
-  <tr height="20" class="textoN" onClick="ver_visit(<?php echo $visita; ?>)" style="cursor:hand" bgcolor="#F9D5B2">
-    <td><?php echo $_GET['motivo']; ?></td>
-	<td><?php echo $nomemp; ?></td>
-	<td><?php echo $_GET['fecha']; ?></td>
-	<td><?php echo $status; ?></td>
+  <tr height="20" class="textoN" onClick="ver_visit(<?php  echo $visita; ?>)" style="cursor:hand" bgcolor="#F9D5B2">
+    <td><?php  echo $_GET['motivo']; ?></td>
+	<td><?php  echo $nomemp; ?></td>
+	<td><?php  echo $_GET['fecha']; ?></td>
+	<td><?php  echo $status; ?></td>
   </tr>
-  <?php if($rownev[0]=='226'){?>
+  <?php  if($rownev[0]=='226'){?>
   <tr>
-    <td colspan="4" class="textoN" style="cursor:hand" bgcolor="#F9D5B2"><span class="textoN">DATOS APROBACION </span>: <?php echo $cla; ?></td>
+    <td colspan="4" class="textoN" style="cursor:hand" bgcolor="#F9D5B2"><span class="textoN">DATOS APROBACION </span>: <?php  echo $cla; ?></td>
   </tr>
-  <?php }?>
+  <?php  }?>
   <TR><td colspan="4" >
     <div align="center" id="ImpriVis">
 
@@ -165,11 +165,11 @@ function resultados(ced)
   </TR>
   <tr>
     <td colspan="4">
-	<table id="vis<?php echo $visita; ?>" style="display:block"  width="702" border="0" cellspacing="1" cellpadding="0">
+	<table id="vis<?php  echo $visita; ?>" style="display:block"  width="702" border="0" cellspacing="1" cellpadding="0">
 	 <tr>
       <td>
 <!-- Historia de la visita -->
-<?php
+<?php 
 	 	$tipHV=$vis->tipos_cond_H('2');
 		if ($tipHV!=false)
 		{  
@@ -220,8 +220,8 @@ function resultados(ced)
 										while($row6 = mysql_fetch_row($valcond))
 										{
 											if($row6[2]==0) $ck=''; else $ck='checked';
-											?> <input type="radio" <?php echo $ck;?>  disabled  name="rbHV<?php echo $contHV; ?>" id="rbHV<?php echo $contHV; ?>" value="<?php echo $row6[0]; ?>" />
-											<?php echo $row6[1].'&nbsp;&nbsp;';
+											?> <input type="radio" <?php  echo $ck;?>  disabled  name="rbHV<?php  echo $contHV; ?>" id="rbHV<?php  echo $contHV; ?>" value="<?php  echo $row6[0]; ?>" />
+											<?php  echo $row6[1].'&nbsp;&nbsp;';
 										}
 										echo '&nbsp;</td>';
 									}
@@ -243,36 +243,36 @@ function resultados(ced)
 <!-- Resultados de la visita -->
 <table  width="702" cellspacing="1">
  <tr>
-    <td  height="30" colspan="4" onClick="ver_resvisit(<?php echo $visita; ?>)" style="cursor:hand"  align="center" class="titulofor">RESULTADOS DE LA VISITA</td>
+    <td  height="30" colspan="4" onClick="ver_resvisit(<?php  echo $visita; ?>)" style="cursor:hand"  align="center" class="titulofor">RESULTADOS DE LA VISITA</td>
   </tr>
-  <?php $rv=$vis->ver_result_vis();
+  <?php  $rv=$vis->ver_result_vis();
      if($rv!=false)
 	   $rowr=mysql_fetch_array($rv);
    ?> 
   <tr>
     <td colspan="4">
-	  <table width="702" id="resvis<?php echo $visita; ?>" style="display:block"  border="0" cellspacing="1" cellpadding="0">
+	  <table width="702" id="resvis<?php  echo $visita; ?>" style="display:block"  border="0" cellspacing="1" cellpadding="0">
 		  <tr>
 			<td width="150" class="textoN">Motivo de la Visita</td>
-			<td width="551" class="texto" colspan="3"><?php echo $rowr[10]; ?></td>
+			<td width="551" class="texto" colspan="3"><?php  echo $rowr[10]; ?></td>
 		  </tr>
 		  <tr bgcolor="#E3E3E6">
 			<td width="150" class="textoN">Examen F&iacute;sico </td>
-			<td width="551" class="texto" colspan="3"><?php echo $rowr[0]; ?></td>
+			<td width="551" class="texto" colspan="3"><?php  echo $rowr[0]; ?></td>
 		  </tr>
 		  <tr>
 			<td width="150" class="textoN">Comentario Examen F&iacute;sico</td>
-			<td width="551" class="texto" colspan="3"><?php echo $rowr[11]; ?></td>
+			<td width="551" class="texto" colspan="3"><?php  echo $rowr[11]; ?></td>
 		  </tr>
 		  <tr bgcolor="#E3E3E6">
 			<td class="textoN">Examen de Laboratorio </td>
-			<td class="texto" colspan="3"><?php echo $rowr[1]; ?></td>
+			<td class="texto" colspan="3"><?php  echo $rowr[1]; ?></td>
 		  </tr>
-		  <?php $diag= new diagnostico($rowr[2],'',''); ?>
+		  <?php  $diag= new diagnostico($rowr[2],'',''); ?>
 		  <tr>
 			<td class="textoN">Diagn&oacute;stico y Comentarios</td>
 			<td class="texto" colspan="3">
-			<?php  
+			<?php   
 		  	$reporte=new formato();
 			$dv=$reporte->diag_vis($visita);
 			while($rowdiag=mysql_fetch_row($dv))
@@ -282,9 +282,9 @@ function resultados(ced)
 		  </tr>
 		  <tr bgcolor="#E3E3E6">
 			<td class="textoN">Tratamiento / Plan </td>
-			<td class="texto" colspan="3"><?php echo $rowr[3]; ?></td>
+			<td class="texto" colspan="3"><?php  echo $rowr[3]; ?></td>
 		  </tr>
-		    <?php
+		    <?php 
   $r_estu= new res_estudio('',$visita,'');
 		$bus_r_e=$r_estu->cons_res_estudio2($visita);
   ?>
@@ -293,7 +293,7 @@ function resultados(ced)
 			<td class="texto" colspan="3"><a href="javascript:mostrarVentana();">aquí</a>
 <div id="miVentana" style="position: fixed; width: 450px; height: 300px; top: 0; left: 0; font-family:Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; border: #000000 3px solid; background-color: #FAFAFA; color: #000000; display:none;">
  <div style="font-weight: bold; text-align: left; color: #FFFFFF; padding: 5px; background-color:#FF8C00" align="center"><img src="imagenes/inf_medico.png" width="60" height="60"> &nbsp;&nbsp;INFORME RESULTADO DE ESTUDIO</div>
- <p style="padding: 5px; text-align: justify; line-height:normal"><textarea id="resuL_infor" name="resuL_infor" cols="60" rows="13"><?php if($bus_r_e!="") echo $bus_r_e; ?></textarea></p>
+ <p style="padding: 5px; text-align: justify; line-height:normal"><textarea id="resuL_infor" name="resuL_infor" cols="60" rows="13"><?php  if($bus_r_e!="") echo $bus_r_e; ?></textarea></p>
   <div style="padding: 5px; background-color: ; text-align: center; margin-top: 10px;"><input id="btnAceptar" onclick="ocultarVentana();" name="btnAceptar" size="20" type="button" value="Aceptar" />
  </div>
 </div>
@@ -301,24 +301,24 @@ function resultados(ced)
 		  </tr>
 			<tr >
 			<td class="textoN">Indicaciones</td>
-			<td class="texto" colspan="3"><?php echo $rowr[4]; ?></td>
+			<td class="texto" colspan="3"><?php  echo $rowr[4]; ?></td>
 		  </tr>
 		
 		  <tr bgcolor="#E3E3E6">
 			<td class="textoN">Conclusiones</td>
-			<td class="texto" colspan="3"><?php echo $rowr[7]; ?></td>
+			<td class="texto" colspan="3"><?php  echo $rowr[7]; ?></td>
 		  </tr>
 		  <tr>
 			<td class="textoN">Recomendaciones</td>
-			<td class="texto" colspan="3"><?php echo $rowr[5]; ?></td>
+			<td class="texto" colspan="3"><?php  echo $rowr[5]; ?></td>
 		  </tr>
 		  <tr bgcolor="#E3E3E6">
 			<td class="textoN">Reposo</td>
-			<td class="texto" colspan="3" ><?php echo $rowr[6]; ?></td>
+			<td class="texto" colspan="3" ><?php  echo $rowr[6]; ?></td>
 		  </tr>
 		  <tr>
 			<td class="textoN">Observaci&oacute;n</td>
-			<td colspan="3" class="texto"><?php echo $rowr[9]; ?></td>
+			<td colspan="3" class="texto"><?php  echo $rowr[9]; ?></td>
 		  </tr>
 		  <tr>
 			<td colspan="4" ><hr size="0" width="100%"></td>
@@ -326,7 +326,7 @@ function resultados(ced)
 		   <tr><td class="textoN">Referencias</td>
 		   <td class="texto" colspan="3">
 		   <table width="474" border="0" cellspacing="0" cellpadding="0">
-		   <?php $ref= new referencia('','','','','','','','','','',''); 
+		   <?php  $ref= new referencia('','','','','','','','','','',''); 
 					$lref=$ref->lista_esp_ref($visita);
 					if($lref!=false)
 					{
@@ -372,7 +372,7 @@ function resultados(ced)
 			<td class="textoN">Solicitudes</td>
 			<td class="texto" colspan="3" >
 				<table width="474" border="0" cellspacing="0" cellpadding="0">
-				<?php	$sol= new solicitud('',''); 
+				<?php 	$sol= new solicitud('',''); 
 					$lsol=$sol->lista_sol($visita);
 					if($lsol!='false')
 					{
@@ -404,19 +404,19 @@ function resultados(ced)
 		  <tr>
 			<td colspan="4" ><hr size="0" width="100%"></td>
 		  </tr>
-		  <?php $labv=$vis->ver_lab_visita();
+		  <?php  $labv=$vis->ver_lab_visita();
 			 if($labv!=false)
 			 {   ?>
 		  <tr>
 			<td class="textoN">&Oacute;rdenes de Laboratorio Asociadas </td>
 			<td colspan="3" >
-			  <?php while($rowlv=mysql_fetch_array($labv))
+			  <?php  while($rowlv=mysql_fetch_array($labv))
 				 { echo '<span class="texto" onclick="imprimir('."'".'orden_pdf.php?orden='.$rowlv[0]."'".');" style="cursor:hand; text-decoration:underline ">Orden de Laboratorio No. '.$rowlv[0].'</span> - 
 				         <span class="texto" onclick="imprimir('."'".'resultado_exa_imp.php?orden='.$rowlv[0]."'".');" style="cursor:hand; text-decoration:underline ">Resultado de Orden No. '.$rowlv[0].'</span><br>'; 
 				 }?>
 			</td>
 		  </tr>
-		  <?php }?>
+		  <?php  }?>
 
 		  <tr>
 			<td colspan="4" ><hr size="0" width="100%"></td>
@@ -434,17 +434,17 @@ function resultados(ced)
 				 
 </p>
 			   <p>
-			     <input class="textoN" name="imprSol" id="imprSol" type="button" onclick="imprimir('referencia_pdf.php?vis=<?php echo $visita; ?>&log=<?php echo $log;?>');" value="Referencia" />
-			     <input class="textoN" name="imprRef" id="imprRef" type="button" onclick="imprimir('solicitud_pdf.php?vis=<?php echo $visita; ?>&log=<?php echo $log;?>');" value="solicitud" />
-			     <input class="textoN" name="imprRecInd" id="imprRecInd" type="button" onclick="imprimir('recipe_indic_pdf.php?vis=<?php echo $visita; ?>&log=<?php echo $log;?>');" value="Récipe/Indic" />
-			     <input class="textoN" name="imprInforme" id="imprInforme" type="button" onclick="imprimir('informe_med_pdf.php?vis=<?php echo $visita; ?>&log=<?php echo $log;?>');" value="Informe" />
-			     <input class="textoN" name="imprConst" id="imprConst" type="button" onclick="imprimir('constancia_pdf.php?vis=<?php echo $visita; ?>&log=<?php echo $log;?>');" value="Constancia" />
-				 <input class="textoN" name="imprCrit" id="imprCrit" type="button" onclick="imprimir('informe_critico_pdf.php?vis=<?php echo $visita; ?>&log=<?php echo $log;?>');" value="Paciente Cronico" />
+			     <input class="textoN" name="imprSol" id="imprSol" type="button" onclick="imprimir('referencia_pdf.php?vis=<?php  echo $visita; ?>&log=<?php  echo $log;?>');" value="Referencia" />
+			     <input class="textoN" name="imprRef" id="imprRef" type="button" onclick="imprimir('solicitud_pdf.php?vis=<?php  echo $visita; ?>&log=<?php  echo $log;?>');" value="solicitud" />
+			     <input class="textoN" name="imprRecInd" id="imprRecInd" type="button" onclick="imprimir('recipe_indic_pdf.php?vis=<?php  echo $visita; ?>&log=<?php  echo $log;?>');" value="Récipe/Indic" />
+			     <input class="textoN" name="imprInforme" id="imprInforme" type="button" onclick="imprimir('informe_med_pdf.php?vis=<?php  echo $visita; ?>&log=<?php  echo $log;?>');" value="Informe" />
+			     <input class="textoN" name="imprConst" id="imprConst" type="button" onclick="imprimir('constancia_pdf.php?vis=<?php  echo $visita; ?>&log=<?php  echo $log;?>');" value="Constancia" />
+				 <input class="textoN" name="imprCrit" id="imprCrit" type="button" onclick="imprimir('informe_critico_pdf.php?vis=<?php  echo $visita; ?>&log=<?php  echo $log;?>');" value="Paciente Cronico" />
 			     <br>
 			     <br>
-			     <input class="textoN" name="imp_res_estudio" id="imp_res_estudio" type="button" onclick="imprimir('res_estudio_pdf.php?vis=<?php echo $visita; ?>&log=<?php echo $log;?>');" value="Resultado de Estudio" />
-				<input class="textoN" name="imprInfMO" id="imprInfMO" type="button" onclick="imprimir('med_ocu_pdf.php?vis=<?php echo $visita; ?>&log=<?php echo $log;?>');" value="Informe Medicina Ocupacional" />
-				<input class="textoN" name="imprInfMF" id="imprInfMF" type="button" onclick="imprimir('med_fam_pdf.php?vis=<?php echo $visita; ?>&log=<?php echo $log;?>');" value="Informe Medicina Familiar" />
+			     <input class="textoN" name="imp_res_estudio" id="imp_res_estudio" type="button" onclick="imprimir('res_estudio_pdf.php?vis=<?php  echo $visita; ?>&log=<?php  echo $log;?>');" value="Resultado de Estudio" />
+				<input class="textoN" name="imprInfMO" id="imprInfMO" type="button" onclick="imprimir('med_ocu_pdf.php?vis=<?php  echo $visita; ?>&log=<?php  echo $log;?>');" value="Informe Medicina Ocupacional" />
+				<input class="textoN" name="imprInfMF" id="imprInfMF" type="button" onclick="imprimir('med_fam_pdf.php?vis=<?php  echo $visita; ?>&log=<?php  echo $log;?>');" value="Informe Medicina Familiar" />
 				</p>
 			 </div>
 			 </td>

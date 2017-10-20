@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE NIVELES
 CREADA POR: MONICA BATISTA

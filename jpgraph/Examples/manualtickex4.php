@@ -1,4 +1,4 @@
-<?php // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=utf-8"
 //
 // Basic example on how to use custom tickmark feature to have a label
 // at the start of each month.

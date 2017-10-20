@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_perfil.php"; 
@@ -49,17 +49,17 @@ function retorna()
 <body>
 <form name="form1" id="form1" method="post" action="resultado_examen.php">
 
-<?php 
+<?php  
 
 
 if($_POST['guaocu']!='')
 {
 	$orden=$_POST['orden'];
-	?>  <input name="orden" id="orden" type="hidden" value="<?php echo $orden; ?>" /> <?php
+	?>  <input name="orden" id="orden" type="hidden" value="<?php  echo $orden; ?>" /> <?php 
 	$examen=$_POST['examen'];
-	?>  <input name="examen" id="examen" type="hidden" value="<?php echo $examen; ?>" /> <?php
+	?>  <input name="examen" id="examen" type="hidden" value="<?php  echo $examen; ?>" /> <?php 
 	$empleado=$_POST['empleado'];
-	?>  <input name="empleado" id="empleado" type="hidden" value="<?php echo $empleado; ?>" /> <?php
+	?>  <input name="empleado" id="empleado" type="hidden" value="<?php  echo $empleado; ?>" /> <?php 
 	/*$rr= new resultado('',$orden,$examen,$empleado,'','','');
 	$idresul=$rr->ins_result();
 	if($idresul!=false)
@@ -79,7 +79,7 @@ if($_POST['guaocu']!='')
 else
 {
 	$orden=$_GET['ord'];
-		?>  <input name="orden" id="orden" type="hidden" value="<?php echo $orden; ?>" /> <?php
+		?>  <input name="orden" id="orden" type="hidden" value="<?php  echo $orden; ?>" /> <?php 
 		$examen=$_GET['exa'];
 		$cedula=$_GET['ced'];
 
@@ -98,9 +98,9 @@ else
 		<td height="55" colspan="2" bgcolor="#E3E3C6">
 		  <div align="left"><img src="imagenes/Logo1.png" /></div>
 		<td colspan="2" bgcolor="#E3E3C6"  class="texto">
-		  <span class="textoN">FECHA</span>:  <?php echo date('d-m-Y'); ?><br>
-		  <span class="textoN">ORDEN No. </span>: <?php echo $orden; ?><br>
-		  <span class="textoN">CÉDULA</span>: <?php echo $cedula; ?><input name="cedula" id="cedula" type="hidden" value="<?php echo $cedula; ?>" /><br>
+		  <span class="textoN">FECHA</span>:  <?php  echo date('d-m-Y'); ?><br>
+		  <span class="textoN">ORDEN No. </span>: <?php  echo $orden; ?><br>
+		  <span class="textoN">CÉDULA</span>: <?php  echo $cedula; ?><input name="cedula" id="cedula" type="hidden" value="<?php  echo $cedula; ?>" /><br>
 		</td>
 		</tr>
 		  <tr>
@@ -117,24 +117,24 @@ else
 		<td width="200">Muestra:</td>
 		<td width="200">M&eacute;todo:</td>
 	  </tr>
-	<?php 
+	<?php  
 	
 		$exa=new examen($examen,'','','','','','','','');
 		$datosexa=$exa->consul_examen();
 	   ?>
 	  <tr class="texto">
-		<td colspan="2"><?php echo $datosexa[0]; ?><input name="examen" id="examen" type="hidden" value="<?php echo $datosexa[0]; ?>" /></td>
-		<td><?php echo $datosexa[2]; ?><input name="muestra" id="muestra" type="hidden" value="<?php echo $datosexa[2]; ?>" /></td>
-		<td><?php echo $datosexa[1]; ?><input name="metodo" id="metodo" type="hidden" value="<?php echo $datosexa[1]; ?>" /></td>
+		<td colspan="2"><?php  echo $datosexa[0]; ?><input name="examen" id="examen" type="hidden" value="<?php  echo $datosexa[0]; ?>" /></td>
+		<td><?php  echo $datosexa[2]; ?><input name="muestra" id="muestra" type="hidden" value="<?php  echo $datosexa[2]; ?>" /></td>
+		<td><?php  echo $datosexa[1]; ?><input name="metodo" id="metodo" type="hidden" value="<?php  echo $datosexa[1]; ?>" /></td>
 	  </tr>
 	  <tr>
 		<td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
 	  </tr>
-	<?php 
+	<?php  
 		$caractexa=$exa->consul_caract_examen($examen);
 		$n=mysql_num_rows($caractexa);
-	?>	<input name="canticar" id="canticar" type="hidden" value="<?php echo $n; ?>" />
-	<?php
+	?>	<input name="canticar" id="canticar" type="hidden" value="<?php  echo $n; ?>" />
+	<?php 
 		//$n=15;
 		if($n!=0)
 		{
@@ -163,34 +163,34 @@ else
 					  <tr>
 						<td height="3" colspan="4"><img src="imagenes/morado.gif" width="100%" height="3" /></td>
 					  </tr> 
-	<?php				 } 
+	<?php 				 } 
 					?>
 					  <tr class="texto">
-						<td colspan="2"><?php  echo $row[2];  ?> <input name="nombcar<?php echo $indi-1;?>" id="nombcar<?php echo $indi-1;?>" type="hidden" value="<?php echo $row[2];?>" /></td>
-						<td colspan="2"><?php 
+						<td colspan="2"><?php   echo $row[2];  ?> <input name="nombcar<?php  echo $indi-1;?>" id="nombcar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $row[2];?>" /></td>
+						<td colspan="2"><?php  
 						
 						if($row[5]==1)
 						{ 
-						?> <select name="caract<?php echo $indi-1;?>" id="caract<?php echo $indi-1;?>" class="texto">
+						?> <select name="caract<?php  echo $indi-1;?>" id="caract<?php  echo $indi-1;?>" class="texto">
 						  <option value="Positivo">Positivo</option>
 						  <option value="Negativo">Negativo</option>
-						</select> <?php
+						</select> <?php 
 						}
 						else
 						{
 							$valores=$exa->consul_valores_caract($row[1]);
 							if($valores==FALSE)
 							{ 			?>
-							<input name="caract<?php echo $indi-1;?>" type="text" class="texto" id="caract<?php echo $row[1];?>" value="" size="5" />
-			<?php				}
+							<input name="caract<?php  echo $indi-1;?>" type="text" class="texto" id="caract<?php  echo $row[1];?>" value="" size="5" />
+			<?php 				}
 							else
 							{
 							?>
-							  <select name="caract<?php echo $indi-1;?>" class="texto" id="caract<?php echo $row[1];?>">
+							  <select name="caract<?php  echo $indi-1;?>" class="texto" id="caract<?php  echo $row[1];?>">
 								<option value="">Seleccione</option>
-								<?php echo $valores; ?>
+								<?php  echo $valores; ?>
 							  </select>					
-		<?php	
+		<?php 	
 							}
 						}
 						$valoresref=$exa->consul_valores_ref($row[1],$datos[6],calculaedad($datos[5]));
@@ -206,12 +206,12 @@ else
 						  $dato.=' ('.$row[4].')';
 						}				
 						 ?>
-						 <input name="datoscar<?php echo $indi-1;?>" id="datoscar<?php echo $indi-1;?>" type="hidden" value="<?php echo $dato;?>" />
-						 <input name="tipocar<?php echo $indi-1;?>" id="tipocar<?php echo $indi-1;?>" type="hidden" value="<?php echo $row[0];?>" />
+						 <input name="datoscar<?php  echo $indi-1;?>" id="datoscar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $dato;?>" />
+						 <input name="tipocar<?php  echo $indi-1;?>" id="tipocar<?php  echo $indi-1;?>" type="hidden" value="<?php  echo $row[0];?>" />
 	
 						</td>
 					  </tr>
-			<?php 	}
+			<?php  	}
 				}
 				else //Si $n>10
 				{
@@ -247,18 +247,18 @@ else
 						<td height="3" colspan="4"><img src="imagenes/morado.gif" width="100%" height="3" /></td>
 					  </tr> 
 					 
-	<?php			 
+	<?php 			 
 					 }
 	
 					   if($cont%2==1) echo '<tr class="texto">';
-	?>					<td width="200"><?php echo $row[2];?> <input name="nombcar<?php echo $cont-1;?>" id="nombcar<?php echo $cont-1;?>" type="hidden" value="<?php echo $row[2];?>" /></td>
-						<td width="200"><?php 
+	?>					<td width="200"><?php  echo $row[2];?> <input name="nombcar<?php  echo $cont-1;?>" id="nombcar<?php  echo $cont-1;?>" type="hidden" value="<?php  echo $row[2];?>" /></td>
+						<td width="200"><?php  
 						if($row[5]==1)
 						{ 
-						?> <select name="caract<?php echo $indi-1;?>" id="caract<?php echo $indi-1;?>" class="texto">
+						?> <select name="caract<?php  echo $indi-1;?>" id="caract<?php  echo $indi-1;?>" class="texto">
 						  <option value="Positivo">Positivo</option>
 						  <option value="Negativo">Negativo</option>
-						</select> <?php
+						</select> <?php 
 						}
 						else
 						{
@@ -266,17 +266,17 @@ else
 							$valores=$exa->consul_valores_caract($row[1]);
 							if ($valores==false)
 							{ 			?>
-							<input name="caract<?php echo $cont-1;?>" type="text" class="texto" id="caract<?php echo $row[1];?>" value="" size="5" />
+							<input name="caract<?php  echo $cont-1;?>" type="text" class="texto" id="caract<?php  echo $row[1];?>" value="" size="5" />
 							
-			<?php				}
+			<?php 				}
 							else
 							{
 							?>
-							  <select name="caract<?php echo $cont-1;?>" class="texto" id="caract<?php echo $row[1];?>">
+							  <select name="caract<?php  echo $cont-1;?>" class="texto" id="caract<?php  echo $row[1];?>">
 								<option value="">Seleccione</option>
-								<?php echo $valores; ?>
+								<?php  echo $valores; ?>
 							  </select>					
-		<?php	
+		<?php 	
 							}
 						}
 						$valoresref=$exa->consul_valores_ref($row[1],$_POST['sexo'],$_POST['edad']);
@@ -291,12 +291,12 @@ else
 						  echo ' ('.$row[4].')'; 
 						  $dato.=' ('.$row[4].')';
 						}				 ?>			
-						<input name="datoscar<?php echo $cont-1;?>" id="datoscar<?php echo $cont-1;?>" type="hidden" value="<?php echo $dato;?>" />
-						<input name="tipocar<?php echo $cont-1;?>" id="tipocar<?php echo $cont-1;?>" type="hidden" value="<?php echo $row[0];?>" />
+						<input name="datoscar<?php  echo $cont-1;?>" id="datoscar<?php  echo $cont-1;?>" type="hidden" value="<?php  echo $dato;?>" />
+						<input name="tipocar<?php  echo $cont-1;?>" id="tipocar<?php  echo $cont-1;?>" type="hidden" value="<?php  echo $row[0];?>" />
 	
 						
 						</td>
-	<?php 			   if($cont%2==0) echo  '</tr>';
+	<?php  			   if($cont%2==0) echo  '</tr>';
 					}	
 				}
 		}
@@ -306,7 +306,7 @@ else
 			<tr class="texto">
 				<td colspan="4">No hay valores Asociados Transcriba el resultado</td>
 			</tr>
-	<?php	}
+	<?php 	}
 			?>
 	  <tr class="texto" align="center">
 				<td height="82" colspan="4" align="center"><div style="background-position:center">Observación:</div><textarea name="obs" cols="70" rows="3" id="obs"></textarea></td>
@@ -316,12 +316,12 @@ else
 	  </tr>
 	  <tr class="texto">
 		<td colspan="2">
-	<?php		$bio= new empleado();
+	<?php 		$bio= new empleado();
 		$result= $bio->buscar_bioanalista(); ?>
 		
 		Bioanalista: <select name="empleado" id="empleado" class="texto">
 		  <option value="">Seleccione</option>
-		<?php
+		<?php 
 	
 		if($result)
 			while ($row = mysql_fetch_row($result))
@@ -344,7 +344,7 @@ else
 	  </tr>
 	</table>
 
-<?php } ?>
+<?php  } ?>
 </form>
 </body>
 </html>

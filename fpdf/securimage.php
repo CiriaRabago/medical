@@ -1,4 +1,4 @@
-<?php
+<?php 
 if (!defined('SI_IMAGE_JPEG'))
   define('SI_IMAGE_JPEG', 1);
 if (!defined('SI_IMAGE_PNG'))
@@ -124,7 +124,7 @@ class Securimage {
      * Generate a code and output the image to the browser.
      *
      * <code>
-     *   <?php
+     *   <?php 
      *   include 'securimage.php';
      *   $securimage = new Securimage();
      *   $securimage->show('bg.jpg');

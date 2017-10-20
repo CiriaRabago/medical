@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_empleado.php";
@@ -81,7 +81,7 @@ function soloNumeros(evt){
 <form id="form1" name="form1" method="post" action="usuario.php">
   
   <p>
-    <?php	
+    <?php 	
 			
 			$etiq='style="display:none"';
 			$eti='Usuario';
@@ -151,7 +151,7 @@ function soloNumeros(evt){
 			
   else 
   			$mos='style="display:block"';?>
-  <table width="573" border="0" align="center" <?php echo $mos; ?>>
+  <table width="573" border="0" align="center" <?php  echo $mos; ?>>
       <tr class="titulofor">
         <td width="563" height="21" class="Titulo_tab"><div align="center" class="TituloF">Usuario</div></td>
     </tr>
@@ -170,9 +170,9 @@ function soloNumeros(evt){
       </tr>
   </table>
   <input name="ocu_tc" type="hidden" value="0" />
-    <table width="891" border="0" align="center" <?php echo $ver;?>>
+    <table width="891" border="0" align="center" <?php  echo $ver;?>>
       <tr class="TituloF">
-        <td colspan="4" class="Titulo_tab"><div align="center" class="titulofor"><?php echo $eti; ?></div></td>
+        <td colspan="4" class="Titulo_tab"><div align="center" class="titulofor"><?php  echo $eti; ?></div></td>
       </tr>
       <tr class="Etiqueta">
         <td colspan="4" class="etiqueta"><ol>
@@ -184,37 +184,37 @@ function soloNumeros(evt){
       </tr>
       <tr class="Etiqueta">
         <td width="145" class="etiqueta">C&eacute;dula:</td>
-        <td width="307" class="texto"><input name="cedula" type="text" disabled="disabled" class="texto" id="cedula" value="<?php echo $vec[0]; ?>" size="25"  />
-        <input name="ocuced" type="hidden" value="<?php  echo $vec[0]; ?>" />
-        <input name="gua_mod" type="hidden" id="gua_mod" value="<?php  echo $CAD1; ?>" /></td>
+        <td width="307" class="texto"><input name="cedula" type="text" disabled="disabled" class="texto" id="cedula" value="<?php  echo $vec[0]; ?>" size="25"  />
+        <input name="ocuced" type="hidden" value="<?php   echo $vec[0]; ?>" />
+        <input name="gua_mod" type="hidden" id="gua_mod" value="<?php   echo $CAD1; ?>" /></td>
         <td width="154" class="etiqueta"><div align="left"><span class="etiqueta"> Nombre de Usuario: </span></div></td>
         <td width="323" class="Texto"><div align="left"><span class="etiqueta">
-          <input name="usuario" type="text" class="texto" id="usuario" maxlength="10"  disabled="disabled"  value="<?php  echo $vec[0]; ?>"/>
+          <input name="usuario" type="text" class="texto" id="usuario" maxlength="10"  disabled="disabled"  value="<?php   echo $vec[0]; ?>"/>
         </span></div>          
         <label></label></td>
       </tr>
       <tr class="Etiqueta">
         <td class="etiqueta"><div align="left">Primer Nombre: </div></td>
-        <td class="texto"><input name="ocun1" type="hidden" value="<?php echo $vec[1];?>" />
-        <input name="nomdoc1" type="text" disabled="disabled" class="texto" id="nomdoc1" size="50" value="<?php echo $vec[1];?>"/></td>
+        <td class="texto"><input name="ocun1" type="hidden" value="<?php  echo $vec[1];?>" />
+        <input name="nomdoc1" type="text" disabled="disabled" class="texto" id="nomdoc1" size="50" value="<?php  echo $vec[1];?>"/></td>
         <td class="etiqueta"><div align="left"><span class="etiqueta">Ingrese una Contrase&ntilde;a: </span></div></td>
         <td class="Texto"><div align="left"><span class="etiqueta">
-          <input name="clave" type="password" class="texto" id="clave"  value="<?php echo $cl; ?>" maxlength="6" />
+          <input name="clave" type="password" class="texto" id="clave"  value="<?php  echo $cl; ?>" maxlength="6" />
           <span class="Estilo2">* </span></span><span class="etiqueta">(m&aacute;ximo 8 caracteres</span>).</div></td>
       </tr>
       <tr class="Etiqueta">
         <td height="20" class="etiqueta"><div align="left">Segundo Nombre: </div></td>
-        <td class="texto"><input name="ocun2" type="hidden" value="<?php echo $vec[2];?>" />
-        <input name="nomdoc2" type="text"disabled="disabled" class="texto" id="nomdoc2" size="25" value="<?php echo $vec[2];?>"/></td>
+        <td class="texto"><input name="ocun2" type="hidden" value="<?php  echo $vec[2];?>" />
+        <input name="nomdoc2" type="text"disabled="disabled" class="texto" id="nomdoc2" size="25" value="<?php  echo $vec[2];?>"/></td>
         <td class="etiqueta">Confirmar Contrase&ntilde;a: </td>
         <td class="Texto"><label>
-          <input name="conclave" type="password" class="texto" id="conclave" maxlength="6" value="<?php echo $cl; ?>" />
+          <input name="conclave" type="password" class="texto" id="conclave" maxlength="6" value="<?php  echo $cl; ?>" />
           <span class="etiqueta"> </span><span class="etiqueta"><span class="Estilo2">*</span>(m&aacute;ximo 8 caracteres</span>).</label></td>
       </tr>
       <tr class="Etiqueta">
         <td class="etiqueta"><div align="left">Primer Apellido: </div></td>
-        <td class="texto"><input name="ocua1" type="hidden" value="<?php echo $vec[3];?>" />
-        <input name="apedoc1" type="text" disabled="disabled" class="texto" id="apedoc1" size="25" value="<?php echo $vec[3];?>"/></td>
+        <td class="texto"><input name="ocua1" type="hidden" value="<?php  echo $vec[3];?>" />
+        <input name="apedoc1" type="text" disabled="disabled" class="texto" id="apedoc1" size="25" value="<?php  echo $vec[3];?>"/></td>
         <td class="etiqueta">Tipo de Usuario:</td>
         <td class="Texto"><label>
           <select name="tipo" class="texto" id="tipo">
@@ -226,14 +226,14 @@ function soloNumeros(evt){
       </tr>
       <tr class="Etiqueta">
         <td class="etiqueta"><div align="left">Segundo Apellido: </div></td>
-        <td class="texto"><input name="ocua2" type="hidden" value="<?php echo $vec[4];?>" />
-        <input name="apedoc2" type="text" disabled="disabled" class="texto" id="apedoc2" size="25" value="<?php echo $vec[4];?>"/></td>
+        <td class="texto"><input name="ocua2" type="hidden" value="<?php  echo $vec[4];?>" />
+        <input name="apedoc2" type="text" disabled="disabled" class="texto" id="apedoc2" size="25" value="<?php  echo $vec[4];?>"/></td>
 		<td class="etiqueta"><div align="left">Sede de Trabajo: </div></td>
         <td class="texto"><select name="cede" id="cede" class="texto">
 		                   <option value="0">Seleccionar--></option>
-						   <option value="1" <?php if($cede=='1') echo "selected";?>>Administrador</option>
-						   <option value="2" <?php if($cede=='2') echo "selected";?>>DonVale</option>
-						   <option value="3" <?php if($cede=='3') echo "selected";?>>Pirineos</option> 
+						   <option value="1" <?php  if($cede=='1') echo "selected";?>>Administrador</option>
+						   <option value="2" <?php  if($cede=='2') echo "selected";?>>DonVale</option>
+						   <option value="3" <?php  if($cede=='3') echo "selected";?>>Pirineos</option> 
 		                  </select></td>
      </tr>
 	 <tr>
@@ -251,7 +251,7 @@ function soloNumeros(evt){
   </table>
        <table width="200" border="0" align="center">
         <tr>
-          <td height="87"><div class="etiqueta"  id="Etiqueta" <?php echo $etiq; ?>>
+          <td height="87"><div class="etiqueta"  id="Etiqueta" <?php  echo $etiq; ?>>
             
             <p align="center" class="Etiqueta">El Usuario ha sido Registrado Satisfactoriamente </p>
             <p align="center" class="Etiqueta">"BIENVENIDO"</p>

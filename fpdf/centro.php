@@ -1,4 +1,4 @@
-<?php session_start();
+<?php  session_start();
 if(session_is_registered("principal"))
 {
 	session_unregister("principal");

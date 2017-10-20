@@ -1,4 +1,4 @@
-<?php
+<?php 
     echo pack("CCC",0xef,0xbb,0xbf);
     //We've included  ../Includes/DBConn.php, which contains functions
     //to help us easily connect to a database.
@@ -12,7 +12,7 @@
 	
 	Steps to ensure UTF8 xml output for FusionCharts:
 		1. Output the BOM bytes 0xef 0xbb 0xbf as shown above in the first few lines
-		2. Put the xml declaration <?phpxml version='1.0' encoding='UTF-8'?> immediately after the output from previous step.
+		2. Put the xml declaration <?php xml version='1.0' encoding='UTF-8'?> immediately after the output from previous step.
 		3. Declare contentType to be text/xml, charSet.
 		4. Use getBytes to get the data from UTF field in the database and to convert it into String, use new String(bytes,"UTF-8")
 	Do not output anything other than the BOM, xml declaration and the xml itself. (no empty lines too!)
@@ -56,4 +56,4 @@
     //Just write out the XML data
     //NOTE THAT THIS PAGE DOESN'T CONTAIN ANY HTML TAG, WHATSOEVER
 ?>
-<?phpxml version='1.0' encoding='UTF-8'?><?php  echo $strXML; ?>
+<?php xml version='1.0' encoding='UTF-8'?><?php   echo $strXML; ?>

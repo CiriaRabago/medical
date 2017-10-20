@@ -15,7 +15,7 @@
 <body>
 <p><img src="imagenes/Logo1.png" height="47" /></p>
 <p>
-  <?php
+  <?php 
  $ms=$_GET['ms'];
  $datos=explode(';',$ms);
  echo "Cita registrada con Numero : <span class='Estilo2'>".$datos[0]."</span>";

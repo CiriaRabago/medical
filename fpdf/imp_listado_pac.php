@@ -1,4 +1,4 @@
-<?php  
+<?php   
 session_start();
 include "clases/clase_conexion.php";
 include "clases/clase_orden.php";
@@ -138,7 +138,7 @@ function inac_vis(visit)
 
 </script>
 <body>
-<?php if ($_POST["primera"]=='')
+<?php  if ($_POST["primera"]=='')
  {
    //// buscar el id de menu que le corresponde esta pagina
    $men= new menu('', '', '', 'listado_pac.php', '','', '', '');
@@ -154,7 +154,7 @@ function inac_vis(visit)
 <input name="nemp" id="nemp" type="hidden" value="" />
 <input name="nmed" id="nmed" type="hidden" value="" />
 <input name="nsta" id="nsta" type="hidden" value="" />
-<?php /////////////////////////Mostrar u ocultar Botones///////////////////////////
+<?php  /////////////////////////Mostrar u ocultar Botones///////////////////////////
   $ope1='style="display:none"'; 
   $ope4='style="display:none"';
   $ope5='style="display:none"';
@@ -323,11 +323,11 @@ function inac_vis(visit)
 					
 					</td>
                     <td colspan="2">
-					<?php  $ser= new servicio('','','','','','','','','','','',''); ?> 
+					<?php   $ser= new servicio('','','','','','','','','','','',''); ?> 
 						<select name="servicio" class="texto" id="servicio" >
 						  <option value="0" selected="selected" >SELECCIONE --></option>
 						  <option value="" >TODOS</option>
-						  <?php  if ($ser->combo_servicios()!= false)
+						  <?php   if ($ser->combo_servicios()!= false)
 								echo $ser->combo_servicios(); ?>
 					  </select>
 					
@@ -353,7 +353,7 @@ function inac_vis(visit)
 					<option value="X" selected="selected" >SELECCIONE --></option>
 						  <option value="" >TODOS</option>
 						  <option value="0" >PARTICULAR</option>
-                      <?php  $emp= new empresa('','','','','','','','','','');
+                      <?php   $emp= new empresa('','','','','','','','','','');
 						$cemp=$emp->combo_emp('');
 						if($cemp!=false) echo $cemp;
 						?>
@@ -376,7 +376,7 @@ function inac_vis(visit)
                     <td colspan="5"><select name="medico" class="texto" id="medico">
 					<option value="0" selected="selected" >SELECCIONE --></option>
 						  <option value="" >TODOS</option>
-                      <?php  $med= new medico('','','','','','','','','','');
+                      <?php   $med= new medico('','','','','','','','','','');
 						$cmed=$med->combo_medico('');
 						if($cmed!=false) echo $cmed;
 						?>
@@ -396,7 +396,7 @@ function inac_vis(visit)
 				<input name="orden" id="orden" type="hidden" value="0" /></td>
 			</tr>
 		  </table>
-	<?php   
+	<?php    
 
 	if($_POST['elimvis']!=0)
  	{
@@ -430,7 +430,7 @@ function inac_vis(visit)
 			  <td width="1040" colspan="12" align="center" class="etiqueta"><input type="checkbox" name="log" />Imprimir con logo el documento</td>
 			</tr>
 		  	<tr class="titulofor">
-			  <td width="1040" colspan="12" align="center"><?php echo $titulo; ?></td>
+			  <td width="1040" colspan="12" align="center"><?php  echo $titulo; ?></td>
 			</tr>	
 			<tr class="titulorep">
 			  <td width="20">N°</td>
@@ -445,7 +445,7 @@ function inac_vis(visit)
 			  <td width="90">IMPRIMIR</td>
 			</tr>	   
 	   
-<?php		 $xy=0;  
+<?php 		 $xy=0;  
          while ($row=mysql_fetch_array($reg))
 		   { 
 		      $xy++;
@@ -465,38 +465,38 @@ function inac_vis(visit)
 			 $busemple=$emple->buscar_nom_emple();
 			 
 		   ?>
-				<tr class="texto" <?php echo $color; ?>>
-				  <td width="20"><?php echo $cont; ?></td>
-				  <td width="70"><?php echo $row[5]; ?></td>
-				  <td width="70"><?php echo $row[2]; ?></td>
-				  <td width="150"><?php echo $row[3]; ?></td>
-				  <td width="150"><?php echo $empresa; ?></td>
-				  <td width="150"><?php echo $row[11]; ?></td>
-				  <td width="140"><?php echo $row[10]; ?></td>
-				  <td width="140"><?php echo $busemple; ?></td>
-				  <td width="90"><?php echo $sta; ?></td>				  
-				  <td width="90" align="center"><input type="checkbox" checked="checked" name="<?php  echo 'id'.$xy;?>"  /></td>
+				<tr class="texto" <?php  echo $color; ?>>
+				  <td width="20"><?php  echo $cont; ?></td>
+				  <td width="70"><?php  echo $row[5]; ?></td>
+				  <td width="70"><?php  echo $row[2]; ?></td>
+				  <td width="150"><?php  echo $row[3]; ?></td>
+				  <td width="150"><?php  echo $empresa; ?></td>
+				  <td width="150"><?php  echo $row[11]; ?></td>
+				  <td width="140"><?php  echo $row[10]; ?></td>
+				  <td width="140"><?php  echo $busemple; ?></td>
+				  <td width="90"><?php  echo $sta; ?></td>				  
+				  <td width="90" align="center"><input type="checkbox" checked="checked" name="<?php   echo 'id'.$xy;?>"  /></td>
 				</tr>
-                  <input type="hidden" value="<?php  echo $row[0];?>"   name="<?php  echo 'ide'.$xy;?>" /> 
-	<?php		}  
+                  <input type="hidden" value="<?php   echo $row[0];?>"   name="<?php   echo 'ide'.$xy;?>" /> 
+	<?php 		}  
 	          echo "<input type='hidden' name='xy' value='".$xy."' id='xy'/>";?>
 				<tr >
 				  <td colspan="12" align="center">
-				  	<a href="#" onclick="irpdf('listado_pacientes_pdf.php?fi=<?php echo $_POST['log'];?>&ff=<?php echo $_POST['ocu_ff'];?>&serv=<?php echo $_POST['servicio'];?>&ced=<?php echo $_POST['cedula'];?>&sta=<?php echo $_POST['estado'];?>&empr=<?php echo $_POST['empresa'];?>&medi=<?php echo $_POST['medico'];?>')"  class="button-print" alt="Imprimir" <?php echo $ope5;?> > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
+				  	<a href="#" onclick="irpdf('listado_pacientes_pdf.php?fi=<?php  echo $_POST['log'];?>&ff=<?php  echo $_POST['ocu_ff'];?>&serv=<?php  echo $_POST['servicio'];?>&ced=<?php  echo $_POST['cedula'];?>&sta=<?php  echo $_POST['estado'];?>&empr=<?php  echo $_POST['empresa'];?>&medi=<?php  echo $_POST['medico'];?>')"  class="button-print" alt="Imprimir" <?php  echo $ope5;?> > <i class="fa fa-print" aria-hidden="true"></i> Imprimir </a>
 
 
-				<input name="consulta" id="consulta" type="hidden" value="<?php echo $row; ?>" />
-				<input name="titu" id="titu" type="hidden" value="<?php echo $titulo; ?>" />
+				<input name="consulta" id="consulta" type="hidden" value="<?php  echo $row; ?>" />
+				<input name="titu" id="titu" type="hidden" value="<?php  echo $titulo; ?>" />
 				<input name="elimvis" id="elimvis" type="hidden" value="0" />
-				<input name="primera" type="hidden" id="primera" value="<?php echo $_POST["primera"]; ?>" />
-                <input name="busper" type="hidden" id="busper" value="<?php echo $_POST["busper"]; ?>" />
+				<input name="primera" type="hidden" id="primera" value="<?php  echo $_POST["primera"]; ?>" />
+                <input name="busper" type="hidden" id="busper" value="<?php  echo $_POST["busper"]; ?>" />
 				</td>
 				</tr>
 	    </table>
-	<?php	}
+	<?php 	}
 		else
 		{ echo '<br><p class="textoN" align="center">No se encontró ninguna coincidencia</p>'; }?>
-<?php	} ?>
+<?php 	} ?>
 
 
 </form>

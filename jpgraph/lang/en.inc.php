@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*=======================================================================
 // File:     EN.INC.PHP
 // Description: English language file for error messages

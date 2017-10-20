@@ -1,4 +1,4 @@
-<?php
+<?php 
     // Example 4 : QR Barcode with specified version and error correction level
 
     // Include the library

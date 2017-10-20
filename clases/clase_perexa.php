@@ -1,4 +1,4 @@
-<?php 
+<?php  
 /* 
 CLASE PERFILES
 CREADA POR: GRATELLY GARZA
