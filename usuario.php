@@ -161,7 +161,7 @@ function soloNumeros(evt){
             <p class="Etiqueta">Introduzca su n&uacute;mero de c&eacute;dula &oacute; RIF y presione Buscar. </p>
             <p>Cedula: <span class="Texto">
             <input name="cedbus" type="text" class="texto" id="cedbus" size="15" />
-            </span><a href="#" onclick="validar();" class="button-search" alt="Buscar"  > <i class="fa fa-search" aria-hidden="true"></i> Buscar </a>
+            </span><a href="#" onclick="buscar()" class="button-search" alt="Buscar"  > <i class="fa fa-search" aria-hidden="true"></i> Buscar </a>
             <span class="Texto">
             <input name="ocu" type="hidden" value="0" />
            
