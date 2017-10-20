@@ -9,6 +9,7 @@ include "clases/clase_usuario.php";
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Documento sin t&iacute;tulo</title>
 <link href="estilolab.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style type="text/css">
 <!--
 .Estilo22 {	font-size: 18px;
@@ -124,7 +125,7 @@ function soloNumeros(evt){
         </span></td>
       </tr>
       <tr>
-        <td colspan="2" class="Etiqueta"><div align="center"><span class="textoN">
+        <td colspan="2" class="Etiqueta td-buttons"><div align="center"><span class="textoN">
           <a href="#" onclick="Guardar();" class="button-save" alt="Guardar"  > <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar </a>
 
 
