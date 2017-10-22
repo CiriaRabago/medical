@@ -11,7 +11,7 @@ $fecha_ac= @date("Y-m-d");//fecha
 <html>
 <head>
 <title>Documento sin t&iacute;tulo</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="estilolab.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 <!--

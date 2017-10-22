@@ -6,7 +6,7 @@ include "clases/clase_solicitud.php";
 include "clases/clase_formato.php"; 
 include "clases/clase_visita.php";
 include "clases/clase_benef.php";
-header("Content-Type: text/html; charset=iso-8859-1 ");
+header("Content-Type: text/html; charset=utf-8 ");
 class PDF extends FPDF
 {
 //Cabecera de página

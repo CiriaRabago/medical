@@ -18,7 +18,7 @@ $iemp=$_GET['idemp'];
 <head>
 <title>Modificar Visita</title>
 <link href="estilolab.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
 <script>

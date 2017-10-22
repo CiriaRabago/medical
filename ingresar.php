@@ -8,7 +8,7 @@ include("securimage.php");
 <html>
 <head>
 <title>Documento sin t&iacute;tulo</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css"></style>
 <!-- <link href="clases/Estilos.css" rel="stylesheet" type="text/css"> -->
 <body>
@@ -27,9 +27,9 @@ if($valid == true)
 $us=$verif->consult_usu();
 if ($us=='0')
 		{  
-			session_unregister("cedu_usu");
-			session_unregister("tipo_usu");
-			session_unregister("nom_usu");
+			// session_unregister("cedu_usu");
+			// session_unregister("tipo_usu");
+			// session_unregister("nom_usu");
 			session_destroy();
 		   echo '<script>alert("Usuario o Contraseña Incorrecto")</script>';
            echo '<script>document.ing.submit()</script>';
@@ -54,9 +54,9 @@ if (($us!='0') && ($us!='1'))
 	   }
 if ($us=='1')
 		{  
-			session_unregister("cedu_usu");
-			session_unregister("tipo_usu");
-			session_unregister("nom_usu");
+			// session_unregister("cedu_usu");
+			// session_unregister("tipo_usu");
+			// session_unregister("nom_usu");
 			session_destroy();
 		   echo '<script>alert("Usuario Desactivado")</script>';
            echo '<script>document.ing.submit()</script>';
