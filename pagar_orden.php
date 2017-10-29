@@ -103,7 +103,7 @@ function Guardar()
       </div></td>
     </tr>
     <tr>
-      <td height="30" colspan="4"><img src="imagenes/naranja.gif" alt="ima" width="100%" height="3" /></td>
+      <td height="30" colspan="4"><img src="imagenes/blanco.gif" alt="ima" width="100%" height="3" /></td>
     </tr>
     <tr>
       <td colspan="4"><div align="center">
@@ -136,7 +136,7 @@ function Guardar()
         </span>      </div></td>
     </tr>
     <tr>
-      <td colspan="2" class="etiqueta"><div align="center"><img src="imagenes/naranja.gif" alt="ima" width="100%" height="3" /></div></td>
+      <td colspan="2" class="etiqueta"><div align="center"><img src="imagenes/blanco.gif" alt="ima" width="100%" height="3" /></div></td>
     </tr>
   </table>
   <p>&nbsp;</p>

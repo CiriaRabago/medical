@@ -21,6 +21,8 @@ $iemp=$_GET['idemp'];
 <title>Modificar Visita</title>
 <link href="estilolab.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="churchil.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <script>
@@ -113,6 +115,10 @@ padre.removeChild(el);
 </script>
 
 <body>
+<div class="header-page">
+<div class="logo-header"> <img src="imagenes/Logo1.png" alt="churchil"  style="width:210px;height:70px"></div>
+<div class="banner-header"><img src="imagenes/header1.jpg" alt="churchil" style="width:800px;height:80px"></div>
+</div>
 <form name="form1" id="form1" method="post" action="visita_modif.php">
 
 <?php  
@@ -672,10 +678,14 @@ $iemp=$_POST['comemp'];
   </tr>
   <?php  } // Fin si encontro ordenes de lab asociadas  ?>
   <tr>
-    <td colspan="3">
+    <td colspan="3"  class="td-btn">
 	 <div align="center" id="cargar">
-	 <img src="imagenes/p_guardar1.gif" title="Guardar Cambios" alt="Guardar Cambios" width="140" height="50" style="cursor:hand" onclick="guardaVis('A');" onmouseover="this.src='imagenes/a_guardar1.gif'"  onmouseout="this.src='imagenes/p_guardar1.gif'"/>
+	  
+      <a href="#" onclick="guardaVis('A');"class="button-save" alt="Guardar"  > <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar </a>
+
+
  	 </div>
+ 	 <br>
 	 <input name="ocugua" id="ocugua" type="hidden" value="0">
 	 
   </td>

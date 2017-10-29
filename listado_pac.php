@@ -402,6 +402,7 @@ function inac_vis(visit)
 				<input name="orden" id="orden" type="hidden" value="0" /></td>
 			</tr>
 		  </table>
+
 	<?php    
 
 	if($_POST['elimvis']!=0)
@@ -429,8 +430,8 @@ function inac_vis(visit)
 			if($_POST['empresa']!='') $titulo.='<br>DE LA EMPRESA: '.$_POST['nemp'];
 			if($_POST['medico']!='') $titulo.='<br>MEDICO: '.$_POST['nmed'];
 		
-	?> 
-		  <table width="1040">
+	?> <div>
+		  <table width="1040" align="center">
 		  	<tr class="titulofor">
 			  <td width="1040" colspan="12" align="center"><?php  echo $titulo; ?></td>
 			</tr>	
@@ -493,6 +494,7 @@ function inac_vis(visit)
 				</td>
 				</tr>
 	    </table>
+      </div>
 	<?php 	}
 		else
 		{ echo '<br><p class="textoN" align="center">No se encontró ninguna coincidencia</p>'; }?>

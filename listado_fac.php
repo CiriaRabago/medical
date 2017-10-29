@@ -437,7 +437,7 @@ function inac_vis(visit)
 			if($_POST['medico']!='') $titulo.='<br>MEDICO: '.$_POST['nmed'];
 		
 	?> 
-		  <table width="1040">
+		  <table width="1040" align="center">
 		  	<tr class="titulofor">
 			  <td width="1040" colspan="15" align="center"><?php  echo $titulo; ?></td>
         <input type="hidden" id="getf_in" value="<?php echo $_POST[ocu_fi]?>">

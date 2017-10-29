@@ -79,7 +79,7 @@ function buscar()
 	  </div></td>
   </tr>   
   <tr>
-    <td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
+    <td height="3" colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
   </tr>  
 </table>
 <?php    

@@ -101,7 +101,7 @@ function firmar(c)
 <input type="hidden" name="xxx" id="xxx" />  
 <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
 	  <tr>
-		<td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
+		<td height="3" colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
 	  </tr>
 	  <tr bgcolor="#E3E3C6">
 		<td height="55" colspan="2" bgcolor="#E3E3C6">
@@ -117,7 +117,7 @@ function firmar(c)
 		</td>
 		</tr>
 	    <tr>
-		   <td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
+		   <td height="3" colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
 	    </tr>
 	    <tr>
 		   <td height="3" colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>

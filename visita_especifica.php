@@ -23,6 +23,7 @@ $devi=$_GET['detvis'];*/
 <head>
 <title>DETALLES DE LA VISITA</title>
 <link href="estilolab.css" rel="stylesheet" type="text/css" />
+<link href="churchil.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
@@ -106,6 +107,10 @@ function resultados(ced)
 
 
 <body>
+<div class="header-page">
+<div class="logo-header"> <img src="imagenes/Logo1.png" alt="churchil"  style="width:210px;height:70px"></div>
+<div class="banner-header"><img src="imagenes/header1.jpg" alt="churchil" style="width:800px;height:80px"></div>
+</div>
 <form action="visita_especifica.php" method="post" name="form4">
 
 
@@ -144,8 +149,8 @@ function resultados(ced)
 		<?php 
 		}	
 		?>
-  <tr><td colspan="4"><img src="imagenes/naranja.gif" height="1" width="100%"></td></tr>
-  <tr height="20" class="textoN" onClick="ver_visit(<?php  echo $visita; ?>)" style="cursor:hand" bgcolor="#F9D5B2">
+  <tr><td colspan="4"><img src="imagenes/blanco.gif" height="1" width="100%"></td></tr>
+  <tr height="20" class="textoN" onClick="ver_visit(<?php  echo $visita; ?>)" style="cursor:hand" bgcolor="#cfe7f9">
     <td><?php  echo $_GET['motivo']; ?></td>
 	<td><?php  echo $nomemp; ?></td>
 	<td><?php  echo $_GET['fecha']; ?></td>
@@ -153,7 +158,7 @@ function resultados(ced)
   </tr>
   <?php  if($rownev[0]=='226'){?>
   <tr>
-    <td colspan="4" class="textoN" style="cursor:hand" bgcolor="#F9D5B2"><span class="textoN">DATOS APROBACION </span>: <?php  echo $cla; ?></td>
+    <td colspan="4" class="textoN" style="cursor:hand" bgcolor="#cfe7f9"><span class="textoN">DATOS APROBACION </span>: <?php  echo $cla; ?></td>
   </tr>
   <?php  }?>
   <TR><td colspan="4" >

@@ -144,8 +144,8 @@ function resultados(ced)
 		<?php 
 		}	
 		?>
-  <tr><td colspan="4"><img src="imagenes/naranja.gif" height="1" width="100%"></td></tr>
-  <tr height="20" class="textoN" onClick="ver_visit(<?php  echo $visita; ?>)" style="cursor:hand" bgcolor="#F9D5B2">
+  <tr><td colspan="4"><img src="imagenes/blanco.gif" height="1" width="100%"></td></tr>
+  <tr height="20" class="textoN" onClick="ver_visit(<?php  echo $visita; ?>)" style="cursor:hand" bgcolor="#cfe7f9">
     <td><?php  echo $_GET['motivo']; ?></td>
 	<td><?php  echo $nomemp; ?></td>
 	<td><?php  echo $_GET['fecha']; ?></td>
@@ -153,7 +153,7 @@ function resultados(ced)
   </tr>
   <?php  if($rownev[0]=='226'){?>
   <tr>
-    <td colspan="4" class="textoN" style="cursor:hand" bgcolor="#F9D5B2"><span class="textoN">DATOS APROBACION </span>: <?php  echo $cla; ?></td>
+    <td colspan="4" class="textoN" style="cursor:hand" bgcolor="#cfe7f9"><span class="textoN">DATOS APROBACION </span>: <?php  echo $cla; ?></td>
   </tr>
   <?php  }?>
   <TR><td colspan="4" >

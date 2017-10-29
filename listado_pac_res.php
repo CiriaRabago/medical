@@ -405,7 +405,7 @@ function inac_vis(visit)
 			</tr>
 			
 			<tr>
-			 <td colspan="5" class="td-btn"><div align="center">
+			 <td colspan="5" class="td-btn"><div  id="cargar"  align="center">
         <a href="#" onclick="validar();" class="button-search" alt="Buscar"  > <i class="fa fa-search" aria-hidden="true"></i> Buscar </a>
         <input name="orden" id="orden" type="hidden" value="0" /></div></td>
 			</tr>
@@ -438,7 +438,7 @@ function inac_vis(visit)
 			if($_POST['medico']!='') $titulo.='<br>MEDICO: '.$_POST['nmed'];
 		
 	?> 
-		  <table width="1040">
+		  <table width="1040" align="center">
 		  	<tr class="titulofor">
 			  <td width="1040" colspan="12" align="center"><?php  echo $titulo; ?></td>
 			</tr>	
@@ -506,7 +506,7 @@ function inac_vis(visit)
      // if($_POST['medico']!='') $titulo.='<br>MEDICO: '.$_POST['nmed'];
     
   ?> 
-      <table width="1040">
+      <table width="1040" align="center">
         <tr class="titulofor">
         <td width="1040" colspan="12" align="center"><?php  echo $titulo; ?></td>
       </tr> 

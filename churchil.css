@@ -1,17 +1,25 @@
+body{
+    margin-top: 0px;
+    background-color: #f1f4f8;
+}
 .banner-header{
-  float: right;
-  width: 800px;
+  float: right;  
+  height: 80px;
+  margin-bottom: 20px;
 }
 
+.header-page{
+    height: 80px;
+    background-color: #FFF;
+}
 .logo-header{
 	padding-top: 3px;
 	padding-left: 20px;
 	float:left;
-	width: 100px;
 }
 .content{
 	padding-top: 20px;
-	background-color: #F9F9F9;
+	background-color: #f1f4f8;
 }
 
 
@@ -26,27 +34,27 @@
 }
 
 .header-box{
-	border-bottom: 2px solid #15709d;
+	border-bottom: 1px solid #15709d;
 }
 .text-center{
 	text-align: center;
 }
 .option-menu{
-	background-color: #2a2e3d;
+	background-color: #004f75;
 	height: 36px;
 	cursor: pointer;
 	padding-left: 15px;
 	text-align: left;
-	border-top: 0.5px solid #315563;
+	border-top: 0.5px solid #173361;
 	color: #F9F9F9;
 	font-size: 12px;
 	font-weight: 100;
 }
 .option-menu:hover{
-	background-color: #434859;	
+	background-color: #173361;	
 }
 .option-submenu{
-	background-color: #1f2333;
+	background-color: #1e2645;
 	cursor: pointer;
 	padding-left: 10px;
 	text-align: left;
@@ -109,6 +117,8 @@
 
 .td-btn{
 	height: 30px;
+    padding-top:20px;
+    padding-bottom: 10px;
 }
 
 .button-delete{

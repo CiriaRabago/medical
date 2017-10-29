@@ -147,7 +147,7 @@ while ($row=mysql_fetch_array($caractexa))
 <?php  
 $indi++; }  ?>
 	<tr>
-    <td colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
+    <td colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
     </tr>
      <td colspan="4" align="center" class="td-buttons">
 	  <input type="hidden"  name="ordenar" id="ordenar" value="0"/>
@@ -190,7 +190,7 @@ while ($row2=mysql_fetch_array($caractexa2))
 $indi2++; 
  }  ?>
   <tr>
-    <td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
+    <td height="3" colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
     </tr>
 	<tr>
     <td colspan="4" align="center" class="td-btn"><input type="hidden" name="agregar" id="agregar" value="0" />

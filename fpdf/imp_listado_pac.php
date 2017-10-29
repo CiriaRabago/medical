@@ -425,7 +425,7 @@ function inac_vis(visit)
 			if($_POST['medico']!='') $titulo.='<br>MEDICO: '.$_POST['nmed'];
 		
 	?> 
-		  <table width="1040">
+		  <table width="1040" align="center">
 		    <tr >
 			  <td width="1040" colspan="12" align="center" class="etiqueta"><input type="checkbox" name="log" />Imprimir con logo el documento</td>
 			</tr>

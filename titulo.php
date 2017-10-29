@@ -27,8 +27,9 @@ body {
 <link href="churchil.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div class="logo-header"> <img src="imagenes/logo_header.jpg" alt="churchil" ></div>
-<div class="banner-header"><img src="imagenes/header1.jpg" alt="churchil" ></div>
-
+<div class="header-page">
+<div class="logo-header"> <img src="imagenes/Logo1.png" alt="churchil"  style="width:210px;height:70px"></div>
+<div class="banner-header"><img src="imagenes/header1.jpg" alt="churchil" style="width:800px;height:80px"></div>
+</div>
 </body>
 </html>

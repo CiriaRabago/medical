@@ -92,7 +92,7 @@ else
 	
 	<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
 	  <tr>
-		<td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
+		<td height="3" colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
 	  </tr>
 	  <tr bgcolor="#E3E3C6">
 		<td height="55" colspan="2" bgcolor="#E3E3C6">
@@ -104,7 +104,7 @@ else
 		</td>
 		</tr>
 		  <tr>
-		<td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
+		<td height="3" colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
 	  </tr>
 	  <tr>
 		<td height="3" colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
@@ -128,7 +128,7 @@ else
 		<td><?php  echo $datosexa[1]; ?><input name="metodo" id="metodo" type="hidden" value="<?php  echo $datosexa[1]; ?>" /></td>
 	  </tr>
 	  <tr>
-		<td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
+		<td height="3" colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
 	  </tr>
 	<?php  
 		$caractexa=$exa->consul_caract_examen($examen);
@@ -312,7 +312,7 @@ else
 				<td height="82" colspan="4" align="center"><div style="background-position:center">Observación:</div><textarea name="obs" cols="70" rows="3" id="obs"></textarea></td>
 	  </tr>
 	  <tr>
-		<td height="3" colspan="4"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
+		<td height="3" colspan="4"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
 	  </tr>
 	  <tr class="texto">
 		<td colspan="2">

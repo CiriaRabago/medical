@@ -306,9 +306,7 @@ document.form1.submit();
 <input type="hidden" name="elim" id="elim" value="0" />
 
 <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr>
-    <td height="3" colspan="2"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
-  </tr>
+  
   <tr bgcolor="#E3E3C6">
     <td height="55" bgcolor="#E3E3C6" ><div align="left"><img src="imagenes/Logo1.png" /></div>
 	  </td>
@@ -324,9 +322,7 @@ document.form1.submit();
 	  <span class="textoN">ORDEN No. </span>: <?php  echo $ordenver; ?><input name="orden" id="orden" type="hidden" value="<?php  echo $ordenver; ?>" />
 	</td>
     </tr>
-	  <tr>
-    <td height="3" colspan="2"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
-  </tr>
+	 
   <tr>
     <td height="3" colspan="2"><img src="imagenes/blanco.gif" width="100%" height="3" /></td>
   </tr>
@@ -362,9 +358,8 @@ document.form1.submit();
 <?php 	} ?>
 	</td>
   </tr>
-  <tr>
-    <td height="3" colspan="2"><img src="imagenes/naranja.gif" width="100%" height="3" /></td>
-  </tr>
+  
+  
   <tr>
     <td height="3" colspan="2" align="center" class="td-buttons">  
 	    <a href="#" onclick="agregar();" class="button" alt="Nuevo"  > <i class="fa fa-plus" aria-hidden="true"></i> Agregar </a>

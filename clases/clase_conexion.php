@@ -8,7 +8,7 @@ OBJETIVO: REALIZAR LA CONEXION A LA BASE DE DATOS
 
 function Conectarse()
 {
-	if (!($link=mysql_connect("localhost","root","temporal")))
+	if (!($link=mysql_connect("192.168.0.12","root","temporal")))
 	{
 		echo "Error conectando a la base de datos.";
 		exit();

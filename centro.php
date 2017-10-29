@@ -37,7 +37,7 @@ document.getElementById('USUARIO').focus();
 <form id="form1" name="form1" method="post" action="ingresar.php">
   <table width="533" height="169" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#D4D0C8" bgcolor="#FFFFFF">
     <tr bordercolor="#CCCCCC" bgcolor="#00CCCC" class="titulofor">
-      <td height="26" colspan="3" ><div align="center" class="TituloF">INICIO DE SESIóN </div></td>
+      <td height="26" colspan="3" ><div align="center" class="TituloF">INICIO DE SESION</div></td>
     </tr>
     <tr>
       <td width="273" height="26" style="padding-top:20px"><div align="right" class="Estilo2 Estilo3 Estilo9 Estilo13 Estilo15 Estilo21">

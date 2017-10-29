@@ -147,7 +147,7 @@ function modf_servicio()
 				<td colspan="6"><div id="servi'.$row[0].'" align="center" style="display:none">';
 				if($produc!=false && ($nume_prods>0))
 				{  
-					$HTML.='<table width="400" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#F9D5B2; border:border-width:thin; border-style: double; border-color: #F0953D">';
+					$HTML.='<table width="400" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#cfe7f9; border:border-width:thin; border-style: double; border-color: #73b0dc">';
 					while ($row2 = mysql_fetch_row($produc))
 		        	{ $HTML.='<tr class="texto"><td width="320"><div align="left">'.$row2[0].'</div></td>
 						<td width="80"><div align="left">'.$row2[1].'</div></td></tr>'; }

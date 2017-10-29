@@ -50,7 +50,7 @@ function mostrar(id,nm)
 
 function expand(el){
   x = document.getElementsByClassName("option-menu");
- console.info(el.childNodes[1].innerHTML);
+ 
  if( el.childNodes[1].innerHTML == '<i class="fa fa-angle-down" aria-hidden="true"></i>' )
  	el.childNodes[1].innerHTML="<i class='fa fa-angle-right' aria-hidden='true'></i>";
  else{
@@ -74,7 +74,7 @@ function expand(el){
 <style type="text/css">
 
 body {
-	background-color: #2a2e3d;
+	background-color: #004f75;
 	margin-left: 0px;
 	margin-right: 0px;
 	font-family: sans-serif;

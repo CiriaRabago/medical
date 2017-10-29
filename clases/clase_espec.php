@@ -99,7 +99,7 @@ class especialidad
 				<td colspan="3"><div id="refea'.$row[0].'" align="center" style="display:none">';
 				if($refes!=false && ($nume_refes>0))
 				{  
-					$HTML.='<table width="500" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#F9D5B2; border:border-width:thin; border-style: double; border-color: #F0953D">';
+					$HTML.='<table width="500" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#cfe7f9; border:border-width:thin; border-style: double; border-color: #73b0dc">';
 					while ($row2 = mysql_fetch_row($refes))
 		        	{ 
 						$cadena=implode('/*',$row2);

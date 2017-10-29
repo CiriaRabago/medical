@@ -115,8 +115,8 @@ function imprimir(ventana)
 		else
 			$nomemp=$rownev[1];
 		?>
-  <tr><td colspan="4"><img src="imagenes/naranja.gif" height="1" width="100%"></td></tr>
-  <tr height="20" class="textoN" onClick="ver_visit(<?php  echo $rowvva[0]; ?>)" style="cursor:hand" bgcolor="#F9D5B2">
+  <tr><td colspan="4"><img src="imagenes/blanco.gif" height="1" width="100%"></td></tr>
+  <tr height="20" class="textoN" onClick="ver_visit(<?php  echo $rowvva[0]; ?>)" style="cursor:hand" bgcolor="#cfe7f9">
     <td><?php  echo $rowvva[1]; ?></td>
 	<td><?php  echo $nomemp; ?></td>
 	<td><?php  echo $rowvva[2]; ?></td>
