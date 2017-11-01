@@ -192,7 +192,7 @@ if($_POST['ingreso']==1)
 	}
 	else
 	   echo "<script>alert('Usuario NO registrado');document.form1.submit();</script>"; ?>
-	<tr><td colspan="2" align="center">
+	<tr><td colspan="2" align="center" class="td-buttons">
 	<a href="#" onclick="Guardar();" class="button-save" alt="Guardar"  > <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar </a>
 <a href="#" onclick="Salir();" class="button" alt="Cerrar"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Volver </a>
 			</td></tr>

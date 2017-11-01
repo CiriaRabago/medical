@@ -32,7 +32,7 @@ function eliminar()
 	}
 	else
 	{	
-		resp=confirm("驴Desea Eliminar el registro Seleccionado?");
+		resp=confirm("緿esea Eliminar el registro Seleccionado?");
 		if (resp==true)
 		{	
 			document.form1.ocu_e.value=1;
@@ -126,10 +126,10 @@ function ver_modif(cadena)
 ?>
   <table width="619" border="0" align="center" bgcolor="#FFFFFF">
     <tr class="titulofor">
-      <td colspan="3"><div align="center">Diagn贸stico</div></td>
+      <td colspan="3"><div align="center">Diagn髎tico </div></td>
     </tr>
     <tr>
-      <td width="73" class="etiqueta">Diagn贸stico:</td>
+      <td width="73" class="etiqueta">Diagn髎tico:</td>
       <td width="367" class="texto"><label>
         <textarea name="nom" cols="70" rows="4" class="texto" id="nom" onkeypress="caracter(0);"></textarea>
         
@@ -138,7 +138,7 @@ function ver_modif(cadena)
         <div id="caract">0 caracteres.</div>
       <span class="textoN">M&aacute;ximo 200 caracteres.</span></td></tr>
     <tr>
-      <td height="71" class="etiqueta">Descripci贸n</td>
+      <td height="71" class="etiqueta">Descripci髇</td>
       <td colspan="2" class="texto"><label>
         <textarea name="des" cols="70" rows="4" class="texto" id="des"></textarea>
       </label></td>
@@ -177,7 +177,7 @@ function ver_modif(cadena)
  $ver=$dia->ver_diagnostico();
         if ($ver==false)
 		{
-		   echo "<script>alert('Error para mostrar los Diagn贸sticos');</script>";
+		   echo "<script>alert('Error para mostrar los Diagn髎ticos');</script>";
 		} 
 		else
 		{

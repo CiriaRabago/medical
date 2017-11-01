@@ -35,7 +35,7 @@ function soloNumeros(evt){
    	var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
  	((evt.which) ? evt.which : 0));
   	if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-  		alert("Solo se permiten nÃºmeros en este campo.");
+  		alert("Solo se permiten números en este campo.");
  		return false;
   	}
 	return true;
@@ -48,7 +48,7 @@ function eliminar()
 	}
 	else
 	{	
-		resp=confirm("Â¿Desea Eliminar el registro Seleccionado?");
+		resp=confirm("¿Desea Eliminar el registro Seleccionado?");
 		if (resp==true)
 		{	
    			document.form1.ocu_e.value=1;
@@ -191,7 +191,7 @@ function fotox()
  ?>
   <table width="649" border="0" align="center">
     <tr class="titulofor">
-      <td height="30" colspan="4"><div align="center" class="titulofor">MÃ©dico</div></td>
+      <td height="30" colspan="4"><div align="center" class="titulofor">Médico </div></td>
     </tr>
     <tr>
       <td class="etiqueta">RIF / Cedula: </td>

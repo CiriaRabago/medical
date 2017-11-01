@@ -58,7 +58,7 @@ function soloNumeros(evt){
 <form id="form1" name="form1" method="post" action="mantenimiento.php">
     <?php 
 			     $ver='style="display:none"';
-           
+
 				 $bus= new usuario($_SESSION["cedu_usu"],'','','','','','','');
 			     $CAD= $bus->buscar_usuario();
 				 if ($CAD!='FALSE')
@@ -127,7 +127,8 @@ function soloNumeros(evt){
         </span></td>
       </tr>
       <tr>
-        <td colspan="2" class="Etiqueta td-buttons"><div align="center"><span class="textoN">
+        <td colspan="2" class="Etiqueta td-buttons"><div align="center">
+        <span class="textoN" >
           <a href="#" onclick="Guardar();" class="button-save" alt="Guardar"  > <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar </a>
 
 
