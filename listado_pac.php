@@ -102,7 +102,7 @@ function soloNumeros(evt){
    	var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
  	((evt.which) ? evt.which : 0));
   	if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-  		alert("Solo se permiten nÃºmeros en este campo.");
+  		alert("Solo se permiten números en este campo.");
  		return false;
   	}
 	return true;
@@ -117,17 +117,17 @@ function irpdf(pag)
 function ver1()
 {
 	if (document.getElementById("fna3").value<1850)
-		alert("AÃ±o de Inicio Erroneo");
+		alert("Año de Inicio Erroneo");
 }
 function ver2()
 {
 	if (document.getElementById("fnf3").value<1850)
-		alert("AÃ±o de Fin Erroneo");
+		alert("Año de Fin Erroneo");
 }
 
 function inac_vis(visit)
 {
-	if(confirm("Â¿Desea Eliminar el registro Seleccionado?"))
+	if(confirm("¿Desea Eliminar el registro Seleccionado?"))
 	{
 		document.getElementById("elimvis").value=visit;
 		document.getElementById('cargar').innerHTML = "<img src='imagenes/loader.gif' />";
@@ -421,8 +421,8 @@ function inac_vis(visit)
    		$cont=0;
 		if($reg!=false)
 		{
-			$titulo='LISTADO DE ATENCIÃ“N';
-			if($_POST['estado']!='') $titulo.='<br>'.$_POST['nsta'];
+			$titulo='LISTADO DE ATENCIÓN';
+			if($_POST['estado']!='') $titulo.='<br> '.$_POST['nsta'];
 			if($_POST['ocu_fi']!='') $titulo.='<br>DESDE: '.$_POST['fna1'].'-'.$_POST['fna2'].'-'.$_POST['fna3'];
 			if($_POST['ocu_ff']!='') $titulo.=' HASTA: '.$_POST['fnf1'].'-'.$_POST['fnf2'].'-'.$_POST['fnf3'];
 			if($_POST['servicio']!='') $titulo.='<br>EN EL SERVICIO: '.$_POST['nser'];
@@ -436,7 +436,7 @@ function inac_vis(visit)
 			  <td width="1040" colspan="12" align="center"><?php  echo $titulo; ?></td>
 			</tr>	
 			<tr class="titulorep">
-			  <td width="20">NÂ°</td>
+			  <td width="20">N°</td>
 			  <td width="70">FECHA</td>
 			  <td width="70">CEDULA</td>
 			  <td width="150">NOMBRE</td>
@@ -497,7 +497,7 @@ function inac_vis(visit)
       </div>
 	<?php 	}
 		else
-		{ echo '<br><p class="textoN" align="center">No se encontrÃ³ ninguna coincidencia</p>'; }?>
+		{ echo '<br><p class="textoN" align="center">No se encontró ninguna coincidencia</p>'; }?>
 <?php 	} ?>
 
 
