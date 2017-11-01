@@ -48,7 +48,7 @@ function buscar()
 	 alert("Debe ingresar un número de cédula");
 }
 
-function guardar()
+function Guardar()
 {  
 	if (document.getElementById("tipo").value!='0' && document.getElementById("clave").value!='' && document.getElementById("conclave").value!='')
 	{
@@ -256,7 +256,7 @@ function soloNumeros(evt){
             <p align="center" class="Etiqueta">El Usuario ha sido Registrado Satisfactoriamente </p>
             <p align="center" class="Etiqueta">"BIENVENIDO"</p>
           </div>            
-          <div align="center"><a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Salir"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a></div></td>
+          <div align="center"><a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Salir"  >  Cerrar </a></div></td>
         </tr>
       </table>
 </form>

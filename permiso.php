@@ -193,10 +193,8 @@ if($_POST['ingreso']==1)
 	else
 	   echo "<script>alert('Usuario NO registrado');document.form1.submit();</script>"; ?>
 	<tr><td colspan="2" align="center">
-	<img src="imagenes/p_guardar1.gif" width="140" height="50" style="cursor:hand" onclick="Guardar();" 
-		onmouseover="this.src='imagenes/a_guardar1.gif'"  onmouseout="this.src='imagenes/p_guardar1.gif'"/>
-<img src="imagenes/p_salir1.gif" alt="salir al men&uacute; de an&aacute;lisis" width="140" height="50" style="cursor:hand" onclick="Salir()" 
-		onmouseover="this.src='imagenes/a_salir1.gif'"  onmouseout="this.src='imagenes/p_salir1.gif'"/>
+	<a href="#" onclick="Guardar();" class="button-save" alt="Guardar"  > <i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar </a>
+<a href="#" onclick="Salir();" class="button" alt="Cerrar"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Volver </a>
 			</td></tr>
 	</table>
 <?php 
@@ -253,8 +251,8 @@ if($_POST['ingreso']==1)
 		<tr>
 		  <td colspan="3" class="td-buttons"><div align="center">
 
-<a href="#" onclick="validar();" class="button-add" alt="Ingresar"  > <i class="fa fa-plus" aria-hidden="true"></i> Ingresar </a>
-<a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Salir"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> Salir </a>
+<a href="#" onclick="validar();" class="button-add" alt="Buscar"  > <i class="fa fa-search" aria-hidden="true"></i> Buscar </a>
+<a href="#" onclick="top.mainFrame.location.href='salir.php'" class="button-close" alt="Salir"  >  Cerrar </a>
 			</div></td>
 		</tr>
 	  </table>

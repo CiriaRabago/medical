@@ -65,7 +65,7 @@ class menu_perm
 			$resulta=mysql_query($sqla,$this->conexion);
 		    while ($rowa = mysql_fetch_row($resulta))
 		    {
-				$HTML.='<tr height="22" bgcolor="#F7D49E" ><td width="175" height="22" >'.$rowa[2].'</td>';
+				$HTML.='<tr height="22" bgcolor="#6da6c1" ><td width="175" height="22" >'.$rowa[2].'</td>';
 				if($rowa[4] !='')
 				{ 
 				  $i++;
@@ -102,7 +102,7 @@ class menu_perm
 				$resultb=mysql_query($sqlb,$this->conexion);
 				while ($rowb = mysql_fetch_row($resultb))
 				{
-					$HTML.='<tr height="22" bgcolor="#FDEACE" ><td width="175" height="22" >&nbsp;&nbsp;'.$rowb[2].'</td>';
+					$HTML.='<tr height="22" bgcolor="#8cc1e4" ><td width="175" height="22" >&nbsp;&nbsp;'.$rowb[2].'</td>';
 					if($rowb[4] !='')
 					{
 						  $i++;
@@ -139,7 +139,7 @@ class menu_perm
 					$resultc=mysql_query($sqlc,$this->conexion);
 					while ($rowc = mysql_fetch_row($resultc))
 					{
-						$HTML.='<tr height="22" bgcolor="#FFF4E1"><td width="175" height="22">&nbsp;&nbsp;&nbsp;&nbsp;'.$rowc[2].'</td>';
+						$HTML.='<tr height="22" bgcolor="#cbdeeb"><td width="175" height="22">&nbsp;&nbsp;&nbsp;&nbsp;'.$rowc[2].'</td>';
 						if($rowc[4] !='')
 						{
 							  $i++;

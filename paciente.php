@@ -6,7 +6,7 @@ include "clases/clase_paciente.php";
 include "clases/clase_beneficiario.php";
 include "clases/clase_benef.php";
 include "clases/clase_pac_req.php";
-$fecha_ac= @date("Y-m-d");//fecha
+$fecha_ac= date("Y-m-d");//fecha
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,7 +16,6 @@ $fecha_ac= @date("Y-m-d");//fecha
 <link href="estilolab.css" rel="stylesheet" type="text/css">
 <link href="churchil.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <style type="text/css">
 <!--
 .Estilo1 {
@@ -26,14 +25,14 @@ $fecha_ac= @date("Y-m-d");//fecha
 .Estilo2 {color: #FF0000}
 -->
 </style>
-<link href="../laboratorio/estilolab.css" rel="stylesheet" type="text/css">
+
 </head>
-<script>
+<script type="text/javascript">
 function mostrarVentana()
 {
     var ventana = document.getElementById('miVentana'); // Accedemos al contenedor
-    ventana.style.marginTop = "100px"; // Definimos su posiciÃ³n vertical. La ponemos fija para simplificar el cÃ³digo
-    ventana.style.marginLeft = ((document.body.clientWidth-350) / 2) +  "px"; // Definimos su posiciÃ³n horizontal
+    ventana.style.marginTop = "100px"; // Definimos su posición vertical. La ponemos fija para simplificar el código
+    ventana.style.marginLeft = ((document.body.clientWidth-350) / 2) +  "px"; // Definimos su posición horizontal
     ventana.style.display = 'block'; // Y lo hacemos visible
 }
 
@@ -132,7 +131,7 @@ function Guardar()
 			}
 		}
 		else
-		alert("Falta ingresar el Cargo y la fecha que ingresÃ³ a la empresa");
+		alert("Falta ingresar el Cargo y la fecha que ingresó a la empresa");
 	}
 	else
 	{	if (document.form1.ocu_N.value==0)//modificar
@@ -164,12 +163,12 @@ function ver_modif(cadena)
 	document.getElementById("te2").value=trozos[8];
 	document.getElementById("cor").value=trozos[9];
 	var fecha=new String(trozos[10]);
-	var aÃ±o = fecha.substr(0, 4);
+	var año = fecha.substr(0, 4);
 	var  mes = fecha.substr(5, 2); 
 	var dia = fecha.substr(8, 2);
 	document.getElementById("fna1").value=dia;
 	document.getElementById("fna2").value=mes;
-	document.getElementById("fna3").value=aÃ±o;
+	document.getElementById("fna3").value=año;
 	document.getElementById("fing").value=trozos[15];
 	document.getElementById("edo").value=trozos[11];
 	document.getElementById("cargo").value=trozos[14];
@@ -185,7 +184,7 @@ function soloNumeros(evt){
    	var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
  	((evt.which) ? evt.which : 0));
   	if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-  		alert("Solo se permiten nÃºmeros en este campo.");
+  		alert("Solo se permiten números en este campo.");
  		return false;
   	}
 	return true;
@@ -198,7 +197,7 @@ function eliminar()
 	}
 	else
 	{	
-		resp=confirm("Â¿Desea Eliminar el registro Seleccionado?");
+		resp=confirm("¿Desea Eliminar el registro Seleccionado?");
 		if (resp==true)
 		{	
 			document.form1.ocu_e.value=1;
@@ -223,7 +222,7 @@ function buscar()
 	 document.form1.submit();
  }
  else
-   	alert('Debe indicar el NÃºmero de Cedula');
+   	alert('Debe indicar el Número de Cedula');
 
 }
 function verf_foto()
@@ -243,12 +242,12 @@ function verf_foto()
 function ver()
 {
 	if (document.getElementById("fna3").value<1850)
-		alert("AÃ±o de nacimiento erroneo");
+		alert("Año de nacimiento erroneo");
 }
 
 </script>
 <body onload="posicion();">
-<?php  ?>
+
 <form name="form1" id="form1" method="post" action="paciente.php" enctype="multipart/form-data">
   <div align="center">
   <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="500" height="255" align="baseline">
@@ -292,12 +291,12 @@ $datos[11]='0';
 $datos[12]='0';
 $datos[13]='0';
 $datos[16]='0';
-
 $pac= new paciente($_POST["ced"],'','','','','','','','','','','','','','');
 
   if ($_POST["ocu_b"]=='1')
   {
   		$bus=$pac->buscar();
+  		
 		if ($bus!='false')
 		{	
 			$datos=explode('**',$bus);
@@ -305,7 +304,7 @@ $pac= new paciente($_POST["ced"],'','','','','','','','','','','','','','');
 			$_POST["imafot"]="fotos"."/".$datos[0].".jpg";
 			$dian=substr($datos[10],8,2);
 			$mesn=substr($datos[10],5,2);
-			$aÃ±on=substr($datos[10],0,4);
+			$añon=substr($datos[10],0,4);
 		}
 		else
 			echo '<script>alert("El Paciente no se encuentra Registrado");</script>';
@@ -573,7 +572,7 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
 </label>
 /
 <label>
-<input name="fna3" type="text" class="texto" id="fna3"  value="<?php  echo $aÃ±on; ?>"onChange="ver()" onkeypress='return soloNumeros(event)' size="8" maxlength="4">
+<input name="fna3" type="text" class="texto" id="fna3"  value="<?php  echo $añon; ?>"onChange="ver()" onkeypress='return soloNumeros(event)' size="8" maxlength="4">
 </label>
 <span class="Estilo2"><strong>
 <input name="ocu_fi" type="hidden" value="" />
@@ -588,7 +587,7 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
         <option value="S">Soltero(a)</option>
         <option value="V">Viudo(a)</option>
         <option value="D">Divorciado(a)</option>
-        <option value="U">UniÃ³n Libre</option>
+        <option value="U">Unión Libre</option>
       </select> <script> document.getElementById("edo").value="<?php  echo $datos[11]; ?>"; </script></td>
     </tr>
     <tr>
@@ -630,7 +629,7 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
       <td colspan="3" class="texto"><label>
       <input name="fing" type="text" class="texto" id="fing" size="20" maxlength="10" value="<?php  echo $datos[15]; ?>">
       </label>
-        <span class="Estilo2"><strong>* </strong></span>Ejemplo: 10 meses Ã³ 2 aÃ±os</td>
+        <span class="Estilo2"><strong>* </strong></span>Ejemplo: 10 meses ó 2 años</td>
     </tr>
     <tr>
       <td class="etiqueta">Cargo:</td>
@@ -687,14 +686,14 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
 <div id="miVentana" style="position: fixed; width: 450px; height: 300px; top: 0; left: 0; font-family:Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; border: #000000 3px solid; background-color: #FAFAFA; color: #000000; display:none;">
  <div style="font-weight: bold; text-align: left; color: #FFFFFF; padding: 5px; background-color:#FF8C00" align="center"><img src="imagenes/inf_medico.png" width="60" height="60"> &nbsp;&nbsp;Requisitos Solicitados al Beneficiario</div>
  <p style="padding: 5px; text-align: justify; line-height:normal"><textarea id="resuL_infor" readonly="readonly" name="resuL_infor" cols="60" rows="13">Titular Activo:
- * CÃ©dula de Identidad del Titular
+ * Cédula de Identidad del Titular
  * Copia del carnet, Constancia de trabajo o recibo de pago (Vigente).
  Titular Jubilado:
- * CÃ©dula de Identidad del Titular
- * Copia de la resoluciÃ³n de jubilaciÃ³n
+ * Cédula de Identidad del Titular
+ * Copia de la resolución de jubilación
  BENEFICIARIOS:
- * Copia de cÃ©dula del Beneficiario
- * Copia de cÃ©dula del Titular
+ * Copia de cédula del Beneficiario
+ * Copia de cédula del Titular
  * Copia de Partida de nacimiento Identificando(Madre-Padre-Hijo(a))
  * Copia de Acta de matrimonio o Constancia de concubinato(Esposo(a))
  </textarea></p>

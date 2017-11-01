@@ -58,6 +58,7 @@ function soloNumeros(evt){
 <form id="form1" name="form1" method="post" action="mantenimiento.php">
     <?php 
 			     $ver='style="display:none"';
+           
 				 $bus= new usuario($_SESSION["cedu_usu"],'','','','','','','');
 			     $CAD= $bus->buscar_usuario();
 				 if ($CAD!='FALSE')

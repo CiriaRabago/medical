@@ -27,18 +27,18 @@ if($valid == true)
 $us=$verif->consult_usu();
 if ($us=='0')
 		{  
-			// session_unregister("cedu_usu");
-			// session_unregister("tipo_usu");
-			// session_unregister("nom_usu");
+			session_unregister("cedu_usu");
+			session_unregister("tipo_usu");
+			session_unregister("nom_usu");
 			session_destroy();
 		   echo '<script>alert("Usuario o Contraseña Incorrecto")</script>';
            echo '<script>document.ing.submit()</script>';
 	    }
 if (($us!='0') && ($us!='1'))
 		{   
-			// session_register("cedu_usu");
-			// session_register("tipo_usu");
-			// session_register("nom_usu");
+			session_register("cedu_usu");
+			session_register("tipo_usu");
+			session_register("nom_usu");
 			$vec=explode('**',$us);
 			$_SESSION["cedu_usu"]=$vec[0];
 			$_SESSION["tipo_usu"]=$vec[1];
@@ -54,9 +54,9 @@ if (($us!='0') && ($us!='1'))
 	   }
 if ($us=='1')
 		{  
-			// session_unregister("cedu_usu");
-			// session_unregister("tipo_usu");
-			// session_unregister("nom_usu");
+			session_unregister("cedu_usu");
+			session_unregister("tipo_usu");
+			session_unregister("nom_usu");
 			session_destroy();
 		   echo '<script>alert("Usuario Desactivado")</script>';
            echo '<script>document.ing.submit()</script>';
