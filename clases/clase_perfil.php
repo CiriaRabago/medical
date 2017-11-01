@@ -2,11 +2,11 @@
 /* 
 CLASE PERFILES
 CREADA POR: MONICA BATISTA
-FECHA DE CREACIÃ“N: 02/09/2010
-OBJETIVO: RECOPILACIÃ“N DE FUNCIONES RELATIVAS A LOS PERFILES DE EXAMENTES
+FECHA DE CREACIÓN: 02/09/2010
+OBJETIVO: RECOPILACIÓN DE FUNCIONES RELATIVAS A LOS PERFILES DE EXAMENTES
 */
 
-/* DECLARACIÃ“N DE LA CLASE */
+/* DECLARACIÓN DE LA CLASE */
 class perfil
 {
    var $cod;
@@ -15,7 +15,7 @@ class perfil
    var $pre;
    
    
-/* FUNCIÃ“N CONSTRUCTORA */  
+/* FUNCIÓN CONSTRUCTORA */  
    function perfil($c, $a, $d, $p)
    {
 		$this->conexion=Conectarse();
@@ -25,7 +25,7 @@ class perfil
 		$this->pre=$p;
 	} //fin del constructor
 	
-/* FUNCIÃ“N PARA INSERTAR UN PERFIL */  	
+/* FUNCIÓN PARA INSERTAR UN PERFIL */  	
 	function ins_perfil($tip)
 	{$zone=(3600*-4.5); 
 $hoy=gmdate("Y-m-d H:i:s", time() + $zone);
@@ -77,7 +77,7 @@ function modf_perfil($tip)
 			   return false;
 	} // fin de funcion  modificar perfiles
 
-/* FUNCIÃ“N PARA VISUALIZAR UN LISTADO DE PERFILES EXISTENTES */  		
+/* FUNCIÓN PARA VISUALIZAR UN LISTADO DE PERFILES EXISTENTES */  		
 	function ver_perfil()
 	{
 	   	$sql="SELECT id_perfil, nomb_perfil, desc_perfil, precio, tipo_perfil from slc_perfil where estatus_perfil=0 order by nomb_perfil";
@@ -89,7 +89,7 @@ function modf_perfil($tip)
 		   $HTML.='<table width="500" border="0" cellpadding="1" cellspacing="1" align="center">
 			  <tr class="titulorep">
 				<td width="200"><div align="left">Nombre</div></td>
-				<td width="300"><div align="left">DescripciÃ³n</div></td>
+				<td width="300"><div align="left">Descripción</div></td>
 			  </tr>';
 
 		   while ($row = mysql_fetch_row($result))
@@ -108,7 +108,7 @@ function modf_perfil($tip)
 	} // fin de funcion ver perfiles
 
 
-/* FUNCIÃ“N PARA LLENAR COMBO DE PERFILES */  		
+/* FUNCIÓN PARA LLENAR COMBO DE PERFILES */  		
 	function combo_perfil()
 	{
 	   	$sql="SELECT 

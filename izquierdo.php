@@ -7,7 +7,7 @@ include "clases/clase_menu.php";
 <html>
 <head>
 <title>Documento sin t&iacute;tulo</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link href="estilolab.css" rel="stylesheet" type="text/css">
 <link href="churchil.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

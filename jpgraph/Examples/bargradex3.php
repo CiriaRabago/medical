@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 // Example for use of JpGraph, 
 // ljp, 01/03/01 20:32
 require_once ('jpgraph/jpgraph.php');

@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 $im = @imagecreate (200, 100) or die ( "cannot create a new gd image.");
 $background_color = imagecolorallocate ($im, 240, 240, 240);
 $border_color = imagecolorallocate ($im, 50, 50, 50);

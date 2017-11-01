@@ -2,11 +2,11 @@
 /* 
 CLASE SERVICIOS
 CREADA POR: MONICA BATISTA
-FECHA DE CREACI脫N: 02/09/2010
-OBJETIVO: RECOPILACI脫N DE FUNCIONES RELATIVAS A LOS SERVICIOS
+FECHA DE CREACI覰: 02/09/2010
+OBJETIVO: RECOPILACI覰 DE FUNCIONES RELATIVAS A LOS SERVICIOS
 */
 
-/* DECLARACI脫N DE LA CLASE */
+/* DECLARACI覰 DE LA CLASE */
 class servicio
 {
    var $cod;
@@ -18,7 +18,7 @@ class servicio
    var $ico;
    var $pre;
    
-/* FUNCI脫N CONSTRUCTORA */  
+/* FUNCI覰 CONSTRUCTORA */  
    function servicio($c, $n, $d, $s, $a, $v, $i, $p)
    {
 		$this->conexion=Conectarse();
@@ -32,7 +32,7 @@ class servicio
 		$this->pre=$p;
 	} //fin del constructor
 	
-/* FUNCI脫N PARA INSERTAR UN SERVICIO */  	
+/* FUNCI覰 PARA INSERTAR UN SERVICIO */  	
 	function ins_servicio()
 	{$zone=(3600*-4.5); 
 $hoy=gmdate("Y-m-d H:i:s", time() + $zone);
@@ -100,7 +100,7 @@ function modf_servicio()
 			   return false;
 	} // fin de funcion  modificar perfiles
 
-/* FUNCI脫N PARA VISUALIZAR UN LISTADO DE SERVICIOS EXISTENTES */  		
+/* FUNCI覰 PARA VISUALIZAR UN LISTADO DE SERVICIOS EXISTENTES */  		
 	function ver_servicios()
 	{
 	   	$sql="SELECT id_servicio, nomb_servicio, desc_servicio, agenda_servicio, vigilan_servicio, precio_servicio 
@@ -113,7 +113,7 @@ function modf_servicio()
 		   $HTML.='<table width="650" border="0" cellpadding="0" cellspacing="0" align="center">
 			  <tr class="titulorep">
 				<td width="200"><div align="left">Nombre</div></td>
-				<td width="250"><div align="left">Descripci贸n</div></td>
+				<td width="250"><div align="left">Descripci髇</div></td>
 				<td width="50"><div align="left">Posee Agenda</div></td>
 				<td width="50"><div align="left">Vigilancia</div></td>
 				<td width="60"><div align="left">Precio</div></td>
@@ -186,7 +186,7 @@ function modf_servicio()
 	} // fin de funcion ver servicios
 
 
-/* FUNCI脫N PARA LLENAR COMBO DE SERVICIOS */  		
+/* FUNCI覰 PARA LLENAR COMBO DE SERVICIOS */  		
 	function combo_servicios()
 	{
 	   	$sql="SELECT 
@@ -362,7 +362,7 @@ function eliminar_servicio($sql)
 			{   return false;}
 
 }
-	/********** DE AQUI EN ADELANTE CREADAS POR M脫NICA PARA LA VISITA **********/
+	/********** DE AQUI EN ADELANTE CREADAS POR M覰ICA PARA LA VISITA **********/
 	function ver_serv_LE()
 	{
 		$zone=(3600*-4.5); 
@@ -491,7 +491,7 @@ function eliminar_servicio($sql)
 		 }
 		 else 
 		 	return false;
-	} // Fin de la funci贸n listado_Atenc
+	} // Fin de la funci髇 listado_Atenc
 	function listado_fact($des,$has,$serv,$pac,$edo,$emp,$med)
 	{
 		$stiempo=' ';
@@ -562,7 +562,7 @@ function eliminar_servicio($sql)
 		 }
 		 else 
 		 	return false;
-	} // Fin de la funci贸n listado_Atenc
+	} // Fin de la funci髇 listado_Atenc
 	function listado_fact2($des,$has,$serv,$pac,$edo,$emp,$med)
 	{
 		$stiempo=' ';
@@ -614,7 +614,7 @@ function eliminar_servicio($sql)
 		 }
 		 else 
 		 	return false;
-	} // Fin de la funci贸n listado_Atenc
+	} // Fin de la funci髇 listado_Atenc
 	function listado_atenc_res($des,$has,$serv,$pac,$edo,$emp,$med)
 	{
 		$stiempo=' ';
@@ -679,7 +679,7 @@ function eliminar_servicio($sql)
 		 }
 		 else 
 		 	return false;
-	} // Fin de la funci贸n listado_Atenc_Res
+	} // Fin de la funci髇 listado_Atenc_Res
 
 	function ver_pac_LE()
 	{

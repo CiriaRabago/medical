@@ -1,5 +1,5 @@
 <script type="text/javascript" src="../javascript/js.js"></script>
-<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
 <link href="../estilos/estilos.css" rel="stylesheet" type="text/css" />
 <?php 
 session_start();

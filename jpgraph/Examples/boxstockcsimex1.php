@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 // Example of a stock chart
 require_once ('jpgraph/jpgraph.php');
 require_once ('jpgraph/jpgraph_stock.php');

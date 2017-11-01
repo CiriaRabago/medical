@@ -1,6 +1,6 @@
 <%	 byte[] utf8Bom =  new byte[]{(byte) 0xef, (byte) 0xbb, (byte) 0xbf};
 String utf8BomStr = new String(utf8Bom,"UTF-8");
-%><%=utf8BomStr%><?php xml version='1.0' encoding='UTF-8'?><%@ page language="java" contentType="text/xml; charset=UTF-8"
+%><%=utf8BomStr%><?php xml version='1.0' encoding='UTF-8'?><%@ page language="java" contentType="text/xml; charset=iso-8859-1"
     pageEncoding="UTF-8"%><%request.setCharacterEncoding("UTF-8");%><%@ include file="../Includes/DBConn.jsp" %><%@ page import="java.sql.Statement,java.sql.ResultSet"%><%
 	/*
 	This page generates the XML data for the Pie Chart contained in FrenchDBExample.jsp. 	

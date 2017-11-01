@@ -26,13 +26,11 @@ class PDF extends FPDF
 		function Footer()
 		{
 			//Posición: a 1,5 cm del final
-			$this->SetY(-10);
-			//Arial italic 8
+			$this->SetY(-16);
 			$this->SetFont('Arial','BI',8);
-			//Número de página
-			//$this->Cell(0,0,'Página '.$this->PageNo().'/{nb}',0,0,'C');
-			$this->Cell(0,0,'También somos Farmacia!! Edif. Don Vale planta baja local 04 "Farmacia El Santuario CA"',0,0,'C');
-			$this->SetY(-7);
+			$this->Cell(0,0,utf8_decode('Carrera 6 barrio Lagunitas local 1-22, San antonio - edo. Táchira /  '),0,0,'C');
+			$this->SetY(-12);
+			$this->Cell(0,0,utf8_decode('Carrera 21 entre pasaje acueducto y calle 12, edificio Tiyity planta baja - San Cristóbal edo. Táchira '),0,0,'C');
 			//$this->Cell(0,0,'unidadmedicasanluis@hotmail.com',0,0,'C');
 
 		}

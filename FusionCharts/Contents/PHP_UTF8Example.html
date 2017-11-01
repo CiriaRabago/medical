@@ -1,7 +1,7 @@
 <?php xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>FusionCharts Free Documentation</title>
 <link rel="stylesheet" href="Style.css" type="text/css" />
 </head>
@@ -105,7 +105,7 @@
         &lt;/HTML&gt;</p>
 <p>This code is similar to the code present in <span class="codeInline">BasicExample/SimpleChart.php.</span> As you would notice, there is nothing specific to be done in the Chart container page to ensure UTF-8 output. As a practice, you  could have the &lt;meta&gt; tag in the head section of the html with the charset defined as UTF-8 as shown below.<br />
             <br />
-            <span class="codeBlock">&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt; </span></p>
+            <span class="codeBlock">&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt; </span></p>
         <p class="text">That's the only effort involved in rendering a chart with UTF8 characters with data from a xml file. The chart with Japanese text will look as shown:</p>
         <p class="text"><img src="Images/Code_JapXMLFileChart.jpg" width="577" height="274" class="imageBorder" /> </p>
         <p class="text">Let' move on to our next example where we get the data from the database and dynamically create the xml. </p>
@@ -126,7 +126,7 @@
             ?&gt;<br />
             &lt;HTML&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;HEAD&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;/&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=iso-8859-1&quot;/&gt; <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TITLE&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FusionCharts Free - UTF8 &#26085;&#26412;&#35486; (Japanese) Database Example<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TITLE&gt;<br />
@@ -180,7 +180,7 @@
 &lt;/HTML&gt;</p>
         <p class="text">In the above Chart container page, as far as UTF-8 specific changes is concerned, only the &lt;meta&gt; tag in the head section of the html with the charset defined as UTF-8 as shown below: <br />
                 <br />
-                <span class="codeBlock">&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt; </span><br />
+                <span class="codeBlock">&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt; </span><br />
                 <br />
       </p>
         <p>Let's move on to PieDataJapanese.php which contains the code to connect to the database and retrieve data. Here is the code present in PieDataJapanese.php:</p>
@@ -233,7 +233,7 @@ include(&quot;../Includes/DBConn.php&quot;);<br />
     </span>$strXML .= &quot;&lt;/graph&gt;&quot;;<br />
     <br />
     <span class="codeComment">//Set Proper output content-type and charset</span><br />
-    header('Content-type: text/xml;charset=UTF-8');<br />
+    header('Content-type: text/xml;charset=iso-8859-1');<br />
     <br />
     <span class="codeComment">//Just write out the XML data<br />
     //NOTE THAT THIS PAGE DOESN'T CONTAIN ANY HTML TAG, WHATSOEVER</span><br />
@@ -255,7 +255,7 @@ This should be the first output from this php. </li>
         <p class="codeBlock"> mysql_query ( "SET&nbsp;NAMES&nbsp;'UTF8'" );&nbsp; </p>        
         <p> This will inform mysql that all incoming data are UTF-8, it will convert them into table/column encoding. Same will happen when mysql sends you the data back - they will be converted into UTF-8. </p>
         <p>You will also have to assure that you set the content-type response header to indicate the UTF-8 encoding of the page as shown:</p>
-        <p><span class="codeBlock">header('Content-type: text/xml;charset=UTF-8');</span> </p>
+        <p><span class="codeBlock">header('Content-type: text/xml;charset=iso-8859-1');</span> </p>
         <p>When we view the chart in the browser, it would look as under: </p>        
         <p> </p>
         <p><img src="Images/Code_JapDBChart.jpg" class="imageBorder" /> </p>

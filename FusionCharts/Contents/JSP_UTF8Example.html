@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>FusionCharts Free Documentation</title>
 <link rel="stylesheet" href="Style.css" type="text/css" />
 </head>
@@ -65,11 +65,11 @@
    <span class="codeInline">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; </span></p>
 	  <p class="text">As you would notice, the caption, x-axisname and names of the months in the xml are in Japanese. </p>
 	  <p>The jsp which uses this xml is JapaneseXMLFileExample.jsp which contains the following code:</p>
-	  <p class="codeBlock">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;<br />
+	  <p class="codeBlock">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=iso-8859-1&quot;<br />
 pageEncoding=&quot;UTF-8&quot;%&gt;<br />
 &lt;HTML&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;HEAD&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;/&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=iso-8859-1&quot;/&gt; <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TITLE&gt;FusionCharts Free - UTF8 &#26085;&#26412;&#35486; (Japanese) Example&lt;/TITLE&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="codeComment">&lt;%<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*You need to include the following JS file, if you intend to embed the chart using JavaScript.<br />
@@ -137,12 +137,12 @@ UTF8 &#26085;&#26412;&#35486; (Japanese) Example&lt;/h2&gt;<br />
 	  <ul>
 	    <li><span class="text">First the page encoding and charset have to be set as shown: <br />
 	        <br />
-	    </span> <span class="codeBlock">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+	    </span> <span class="codeBlock">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=iso-8859-1&quot;
 pageEncoding=&quot;UTF-8&quot;%&gt;<br />
 	    </span></li>
         <li>Next, it  is important to have the &lt;meta&gt; tag in the head section of the html with the charset defined as UTF-8 as shown below.<br />
 	      <br />
-	      <span class="codeBlock">&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt; </span><br />
+	      <span class="codeBlock">&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt; </span><br />
 	    </li>
     </ul>	  
 	  <p class="text">That's the only effort involved in rendering a chart with UTF8 characters with data from a xml file. The chart with Japanese text will look as shown:</p>
@@ -158,11 +158,11 @@ pageEncoding=&quot;UTF-8&quot;%&gt;<br />
     <p>Let's now shift our attention to the code that will interact with the database, fetch data and then render a chart. We will create two jsps - JapaneseDBExample.jsp and PieDataJapanese.jsp for this example. </p>    
     <p class="text">JapaneseDBExample.jsp will act as the chart container and PieDataJapanese.jsp will be the xml data provider.</p>
     <p class="text">The code contained in JapaneseDBExample.jsp is as follows:</p>
-    <p class="codeBlock"><strong>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;<br />
+    <p class="codeBlock"><strong>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=iso-8859-1&quot;<br />
     pageEncoding=&quot;UTF-8&quot;%&gt;</strong><br />
 &lt;HTML&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;HEAD&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;/&gt; </strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=iso-8859-1&quot;/&gt; </strong><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TITLE&gt;FusionCharts Free - UTF8 &#26085;&#26412;&#35486; (Japanese) Database Example&lt;/TITLE&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="codeComment">&nbsp;&nbsp;/*You need to include the following JS file, if you intend to embed the chart using JavaScript.<br />
@@ -233,17 +233,17 @@ pageEncoding=&quot;UTF-8&quot;%&gt;<br />
     <ul>
       <li>It is important to have the &lt;meta&gt; tag in the head section of the html with the charset defined as UTF-8 as shown below.<br />
         <br />
-        <span class="codeBlock">&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt; </span><br />
+        <span class="codeBlock">&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt; </span><br />
       </li>
       <li>The page encoding and charset need to be set with the following code: ( first line of the jsp)<br />
         <br />
-        <span class="codeBlock">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot;%&gt;</span><br />
+        <span class="codeBlock">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=iso-8859-1&quot; pageEncoding=&quot;UTF-8&quot;%&gt;</span><br />
         </li>
       </ul>    
     <p>Next, let us understand the code in PieDataJapanese.jsp</p>
     <p class="codeBlock">&lt;% byte[] utf8Bom = new byte[]{(byte) 0xef, (byte) 0xbb, (byte) 0xbf};<br />
       String utf8BomStr = new String(utf8Bom,&quot;UTF-8&quot;);<br />
-      %&gt;&lt;%=utf8BomStr%&gt;&lt;?xml version='1.0' encoding='UTF-8'?&gt;&lt;%@ page language=&quot;java&quot; contentType=&quot;text/xml; charset=UTF-8&quot;<br />
+      %&gt;&lt;%=utf8BomStr%&gt;&lt;?xml version='1.0' encoding='UTF-8'?&gt;&lt;%@ page language=&quot;java&quot; contentType=&quot;text/xml; charset=iso-8859-1&quot;<br />
 pageEncoding=&quot;UTF-8&quot;%&gt;&lt;%@ include file=&quot;../Includes/DBConn.jsp&quot; %&gt;&lt;%@ page import=&quot;java.sql.Statement,java.sql.ResultSet&quot;%&gt;&lt;%<br />
 <span class="codeComment">/*<br />
 This page generates the XML data for the Pie Chart contained in JapaneseDBExample.jsp. <br />
@@ -352,7 +352,7 @@ String strQuery=&quot;&quot;;<br />
       <li>Finally, the xml data should be output</li>
     </ol>    
     <p>Try not to put any empty lines or spaces in the output xml. You will also have to assure that you set the content-type response header to indicate the UTF-8 encoding of the page as shown:</p>
-    <p class="codeBlock">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/xml; charset=UTF-8&quot;
+    <p class="codeBlock">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/xml; charset=iso-8859-1&quot;
 pageEncoding=&quot;UTF-8&quot;%&gt;</p>
     <p>When we view the chart in the browser, it would look like this: </p>    
     <p> </p>

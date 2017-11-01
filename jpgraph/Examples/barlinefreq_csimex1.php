@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 //
 // Example of CSIM frequence bar that uses the cache
 //

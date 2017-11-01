@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <title>Class: Fusioncharts::Utf8ExampleController</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <meta http-equiv="Content-Script-Type" content="text/javascript" />
   <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
   <script type="text/javascript">
@@ -104,14 +104,14 @@ Steps to ensure correct UTF-8 output:
 </p>
 <ul>
 <li>&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;
-charset=utf-8&quot; /&gt; has to be present in the &lt;head&gt; section of
+charset=iso-8859-1&quot; /&gt; has to be present in the &lt;head&gt; section of
 the page which contains UTF8 characters. Notice that we have included this
 in the &quot;common.html.erb&quot; layout, so that it is avialable to all
 pages.
 
 </li>
 <li>Put this, headers[&quot;Content-Type&quot;] = &quot;text/xml;
-charset=utf-8&quot; in the action which is the XML provider. ( Here, <a
+charset=iso-8859-1&quot; in the action which is the XML provider. ( Here, <a
 href="Utf8ExampleController.html#M000025">pie_data_french</a> or <a
 href="Utf8ExampleController.html#M000022">pie_data_japanese</a> actions)
 

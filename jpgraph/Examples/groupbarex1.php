@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 // $Id: groupbarex1.php,v 1.2 2002/07/11 23:27:28 aditus Exp $
 require_once ('jpgraph/jpgraph.php');
 require_once ('jpgraph/jpgraph_bar.php');

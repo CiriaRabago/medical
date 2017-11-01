@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 // Illustration of the different patterns for bands
 // $Id: smallstaticbandsex6.php,v 1.1 2002/09/01 21:51:08 aditus Exp $
 require_once ('jpgraph/jpgraph.php');

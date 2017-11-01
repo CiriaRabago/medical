@@ -7,7 +7,7 @@ session_start();
 <head>
 <title>Documento sin t&iacute;tulo</title>
 <link href="estilolab.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link href="Estilos.css" rel="stylesheet" type="text/css" />
 </head>
 

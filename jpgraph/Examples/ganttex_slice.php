@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 // $Id: ganttex_slice.php,v 1.2 2002/07/11 23:27:28 aditus Exp $
 // Gantt example with sunday week start and only shows a partial graph
 require_once ('jpgraph/jpgraph.php');

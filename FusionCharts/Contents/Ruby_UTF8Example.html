@@ -1,7 +1,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>FusionCharts Documentation</title>
 <link rel="stylesheet" href="Style.css" type="text/css" />
 </head>
@@ -60,7 +60,7 @@
  <span class="codeInline">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; </span></p>
     <p class="text">As you would notice, the caption, x-axisname and names of the months in the xml are in Japanese. </p>
     <p class="text">Assuming that the Fusioncharts::Utf8ExampleController class has been created, we will define a function called japanese_xmlfile_example in this controller. The view used for this controller is the japanese_xmlfile_example.html.erb file. We will use the &quot;common&quot; layout for this view. It is important to have the &lt;meta&gt; tag in the head section of the html wih the charset defined as UTF-8 as shown below. This tag has been declared in the &quot;common.html.erb&quot; file, so that it is present in all the pages. </p>
-    <p class="codeBlock">&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt; </p>
+    <p class="codeBlock">&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt; </p>
     <p class="text">The code in the controller and view are given below. </p>    <p class="codeBlock"><b>Controller: <b>Fusioncharts::Utf8ExampleController</b><br/>
   Action: japanese_xmlfile_example<br>
       </b><span class="style1">class Fusioncharts::Utf8ExampleController &lt; ApplicationController</span><br>
@@ -116,7 +116,7 @@ render(:layout =&gt; &quot;layouts/common&quot;)<br>
 # Content-type for its view is set to text/xml and char-set to UTF-8.</span><br>
 <strong>def pie_data_japanese<br>
 </strong><br>
-<strong>headers[&quot;Content-Type&quot;] = &quot;text/xml; charset=utf-8&quot; # xml content with charset=uttf-8</strong><br>
+<strong>headers[&quot;Content-Type&quot;] = &quot;text/xml; charset=iso-8859-1&quot; # xml content with charset=uttf-8</strong><br>
 @factory_data = []<br>
         <br>
         <span class="codeComment"># Find all the factories</span><br>
@@ -156,7 +156,7 @@ str_xml+=&quot;&lt;/graph&gt;&quot;<br>
 #Create the chart - Pie 3D Chart with data from strXML<br>
 %&gt;&lt;%=str_xml%&gt;      </p>
       <p class="text">The action japanese_db_example and its view japanese_db_example.html.erb are very similar to default action of <span class="text"><b>Fusioncharts::DbDataUrlController</b></span> and corresponding default.html.erb view. Here we have used Japanese text for page heading etc. There is no UTF specific changes that need to be done to this action and its view. Let's move on to the pie_data_japanese action and its view. In pie_data_japanese action we have set the header with right content-type and charset as shown:</p>
-      <p class="text"><span class="codeBlock">headers[&quot;Content-Type&quot;] = &quot;text/xml; charset=utf-8&quot;</span></p>
+      <p class="text"><span class="codeBlock">headers[&quot;Content-Type&quot;] = &quot;text/xml; charset=iso-8859-1&quot;</span></p>
       <p class="text"><br>
       We have used the <span class="codeInline">JapaneseFactoryMaster</span> to find the factory names in Japanese. In the view pie_data_japanese.html.erb, we have built the xml as a string using <span class="codeInline">@factory_data</span> present in the controller. The steps followed in this page are:</p>
       <ul>

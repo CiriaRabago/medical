@@ -5,7 +5,7 @@ include("../Includes/FusionCharts.php");
 ?>
 <HTML>
 <HEAD>
-	<META http-equiv="Content-Type" content="text/html;charset=UTF-8"/> 
+	<META http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/> 
 	<TITLE>
 	FusionCharts Free - UTF8 日本語 (Japanese) Database Example
 	</TITLE>

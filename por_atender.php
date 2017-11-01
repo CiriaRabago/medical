@@ -7,7 +7,7 @@ include "clases/clase_visita.php";
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"  />
 <title>Documento sin t&iacute;tulo</title>
 <link href="estilolab.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
@@ -45,7 +45,7 @@ function atendio(idv,dv,sv)
 	
 	if(sv=='E' && document.getElementById('cmat'+idv).value=='')
 	{
-		alert('Debe Indicar una observaciÃ³n para eliminar el registro');
+		alert('Debe Indicar una observación para eliminar el registro');
 		return false;
 	}
 
@@ -67,7 +67,7 @@ function atendio(idv,dv,sv)
    	$ver=$ser->ver_serv_LE();
     if ($ver==false)
 	{
-		echo "<script>alert('No hay Pacientes en Espera de NingÃºn Servicio');</script>";
+		echo "<script>alert('No hay Pacientes en Espera de Ningún Servicio');</script>";
 	} 
 	else
 	{  
@@ -157,10 +157,10 @@ function atendio(idv,dv,sv)
 						<td width="40">'.$row2[8].'</td>
 						<td width="60">'.$row2[7].'</td>
 						<td width="200">'.$row2[11].'</td>
-						<td width="70"><span style="cursor:hand; text-decoration:underline" onclick="verat('.$row2[0].')">AtenciÃ³n</span>'.$cor.'</td>
+						<td width="70"><span style="cursor:hand; text-decoration:underline" onclick="verat('.$row2[0].')">Atención</span>'.$cor.'</td>
 					  </tr>
 					  <tr class="textoN" '.$color.' style="display:none;" id="at'.$row2[0].'" >
-						<td width="700" colspan="6" align="center" height="22">ObservaciÃ³n: <input class="texto" name="cmat'.$row2[0].'" id="cmat'.$row2[0].'" value="" type="text" size="50" /> 
+						<td width="700" colspan="6" align="center" height="22">Observación: <input class="texto" name="cmat'.$row2[0].'" id="cmat'.$row2[0].'" value="" type="text" size="50" /> 
 												   <input class="texto" name="aten'.$row2[0].'" id="aten'.$row2[0].'" value="Atendido" onclick="atendio('.$row2[0].','.$row2[6].','."'A'".')" type="button" />
 												   <input class="texto" name="inco'.$row2[0].'" id="inco'.$row2[0].'" value="Incompleto" onclick="atendio('.$row2[0].','.$row2[6].','."'I'".')" type="button" />
 												   <input class="texto" name="pend'.$row2[0].'" id="pend'.$row2[0].'" value="Pendiente" onclick="atendio('.$row2[0].','.$row2[6].','."'P'".')" type="button" />

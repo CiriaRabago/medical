@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 $im =  imagecreatetruecolor ( 300, 200);
 $black = imagecolorallocate ($im,  0, 0, 0);
 $lightgray = imagecolorallocate ($im,  230, 230, 230);

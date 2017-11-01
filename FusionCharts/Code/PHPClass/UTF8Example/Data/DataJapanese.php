@@ -39,7 +39,7 @@
     $FC->addChartData("960","name=十二月");
 		
     //Set Proper output content-type and charset
-    header('Content-type: text/xml;charset=UTF-8');
+    header('Content-type: text/xml;charset=iso-8859-1');
 	
     //Just write out the XML data
     //NOTE THAT THIS PAGE DOESN'T CONTAIN ANY HTML TAG, WHATSOEVER

@@ -24,7 +24,7 @@ $devi=$_GET['detvis'];*/
 <title>DETALLES DE LA VISITA</title>
 <link href="estilolab.css" rel="stylesheet" type="text/css" />
 <link href="churchil.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 
 <script>

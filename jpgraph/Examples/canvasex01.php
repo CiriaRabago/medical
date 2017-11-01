@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 // $Id: canvasex01.php,v 1.3 2002/10/23 08:17:23 aditus Exp $
 require_once ('jpgraph/jpgraph.php');
 require_once ('jpgraph/jpgraph_canvas.php');

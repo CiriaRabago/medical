@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 // $Id: bar_csimex3.php,v 1.3 2002/08/31 20:03:46 aditus Exp $
 // Horiontal bar graph with image maps
 require_once ('jpgraph/jpgraph.php');

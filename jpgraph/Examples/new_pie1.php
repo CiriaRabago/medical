@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 require_once ('jpgraph/jpgraph.php');
 require_once ('jpgraph/jpgraph_pie.php');
 // Some data

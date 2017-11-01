@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 // A medium complex example of JpGraph
 // Note: You can create a graph in far fewwr lines of code if you are
 // willing to go with the defaults. This is an illustrative example of

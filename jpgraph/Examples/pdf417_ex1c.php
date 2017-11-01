@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 require_once ('jpgraph/pdf417/jpgraph_pdf417.php');
 
 $data = 'PDF-417';

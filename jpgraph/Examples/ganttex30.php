@@ -1,4 +1,4 @@
-<?php  // content="text/plain; charset=utf-8"
+<?php  // content="text/plain; charset=iso-8859-1"
 // Gantt example 30
 // $Id: ganttex30.php,v 1.4 2003/05/30 20:12:43 aditus Exp $
 require_once ('jpgraph/jpgraph.php');

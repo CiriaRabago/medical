@@ -4,8 +4,8 @@
   #* Rotated text cannot render UTF-8 characters. For example, UTF-8 characters in the rotated labels will not be rendered correctly.
   #* BOM has to present in the xml given as input to the chart.
   #Steps to ensure correct UTF-8 output:
-  #* <meta http-equiv="content-type" content="text/html; charset=utf-8" />	has to be present in the <head> section of the page which contains UTF8 characters. Notice that we have included this in the "common.html.erb" layout, so that it is avialable to all pages.
-  #* Put this, headers["Content-Type"] = "text/xml; charset=utf-8"  in the action which is the XML provider. ( Here, pie_data_french or pie_data_japanese actions)
+  #* <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />	has to be present in the <head> section of the page which contains UTF8 characters. Notice that we have included this in the "common.html.erb" layout, so that it is avialable to all pages.
+  #* Put this, headers["Content-Type"] = "text/xml; charset=iso-8859-1"  in the action which is the XML provider. ( Here, pie_data_french or pie_data_japanese actions)
   #* If you are using a xml file for the data, then the file should be saved with UTF-8 encoding with UTF-8 BOM.  It should have the xml declaration also:  <?php xml version="1.0" encoding="UTF-8" ?>
   #* If you are generating xml dynamically, then in the xml provider ( here, pie_data_japanese.html.erb and pie_data_french.html.erb ), use get_UTF8_BOM and assign the BOM to the xml as initial value. This function present in fusioncharts_helper library.
   #* After placing the BOM in the xml string, append the xml declaration: <?php xml version='1.0' encoding='UTF-8'?>. Finally, append the actual chart xml.
@@ -47,7 +47,7 @@ class Fusioncharts::Utf8ExampleController < ApplicationController
   # Content-type for its view is set to text/xml and char-set to UTF-8.
   def pie_data_japanese
     
-      headers["Content-Type"] = "text/xml; charset=utf-8"  # xml content with charset=uttf-8
+      headers["Content-Type"] = "text/xml; charset=iso-8859-1"  # xml content with charset=uttf-8
 
       @factory_data = []
       
@@ -98,7 +98,7 @@ class Fusioncharts::Utf8ExampleController < ApplicationController
   # Content-type for its view is set to text/xml and char-set to UTF-8.
   def pie_data_french
     
-      headers["Content-Type"] = "text/xml; charset=utf-8"  # xml content
+      headers["Content-Type"] = "text/xml; charset=iso-8859-1"  # xml content
 
       @factory_data = []
       
