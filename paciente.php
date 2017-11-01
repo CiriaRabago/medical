@@ -464,7 +464,7 @@ $_POST["ususis"]=$_SESSION["cedu_usu"];
         <input name="ced" type="text" class="texto" id="ced" size="25"  value="<?php  echo $datos[1]; ?>" onkeypress='return soloNumeros(event)'/>
         <img src="imagenes/p_buspeq1.gif" alt="Buscar paciente Si EXISTE" width="35" height="25"  style="cursor:hand" onClick="buscar();"	onMouseOver="this.src='imagenes/a_buspeq1.gif'"  onMouseOut="this.src='imagenes/p_buspeq1.gif'"/><span class="Estilo1">*</span> s&oacute;lo n&uacute;meros  </label></td>
       <td width="321" rowspan="5" class="texto"><div align="right">
-<img src="<?php  echo $_POST["imafot"]?>?<?=time()?>" width="120" height="100" id="foto" name="foto"><img src="imagenes/p_elifoto1.gif" alt="Eliminar la Foto" width="25" height="25" style="cursor:hand" onClick="eliminar_foto();"	onMouseOver="this.src='imagenes/a_elifoto1.gif'"  onMouseOut="this.src='imagenes/p_elifoto1.gif'">
+<img src="<? echo $_POST["imafot"]?>?<?=time()?>" width="120" height="100" id="foto" name="foto"><img src="imagenes/p_elifoto1.gif" alt="Eliminar la Foto" width="25" height="25" style="cursor:hand" onClick="eliminar_foto();"	onMouseOver="this.src='imagenes/a_elifoto1.gif'"  onMouseOut="this.src='imagenes/p_elifoto1.gif'">
 <input name="ocu_fot" type="hidden" id="ocu_fot" value="0">
 <input name="imafot" type="hidden" id="imafot" value="<?php  echo $_POST["imafot"]; ?>">
       </div></td>

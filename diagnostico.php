@@ -181,7 +181,7 @@ function ver_modif(cadena)
 		} 
 		else
 		{
-		    echo $ver;
+		    echo utf8_decode($ver);
 		}?>
   </div>
 </form>

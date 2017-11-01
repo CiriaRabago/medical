@@ -108,7 +108,7 @@ function soloNumeros(evt){
    	var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
  	((evt.which) ? evt.which : 0));
   	if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-  		alert("Solo se permiten nÃºmeros en este campo.");
+  		alert("Solo se permiten números en este campo.");
  		return false;
   	}
 	return true;
@@ -123,17 +123,17 @@ function irpdf(pag)
 function ver1()
 {
 	if (document.getElementById("fna3").value<1850)
-		alert("AÃ±o de Inicio Erroneo");
+		alert("Año de Inicio Erroneo");
 }
 function ver2()
 {
 	if (document.getElementById("fnf3").value<1850)
-		alert("AÃ±o de Fin Erroneo");
+		alert("Año de Fin Erroneo");
 }
 
 function inac_vis(visit)
 {
-	if(confirm("Â¿Desea Eliminar el registro Seleccionado?"))
+	if(confirm("¿Desea Eliminar el registro Seleccionado?"))
 	{
 		document.getElementById("elimvis").value=visit;
 		document.getElementById('cargar').innerHTML = "<img src='imagenes/loader.gif' />";
@@ -428,7 +428,7 @@ function inac_vis(visit)
    		$cont=0;
 		if($reg!=false)
 		{
-			$titulo='LISTADO RESUMEN DE ATENCIÃ“N';
+ 			$titulo='LISTADO RESUMEN DE ATENCIÓN';
 			if($_POST['estado']!='') $titulo.='<br>'.$_POST['nsta'];
 			if($_POST['ocu_fi']!='') $titulo.='<br>DESDE: '.$_POST['fna1'].'-'.$_POST['fna2'].'-'.$_POST['fna3'];
 			if($_POST['ocu_ff']!='') $titulo.=' HASTA: '.$_POST['fnf1'].'-'.$_POST['fnf2'].'-'.$_POST['fnf3'];
@@ -443,7 +443,7 @@ function inac_vis(visit)
 			  <td width="1040" colspan="12" align="center"><?php  echo $titulo; ?></td>
 			</tr>	
 			<tr class="titulorep">
-			  <td width="15%">NÂ°</td>
+			  <td width="15%">N°</td>
 			  <td width="45%">NOMBRE DEL SERVICIO</td>
 			  <td width="20%">ESTADO</td>
               <td width="20%">CANTIDAD</td>
@@ -488,7 +488,7 @@ function inac_vis(visit)
 	    </table>
 	<?php 	}
 		else
-		{ echo '<br><p class="textoN" align="center">No se encontrÃ³ ninguna coincidencia</p>'; }?>
+		{ echo '<br><p class="textoN" align="center">No se encontró ninguna coincidencia</p>'; }?>
 <?php 	}
   if($_POST['ingreso']==2)//muestro detalle de todos los medicos
   {
@@ -496,7 +496,7 @@ function inac_vis(visit)
       $cont=0;
     if($reg!=false)
     {
-      $titulo='LISTADO RESUMEN DE ATENCIÃ“N';
+      $titulo='LISTADO RESUMEN DE ATENCIÓN';
       if($_POST['estado']!='') $titulo.='<br>'.$_POST['nsta'];
       if($_POST['ocu_fi']!='') $titulo.='<br>DESDE: '.$_POST['fna1'].'-'.$_POST['fna2'].'-'.$_POST['fna3'];
       if($_POST['ocu_ff']!='') $titulo.=' HASTA: '.$_POST['fnf1'].'-'.$_POST['fnf2'].'-'.$_POST['fnf3'];
@@ -511,7 +511,7 @@ function inac_vis(visit)
         <td width="1040" colspan="12" align="center"><?php  echo $titulo; ?></td>
       </tr> 
      <tr class="titulorep">
-        <td width="10%">NÂ°</td>
+        <td width="10%">N°</td>
         <td width="20%">MEDICO</td>
         <td width="35%">NOMBRE DEL SERVICIO</td>
         <td width="15%">ESTADO</td>
@@ -559,7 +559,7 @@ function inac_vis(visit)
       </table>
   <?php   }
     else
-    { echo '<br><p class="textoN" align="center">No se encontrÃ³ ninguna coincidencia</p>'; }?>
+    { echo '<br><p class="textoN" align="center">No se encontró ninguna coincidencia</p>'; }?>
 <?php   } ?>
 
 
