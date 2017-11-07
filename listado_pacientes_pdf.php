@@ -171,13 +171,13 @@ for($y=1;$y<=$x;$y++)
 		$pdf->SetFont('Arial','BI',10); $pdf->Cell(100,5,'RENOVAR INFORME MEDICO CADA 3 MESES',0,0,'R',false);
           }
   */
-    $sql="SELECT * FROM `servinet_sislabcli`.`slc_visita` where id_visita=$idvis";
+    $sql="SELECT * FROM `slc_visita` where id_visita=$idvis";
 	$resultado=mysql_query($sql);
 	$DATOS=mysql_fetch_array($resultado);
-	$sql2="SELECT * FROM `servinet_sislabcli`.`slc_medico` where ced_rif_medico='".$DATOS['ced_especialista']."'";
+	$sql2="SELECT * FROM `slc_medico` where ced_rif_medico='".$DATOS['ced_especialista']."'";
 	$resultado2=mysql_query($sql2);
 	$DATOS2=mysql_fetch_array($resultado2);
-	$sql3="SELECT * FROM `servinet_sislabcli`.`slc_especialidad` where id_esp='".$DATOS2['id_esp']."'";
+	$sql3="SELECT * FROM `slc_especialidad` where id_esp='".$DATOS2['id_esp']."'";
 	$resultado3=mysql_query($sql3);
 	$DATOS3=mysql_fetch_array($resultado3);
         $pdf->Ln();
